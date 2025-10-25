@@ -1,0 +1,23 @@
+
+ship "KW.Shuttle" "KW.Shuttle (Light)"
+	outfits
+		"Beam Laser"
+		"KW.CDX-PV-200 Photovoltaic Array"
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-1250S Ion Steering"
+		"KW.TRS-C Cargo Scanner"
+
+	gun "Beam Laser"
+
+ship "KW.Firefly" "KW.Firefly (Light)"
+	outfits
+		"Beam Laser"
+		"KW.CDX-PV-200 Photovoltaic Array"
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-1250S Ion Steering"
+		"KW.TRS-C Cargo Scanner"
+
+	gun "Beam Laser"
+

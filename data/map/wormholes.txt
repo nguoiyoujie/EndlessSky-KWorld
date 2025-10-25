@@ -1,0 +1,9 @@
+planet "KW.WH.Sanctuary Wormhole"
+	wormhole "Sanctuary Wormhole"
+
+wormhole "Sanctuary Wormhole"
+	mappable
+	link KW.MWC.000.Sgr-A* "KW.SZ.002.The Door"
+	link "KW.SZ.002.The Door" KW.MWC.000.Sgr-A*
+	color "KW.Color: Wormhole.Sanctuary"
+

@@ -1,0 +1,68 @@
+planet KW.P.000.0.Phi'ephi
+	"display name" Phi'ephi
+	landscape land/mfield3
+	description "The capital of Phi is filled with a studious people, ruled by a committee of scholar kings. They are often concerned with problems and objects of technical nature and seek to model them in isolated conditions before applying them to their policies. "
+	spaceport "It takes half as much time to refuel a tanker on the Phi homeworld compared to neighbouring homeworlds, a rather significant feat that you might hear from the more boastful port workers. Most Phi devices are voice-activated, and do not feature a visual or tactile interface. You can't help but wonder if this choice of standard had inconvenienced some species."
+	government KW.Phi
+
+planet KW.P.000.1.'ru'iblis
+	"display name" 'ru'iblis
+	landscape land/lava13
+	description "The planet hosts an ambitious project involving two Systems - Phi and Hel - dedicated to the development of the geological understructure of Gaia instances. A planetary Gaia system is typically hosted within the planet's mantle, with its sensor equipment and interface columns extending into the crust, where it collects geological and lifeform data, evaluates them and communicates the results to analysts closer to the surface. Only by combining the geological expertise of Hel, integration efforts of Phi, and technical contributions from other systems, was such a feat even remotely plausible."
+	spaceport "The starport is more spacious than those encountered on the homeworld, to account for the larger ship hulls that the Hels use. This place is one of the few places in Phi space where the chaos of having more than 200 nozzles and fuel inlets per docking bay could be experienced. Try not to panic and over-pressurize your fuel tank via the wrong pump."
+	government KW.Phi
+
+planet KW.P.000.2.'et'us
+	"display name" 'et'us
+	landscape land/mercury1
+	description "The planet hosts a joint research center, co-owned by Systems Bet and Phi, to work on the problem of life on a moon of a brown dwarf. To commit to such a venture on another homeworld, the Betians seem to be really serious about the research."
+	spaceport "The port and planet is bereft of an atmosphere, so visitors have to move around the station in their spacesuits. The grounds are largely restricted to research workers, so there is little you can do but watch grass try to grow (and often fail)."
+	government KW.Phi
+
+planet KW.P.001.0.'ifi'as
+	"display name" 'ifi'as
+	landscape land/mountain26
+	description "The airless land is free from disturbance, showing only the remains of craters of centuries past. While cold without the blanket of an atmosphere, the illumination is not unlike your homeworld."
+	spaceport "A simple refueling station stands on a plateau, serving as an oasis for the traveller needing a stop en route to the Phi homeworld."
+	government KW.Phi
+
+planet KW.P.003.0.'eifu
+	"display name" 'eifu
+	landscape land/mars0
+	description "The barren planet mostly serves as a pit-stop for travellers moving between systems. The lack of an atmosphere makes the planet both unbearably hot and unbearably cold within a short span of time."
+	spaceport "The port facilities are barely maintained, but remain operable without much effort. There is no material to perform any kind of repair, but at least the refueling is without fault."
+	government KW.Phi
+
+planet KW.P.006.'esfi'us
+	"display name" 'esfi'us
+	landscape land/fog9
+	description "The reforested planet serves as a major checkpoint between Phi and the AB-Highway. The greens also allow patrols from the Second Fleet or Phi's internal police to ambush unsuspecting criminals who try to stop there."
+	spaceport "A small colony is on hand to bring any ship back to service. Some of the locals go even further and set up a space for outfitting. Business at the crossroads is booming."
+	government KW.Phi
+
+planet KW.P.016.0.'olo'es
+	"display name" 'olo'es
+	landscape land/sea23
+	description "The so-called ocean world is filled with fluids super-saturated with rock minerals, that crystals spontaneously form and break underneathh the ocean surfac. This makes it sterile to native life, but a curious anomaly for the outsider."
+	spaceport "An industrial town had been established on the surface to extract this ocean water and send it to the Phi capital where it would be used to produce antisepties, space-grade coatings and lubricants. At least, they found out which materials would survive the auto-crystalization process."
+	government KW.Phi
+
+planet KW.P.016.1.'olo'us'esi
+	"display name" 'olo'us'esi
+	landscape land/treser
+	description "Another joint operaion between Phi and Bet. This time, the environment is too cold for someone to be out on the field without a suit."
+	spaceport "The doors and values often jam in the cold. You wonder how this station survived this long without a fuel leak."
+	government KW.Phi
+
+planet KW.P.018.'iferi'us
+	"display name" 'iferi'us
+	landscape land/fog9
+	description "The now lively landscape was once said to be barren, until a ship carrying seeds crashed unto this planet, and the plant spread like wildfire. The tale seems unlikely, but you can't help but wonder why Phi did not try to colonize it openly."
+	government Uninhabited
+
+planet KW.P.025.0.'e'ifus
+	"display name" 'e'ifus
+	landscape land/mountain27
+	description "There is litle wind oo this planet, which allowed snow to acculmulate and compact themselves into icy hills of immense size. The local populaion directs you to one of the few areas that allow for safe landing."
+	spaceport "A lone station sits at the root of a massive mountain. The station used to belong to a spare-faring corporation, but the venture proved unsuccessful and it was sold into a family. Now, the facilities have been repurposed into a serene resort for those retiring frm adventure, or those who simply wanted out from the conformist nature of mainstream Phi philosophy."
+	government KW.Phi

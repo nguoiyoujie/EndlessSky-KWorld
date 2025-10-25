@@ -1,0 +1,477 @@
+
+
+############### MISSIONS: ADVENT ###############
+#	Advent is a planet on Alpha Centauri, just next to Sol. It requires terraforming effort to be habitable.
+#	Advent is described as uninhabitable, but there is actually an outpost underneath the surface, not unlike the situation on Earth.
+#
+#	Intent:
+#		The first system where the player can establish an 'workshop'.
+#			A workshop is a place where the player can convert an outfit into another using recipes.
+#			A workshop with other planet attributes may also be invested in to produce a low amount of raw (mineable) material on site.
+#			The workshop is powered purely by conversations.
+#
+#	Advent questline should be allowed to be skipped without major repercussions.
+
+mission "KW.Sol.Advent [0]"
+	priority
+	name "[Sol] Bring geologists to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Transport a team of <bunks> geologists and <cargo> to <destination>. Payment is <payment>."
+	landing
+	source KW.S.000.2.Io
+	destination KW.S.001.0.Advent
+	passengers 3
+	cargo "supplies" 6
+	to offer
+		or
+			has "KW.Sol.Lepo [2]: done"
+			has "KW.Sol.Inbox [2C]: done"
+		random < 50
+
+	on offer
+		conversation
+			`At port, you notice a human, an uncommon occurence on Io, hailing you.`
+			`	"I am Arthur, an associate professor of Shalenge University, and this is Lance and Mary. We are looking to conduct research on <destination>, and am looking for some one to transport us there."`
+
+			choice
+				`	"Where is <destination>?"`
+					goto uhwhere
+					to display
+						not "visited planet: KW.S.001.0.Advent"
+				`	"That is one just jump away. How did you end up here?"`
+					goto uhhow
+					to display
+						has "visited planet: KW.S.001.0.Advent"
+				`	"I can take you there. ${KW.Phrase.Mission: Accept}"`
+					goto takejob
+				`	"Give me a bit of time to prepare. ${KW.Phrase.Mission: Defer}"`
+					defer
+				`	"Please find another pilot to handle it. ${KW.Phrase.Mission: Decline}"`
+					decline
+
+			label uhwhere
+			`	Arthur pauses. "On system <system>, next to our Solar system. It is uninhabited, but the climate is almost right. We have the means to turn its resources into sustenance."`
+
+			label uhhow
+			`	Arthur shakes his head. "Our previous taxi bailed on us. Apparently he did not qualify for a Chronodrive, and the job was bust. Most of the pilots with a drive are either busy with more profitable routes, or left our world behind."`
+
+			choice
+				`	"I can take you there. ${KW.Phrase.Mission: Accept}"`
+				`	"Give me a bit of time to prepare. ${KW.Phrase.Mission: Defer}"`
+					defer
+				`	"Please find another pilot to handle it. ${KW.Phrase.Mission: Decline}"`
+					decline
+
+			label takejob
+			`	Authur thanks you, and signals the rest of his team to board your ship.`
+				accept
+
+	on complete
+		payment 9400
+		event "KW.Sol.Advent 1 available" 14
+		dialog
+			"Arthur points you to a geological formation, where you land without fanfare. The scientists don their breathing suits and carry their supplies into the open space. You wonder how long they could live with only few crates of supplies, but Arthur reassures you, and directs the transfer of <payment> to you."
+			`"Come back in 14 days," he says. "That should be when we have extracted sufficent rock to send back to Earth. I won't take no for an answer."`
+
+mission "KW.Sol.Advent [1A]"
+	priority
+	name "[Sol] Deliver <cargo> to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	blocked `You spot Authur as you approach the landing site. Beside him was what looks to be 8 tons of rock. You have a sudden feeling he will try to load them unto your ship even if overcapacity, so you make a detour and land somewhere else before he notices you.`
+	landing
+	source KW.S.001.0.Advent
+	destination KW.S.000.0A.Yekaterinburg
+	cargo "geological samples" 8
+	to offer
+		has "event: KW.Sol.Advent 1 available"
+		not "KW.Sol.Advent [1B]: active"
+		not "KW.Sol.Advent [1C]: active"
+		random < 70
+
+	on offer
+		conversation
+			`The assistant professor Authur hails you excitedly, along with a large crate filled with sacks of stone and coal.`
+			`	"Captain <last>, I was about to miss you!" He beams. "Let's get these rocks into safety and to my colleagues on Earth. Here is his contact."`
+				to display
+					not "KW.Sol.Advent [1B]: done"
+					not "KW.Sol.Advent [1C]: done"
+			`	"Captain <last>, good to see you again!" He gives his usual jovial smile. "Last batch of rocks have shown promising results on Earth. Same contact, same fee."`
+				to display
+					or
+						has "KW.Sol.Advent [1B]: done"
+						has "KW.Sol.Advent [1C]: done"
+			`	Before you know it, his assistants had wheeled the crates into your cargo hold. Luckily, you have had enough space or there would have been a problem.`
+				accept
+
+	on complete
+		payment 7200
+		clear "event: KW.Sol.Advent 1 available"
+		event "KW.Sol.Advent 1 available" 7
+		dialog
+			`You phoned the contact given by Authur. An unkempt-looking man shows up. After matching his identity, you direct the transfer of the coal-laden rocks to his truck.`
+				to display
+					not "KW.Sol.Advent [1B]: done"
+					not "KW.Sol.Advent [1C]: done"
+			`The same deal. The two of you barely talk as you make the same exchange."`
+				to display
+					"KW.Sol.Advent [1B]: done" + "KW.Sol.Advent [1C]: done" == 1
+			`The usual. Though this time, the man takes a bit of time checking the rocks, even taking a short tool to chip at the rock and tasting the piece that fell off."`
+				to display
+					has "KW.Sol.Advent [1B]: done"
+					has "KW.Sol.Advent [1C]: done"
+			`	You check that <payment> has been transferred to your account, and a message that the next shipment is in 7 days.`
+				to display
+					or
+						not "KW.Sol.Advent [1B]: done"
+						not "KW.Sol.Advent [1C]: done"
+			`	As usual, you receive <payment>, but you begin to suspect something. It might be a good idea to confront Arthur about it.`
+				to display
+					has "KW.Sol.Advent [1B]: done"
+					has "KW.Sol.Advent [1C]: done"
+
+
+mission "KW.Sol.Advent [1B]"
+	priority
+	name "[Sol] Deliver <cargo> to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	blocked `You spot Authur as you approach the landing site. Beside him was what looks to be 9 tons of rock. You have a sudden feeling he will try to load them unto your ship even if overcapacity, so you make a detour and land somewhere else before he notices you.`
+	landing
+	source KW.S.001.0.Advent
+	destination KW.S.000.0A.Yekaterinburg
+	cargo "geological samples" 9
+	to offer
+		has "event: KW.Sol.Advent 1 available"
+		not "KW.Sol.Advent [1A]: active"
+		not "KW.Sol.Advent [1C]: active"
+		random < 70
+
+	on offer
+		conversation
+			`The assistant professor Authur hails you excitedly, along with a large crate filled with sacks of darkened rock.`
+			`	"Captain <last>, I was about to miss you!" He beams. "Let's get these rocks into safety and to my colleagues on Earth. Here is his contact."`
+				to display
+					not "KW.Sol.Advent [1B]: done"
+					not "KW.Sol.Advent [1C]: done"
+			`	"Captain <last>, it's a pleasure!" He gives his usual jovial smile. "Last batch of rocks could have been better, but this batch should allay my colleagure's concerns. Deliver this to the same person, and I will pay you for the trouble!"`
+				to display
+					or
+						has "KW.Sol.Advent [1B]: done"
+						has "KW.Sol.Advent [1C]: done"
+			`	You are somewhat surprised by the speed in which his assistants loaded the rocks into your ship. Luckily, your ship is spacious enough to hold these rocks.`
+				accept
+
+	on complete
+		payment 8100
+		clear "event: KW.Sol.Advent 1 available"
+		event "KW.Sol.Advent 1 available" 7
+		dialog
+			`You phoned the contact given by Authur. An unkempt-looking man shows up. After matching his identity, you direct the transfer of the coal-laden rocks to his truck.`
+				to display
+					not "KW.Sol.Advent [1B]: done"
+					not "KW.Sol.Advent [1C]: done"
+			`The same deal. The two of you barely talk as you make the same exchange."`
+				to display
+					"KW.Sol.Advent [1B]: done" + "KW.Sol.Advent [1C]: done" == 1
+			`The usual. Though this time, the man takes a bit of time checking the rocks, even taking a short tool to chip at the rock and tasting the piece that fell off."`
+				to display
+					has "KW.Sol.Advent [1B]: done"
+					has "KW.Sol.Advent [1C]: done"
+			`	You check that <payment> has been transferred to your account, and a message that the next shipment is in 7 days.`
+				to display
+					or
+						not "KW.Sol.Advent [1B]: done"
+						not "KW.Sol.Advent [1C]: done"
+			`	As usual, you receive <payment>, but you begin to suspect something. It might be a good idea to confront Arthur about it.`
+				to display
+					has "KW.Sol.Advent [1B]: done"
+					has "KW.Sol.Advent [1C]: done"
+
+mission "KW.Sol.Advent [1C]"
+	priority
+	name "[Sol] Deliver <cargo> to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	blocked `You spot Authur as you approach the landing site. Beside him was what looks to be 10 tons of rock. You have a sudden feeling he will try to load them unto your ship even if overcapacity, so you make a detour and land somewhere else before he notices you.`
+	landing
+	source KW.S.001.0.Advent
+	destination KW.S.000.0A.Yekaterinburg
+	cargo "geological samples" 10
+	to offer
+		has "event: KW.Sol.Advent 1 available"
+		not "KW.Sol.Advent [1A]: active"
+		not "KW.Sol.Advent [1B]: active"
+		random < 70
+
+	on offer
+		conversation
+			`The assistant professor Authur hails you excitedly, along with a large crate filled with colorful stones. They are not gemstones, but they could have fooled an untrained eye.`
+			`	"Captain <last>, I was about to miss you!" He beams. "Let's get these rocks into safety and to my colleagues on Earth. Here is his contact."`
+				to display
+					not "KW.Sol.Advent [1B]: done"
+					not "KW.Sol.Advent [1C]: done"
+			`	"Captain <last>, great to see you!" He offers his usual smile. "We made some discovery with the last batch of rocks! Unfortunately, I cannot tell you now, but if you stick with us you'd be the first to know. Give these to the same person and I will pay you."`
+				to display
+					or
+						has "KW.Sol.Advent [1B]: done"
+						has "KW.Sol.Advent [1C]: done"
+			`	You believe that even port authorities could not achieve such loading speeds. Then again, you remind yourself that port authorities are probably not a good model for speed and efficiency.`
+				accept
+
+	on complete
+		payment 9000
+		clear "event: KW.Sol.Advent 1 available"
+		event "KW.Sol.Advent 1 available" 7
+		dialog
+			`You phoned the contact given by Authur. An unkempt-looking man shows up. After matching his identity, you direct the transfer of the coal-laden rocks to his truck.`
+				to display
+					not "KW.Sol.Advent [1B]: done"
+					not "KW.Sol.Advent [1C]: done"
+			`The same deal. The two of you barely talk as you make the same exchange."`
+				to display
+					"KW.Sol.Advent [1B]: done" + "KW.Sol.Advent [1C]: done" == 1
+			`The usual. Though this time, the man takes a bit of time checking the rocks, even taking a short tool to chip at the rock and tasting the piece that fell off."`
+				to display
+					has "KW.Sol.Advent [1B]: done"
+					has "KW.Sol.Advent [1C]: done"
+			`	You check that <payment> has been transferred to your account, and a message that the next shipment is in 7 days.`
+				to display
+					or
+						not "KW.Sol.Advent [1B]: done"
+						not "KW.Sol.Advent [1C]: done"
+			`	As usual, you receive <payment>, but you begin to suspect something. It might be a good idea to confront Arthur about it.`
+				to display
+					has "KW.Sol.Advent [1B]: done"
+					has "KW.Sol.Advent [1C]: done"
+
+mission "KW.Sol.Advent [2A]"
+	priority
+	name "[Sol] Transport Arthur's assistant to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Transport Arthur's assistant to <destination>. Payment is <payment>."
+	blocked `You notice Authur has left you a message. The next job involves 1 passenger, so it'll be a good idea to have that space before you next speak to him.`
+	landing
+	source KW.S.000.0A.Yekaterinburg
+	destination KW.S.001.0.Advent
+	passengers 1
+	to offer
+		has "KW.Sol.Advent [1A]: done"
+		has "KW.Sol.Advent [1B]: done"
+		has "KW.Sol.Advent [1C]: done"
+
+	on offer
+		conversation
+			`You make the call with Arthur.`
+			`	"Oh, I wasn't expect you to call me. Is something wrong?"`
+
+			choice
+				`	"Nothing wrong. Your contact seems a little... strange."`
+					goto strangeman
+				`	"Your contact licked the rock you delivered. Is that part of the analysis?"`
+					goto strangelick
+				`	"Those rocks don't seem like normal rocks."`
+					goto strangerocks
+
+			label strangeman
+			`	You felt the first hint of tension in his voice, though lasting only for a second, before hearing the cheerful response. "He may not look or act typical, but he is as much a genius as he is mad! If I were as good an analyst as he is, I would not have been breaking rocks in A..."`
+
+			choice
+				`	"Advent."`
+				`	"Alpha Centauri."`
+
+			`	"Yes, Advent." He coughed, "The air here is not great for extended conversations. In any case, he is a bit tempermental, a maverick in our Department. But that is not something you need to be exposed to. Just keep up with the deliveries and you'll be fine. That said, this job is different:"`
+				goto jobdetails
+
+			label strangelick
+			`	You felt a soft sigh, before he asked, "Did he do that in the Port?"`
+
+			choice
+				`	"Right on delivery. Cut loose a piece, even."`
+				`	"Right in front of me. It almost seems he was judging it."`
+
+			`	He sighs. "He should not have done that, as harmless as it may be. An oddball in our Department, but a master behind the tools. I apologize on his behalf."`
+
+			choice
+				`	"No worries."`
+				`	"He could have been mistaken as a vagrant or something else."`
+
+			`	"I'll have someone else with him, but that should be the last you see him for a while. The job I have this time is different."`
+				goto jobdetails
+
+			label strangerocks
+			`	He laughs, "If they are the same as rocks on Earth, I wouldn't be paying attention to them, would I? Thank you for your kind evaluation, but that man is much more an expert that you are. But it's your lucky day, since today's job is not about rocks."`
+
+			label jobdetails
+			`	Arthur describes the new job: Transport his assistant to join him on Advent. There was not many questions to be asked, but that the assistant was occupied with other work when you transported Authur to Advent.`
+			`	On finishing the conversation, you find the assistant standing in front of you. Guess saying no at this point is not really an option.`
+				accept
+
+	on complete
+		payment 2000
+		conversation
+			`As you prepare your ship to breach the atmosphere for landing, you turn to look at the passenger. Throughout the journey, he has been jittery and scared.`
+
+			choice
+				`	"Is there a problem?"`
+
+			`	The man utters nothing, but shakes his head. You decide it is not a good idea to press further. As the door opens and Arthur greets you, the man crams a few coins and bolts out of the door.`
+			` "Ah, Captain <last>. Really sorry about that," Arthur apologizes. "Earth had not been good for him. He wanted to come sooner, but alas it was not to be."`
+
+			`	Arthur picked up the coins and instead gave you a digital token. You use it and received <payment>. There are some questions you want to ask, but Arthur cuts you off-`
+
+mission "KW.Sol.Advent [2B]"
+	priority
+	name "[Sol] Transport an injured worker to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Transport an injured worker to <destination> by <date>. Payment is <payment>."
+	landing
+	source KW.S.001.0.Advent
+	destination KW.S.000.0A.Yekaterinburg
+	passengers 1
+	deadline 2
+	to offer
+		has "KW.Sol.Advent [2A]: done"
+
+	on offer
+		conversation
+			`"We could have a good talk about the people I am bringing to Advent, but there is a more pressing matter."`
+			`	"One of my people has been injured by falling rocks, and will need to be receive medical attention on Earth. We have stablized her, but we need to transport her now." At this point, you notice an unconscious woman, still clad in spacesuit, lying on the stretcher.`
+
+			choice
+				`	"I'll take her."`
+					goto takejob
+				`	"How did she get injured?"`
+
+			`	"Rocks break off when you drill into them. And she was within the evacuation zone when we were working on one of the bigger ones. She's not badly injured, but it is best not to ignore such a blunt force to the chest. She does have signs of respiratory distress."`
+			choice
+				`	"I'll take her."`
+					goto takejob
+				`	"What if her condition worsens en route?"`
+
+			label whatif
+			`"I hope that does not happen. There would be nothing we can do. Advent does not have the supplies. Your ship can probably stablize her for one day, that might just be enough to reach Earth."`
+
+			choice
+				`	"Two days. There's no choice. Load her on my ship."`
+
+			label takejob
+			`	You notice a drop of tears rolling down Arthur's face, "This should not have happened. Please save her."`
+			`	You load the injured woman to your ship, hook her up with the ship's life support systems, and make haste towards the sky.`
+				launch
+
+	on complete
+		payment 2500
+		set "job-board: enable generic rescue jobs"
+		conversation
+			`You declare the injured person to the authorities. Upon landing, you are greeted by five paramedics waiting to take her to the hospital. And a man clad in a navy blue military uniform.`
+
+			`"<first> <last>," the man announced, as the medical team checked on the woman, and began transfer to an ambulance, "of the Great House of Coreillius."`
+
+			choice
+				`	"Yes?"`
+				`	"What would an officer from the House of Cerberus want from me?"`
+				# to display
+				#		has "read about the Organization"
+
+			`	"I have no business with you, but with this woman, and where she came from."`
+
+			choice
+				`	"Is something the matter?"`
+
+			`	"I believe my own questions will help you answer them." You sense a little consternation within his voice, but you also know he has no cause to arrest you.`
+			`	"Have you been performing cargo deliveries between Earth and the planet 'Advent'?"`
+
+			choice
+				`	"I have."`
+				`	"I did not."`
+					goto oops1
+
+			`	The man nods his head slightly. "Well, it is not illegal to be transporting rocks from Advent. Even those kinds of rocks."`
+				goto next2
+
+			label oops1
+			`	The man blinks an eye. "I could write you up for 'Willful obstruction of justice', and that could cost you a whole ship. But... you seem to be clueless, and you have special status, so I'll do you a favor. Your act of tranporting rocks from Advent is not by itself illegal, even if you have no idea what those rocks are. You are not yet in trouble."`
+
+			label next2
+			choice
+				`	"I knew something was up with those rocks."`
+				`	"What's wrong with those rocks?"`
+					goto next3
+
+			#label oops2
+			`	The man raises an eyebrow. "Try not to present yourself as a knowing accomplice if you are not one. We have a record of your travels so we are not fooled by your self-sacrifice."`
+
+			label next3
+			`	"The rocks, when ground into powder, produces a potent hallucinogen. Despite the closeness to Earth, few have the equipment to support a mining operation and extract these rocks. It has great value in the market, fetching millions when sold to phramaceutials."`
+
+			choice
+				`	"Drugs? I have a bad feeling about this."`
+					goto ohno
+				`	"I... I think I have been scammed."`
+
+			`	"That is between you and the contact named 'Arthur'. I'd be less concerned about payout than whatever else is at stake."`
+
+			label ohno
+			`	"Whoever you delivered those products to, he was linked to a syndicate we have been tracking." He shakes his head, "The undergrounds of Earth is not a pretty place. My team is going to take care of the problem, and the woman will squeal, but you have to handle Arthur."`
+
+			choice
+				`	"You know something about Arthur?"`
+
+			`	"He was indeed affliated with Shalenge University, but he is no 'Assistant Professor'. More like a teaching assistant who knew enough people and information to formulate a plan to Advent. He is quite resourceful, acquiring one of the very few bores that can handle the harsh geology of Advent... but his luck ran out there."`
+			`	"He ran into bad people, and incurred quite a debt on himself. The syndicate made him travel to Advent, multiple times, releasing only a fraction of the debt each time he brought back a rock. That woman you just sent here? That was his handler."`
+
+			choice
+				`	"Is that not a good thing, being free of his handler?"`
+
+			`	"Only if the syndicate wouldn't send another goon to capture him. Fortunately for him, my team is poised to pounce upon his hunters for the illicit drug they have sunk themselves into. They will be rather occupied for a while."`
+
+			choice
+				`	"Are you going to arrest Arthur?"`
+
+			`	The officer shrugs, "That's not up to me. I'm just told to watch. You can tell Arthur even that. At least my intelligence tells me he is not at risk of harm so long as he stays on Advent."`
+			`	"There is hope for him yet. He is stranded on Advent, but you do know where he mines his rocks. Go to him. Perhaps in the future, we will have something for you."`
+			`	With that the officer curtly walks away.`
+
+mission "KW.Sol.Advent [2C]"
+	priority
+	name "[Sol] Talk to Arthur on <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Confront Arthur about his mining operation on <destination>."
+	landing
+	source KW.S.000.0A.Yekaterinburg
+	destination KW.S.001.0.Advent
+	to offer
+		has "KW.Sol.Advent [2B]: done"
+
+	on complete
+		event "KW.Sol.Advent Workshop 1" 28
+		conversation
+			`	Arthur was not around to greet you when you landed. You walk into the cave that he was working at. The entrance surprises you: A makeshift wind-barrier made of logs and vines of local flora cover the cave entrance, leaving a small hole the size of a human adult body.`
+
+			choice
+				`	(Walk into the cave.)`
+
+			`	You spot Arthur fiddling with a set of mechanical instruments and valves a few meters into the cave. You call out to him. Arthur jumps up, startled, but relaxes a bit when he recognizes you.`
+
+			choice
+				`	(Relate your encounter with the Cerberus officer to Arthur.)`
+
+			`	Arthur paces around for a few circles, then sits down. His sigh betrays his emotions of worry and relief.`
+			`	"I guess I'll have to stay here for now, but I'll need to scout for a different cave to live in," Arthur said thoughtfully. "The other crew here are my friends, and this little shack has food enough to last us more than eight months. So we will be fine."`
+
+			choice
+				`	"Are you going to continue mining the rocks here?"`
+
+			`	"If I can find another buyer, sure. And if so, hopefully you and I will get a better cut. But that will have to wait."`
+			`	Arthur pauses, then his eyes lit up. "I think I can trust you enough with this information. I know another cave which is quite... livable. It has ample supply of water, with minimal effort needed to make it potable. My team and I will be moving there and set up a little colony, out of sight of any other visitor. This should take 28 days, I think."`
+			`	Arthur was almost as excited as when you first met him. "Come back to this location in about a month, and I will have a little workshop open for you. There might be things we can do with the rocks and marble we collect here."`
+			`	You bid farewell to Arthur feeling quite more positive than before.`
+

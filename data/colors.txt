@@ -1,0 +1,11 @@
+
+color "KW.Color: main missions selected" 0. 1. .7
+color "KW.Color: main missions unselected" .3 .8 .5
+
+color "KW.Color: secondary missions selected" 0. .7 1.
+color "KW.Color: secondary missions unselected" .3 .5 .8
+
+color "KW.Color: locale missions selected" .9 1. 0.
+color "KW.Color: locale missions unselected" .5 .6 .3
+
+color "KW.Color: Wormhole.Sanctuary" .3 .1 .8

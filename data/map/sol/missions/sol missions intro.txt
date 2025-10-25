@@ -1,0 +1,762 @@
+############### MISSIONS: C1 INBOX ###############
+#	You are actually part of a military, sort of. The Organization is a union of three Great Houses, and every respectable member has a rank.
+#	As far as you are concerned, you deal mostly with logistics, but you are permitted to use weapons if there need be.
+#
+#	Your superior is (a yet unnamed) Major operating solely within the confines of Sol. Your group handles transport between Earth and Io.
+#
+#
+#	Intent:
+#		The main tutorial. Completing the tutorial unlocks the full job offers and other questlines around Sol
+#
+#	This is an essential questline. Generally, these missions cannot be declined. If aborted or failed, a mechanism should be in place to restore the failed mission
+
+mission "KW.Sol.Inbox [Reset]"
+	priority
+	name "[Sol] Restore mission progress"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	job
+	"offer precedence" 999
+	repeat
+	description "You had stopped essential work for the Organization. Resume your aborted missions by compensating 10000 credits."
+	source
+		system KW.S.000.Sol
+		attributes earth
+
+
+	to offer
+		or
+			has "KW.Sol.Inbox [0]: aborted"
+			has "KW.Sol.Inbox [0]: failed"
+			has "KW.Sol.Inbox [1A]: aborted"
+			has "KW.Sol.Inbox [1A]: failed"
+			has "KW.Sol.Inbox [1B]: aborted"
+			has "KW.Sol.Inbox [1B]: failed"
+			has "KW.Sol.Inbox [1C]: aborted"
+			has "KW.Sol.Inbox [1C]: failed"
+			has "KW.Sol.Inbox [2A]: aborted"
+			has "KW.Sol.Inbox [2A]: failed"
+			has "KW.Sol.Inbox [2B]: aborted"
+			has "KW.Sol.Inbox [2B]: failed"
+			has "KW.Sol.Inbox [2C]: aborted"
+			has "KW.Sol.Inbox [2C]: failed"
+
+	on accept
+		payment -10000
+		conversation
+			branch skip.0
+				and
+					not "KW.Sol.Inbox [0]: aborted"
+					not "KW.Sol.Inbox [0]: failed"
+
+			action
+				clear "KW.Sol.Inbox [0]: offered"
+				clear "KW.Sol.Inbox [0]: aborted"
+				clear "KW.Sol.Inbox [0]: failed"
+
+			label skip.0
+			branch skip.1a
+				and
+					not "KW.Sol.Inbox [1A]: aborted"
+					not "KW.Sol.Inbox [1A]: failed"
+
+			action
+				clear "KW.Sol.Inbox [1A]: offered"
+				clear "KW.Sol.Inbox [1A]: aborted"
+				clear "KW.Sol.Inbox [1A]: failed"
+
+			label skip.1a
+			branch skip.1b
+				and
+					not "KW.Sol.Inbox [1B]: aborted"
+					not "KW.Sol.Inbox [1B]: failed"
+
+			action
+				clear "KW.Sol.Inbox [1B]: offered"
+				clear "KW.Sol.Inbox [1B]: aborted"
+				clear "KW.Sol.Inbox [1B]: failed"
+
+			label skip.1b
+			branch skip.1c
+				and
+					not "KW.Sol.Inbox [1C]: aborted"
+					not "KW.Sol.Inbox [1C]: failed"
+
+			action
+				clear "KW.Sol.Inbox [1C]: offered"
+				clear "KW.Sol.Inbox [1C]: aborted"
+				clear "KW.Sol.Inbox [1C]: failed"
+
+			label skip.1c
+			branch skip.2a
+				and
+					not "KW.Sol.Inbox [2A]: aborted"
+					not "KW.Sol.Inbox [2A]: failed"
+
+			action
+				clear "KW.Sol.Inbox [2A]: offered"
+				clear "KW.Sol.Inbox [2A]: aborted"
+				clear "KW.Sol.Inbox [2A]: failed"
+
+			label skip.2a
+			branch skip.2b
+				and
+					not "KW.Sol.Inbox [2B]: aborted"
+					not "KW.Sol.Inbox [2B]: failed"
+
+			action
+				clear "KW.Sol.Inbox [2B]: offered"
+				clear "KW.Sol.Inbox [2B]: aborted"
+				clear "KW.Sol.Inbox [2B]: failed"
+
+			label skip.2b
+			branch skip.2c
+				and
+					not "KW.Sol.Inbox [2C]: aborted"
+					not "KW.Sol.Inbox [2C]: failed"
+
+			action
+				clear "KW.Sol.Inbox [2C]: offered"
+				clear "KW.Sol.Inbox [2C]: aborted"
+				clear "KW.Sol.Inbox [2C]: failed"
+
+			label skip.2c
+			`You grit your teeth and make the call, enduring the reprimand from your superior. After a lengthy session, he tells you that he has reopened the offers previously abandoned by you, demanding that you work to regain his trust.`
+				decline
+
+	on daily
+		fail
+
+# MISSION 0: First Delivery
+
+mission "KW.Sol.Inbox [0]"
+	priority
+	name "[Sol] First delivery to <planet>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination KW.S.000.2.Io
+	cargo sensors 18
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io cargo start}`
+			`Further instructions await once this job is done.`
+				accept
+
+	on accept
+		"salary: House of Coreillius" = 300
+
+	on visit
+		dialog phrase "generic cargo on visit"
+
+	on complete
+		payment 15000
+		conversation
+			`A towering android, its skin rusty from its days under the harsh weather outside the habitat dome on Io, inspects the goods and makes ticking noises on occasion.`
+			`	"I have not seen you before." It said, "New captain?"`
+			choice
+				`	"It's my first job here."`
+				`	"Is something the matter?"`
+
+			`	"This shipment is in order. Normally, I am supposed to give you a shipment to send back to Earth, but I have specific instructions to... free your schedule. Above that, you are given clearance to own a hyperdrive of sorts. Quite unusual."`
+			choice
+				`	"Is it not normal to get a hyperdrive?"`
+
+			`	The machine looks up. "Most people have a few hundred flights between Io and Earth before they dare cross the Oort Cloud. This early... there are indeed individuals who get their drives on the second run, like you, but they have special assignments. I will not question further, but I will inform you about your choices."`
+			`	"You are free to purchase the Basic Chronodrive at this station. It is very basic, but it allows you to travel to nearby stars. The Chronodrive consumes more fuel the heavier you are, so make sure you have sufficient fuel to return. If you wish to move a heavier ship, you may find a fuel recycler useful."`
+			`	"These are not cheap. You may want to go to the Job Board and take more local missions before you purchase the Chronodrive. I can arrange to put you in a priority list for job openings until you make the purchase."`
+			choice
+				`	"Alright, take jobs until I get the hyperdrive. Got it."`
+					goto proceed
+				`	"Will the jobs go away after I purchase the Chronodrive?"`
+			`	"Jobs will always be present. When you get a Chronodrive, you will have better jobs."`
+
+			label proceed
+			`The android sits up. "For starters, I have a job opening you can take. Two-passenger ferry to Earth. If you are interested, go to the spaceport and talk to them."`
+				to display
+					not "KW.Sol.Morris [0]: done"
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+# MISSION 1: Basic Cargo Operations
+
+mission "KW.Sol.Inbox [1A]"
+	priority
+	name "[Sol] Delivery to <planet>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination KW.S.000.2.Io
+	cargo "medical gear" 9
+	blocked "${KW.Phrase.Sol: Io cargo blocked}"
+	to offer
+		not "KW.Sol.Inbox [1B]: active"
+		not "KW.Sol.Inbox [1C]: active"
+		has "KW.Sol.Inbox [0]: done"
+		random < 70
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io cargo start}`
+			`Further instructions await once this job is done.`
+				accept
+
+	on accept
+		"salary: House of Coreillius" = 300
+
+	on visit
+		dialog phrase "generic cargo on visit"
+
+	on complete
+		payment 8000
+		dialog phrase "KW.Phrase.Sol: Io delivery payment"
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+mission "KW.Sol.Inbox [1B]"
+	priority
+	name "[Sol] Delivery to <planet>"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination KW.S.000.2.Io
+	cargo "mining equipment" 12
+	blocked "${KW.Phrase.Sol: Io cargo blocked}"
+	to offer
+		not "KW.Sol.Inbox [1A]: active"
+		not "KW.Sol.Inbox [1C]: active"
+		has "KW.Sol.Inbox [0]: done"
+		random < 70
+
+	on accept
+		"salary: House of Coreillius" = 300
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io cargo start}`
+			`Further instructions await once this job is done.`
+				accept
+
+	on visit
+		dialog phrase "generic cargo on visit"
+
+	on complete
+		payment 12500
+		dialog phrase "KW.Phrase.Sol: Io delivery payment"
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+mission "KW.Sol.Inbox [1C]"
+	priority
+	name "[Sol] Delivery to <planet>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination KW.S.000.2.Io
+	cargo "iron plates" 21
+	blocked "${KW.Phrase.Sol: Io cargo blocked}"
+	to offer
+		not "KW.Sol.Inbox [1A]: active"
+		not "KW.Sol.Inbox [1B]: active"
+		has "KW.Sol.Inbox [0]: done"
+		random < 70
+
+	on accept
+		"salary: House of Coreillius" = 300
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io cargo start}`
+			`Further instructions await once this job is done.`
+				accept
+
+	on visit
+		dialog phrase "generic cargo on visit"
+
+	on complete
+		payment 25000
+		dialog phrase "KW.Phrase.Sol: Io delivery payment"
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+# MISSION 2: Mining Operations
+
+mission "KW.Sol.Inbox [2A]"
+	priority
+	name "[Sol] Harvest <mineral> to <planet>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <amount> of <mineral> for <destination>. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination KW.S.000.2.Io
+	substitutions
+		"<mineral>" "Iron"
+		"<amount>" "6"
+	to offer
+		has "KW.Sol.Inbox [1A]: done"
+		has "KW.Sol.Inbox [1B]: done"
+		has "KW.Sol.Inbox [1C]: done"
+		random < 80
+
+	on accept
+		"salary: House of Coreillius" = 350
+
+	on offer
+		set "job-board: enable generic cargo jobs"
+		set "job-board: enable generic passenger jobs"
+		conversation
+			`${KW.Phrase.Sol: Io mineral start}`
+			`You will need a weapon to break asteroids into collectible parts. `
+				to display
+					not "ship attribute: hull damage"
+					has "flagship attribute: asteroid scan power"
+			`You may want an Asteroid Scanner to detect extractable resources from the asteroid field. `
+				to display
+					has "ship attribute: hull damage"
+					not "flagship attribute: asteroid scan power"
+			`You will want an Asteroid Scanner to detect extractable resources from the asteroid field, and a weapon to break them into collectible parts. `
+				to display
+					not "ship attribute: hull damage"
+					not "flagship attribute: asteroid scan power"
+			`For your troubles, your salary has been increased to 350. You may take other jobs to outfit your ship for the job, or hire another pilot to do the work for you.`
+			`Further instructions await once this job is done.`
+				accept
+
+	on visit
+		dialog phrase "generic mineral on visit"
+
+	on complete
+		payment 8600
+		outfit "Iron" -6
+		dialog phrase "KW.Phrase.Sol: Io delivery payment"
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+mission "KW.Sol.Inbox [2B]"
+	priority
+	name "[Sol] Harvest <mineral> to <planet>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <amount> of <mineral> for <destination>. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination KW.S.000.2.Io
+	substitutions
+		"<mineral>" "Iron"
+		"<amount>" "15"
+	to offer
+		has "KW.Sol.Inbox [2A]: done"
+		random < 80
+
+	on accept
+		"salary: House of Coreillius" = 350
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io mineral start}`
+			`You will need a weapon to break asteroids into collectible parts. `
+				to display
+					not "ship attribute: hull damage"
+					has "flagship attribute: asteroid scan power"
+			`You may want an Asteroid Scanner to detect extractable resources from the asteroid field. `
+				to display
+					has "ship attribute: hull damage"
+					not "flagship attribute: asteroid scan power"
+			`You will want an Asteroid Scanner to detect extractable resources from the asteroid field, and a weapon to break them into collectible parts. `
+				to display
+					not "ship attribute: hull damage"
+					not "flagship attribute: asteroid scan power"
+			`Further instructions await once this job is done.`
+				accept
+
+	on visit
+		dialog phrase "generic mineral on visit"
+
+	on complete
+		payment 22000
+		outfit "Iron" -15
+		dialog phrase "KW.Phrase.Sol: Io delivery payment"
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+mission "KW.Sol.Inbox [2C]"
+	priority
+	name "[Sol] Harvest <mineral> to <planet>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <amount> of <mineral> for <destination>. The nearest <mineral> deposit is in <nsystem>, requiring a hyperdrive. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination KW.S.000.2.Io
+	substitutions
+		"<nsystem>" "Denebola"
+		"<dplanet>" "Io"
+		"<mineral>" "Lead"
+		"<amount>" "15"
+	to offer
+		has "KW.Sol.Inbox [2B]: done"
+		random < 80
+
+	on accept
+		"salary: House of Coreillius" = 350
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io mineral start}`
+			`<system> does not have <mineral> deposits. The nearest <mineral> deposit is in <nsystem>.`
+			`Purchase a Basic Chronodrive system from <dplanet> for the means to use hyperlane routes to other star systems. `
+				to display
+					not "ship attribute: hyperdrive"
+					not "ship attribute: jump drive"
+			`You will need a weapon to break asteroids into collectible parts. `
+				to display
+					not "ship attribute: hull damage"
+					has "flagship attribute: asteroid scan power"
+			`You may want an Asteroid Scanner to detect extractable resources from the asteroid field. `
+				to display
+					has "ship attribute: hull damage"
+					not "flagship attribute: asteroid scan power"
+			`You will want an Asteroid Scanner to detect extractable resources from the asteroid field, and a weapon to break them into collectible parts. `
+				to display
+					not "ship attribute: hull damage"
+					not "flagship attribute: asteroid scan power"
+			`Further instructions await once this job is done.`
+				accept
+
+	on visit
+		dialog phrase "generic mineral on visit"
+
+	on complete
+		payment 32000
+		outfit "Lead" -15
+		set "job-board: enable generic mining jobs"
+		event "KW.Sol.Inbox 3A available" 14
+		dialog
+			phrase "KW.Phrase.Sol: Io delivery payment"
+			`Satisfied with your work, your superior informs you that the mining job catalog is open for you to pick a job of your choosing.`
+			`Another task may be available in 14 days. Take your time to rest or explore the map.`
+
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+############### MISSIONS: C1 INBOX II ###############
+#	Post-tutorial basic questline. A little trouble for some specific gains. It is a Navy job after all, you gotta do your duty.
+#
+#	Intent:
+#		Some of the tasks use some intermediate tricks that may help you in your later journey.
+#		Completing this chain of missions unlocks
+#
+#	This is an essential questline. Generally, these missions cannot be declined. If aborted or failed, a mechanism should be in place to restore the failed mission
+
+# MISSION 3: Intermediate Cargo Operations
+
+mission "KW.Sol.Inbox [3A]"
+	priority
+	name "[Sol] Purchase and deliver <amount> units of <outfit> to Earth"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <amount> units of <outfit> to <destination>. The outfit can be purchased from the outfitter <dplanet> in <dsystem>. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	substitutions
+		"<outfit>" "TRS-T Tactical Scanner"
+		"<dplanet>" "Lepo"
+		"<dsystem>" "Arneb"
+		"<amount>" "3"
+	to offer
+		has "event: KW.Sol.Inbox 3A available"
+
+	on accept
+		"salary: House of Coreillius" = 350
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io outfit start}`
+			`There is an additional note: "<outfit> are found only on <dplanet>. Compensation for your troubles would be awarded upon delivery with a bonus. If you have insufficient cash, you may take a temporary loan to finance the purchase, and repay it on delivery.`
+			`Tutorial: You may purchase an outfit and place it in your cargo space instead of outfit space. You can do so at an outfitter with hotkeys (default: C - load to cargo, U - unload to storage), or by using the install/uninstall option with no ships selected (hold Ctrl and left-click to toggle selection of a specific ship). Space is a precious commodity; mastering this techinique can aid you in future adventures to come.`
+			`Further instructions await once this job is done.`
+				accept
+
+	on visit
+		dialog phrase "generic cargo on visit"
+
+	on complete
+		payment 488000 #purchase cost 144000 x 3 = 432000
+		outfit "KW.TRS-T Tactical Scanner" -3
+		dialog
+			phrase "KW.Phrase.Sol: Io delivery payment"
+			`A representative from Traverser Systems was also on the scene, he introduces himself as a regional manager, and hints that he may offer you more jobs transporting materials for his company, should you be interested.`
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+mission "KW.Sol.Inbox [3B]"
+	priority
+	name "[Sol] Harvest <mineral> to <planet>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <amount> of <mineral> for <destination>. The nearest <mineral> deposit is in <nsystem>, requiring a hyperdrive. <mineral> must be stocked in cargo space. You may store partial quotas of <mineral> in planetary storage, then install cargo refits to fulfill the cargo space requirement when you have enough. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination KW.S.000.2.Io
+	substitutions
+		"<nsystem>" "Denebola"
+		"<dplanet>" "Io"
+		"<mineral>" "Lead"
+		"<amount>" "120"
+	to offer
+		has "KW.Sol.Inbox [3A]: done"
+
+	on accept
+		set "KW.Sol.Inbox 3A: outfit given"
+		"salary: House of Coreillius" = 350
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io mineral start}`
+			`As a reminder, the nearest <mineral> deposit is in <nsystem>.`
+
+			branch "gift refit modules"
+				not "KW.Sol.Inbox 3A: outfit given"
+
+			`There is an additional note: "The <mineral> requested exceeds the normal cargo space of a single freighter. Cargo Refit modules had been provided to you before, so use them."`
+
+			label "gift refit modules"
+			action
+				outfit "KW.Cargo Refit" 3
+				event "KW.Sol.Sol Cargo Refit in Io"
+			`There is an additional note: "The <mineral> requested exceeds the normal cargo space of a single freighter. To aid your job, 3 Cargo Refit modules have been purchased and prepared for you, with more available on Io and Lepo. The cost of these outfits has been deducted from the payout on completion, in return you can keep the modules for your own use."`
+				goto "tutorial"
+
+			label "tutorial"
+			`	Tutorial: You may install and uninstall outfits from your ship using hotkeys (default: I - install, U - uninstall) with a selected item on the Outfitter screen. You may also unload and load items into cargo space with another set of hotkeys (default: C - load to cargo, U - unload to storage), or by using the install/uninstall option with no ships selected (hold Ctrl and left-click to toggle selection of a specific ship). Space is a precious commodity; mastering this techinique can aid you in future adventures to come.`
+			`	Further instructions await once this job is done.`
+				accept
+
+	on visit
+		dialog phrase "generic mineral on visit"
+
+	on complete
+		payment 225000
+		outfit "Lead" -120
+		dialog
+			phrase "KW.Phrase.Sol: Io delivery payment"
+			`	The portmaster was pleased with your job. He provides you with a tip - 'There is a reason why most competent pilots leave their nest of Sol behind' - hinting at some tranformation to your career in the days to come.`
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+mission "KW.Sol.Inbox [3C]"
+	priority
+	name "[Sol] Purchase and deliver <amount> units of <outfit> to Earth"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Deliver <amount> units of <outfit> to <destination>. The outfit can be purchased from the outfitter <dplanet> in <dsystem>. Payment is <payment>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	substitutions
+		"<outfit>" "Basic Chronodrive"
+		"<dplanet>" "Io"
+		"<dsystem>" "Sol"
+		"<amount>" "3"
+	to offer
+		has "KW.Sol.Inbox [3B]: done"
+
+	on accept
+		"salary: House of Coreillius" = 350
+
+	on offer
+		conversation
+			`${KW.Phrase.Sol: Io outfit start}`
+			`	There is an additional note: "<outfit> can be purchased in <dplanet>. Compensation for your troubles would be awarded upon delivery with a bonus. If you have insufficient cash, you may take a temporary loan to finance the purchase, and repay it on delivery. Note that the outfits exceed the normal cargo capacity of a single freighter. Additionally, the Chronodrives are very heavy for the space they occupy. It may be easier to transport them as outfits instead of cargo."`
+			`	Tutorial: Remember you can choose whether to install an outfit as either cargo or active outfit. Sometimes one choice is preferable over the other Space is a precious commodity; mastering this techinique can aid you in future adventures to come.`
+			`	Further instructions await once this job is done.`
+				accept
+
+	on visit
+		dialog phrase "generic cargo on visit"
+
+	on complete
+		payment 500000 #purchase cost 150000 x 3 = 450000
+		outfit "KW.Basic Chronodrive" -3
+		dialog
+			phrase "KW.Phrase.Sol: Io delivery payment"
+			`	A representative from ChronoLock Institute was also on the scene, he introduces himself as an associate professor of the Institute, and mentions that the Institute was going to inspect and mount them in a technological expo. He indicates that he would be eager to request more services from you in the future.`
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+# MISSION 4: Basic Combat
+
+mission "KW.Sol.Inbox [4A]"
+	priority
+	name "[Sol] Acquire an Interceptor"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Acquire an Interceptor and go to <destination>. The most basic interceptor is the <dfighter>. New ships can be bought on <dplanet> in <dsystem>."
+	landing
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination "KW.S.017.0.Ebbing Colors"
+	substitutions
+		"<dfighter>" "Firefly"
+		"<dplanet>" "Io"
+		"<dsystem>" "Sol"
+	to offer
+		has "KW.Sol.Inbox [3C]: done"
+
+	on accept
+		"salary: House of Coreillius" = 350
+
+	on offer
+		conversation
+			`You look into your digital notepad, and check your inbox. This time, the job does not have a payout, but your superior has asked you to acquire an Interceptor spacecraft. There, you would perform basic combat training, so discarding weapons is quite... ill-advised.`
+			`	Thereafter, you should report to <destination>. It is four jumps away, so a fuel tank may be prudent.`
+				accept
+
+	on visit
+		dialog `You have landed at <destination> without an Interceptor! Either purchase one at <dplanet>, or if they are already in your fleet, wait for them to arrive in system.`
+
+	to complete
+		has "ships: Interceptor"
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+mission "KW.Sol.Inbox [4B]"
+	priority
+	name "[Sol] Acquire an Interceptor"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Eliminate "
+	landing
+	source "KW.S.017.0.Ebbing Colors"
+
+	to offer
+		has "KW.Sol.Inbox [4A]: done"
+
+	npc disable kill
+		government "Test Dummy"
+		personality staying heroic target
+			confusion 120
+		system destination
+		ship "KW.Shuttle (Light)" "Target Practice"
+		dialog "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
+
+	on accept
+		"salary: House of Coreillius" = 350
+
+	on offer
+		conversation
+			`An instructor of sorts awaits you at the outpost.`
+			`	"Took your bloody time, eh," the instructor sizes you up, before he turns around. "You have done quite a few jobs already. All is good when there is no hostile ship firing at you."`
+
+			choice
+				`	"Am I expecting hostile ships around Earth?"`
+				`	"I have not seen much hostile activity in space."`
+
+			`	"Life is hard. Some turn to piracy and hunt down people like you. The machines take care of most of the problem, but surely you are not going to rely on them forever?", the instructor grunts in near-disbelief.`
+			`	"I have placed a shuttle in orbit. It is lightly armed. Destroy it, then come back. I will be observing you from planetside."`
+				accept
+
+	to complete
+		has "ships: Interceptor"
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"

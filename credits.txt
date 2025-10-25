@@ -1,0 +1,5 @@
+k.world
+author:
+	lovalmidas
+galaxy image:
+	https://www.needpix.com/photo/download/1410680/milkyway-galaxy-space-stars-publicdomain-wallpaper-background-science-astronomy

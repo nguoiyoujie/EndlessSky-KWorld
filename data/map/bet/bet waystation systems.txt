@@ -1,0 +1,326 @@
+system "KW.B.W1.Waypoint B-1"
+	pos 9451.468 -8878.504
+	government KW.Fleet2
+	arrival 1715
+	habitable 1715
+	haze _menu/haze-133
+	link "KW.B.W2.Waypoint B-2"
+	trade Clothing 278
+	trade Electronics 714
+	trade Equipment 521
+	trade Food 376
+	trade "Heavy Metals" 729
+	trade Industrial 811
+	trade "Luxury Goods" 1134
+	trade Medical 738
+	trade Metal 284
+	trade Plastic 388
+	object
+		sprite star/f5
+		period 100
+	object
+		sprite planet/desert10
+		distance 1552
+		period 122
+		object "KW.B.W1.Waystation B-1"
+			sprite planet/station12
+				scale 0.5
+			distance 154.565
+			period 173.051
+	object
+		sprite planet/gas16
+		distance 2359.836
+		period 535
+		object
+			sprite planet/luna-b
+			distance 227
+			period 129.282
+		object
+			sprite planet/desert4-b
+			distance 332
+			period 286.167
+	object
+		sprite planet/jupiter
+		distance 5146
+		period 415
+		object
+			sprite planet/oberon
+			distance 256
+			period 252.263
+
+system "KW.B.W2.Waypoint B-2"
+	pos 9639.468 -9057.171
+	government KW.Fleet2
+	arrival 700
+	habitable 700
+	belt 500
+	haze _menu/haze-33
+	link "KW.B.W1.Waypoint B-1"
+	link "KW.B.W3.Waypoint B-3"
+	minables copper 90 6
+	trade Clothing 242
+	trade Electronics 737
+	trade Equipment 511
+	trade Food 366
+	trade "Heavy Metals" 793
+	trade Industrial 813
+	trade "Luxury Goods" 1082
+	trade Medical 790
+	trade Metal 236
+	trade Plastic 351
+	object
+		sprite star/g3
+		period 100
+	object
+		sprite planet/ocean7-b
+		distance 750.789
+		period 52
+	object
+		sprite planet/uranus-b
+		distance 1119.786
+		period 130
+		object "KW.B.W2.Waystation B-2"
+			sprite planet/station12
+				scale 0.5
+			distance 213
+			period 191.454
+	object
+		sprite planet/gas0
+		distance 2961.211
+		period 454
+	object
+		sprite planet/redias
+		distance 5065.5
+		period 1250
+		object
+			sprite planet/rock12-b
+				scale 0.5
+			distance 370.5
+			period 221.8
+		object
+			sprite planet/rock17-b
+			distance 477.5
+			period 642.62
+		object
+			sprite planet/rock14
+			distance 625.5
+			period 409.41
+
+system "KW.B.W3.Waypoint B-3"
+	pos 9791.129 -9220.796
+	government KW.Fleet2
+	habitable 11350
+	belt 1528 7
+	haze _menu/haze-sarifa
+	link "KW.B.W2.Waypoint B-2"
+	link "KW.B.W4.Waypoint B-4"
+	minables iron 100 10
+	trade Clothing 226
+	trade Electronics 723
+	trade Equipment 494
+	trade Food 357
+	trade "Heavy Metals" 808
+	trade Industrial 854
+	trade "Luxury Goods" 1038
+	trade Medical 742
+	trade Metal 225
+	trade Plastic 314
+	object
+		sprite star/b-giant
+	object
+		sprite planet/lava0-b
+		distance 645.581
+		period 30.602
+	object
+		sprite planet/lava6
+		distance 867.821
+		period 93.867
+	object
+		sprite planet/venus
+		distance 1780
+		period 281.963
+		object
+			sprite planet/rock10-b
+				scale 0.3
+			distance 198.854
+			period 50.658
+	object
+		sprite planet/browndwarf-l-rogue
+		distance 3772
+		period 869.8
+		object
+			sprite planet/ice7-b
+			distance 327
+			period 154.753
+		object "KW.B.W3.Waystation B-3"
+			sprite planet/station12
+				scale 0.5
+			distance 475
+			period 270.931
+	object
+		sprite planet/gas2
+		distance 6365
+		period 1906.6
+		object
+			sprite planet/oberon-b
+			distance 307
+			period 331.285
+
+system "KW.B.W4.Waypoint B-4"
+	pos 9862.134 -9358.505
+	government KW.Fleet2
+	arrival 500
+	habitable 425
+	belt 1868 7
+	haze _menu/haze-sarifa
+	link "KW.B.W3.Waypoint B-3"
+	link "KW.B.W5.Waypoint B-5"
+	minables copper 6 16
+	minables tungsten 6 4
+	minables iron 18 4
+	trade Clothing 258
+	trade Electronics 696
+	trade Equipment 462
+	trade Food 368
+	trade "Heavy Metals" 769
+	trade Industrial 835
+	trade "Luxury Goods" 1105
+	trade Medical 704
+	trade Metal 275
+	trade Plastic 319
+	object
+		sprite star/k5
+			scale 1.5
+		period 100
+	object
+		sprite planet/rock14
+			scale 0.6
+		distance 305
+		period 103.351
+	object
+		sprite planet/neptune-b
+		distance 900
+		period 523.877
+		object "KW.B.W4.Waystation B-4"
+			sprite planet/station12
+				scale 0.5
+			distance 228
+			period 90.099
+	object
+		sprite planet/browndwarf-y
+		distance 1553
+		period 787.47
+	object
+		sprite planet/gas8
+		distance 5806.012
+		period 2074
+
+system "KW.B.W5.Waypoint B-5"
+	pos 9972.467 -9560.616
+	government KW.Fleet2
+	habitable 1310
+	belt 1250
+	haze _menu/haze-yellow
+	link "KW.B.W4.Waypoint B-4"
+	link "KW.B.W6.Waypoint B-6"
+	minables iron 120 1.6
+	minables aluminum 24 3
+	trade Clothing 252
+	trade Electronics 706
+	trade Equipment 453
+	trade Food 306
+	trade "Heavy Metals" 704
+	trade Industrial 787
+	trade "Luxury Goods" 1180
+	trade Medical 711
+	trade Metal 287
+	trade Plastic 339
+	object
+		sprite star/f8
+		period 100
+	object
+		sprite planet/desert7
+			scale 0.6
+		distance 279.859
+		period 23
+	object
+		sprite planet/rock4
+			scale 0.8
+		distance 445.829
+		period 120
+	object
+		sprite planet/rock3
+		distance 1951.304
+		period 550
+	object "KW.B.W5.Waystation B-5"
+		sprite planet/station12
+			scale 0.5
+		distance 1150
+		period 360
+
+system "KW.B.W6.Waypoint B-6"
+	pos 10102.204 -9754.371
+	government KW.Fleet2
+	arrival 5000
+	habitable 5612.21
+	haze _menu/haze-chanai
+	link "KW.B.W5.Waypoint B-5"
+	minables neodymium 8 40
+	trade Clothing 223
+	trade Electronics 722
+	trade Equipment 481
+	trade Food 268
+	trade "Heavy Metals" 739
+	trade Industrial 738
+	trade "Luxury Goods" 1188
+	trade Medical 704
+	trade Metal 306
+	trade Plastic 347
+	object
+		sprite star/k8
+		distance 115.546
+		period 55.93
+		offset 180
+	object
+		sprite star/b5
+		distance 50.954
+		period 55.93
+	object
+		sprite planet/rock10
+		distance 670.799
+		period 51.992
+		object
+			sprite planet/dust0
+			distance 148.486
+			period 136.511
+	object
+		sprite planet/gas8-hot
+		distance 1306
+		period 252.004
+		object
+			sprite planet/desert4
+				scale 0.6
+			distance 162.137
+			period 232.412
+		object
+			sprite planet/rock19
+				scale 0.2
+			distance 205.627
+			period 297.881
+	object
+		sprite planet/gas9-hot
+		distance 2551
+		period 687.953
+		object
+			sprite planet/rock17
+			distance 154.968
+			period 603.66
+	object
+		sprite planet/gas6-hot
+		distance 4096
+		period 1399.694
+		object "KW.B.W6.Waystation B-6"
+			sprite planet/station15
+				scale 0.8
+			distance 241
+			period 141.425

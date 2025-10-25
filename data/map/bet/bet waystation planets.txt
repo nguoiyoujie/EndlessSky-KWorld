@@ -1,0 +1,44 @@
+planet "KW.B.W1.Waystation B-1"
+	"display name" "Waystation B-1"
+	landscape land/station56
+	description "The station boasts a decent population and mimicks a miniature city ship. However, that section was not open to you, but members of the Second Fleet. The Waystation lies adjacent to bases held by the Fleet Service, and this route allows timely response to events occuring with the range of its responsibilities. Nevertheless, a civilian port was available to whichever traveller decided to make a stop for the day in its quarters."
+	spaceport "Captains often saluted one another in this station, and you wonder if this is a custom to be followed. After some questions, you realise that the practice is required only for Second Fleet captains, but civilian spacefarers took a wrong hint and started doing that themselves. Everyone just accepted it and moved on with their duties. A guide did mention that there is an 'interesting' subculture amongst the more permanent denziens dedicated to some kind of captain-related 'cosplay', and offered a contact should you care to join. You are unsure if a captain pretending to be a captain makes sense, and your interface is probably not that capable enough to deal with another kind of game."
+	government KW.Fleet2
+
+planet "KW.B.W2.Waystation B-2"
+	"display name" "Waystation B-2"
+	landscape land/station56
+	description "This Waystation exists in the crossroads of multiple paths. The system itself is positioned slightly off the galactic plane, unmarred by background and neighbouring stars, allowing navigators to reach it easily with greater reliability. There seens to be a trend that the reachable stars get whiter and brighter the closer it is to the core, and the station reasons that being distinguishable from other stars is the primary reason."
+	spaceport "Few facilities exist on this Waystation. Most mining operations use this place as a transit point, and enterprise is kept to a minimum. The station is largely automated save for a few rooms reserved for scientists and celestial observers."
+	government KW.Fleet2
+
+planet "KW.B.W3.Waystation B-3"
+	"display name" "Waystation B-3"
+	landscape land/station56
+	description "A towering satellite, which the Betians call a 'Waystation', is one of the architectural wonders of their species. It uses the local star as a beacon and coordinates with another star system with the same device, so that a lane would be calculated with increased reliability, enough to be used by most minimally proficient captains."
+	spaceport "The conditions are too hot to sustain life, so much of the facilities are handled by physical mechanisms. You are surprised at how straightforward the manual is, and the ease of operating the levers needed to connect your ship to the fuel depot."
+	government KW.Fleet2
+
+planet "KW.B.W4.Waystation B-4"
+	"display name" "Waystation B-4"
+	landscape land/station56
+	description "The use of a yellow star as a Waystation may be strange, but you were told that this is an older variant, born at a time when navigating around higher-energy white stars were more risky. You hardly understand the details of many centuries past, so you simply accepted it. You could not tell the age of this station even relative to others."
+	spaceport "The station's age becomes more apparent when you find out that the refueling modules take fuel from tankers that harvest the ingredients from the nearby gas giant. A refining facility could be identified by its numerous pipes near a section of the station reserved for those haulers."
+	government KW.Fleet2
+	outfitter "Basic Outfits"
+
+planet "KW.B.W5.Waystation B-5"
+	"display name" "Waystation B-5"
+	landscape land/station56
+	description "The fact that there was no planet in suitable orbit did not faze whoever built this station, as it rests within the zone, stablized by thrusters expertly navigating past the asteroid-rich interspace. Somehow it worked. You feel some unease knowing the system's drive lanes may shut off by a tiny rock smashing through a sensitive part of the Waystation. Let's hope the station remains standing the next time you need it."
+	spaceport "Since the Waystation is simply a passage from other homeworlds to the galactic core, the facilities within are basic. The station makes up for its low variability with its scale; thousands of ships can be parked here, and a local hydroponics facility can provide the essentials needed if ever warranted."
+	government KW.Fleet2
+
+planet "KW.B.W6.Waystation B-6"
+	"display name" "Waystation B-6"
+	landscape land/station56
+	description "The terminus of the waypoint route towards the galactic core is bustling with activity, as traders and tourists decked the station as the final stop before their journey into the galactic core. The fabled seat of government lay within the maze of stars. You can't help but ponder why getting into the capital was so much trouble."
+	spaceport "Unlike other Waystations, the spaceport boasts a variety of shipyards and merchants looking to cash in on the high traffic. Amusingly, the displays on the walls of the station occasionally blasts out alerts warning about scams and robbery. Even this place is not exempt from monsters and villains."
+	government KW.Fleet2
+	shipyard "Basic Ships"
+	outfitter "Basic Outfits"

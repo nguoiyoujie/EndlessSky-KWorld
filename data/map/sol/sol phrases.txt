@@ -1,0 +1,66 @@
+############### MISSION REJECT MESSAGES ###############
+
+phrase "KW.Phrase.Sol: declined"
+	word
+		`You have declined an essential task. Your salary is withheld until you return to Sol.`
+
+phrase "KW.Phrase.Sol: failed"
+	word
+		`You have failed to complete the task. Your salary is withheld until you return to Sol.`
+
+############### MISSION DESCRIPTIONS ###############
+
+phrase "KW.Phrase.Sol: Io cargo blocked"
+	word
+		`You look into your digital notepad, and check your inbox. Your superior has instructed you to load <cargo>, but you will have to free up some cargo space to take it.`
+
+phrase "KW.Phrase.Sol: Io order prefix"
+	word
+		`You look into your digital notepad, and check your inbox. `
+		`You heard a familiar notification, and check your inbox. `
+		`You check your inbox. `
+	word
+		`Your superior `
+	word
+		`has instructed `
+		`has ordered `
+		`has requested `
+
+phrase "KW.Phrase.Sol: Io cargo start"
+	word
+		`${KW.Phrase.Sol: Io order prefix}`
+	word
+		`you to load <cargo> and make for <destination>. `
+		`the delivery of <cargo> to <destination>. `
+		`the transfer of <cargo> to <destination>. `
+
+phrase "KW.Phrase.Sol: Io mineral start"
+	word
+		`${KW.Phrase.Sol: Io order prefix}`
+	word
+		`you to harvest <amount> tons of <mineral> and make for <destination>. `
+		`you to deliver <amount> tons of <mineral> to <destination>. `
+
+phrase "KW.Phrase.Sol: Io outfit start"
+	word
+		`${KW.Phrase.Sol: Io order prefix}`
+	word
+		`you to purchase and deliver <amount> units of <outfit> to a contact on <destination>. `
+		`you to deliver <amount> units of <outfit> to <destination>. `
+
+phrase "KW.Phrase.Sol: Io delivery payment"
+	word
+		`The android in charge of unloading and inspecting your delivery `
+		`The assistant android `
+		`The human clerk `
+		`The quartermaster `
+	word
+		`nods `
+		`hums `
+		`signs the handoff `
+	word
+		`with satisfaction. `
+		`approvingly. `
+	word
+		`You collect your payment of <payment>.`
+		`You check that <payment> has been transferred to your account.`

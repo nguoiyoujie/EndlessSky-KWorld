@@ -1,0 +1,505 @@
+############### MISSION: ARCHIVE ###############
+#	
+#
+#	Intent:
+#
+#
+
+mission "KW.Sol.Archive"
+	name "[Archive] Visit the Archive"
+	color selected "KW.Color: locale missions selected"
+	color unselected "KW.Color: locale missions unselected"
+	job
+	repeat
+	description "Visit the Archive."
+	"offer precedence" 998
+	source 
+		system KW.S.000.Sol
+		attributes archive
+
+	on accept
+		conversation
+			`You walk into the halls of the Archives, an inter-system initiative started by the current First Ascendant, Her Ladyship Kasouchinou Namiko.`
+			`	The halls glitter with soft and radiant yellow against oak and mahogany tiles. Despite the traditional look, the archives within are digitalized.`
+			`	A voice greets you, "What may I do for you today?"`
+				goto frontdesk
+
+			label frontdeskreturn
+			`You return to the front desk.`
+
+			label frontdesk
+			choice
+				`	(Proceed to Personal.)`
+					goto personal
+				`	(Proceed to Internal Archives.)`
+					goto intrasystem
+				`	(Proceed to Inter-System Archives.)`
+					goto intersystem
+				`	(Enquire about another person.)`
+					goto otherperson
+				`	(Enquire about game mechanics.)`
+					goto gamemechanics
+				`	(Leave.)`
+					goto exit
+
+### REQUEST FOR INFORMATION, SELF ###
+
+			label personal
+			`<first> <last>`
+			`	Human`
+			`	Born: 12 September 1994, Shalenge District, Yekaterinburg Base`
+			`	Member of the Organization, Ordinary, by birth`
+			`	Member of the Great House of Coreillius, by birth`
+			`	Education Level: Pre-University Diploma`
+			`	Enlisted into Service: CCC Aerospace Force, 2013`
+			`	Commissioned into Service: CCC Aerospace Force, 2020`
+			`	Great House of Coreillius, Lieutenant, 2nd, 2020`
+			`	Great House of Coreillius, Lieutenant, 1st, 2021`
+			`	Great House of Coreillius, Captain, Minoris, 2024`
+			`	Current Station: Captain, '<flagship>', Roving Taskforce, Interspace Logistics Office, Aerospace Command, Yekaterinburg Base`
+			``
+			`	Additional information can be sought from Aerospace Command.`
+
+
+
+			choice
+				`	(Return to the front desk.)`
+					goto frontdeskreturn
+				`	(Leave.)`
+					goto exit
+
+### REQUEST FOR INFORMATION, SOL ###
+
+			label intrasystem
+
+
+			choice
+				`	(Return to the front desk.)`
+					goto frontdeskreturn
+				`	(Leave.)`
+					goto exit
+
+### REQUEST FOR INFORMATION, OTHER SYSTEMS ###
+
+			label intersystem
+
+			choice
+				`	(Return to the front desk.)`
+					goto frontdeskreturn
+				`	(Leave.)`
+					goto exit
+
+
+
+### REQUEST FOR INFORMATION, PERSON ###
+# Mostly little tibits of information about the Organization's structure as a whole.
+# This will not be tested in a quest questionaire, I promise ;)
+			label otherperson
+			`"Depending on your security classification, we may present our records of your requested person. We require the full name and identification code. Your request will be logged."`
+
+			label otherpersonshort
+			`	"Of whom do you wish to inquire?"`
+
+			choice
+				`	"Viro Lebel, C1-D124RCL"` # your direct superior officer
+					to display
+						has "KW: has ID: Viro Leber"
+					goto personinfo.leber
+				`	"Wilgram Morris, C1-D157NKX"` # Morris questline
+					to display
+						has "KW: has ID: Wilgram Morris"
+					goto personinfo.morris
+				`	"Steven Arthur, C3-C945AFC"` # Arthur questline
+					to display
+						has "KW: has ID: Steven Arthur"
+					goto personinfo.arthur
+				`	(Return to the front desk.)`
+					goto frontdeskreturn
+				`	(Leave.)`
+					goto exit
+
+			label personinfo.leber
+			`Viro Leber`
+			`	Human`
+			`	Born: 8 November 1984, Shalenge District, Yekaterinburg Base`
+			`	Member of the Organization, Ordinary, by birth`
+			`	Member of the Great House of Coreillius, by birth`
+			`	Education Level: University, Degree`
+			`	Commissioned into Service: CCC Aerospace Force, 2006`
+			`	Great House of Coreillius, Lieutenant, 2nd, 2006`
+			`	Great House of Coreillius, Lieutenant, 1st, 2008`
+			`	Great House of Coreillius, Captain, Minoris, 2010`
+			`	Great House of Coreillius, Captain, Majorus, 2015`
+			`	Great House of Coreillius, Major, 2017`
+			`	Great House of Coreillius, Lieutenant Colonel, breveted, 2024`
+			`	Current Station: Deputy Director, Interspace Logistics Office, Aerospace Command, Yekaterinburg Base`
+			``
+			`	Additional information can be sought from Aerospace Command.`
+
+			choice
+				`	(Return to the person inquiry list.)`
+					goto otherpersonshort
+				`	(Leave.)`
+					goto exit
+
+			label personinfo.morris
+			`Wilgram Morris`
+			`	Human`
+			`	Born: 4 January 1958, Avgnon District, Alps Base`
+			`	Member of the Organization, Ordinary, by birth`
+			`	Member of the Great House of Coreillius, by birth`
+			`	Education Level: Pre-University Diploma`
+			`	Enlisted into Service: CCC Aerospace Force, 1974`
+			`	Commissioned: CCC Aerospace Force, 1981`
+			`	Great House of Coreillius, Lieutenant, 2nd, 1981`
+			`	Great House of Coreillius, Lieutenant, 1st, 1983`
+			`	Great House of Coreillius, Captain, Minoris, 1986`
+			`	Great House of Coreillius, Captain, Majorus, 1989`
+			`	Great House of Coreillius, Major, 1994`
+			`	Great House of Coreillius, Lieutenant Colonel, 1999`
+			`	Great House of Coreillius, Colonel, 2012`
+			`	Current Station: Head of Operations, Technical Instruction, Evnir Aerospace Base, Yekaterinburg Base`
+			``
+			`	Additional information can be sought from Aerospace Command.`
+
+			choice
+				`	(Return to the person inquiry list.)`
+					goto otherpersonshort
+				`	(Leave.)`
+					goto exit
+
+			label personinfo.arthur
+			`Steven Arthur`
+			`	Human`
+			`	Born: 13 March 1986, [???], United Kingdom`
+			`	Acquired, 24 April 1993`
+			`	Member of the Organization, Subsidary, by acquisition`
+			`	Member of the Great House of Cerebelliumus, 1994`
+			`	Member of the Organization, Ordinary, by merit, 2001`
+			`	Education Level: University, Degree with Honors`
+			`	Enlisted into Profession: Education, 2001`
+			`	Great House of Cerebelliumus, Apprentice, 3rd, 2001`
+			`	Great House of Cerebelliumus, Apprentice, 2nd, 2006`
+			`	Current Station: Unemployed`
+			``
+			`	Additional information can be sought from the Ministry of Home Affairs.`
+
+			choice
+				`	(Return to the person inquiry list.)`
+					goto otherpersonshort
+				`	(Leave.)`
+					goto exit
+
+### GAME MECHANICS ###
+
+			label gamemechanics
+			`	"Which part of the simulation do you wish to inquire?"`
+
+			choice
+				`	(Check the list of planet attributes)`
+					goto gamemechanics.planetattributes
+				`	(Return to the front desk.)`
+					goto frontdeskreturn
+				`	(Leave.)`
+					goto exit
+
+			label gamemechanics.planetattributes
+			`	"Please select the attribute you wish to inspect."`
+
+			choice
+				`	[Urban]`
+					goto gamemechanics.planetattributes.urban
+				`	[Rural]`
+					goto gamemechanics.planetattributes.rural
+				`	[Large]`
+					goto gamemechanics.planetattributes.large
+				`	[Rich]`
+					goto gamemechanics.planetattributes.rich
+				`	[Research]`
+					goto gamemechanics.planetattributes.research
+				`	[Analysis]`
+					goto gamemechanics.planetattributes.analysis
+				`	[Tourism]`
+					goto gamemechanics.planetattributes.tourism
+				`	[Mining]`
+					goto gamemechanics.planetattributes.mining
+				`	[Synthetic]`
+					goto gamemechanics.planetattributes.synthetic
+				`	[Factory]`
+					goto gamemechanics.planetattributes.factory
+				`	[High-Tech]`
+					goto gamemechanics.planetattributes.hitech
+				`	[Farming]`
+					goto gamemechanics.planetattributes.farming
+				`	[Education]`
+					goto gamemechanics.planetattributes.education
+				`	[Military]`
+					goto gamemechanics.planetattributes.military
+				`	[Shipworks]`
+					goto gamemechanics.planetattributes.shipworks
+				`	[Logistics]`
+					goto gamemechanics.planetattributes.logistics
+				`	[Gaia]`
+					goto gamemechanics.planetattributes.gaia
+				`	[Archive]`
+					goto gamemechanics.planetattributes.archive
+				`	[Beacon]`
+					goto gamemechanics.planetattributes.beacon
+				`	[Terraform]`
+					goto gamemechanics.planetattributes.terraform
+				`	[Isolated]`
+					goto gamemechanics.planetattributes.isolated
+
+				`	(Return to the mechanics listing.)`
+					goto gamemechanics
+				`	(Leave.)`
+					goto exit
+
+			label gamemechanics.planetattributes.urban
+			`Planet Attribute [Urban]`
+			``
+			`	High-density population, indicates high economic and trade activity.`
+			`	Exports: `
+			`		Farmers to [Farming]`
+			`		Workers to [Mining]`
+			`		Workers to [Factory]`
+			`		Workers/Farmers to [Synthetic]`
+			`		Workers to [High-Tech]`
+			`		Workers to [Logistics]`
+			`		Workers to [Shipworks]`
+			`		Researchers to [Research]`
+			`		Researchers to [High-Tech]`
+			`		Tourists to [Tourism]`
+			`		Students to [Education]`
+			``
+			`	Imports: `
+			`		Trade goods of all kinds`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.rural
+			`Planet Attribute [Rural]`
+			``
+			`	Low-density population, indicates lower economic activity, but often associated with [Rich] and [Tourism] traits.`
+			`	Exports: `
+			`		Farmers to [Farming]`
+			`		Tourists to [Tourism]`
+			`		Students to [Education]`
+			``
+			`	Imports: `
+			`		Trade goods of all kinds`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.large
+			`Planet Attribute [Large]`
+			``
+			`	Large planet and population regardless of density, indicates great economic activity. May make large bulk delivery requests.`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.rich
+			`Planet Attribute [Rich]`
+			``
+			`	This planet offers living conditions comparable to paradise. Jobs offered by neighboring systems may require an luxurious outfit for travellers going there.`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.research
+			`Planet Attribute [Research]`
+			``
+			`	At least a research station or lab is available.`
+			`	Exports: `
+			`		'Research Samples' to [Analysis]`
+			``
+			`	Imports: `
+			`		Researchers`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.analysis
+			`Planet Attribute [Analysis]`
+			``
+			`	At least a material analysis station or lab is available.`
+			`	Imports: `
+			`		'Research Samples' from [Research]`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.tourism
+			`Planet Attribute [Tourism]`
+			``
+			`	This planet hosts a tourist attraction.`
+			`	Imports: `
+			`		Tourists`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.mining
+			`Planet Attribute [Mining]`
+			``
+			`	A mining and material processing facility is available.`
+			`	Exports: `
+			`		'Metal' to [Factory]`
+			`		'Metal' to [Urban]`
+			`		'Metal' to [Rural]`
+			`		'Heavy Metals' to [Factory]`
+			`		'Heavy Metals' to [High-Tech]`
+			`	Imports: `
+			`		'Equipment'`
+			`		Workers`
+			`		Asteroid Minables`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.synthetic
+			`Planet Attribute [Synthetic]`
+			``
+			`	A polymer-processing facility is available, giving rise to oils, plastics, cloth, rubbers and other elastomer products`
+			`	Exports: `
+			`		'Clothing' to all`
+			`		'Plastic' to [Factory]`
+			`		'Plastic' to [Urban]`
+			`		'Plastic' to [Rural]`
+			`	Imports: `
+			`		'Equipment'`
+			`		Workers`
+			`		Farmers`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.factory
+			`Planet Attribute [Factory]`
+			``
+			`	Various industrial elements are on-site to work raw materials into intermediate products.`
+			`	Exports: `
+			`		'Equipment' to any`
+			`		'Electronics' to any`
+			`		'Construction' to any`
+			`		'Military' to [Military]`
+			`	Imports: `
+			`		'Metal'`
+			`		'Plastic'`
+			`		'Industrial'`
+			`		'Heavy Metal'`
+			`		Workers`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.hitech
+			`Planet Attribute [High-Tech]`
+			``
+			`	High-tech industry take intermediate and rare materials and produce high-quality products.`
+			`	Exports: `
+			`		'Industrial' to [Factory]`
+			`		'Medical' to any`
+			`		'Electronics' to any`
+			`		'Luxury Goods' to any`
+			`		'Military' to [Military]`
+			`		'Ship Systems' to [Shipworks]`
+			`		'Ship Alloys' to [Shipworks]`
+			`	Imports: `
+			`		'Equipment'`
+			`		'Heavy Metal'`
+			`		Workers`
+			`		Researchers`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.farming
+			`Planet Attribute [Farming]`
+			``
+			`	Harvests crops for the colony. Food is needed by all.`
+			`	Exports: `
+			`		'Food' to any`
+			`	Imports: `
+			`		'Equipment'`
+			`		Farmers`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.education
+			`Planet Attribute [Education]`
+			``
+			`	Hosts educational facilities for the benefit of the workforce.`
+			`	Exports: `
+			`		Researchers to [Research]`
+			`		Researchers to [High-Tech]`
+			`	Imports: `
+			`		Students`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.military
+			`Planet Attribute [Military]`
+			``
+			`	Hosts a significant military presence, as far as intraspace combat is concerned.`
+			`	Imports: `
+			`		'Military'`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.shipworks
+			`Planet Attribute [Shipworks]`
+			``
+			`	Hosts at least a significant shipbuilding capacity. Often associated with systems with a Shipyard.`
+			`	Imports: `
+			`		'Ship Systems'`
+			`		'Ship Alloys'`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.logistics
+			`Planet Attribute [Logistics]`
+			``
+			`	This planet acts as a transfer location for all types of goods. Very profitable for cargo delivery fleets.`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.gaia
+			`Planet Attribute [Gaia]`
+			``
+			`	The Gaia System is conceptualized and designed by System Phi. It is a modular material and lifeform analysis suite implanted deep within the planet's crust, sometimes embedding it within the mantle. It's primary task is to monitor the status of the planet as well as the inhabitants within. In some of the later variants, the Gaia System has some capacity to influence planetary attributes and shape the world into a more hospitable place to live in.`
+			`	It is said that some Gaia Systems are capable of remote influence, allowing the system to persuade some residents to perform actions not initiated by themselves. The ethics of this development is still in question, and in the interim, such uses are restricted and allowed only with permission of the residing World Controller.`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.archive
+			`Planet Attribute [Archive]`
+			``
+			`	Prior, each System's libraries and knowledge base are heavily restricted by the System's government, often necessitating the World Controller's approval and treaties to engage in technological and cultural exchanges.`
+			`	In 2021, the First Ascendant, Her Ladyship Kasouchinou Namiko, directed the Council of World Systems to form a network of Archives, following the limited success of Knowledge Archives that was established in Sol. Such Archives would compile information about the System, its culture, its history, its government, and its deals with the central government. The records would be available to view as public record for the residents and members of the Common Forum, the inter-galactic plebian committee.`
+			`	It is hoped that with this initiative would lower the boundaries between Systems and foster greater cooperation in technology and culture. The Common Forum has celebrated the initiative. However, not all System governments are happy with the path taken toward this objective.`
+			`	A faction's Archives are typically held within the faction's homeworld.`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.beacon
+			`Planet Attribute [Beacon]`
+			``
+			`	Enables rescue missions.`
+			`	Interspace travel is inherently a dangerous and risky adventure. The loss of hull integrity, a hyperdrive, or a depleted oxygen tank can spell doom for anyone involved. Though the loss is usually total, a fraction of doomed pilots would manage to land on an uninhabited planet and wait for help to arrive.`
+			`	Beacon outposts look out for stranded ships and attempt to rescue them. You may ask to be enlisted in such a job.`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.terraform
+			`Planet Attribute [Terraform]`
+			``
+			`	Indicates that a terraforming project is active on site. These sites may provide their own set of missions. Due to extraterrestial contamination concerns, this trait is usually accompanied with [Isolated] to prevent generic missions from being offered.`
+			``
+				goto gamemechanics.planetattributes
+
+			label gamemechanics.planetattributes.isolated
+			`Planet Attribute [Isolated]`
+			``
+			`	Indicates that this planet should not be offered generic jobs, nor should it be a destination of generic jobs. The planet may offer its own specific missions.`
+			``
+				goto gamemechanics.planetattributes
+
+			label exit
+			`	The voice bid you goodbye as you return to the spaceport.`
+		fail
+
+
+

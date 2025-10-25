@@ -1,0 +1,6485 @@
+############### GENERIC INTERSYSTEM JOBS ###############
+# Note: Generic jobs should have a destination at least one jump away. For intrasystem jobs, define them individually
+# allow to show on non-visited, 'disclosing' undiscovered outposts
+
+mission "KW.Generic.Job Count Reset"
+	invisible
+	repeat
+	landing
+	on enter
+		clear "job-board: cargo jobs"
+		clear "job-board: bulk cargo jobs"
+		clear "job-board: mega cargo jobs"
+		clear "job-board: passenger jobs"
+
+# job limits
+#						Rural	Normal 	Urban 	Logi	Large
+#	cargo jobs	 		3 		4 		5 		9		+3
+#	bulk cargo jobs 	1 		2 		3 		6		+2
+#	mega cargo jobs 	0 		1 		2 		4		+1
+#	passenger jobs 		3 		4 		5 		-		+3
+
+### COMMODITY: FOOD ###
+#		farming -> any
+#
+# Food is needed everywhere
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.00.Food Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Cargo [3]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 5 2 .1
+	to offer
+		random < 15
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 1 3
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Cargo [4]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 5 2 .1
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 4 8
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes factory logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 130
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes factory logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 130
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes factory logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 130
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes factory logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 135
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.00.Food Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Food" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes farming logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes factory logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 135
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: CLOTHING ###
+#		synthetic -> any
+#
+# Clothing is needed everywhere
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.01.Clothing Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Cargo [3]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 1 3
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Cargo [4]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 4 8
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes factory logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 130
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes factory logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 130
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes factory logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 130
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes factory logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 135
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.01.Clothing Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Clothing" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes factory logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 135
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: METAL ###
+#		mining -> factory
+#
+# Factories request preprocessed materials from mining outposts
+# Use these amounts
+#		Normal:	5 2 .1 (to urban / rural)
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.02.Metal Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Metal" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.02.Metal Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Metal" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		attributes urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.02.Metal Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Metal" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		attributes urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.02.Metal Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Metal" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes factory logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.02.Metal Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Metal" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes factory logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.02.Metal Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Metal" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes factory logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.02.Metal Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Metal" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes factory logistics
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 150
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.02.Metal Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Metal" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes factory logistics
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 150
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: PLASTIC ###
+#		synthetic -> factory / urban / rural
+#
+# Factories request preprocessed materials from synthetic/polymeric-producing outposts
+# Use these amounts
+#		Normal:	5 2 .1 (to urban / rural)
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.03.Plastic Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		attributes urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		attributes urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Cargo [3]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 5 2 .1
+	to offer
+		random < 15
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 1 3
+		attributes urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Cargo [4]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 5 2 .1
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 4 8
+		attributes urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes factory logistics urban rural
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes factory logistics urban rural
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes factory logistics urban rural
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes factory logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 150
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.03.Plastic Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Plastic" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes synthetic logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes factory logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 150
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: EQUIPMENT ###
+#		factory -> any
+#
+# Equipment is needed everywhere
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.04.Equipment Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Equipment" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.04.Equipment Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Equipment" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.04.Equipment Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Equipment" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.04.Equipment Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Equipment" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes hitech logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.04.Equipment Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Equipment" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes hitech logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.04.Equipment Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Equipment" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes hitech logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.04.Equipment Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Equipment" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes hitech logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 150
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.04.Equipment Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Equipment" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes hitech logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 150
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: INDUSTRIAL ###
+#		hitech -> factory
+#
+# Industrial equipment is needed primarily by factories
+# Factories typically don't take small orders
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.05.Industrial Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Industrial" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes factory logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.05.Industrial Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Industrial" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes factory logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.05.Industrial Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Industrial" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes factory logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.05.Industrial Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Industrial" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes factory logistics
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.05.Industrial Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Industrial" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes factory logistics
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: MEDICAL ###
+#		factory -> any
+#
+# Medical supplies is needed everywhere
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.06.Medical Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Medical" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.06.Medical Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Medical" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.06.Medical Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Medical" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.06.Medical Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Medical" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.06.Medical Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Medical" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.06.Medical Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Medical" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.06.Medical Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Medical" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.06.Medical Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Medical" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: ELECTRONICS ###
+#		factory / hitech -> any
+#
+# Electronics is needed everywhere
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.07.Electronics Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Electronics" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.07.Electronics Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Electronics" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.07.Electronics Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Electronics" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.07.Electronics Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Electronics" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.07.Electronics Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Electronics" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.07.Electronics Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Electronics" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.07.Electronics Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Electronics" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.07.Electronics Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Electronics" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: HEAVY METALS ###
+#		mining -> factory / hitech
+#
+# Both factories and high-tech factories demand heavy metals
+# Use these amounts
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.08.Heavy Metals Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Heavy Metals" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes factory hitech logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.08.Heavy Metals Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Heavy Metals" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes factory hitech logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.08.Heavy Metals Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Heavy Metals" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes factory hitech logistics
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.08.Heavy Metals Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Heavy Metals" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes factory hitech logistics
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 180
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.08.Heavy Metals Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Heavy Metals" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes mining logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes factory hitech logistics
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 180
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: LUXURY GOODS ###
+#		hitech -> any
+#
+# Luxury Goods is demanded by rural / urban communities
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.09.Luxury Goods Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Luxury Goods" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 180
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.09.Luxury Goods Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Luxury Goods" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 180
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.09.Luxury Goods Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Luxury Goods" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		attributes logistics urban rural
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 180
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.09.Luxury Goods Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Luxury Goods" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics urban rural
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 185
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.09.Luxury Goods Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Luxury Goods" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes logistics urban rural
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 185
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.09.Luxury Goods Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Luxury Goods" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes logistics urban rural
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 185
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.09.Luxury Goods Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Luxury Goods" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 190
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.09.Luxury Goods Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Luxury Goods" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 190
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: CONSTRUCTION ###
+#		factory -> any
+#
+# Construction materials is needed everywhere
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.10.Construction Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Construction" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.10.Construction Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Construction" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.10.Construction Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Construction" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 140
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.10.Construction Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Construction" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.10.Construction Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Construction" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.10.Construction Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Construction" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes logistics urban large
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 145
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.10.Construction Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Construction" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 150
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.10.Construction Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Construction" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes factory logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes logistics urban
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 150
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: MILITARY ###
+#		factory / hitech -> military
+#
+# Factories produce mil-grade components to military bases
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.11.Military Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Military" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics military
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.11.Military Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Military" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		attributes logistics military
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.11.Military Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Military" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		attributes logistics military
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.11.Military Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Military" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics military
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.11.Military Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Military" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes logistics military
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.11.Military Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Military" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes logistics military
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.11.Military Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Military" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes logistics military
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.11.Military Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Military" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes factory hitech logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes logistics military
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: SHIP ALLOYS ###
+#		 hitech -> military
+#
+# High-tech factories supply shipyards
+# Use these amounts
+#		Normal:	5 2 .1
+#		Bulk:	20 2 .075
+#		Mega:	30 3 .04 (to urban + large)
+# Treat them like generic cargo jobs with no bonuses
+mission "KW.Generic.12.Ship Alloys Cargo [0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Ship Alloys" 5 2 .1
+	to offer
+		random < 35
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics shipworks
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.12.Ship Alloys Cargo [1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Ship Alloys" 5 2 .1
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 3 4
+		attributes logistics shipworks
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.12.Ship Alloys Cargo [2]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Ship Alloys" 5 2 .1
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 5 6
+		attributes logistics shipworks
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 165
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.12.Ship Alloys Bulk Cargo [0]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Ship Alloys" 20 2 .075
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 1 2
+		attributes logistics shipworks
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.12.Ship Alloys Bulk Cargo [1]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Ship Alloys" 20 2 .075
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 3 6
+		attributes logistics shipworks
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.12.Ship Alloys Bulk Cargo [2]"
+	name "Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Ship Alloys" 20 2 .075
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 6
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 8
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 1
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 2
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 4
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 3
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: bulk cargo jobs" < 5
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 6 8
+		attributes logistics shipworks
+		not attributes isolated
+	on offer
+		"job-board: bulk cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 170
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.12.Ship Alloys Mega Cargo [0]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Ship Alloys" 30 3 .04
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 4 7
+		attributes logistics shipworks
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Generic.12.Ship Alloys Mega Cargo [1]"
+	name "Large Bulk Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo "Ship Alloys" 30 3 .04
+	to offer
+		random < 10
+		has "job-board: enable generic cargo jobs"
+		"cargo space" > 100
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 4
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 5
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 0
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 1
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 2
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: mega cargo jobs" < 3
+	source
+		attributes hitech logistics
+		not attributes isolated
+	destination
+		distance 8 12
+		attributes logistics shipworks
+		attributes large
+		not attributes isolated
+	on offer
+		"job-board: mega cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 175
+		dialog phrase "generic cargo delivery payment"
+
+### COMMODITY: RESEARCH SAMPLES ###
+# Most outposts are research stations. Over time they may develop other attributes. Research-related jobs will offer a bonus for your troubles
+mission "KW.Generic.13.Research Samples [0]"
+	job
+	repeat
+	name "Deliver research samples to <planet>"
+	description "${KW.Phrase.Job: timed cargo offer}"
+	cargo "research samples" 15 3 .1
+	deadline
+	to offer
+		random < 30
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes research
+		not attributes isolated
+	destination
+		attributes analysis
+		distance 1 3
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		dialog phrase "generic cargo delivery payment"
+		payment 1500 160
+
+mission "KW.Generic.13.Research Samples [1]"
+	job
+	repeat
+	name "Deliver research samples to <planet>"
+	description "${KW.Phrase.Job: timed cargo offer}"
+	cargo "research samples" 15 3 .1
+	deadline
+	to offer
+		random < 20
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes research
+		not attributes isolated
+	destination
+		attributes analysis
+		distance 1 3
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		dialog phrase "generic cargo delivery payment"
+		payment 1500 160
+
+mission "KW.Generic.13.Research Samples [2]"
+	job
+	repeat
+	name "Deliver research samples to <planet>"
+	description "${KW.Phrase.Job: timed research sample offer}"
+	cargo "research samples" 3 3 .1
+	deadline
+	to offer
+		random < 15
+		has "job-board: enable generic cargo jobs"
+		or
+			and
+				has "flagship planet attribute: logistics"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 9
+			and
+				has "flagship planet attribute: logistics"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 12
+			and
+				has "flagship planet attribute: rural"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 3
+			and
+				has "flagship planet attribute: rural"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 6
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 4
+			and
+				not "flagship planet attribute: rural"
+				not "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 7
+			and
+				has "flagship planet attribute: urban"
+				not "flagship planet attribute: large"
+				"job-board: cargo jobs" < 5
+			and
+				has "flagship planet attribute: urban"
+				has "flagship planet attribute: large"
+				"job-board: cargo jobs" < 8
+	source
+		attributes research
+		not attributes isolated
+	destination
+		attributes analysis
+		distance 1 3
+		not attributes isolated
+	on offer
+		"job-board: cargo jobs"++
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		dialog phrase "generic cargo delivery payment"
+		payment 1500 160
+

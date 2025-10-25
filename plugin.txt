@@ -1,0 +1,4 @@
+name "k.world"
+about "Explore a different world!"
+authors
+	"lovalmidas"

@@ -1,0 +1,311 @@
+planet KW.S.000.0A.Yekaterinburg
+	"display name" Yekaterinburg
+	attributes earth urban factory logistics analysis military large gaia archive
+	landscape land/city20
+	description `Homeworld of humanity, bliss in ignorance.`
+	description `	The human species have recently entered an era of 'information technology' and is getting into grips with the notion of travelling within intra-space - a term representing the space within a star's influence up to its magnetosphere. Fortunately, this venture is not old, and visitors have came and shaped humanity to its current height with an invisible hand. Unfortunately, this hand wishes to remain invisible.`
+	description `	Yekaterinburg, also known at some point as the second capital of Russia, is home to an underground megacity extending from the rocks of the Ural to the surface of the mantle. It is relatively young, having started construction in 1942 leeching off the policies from the Soviet Union, and opened for service and residence in 1955. Its early years was formative with the introduction of the first AI supercomputer 'C-CUBE' as its President and city manager, which expanded the city to its present heights and depths today.`
+
+	port "Ural Port"
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `There are four spaceports around this world - Rotterdam, Osaka, Riau Island and Yekaterinburg. They are operated by a group known as the 'Organization', a 5-million underground nation living to the whims of a selective upper-class known as the 'Establishment'. The elders used to be known as 'the Committees', but had taken this new name as if to spite a certain group of 'fickle populists'. Collectively, they are known as the 'Underworld', relative to the 'Surface World' of nations that remain naive to the infestation crawling under their feet.`
+		description `	The following are traits inherent within this city:`
+		description `	[Urban/Large]: The city under Yekaterinburg hosts an impressive 1.5 million people, of which 200,000 are Sentient Machines.`
+		description `	[Factory]: The Organization's major enterprises, such as Codex Corporation, Traverseer Systems, and Pathogen Labs, are headquarted in this city, its factories in perpetual motion to meet the demands of the government and its people.`
+		description `	[Logistics]: The Organization's major House of Coreillius specializes in military and logistical solutions, managing the traffic of goods and people between clandestine underground bases. The city lies within the center of a Maglev network that connects it to Alps, Rotterdam, Caspian, Kyoto (via Yanbing-Yanbian) and Wuhan Bases.`
+		description `	[Analysis]: The Organization's Adminstration-aligned institutions such as WEAPL, Institute of Advanced Robotics and Cybernetics (InsARC), and ChronoLock Institute are also situated in this city. The Organization's major House of Cerebelliumus specialize in professional trades and sciences. Only with their combined efforts was the space age possible.`
+		description `	[Military]: Due to its nature as a secret organization, the Organization is primarily a closed police state, which uses any means necessary to evade detection by the Nation States on the surface. It is not above infiltrating or inciting wars amongst surface nations to ensure its survival.The Organization's major House of Cerberus specializes in episonage and subterfuge to give the Organization the edge it needs to maintain its secrecy.`
+		description `	[Gaia/Archive]: Yekaterinburg has direct access to both the planetary Dreamweaver/Gaia system installed within the mantle, and the planetary Archive network. Should you be fortunate, you may be able to access their records.`
+	government KW.Sol
+	outfitter "KW.Sol.Earth Exclusive"
+	outfitter "KW.Sol.Earth 1"
+	# outfitter "KW.Sol.Earth 2"
+
+planet KW.S.000.0B.Alps
+	"display name" Alps
+	attributes earth urban education hitech analysis
+	landscape land/canyon10-harro
+	description "Homeworld of humanity, bliss in ignorance."
+	description "	On the surface, Rotterdam is home to one of Europes's largest seaports. Under the ground, Rotterdam is linked to a underground base beneath the Alps - the old capital of the Organization before Yekaterinburg Base was built. It remains one of the more prosperous locales within the underground network."
+	port "Rotterdam"
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `Rotterdam's spaceport boasts an activity rivalled only by Yekaterinburg's own. Often, corporations would direct their captains to avoid congestion in Yekaterinburg and land on Rotterdam, where the cargo are parked in warehouses or sent to their destination via rail.`
+		description `	The following are traits inherent within this city:`
+		description `	[Urban]: Rotterdam is linked to Alps Base, the old underground capital of the Organization prior to 1950s. Alps Base is still one of its major cities with a population of around 800,000 as of the 2020 census.`
+		description `	[Education]: While the majority of the most prestigious schools and universities reside within the capital, Alps boasts a generous offer of more than 25 trade schools for a future in the Organization, on Earth and beyond.`
+		description `	[High-tech/Analysis]: A good fraction of the Organization's private sector remained in the Alps after Yekaterinburg's founding. These companies form the bedrock of technological prowess compared to the rest of the world.`
+
+	government KW.Sol
+
+planet KW.S.000.0C.Kyoto
+	"display name" Kyoto
+	attributes earth hitech tourism analysis
+	landscape land/city21
+	description "Homeworld of humanity, bliss in ignorance."
+	description "	Kyoto Base is one of the more modern underground bases, having been founded in 1985 when the Organization opened new facilities in Asia. It has a modest population of less than 200,000, and most of the ground remain undisturbed, marking a curious balance between modernity and ancient harmony with nature."
+	port "Osaka"
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `Osaka is the port counterpart to Kyoto Base. The following are traits inherent within this city:`
+		description `	[Tourism]: The relatively serene atmosphere in the Far East makes the location a favorite destination for tourists.`
+		description `	[High-tech/Analysis]: Many of the newer enterprises start their life in undersaturated Kyoto. Due to the smaller pool of workforce, the city primarily focused on light and high-tech industries such as software and chemical research.`
+	government KW.Sol
+
+planet "KW.S.000.0D.Riau Island"
+	"display name" "Riau Island"
+	attributes earth tourism rural
+	landscape land/beach0
+	description "Homeworld of humanity, bliss in ignorance."
+	description "	Riau Island was intended to be a spaceport serving the South. However, development of the South remained lacking, and with the abandonment of Singapore Base, the southern influence was maintained only by Lagos (Africa) and Wuhan/Tibet (Asia). As such, the port is minute and doubles as a port of call for seaborne enterprise."
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `Riau Island is the southern-most port capable of serving interspace vessels. The closest Organization-affliated outpost is Flinders Island Free Base, which had gained independence in 2014 and remained an ally since. The locale draws much of its support from FIFB.`
+		description `	The following are traits inherent within this area:`
+		description `	[Rural]: There are few people, and most of the workers live in floating villages formed by boats. Due to the mobility of the people in the area, it is difficult to obtain a precise number of the population, but it is estimated that between 5,000 to 15,000 are within sailing range of the port at any given time.`
+		description `	[Tourism]: Those who dislike the stress of urban life would find this soothing place welcome.`
+	government KW.Sol
+
+planet KW.S.000.1.Moon
+	"display name" Luna
+	landscape land/earthrise
+	description "The lunar surface is clean, almost void of any activity if not for the occasional sight of a colored flag or a bumbling rover. "
+	spaceport "Interestingly, the spaceport isn't on the Moon, but on an array of ships further in orbit around the Earth. You don't notice them until you were given directions to them from the 'port'. The facilities in the port-ship is sufficient for basic operations such as refuelling and logistics. Evidently, whoever directed this operation insisted that the lunar surface be left untouched for the rest of humanity."
+	government KW.Sol
+
+planet KW.S.000.2.Io
+	"display name" Io
+	attributes mining factory military beacon
+	landscape land/mars3
+	description `The existence of even the most basic of spacefaring technologies allowed this moon of Jupiter to be observed, and eventually explored. For most of humanity, this moon remains an object of intrigue and imagination of a possible outpost. To those burdened with knowledge, the imagination had been lost; a outpost already exists, under the ownership of the human 'Organization' in name, but almost entirely populated by mechanical beasts known as the 'Sentient Machines'.`
+	description `	As though mimicking the human Organization's division into its three Houses, the Sentient Machines on Io Base are governed by the 'House of Xanadu', and subgroups made up their own colors like 'Vermillion'. You are not sure if this is intended to be a homage or a mockery.`
+	port "Io Base"
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+		description `The few humans you sight within this monolith of iron and steel come and go in large mechanical suits. Logistics in this base is hard work, being the center of operations for any adventurous soul wishing to make it into interspace.`
+		description `	The Machines are a proud people. Anyone who wished to enlist the Machines into their crew would be... politely referred back to Earth.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Mining/Factory]: Due to sensitivites surrounding the handling exterterrestial objects on Earth, almost all processing of asteroid materials are performed in Io.`
+		description `	[Military]: The Sentient Machines maintain a token amount of military force in this location. Whatever the true extent of their power is, they are not willing to share.`
+		description `	[Beacon]: Humans often get lost and stranded in space. The Machines organize rescue parties to bring them back to civilization.`
+	government KW.Machines
+	shipyard "KW.Sol.Basic Ships"
+	outfitter "KW.Sol.Io Exclusive"
+	outfitter "KW.Sol.Io 1"
+	#outfitter "KW.Sol.Io 2"
+	#outfitter "KW.Sol.Temp"
+
+planet KW.S.001.0.Advent
+	"display name" Advent
+	landscape land/snow5
+	description "The humans expected at least one other habitable planet across the galaxy. They did not expect one right next door. The 'planet' is smaller than the moon, and much work remains before the planet is ready to sustain life, but those are easy steps compared to the galactic lottery. Melting the ice is but a matter of time."
+	government Uninhabited
+
+planet KW.S.002.0.Tiptoe
+	"display name" Tiptoe
+	attributes research
+	landscape land/desert4
+	description "When human explorers first used Chronodrives, the brightest stars of the night sky were their first targets, not only because they could ride on the historical fame of the star, but also because navigation relied on the identifying stars relative to their immediate surroundings. It is bad for a captain to gun his ship towards a speck of light and miss by 100x his anticipated distance, and gravity wells can only be sensed at close-range. Therefore, most starlanes from Sol led to especially hot and luminous systems."
+	description "	Rigel was an early challenge due to occasional interference from Betelgeuse. The challenge was short-lived. When the first explorers arrived, they found no habitable systems. Nonetheless, this piece of rock was far enough from the glazing white heat to secure at least some form of foothold."
+	port "Outpost"
+		recharges
+			energy
+			fuel
+		services
+			trading
+			"job board"
+			"offers missions"
+		description `A cave amongst the mountains reveals a base facing north, away from the glare of the multiple stars. At this distance, temperatures are still warmer than Earth, and solar panels had been fitted with special materials to work in this environment. Energy is hardly a problem, so long as cooling systems continue to work.`
+		description `The port is functional but understaffed, you and your crew will have to share some of the workload for refuel and logistics. No shield or hull repair services are offered here.`
+			to display
+				"flagship crew" > 1
+		description `The port is functional but understaffed, you will have to share some of the workload for refuel and logistics. No shield or hull repair services are offered here`
+			to display
+				"flagship crew" <= 1
+		description `	The following are traits inherent within this planet:`
+		description `	[Research]: A research facility on site regularly dispatches drones to collect and test geological samples. The researches are not immediately keen to share their work with you.`
+	government KW.Sol
+
+planet KW.S.003.0.Companion
+	"display name" Companion
+	landscape land/sky5
+	description "Imagine the bewilderment of scientists when they found that the known 'substellar companion' of this star was really a curious system of planets. The gas giants are probably responsible for the strange oscillation. In retrospect, given Bet's attempts to hide themselves from less advanced worlds, such an interference might have had the intended effects on our night sky. What is next, Bet trying to fool humans by 'exposing' their position as Betelgeuse and send us in the opposite direction?"
+	government Uninhabited
+
+planet KW.S.005.0.Marigold
+	"display name" Marigold
+	attributes urban
+	landscape land/valley12-harro
+	description "A beautiful landscape worthy of colonization, marred by bickering politics. The story is older than your grandparents, but based on the records and sparse monuments in the settlement, multiple Systems had attempted to lay claim on this world, and to prevent hostile intentions and possible infarction into human space, higher courts mediated an settlement where the planet would be stewarded by the Machines and population be limited."
+	description "	Over time, it is hoped that humanity will inherit this planet as one of their own."
+		port "Marigold Base"
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"hire crew"
+		description "A functional spaceport with a mix of people and technology, speaking in tongues you can sparsely recognize. You could infer that a good number of them are polygots, if only by the fact some of them wear pocket instruments to emulate some articulations not possible by their biology. The people on this world seem at least oblivious to the politics stewing within their capitals."
+		description "	The Machines are a proud people. Anyone who wished to enlist the Machines into their crew would be... politely turned away. Better to source from other populations."
+
+	government KW.Machines
+	shipyard "Basic Ships"
+	outfitter "KW.Sol.Marigold 1"
+
+planet KW.S.007.0.Magellan
+	"display name" Magellan
+	landscape land/mars1
+	description "When the first human explorers traversed the immediate stars, some star systems were more interesting than others. Arcux, being a binary star with cultural significance to several nations on Earth, was one of such feats to conquer. When the feat was achieved, the explorers landed on one of the rocks just far enough to be endured by human life. Though this expedition, like all others, were kept from the bickering nations on the Surface World, the human organization held a vote on what name to honor this experience. After some contemplation, a momento to the Age of Exploration was offered, and the name stuck to this day."
+	government Uninhabited
+
+planet KW.S.008.0.Planstation
+	"display name" Planstation
+	landscape land/canyon01
+	attributes research farming synthetic
+	description `The canyons and valleys in this moon allowed for a wary traveller to rest within, shielded from the cosmic radiation that buffeted this space.`
+	port "Station Docks"
+		recharges
+			energy
+			fuel
+		services
+			trading
+			"job board"
+			"offers missions"
+		description `The station houses a research team working on the feasibility of colonization on the moon of a brown dwarf. They have managed to get some kind of plant to grow, so the venture had not been a complete waste, but the artifical conditions that needed to be applied to sustain life made it difficult for this base to continue their work; a different moon with better conditions is sorely needed. The heat from the local star probably wasn't helping.`
+		description `	As a research station, the local population is small and more interested in their own projects than joining you in space.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Research]: A research facility on site regularly grows crops in different conditions to test their suitability in the hostile climate. The station is largely concerned with argiculture.`
+		description `	[Farming]: Some of the more successful crops are grown on reservations for export. It is one of the ways the station keeps itself afloat.`
+		description `	[Synthetic]: A number of plants do not make good food, but could be used to produce polymer fibers and resins for the fabrication of clothes and plastic.`
+	government KW.Bet
+
+planet KW.S.010.0.Observer
+	"display name" Observer
+	landscape land/station22
+	attributes research
+	description "The station was established to witness and study the birth of a new star. This birth is unusual, due to its cradle being near the grave of another, and the two masses merged to form a curiousity. Precariously treading the balance between the star's gravity and a diminishing ball of gas, scientists hope to stay for as long as they can before the unstable position would force the station to relocate."
+	port "Station Docks"
+		recharges
+			energy
+			fuel
+		services
+			trading
+			"job board"
+			"offers missions"
+		description "The station holds modest supplies but ample fuel thanks to a logistical operation siphoning off raw materials from the atmosphere of the gas giant it orbits. It has the essentials to be self-sufficient for centuries, though its hydroponics selection and biohabitats are rather bland due to most organisms not surviving the kind of radiation emitted by the early star."
+		description "	As a research station, the local population is small and more interested in their own projects than joining you in space."
+		description `	The following are traits inherent within this planet:`
+		description `	[Research]: A observatory on site is fixated on the local star. You will not convince the owner to point it elsewhere.`
+	government KW.Bet
+
+planet KW.S.012.0.Pale
+	"display name" Pale
+	landscape land/mountain2
+	description "The planet looks grey, almost white, when viewed from space. On a closer look, you find that the planet surface has been covered with some kind of grey 'soot', a powdery substance that is soft and crumbles easily upon the application of some force. There is little wind on the planet, and also little tectonic activity to stir the dust. It was pretty peaceful until your ship landed. You could take samples of the rock; the planet is otherwise eventless."
+	government Uninhabited
+
+planet KW.S.015.0.Goat
+	"display name" Goat
+	landscape land/sky5
+	description "Across cultures on Earth, the Greek description of the star as a goat stood the test of time better than most others. You vaguely reading such a tale of its legend, but after many stars, your brain struggles to remember it. It's something to do with a Greek god, the only evidence you remember that this tale was Greek."
+	government Uninhabited
+
+planet KW.S.015.1.Chariot
+	"display name" Chariot
+	landscape land/sky5
+	description "The constellation this star was famed for was the Auriga, which featured a chariot and its rider. This was the predominant opinion at the time, when all things were thought to be hung on a firament and spun around the earth, as though humans were babies lying on a cot, marvelled by the shapes dangling from a ceiling. Quite an astute descript of humanity, even if the chariot represented nothing of innocence. Still, it is a little strange how Ptolemy and the Chinese reached the same conclusion when most others saw them as an animal."
+	government Uninhabited
+
+planet KW.S.015.2.Hawk
+	"display name" Hawk
+	landscape land/sky5
+	description "The Capella was known by many names, most of which are animals. One popular Macedonian folklore described it as a hawk poised to pounce on a 'hen' and a 'rooster'. That makes another name etched unto a ever growing list of names for the discovered moons. You wonder if humanity would ever stop their obsession with animals."
+	government Uninhabited
+
+planet "KW.S.017.0.Ebbing Colors"
+	"display name" "Ebbing Colors"
+	landscape land/canyon01
+	attributes farming
+	description "The spectral radiation emanating from the star may fluculate and flare at a moment's notice, so all life is kept underground. The varying intensities change differently along the wavelength, giving the appearance of shimmering colors against the ground, earning the name it has today."
+	port "Outpost"
+		recharges
+			energy
+			fuel
+		services
+			trading
+			"job board"
+			"offers missions"
+		description "Mountains offer numerous caverns to shield visitors from the star. Water is stored under deep caves for use in irrigation while fuel tanks is left in the exterior. This creates a curious ad hoc system of temperature regulation as heated fluids is pumped underground at night to sustain living conditions."
+		description "	As expected from a budding outpost, minimal services are offered here. There is no specialized equipment on site to perform shield and hull repairs, and the population would rather stay committed to the planet than join your crew."
+		description `	The following are traits inherent within this planet:`
+		description `	[Farming]: Owing to the Organization's expertise in the underground, the development of irrigation within the cave system produces a decent supply of food, with some excess sold back to Earth in exchange for new equipment for their other projects.`
+	government KW.Sol
+	outfitter "KW.Sol.Ebbing Colors 1"
+
+planet KW.S.025.0.Lepo
+	"display name" Lepo
+	landscape land/canyon16
+	attributes research synthetic
+	description "The name was supposed to be 'Leporis' but someone misclicked, and it was stuck ever since. Humanity will have to live with it, but it might have been a blessing, for the second choice was 'Toilet'."
+	port "'CCCS-Blessing'"
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+		description "The 'spaceport' was actually a ship marooned during the earlier exploration days. When another expedition was called to recover it, they landed badly, and they had to take scrap materials from the first to repair the second before returning home. The remains now serve as a machine shop for the wild spacefarer who got this far."
+		description `	The following are traits inherent within this planet:`
+		description `	[Research]: Like others in Sol space, the outpost comes with a research station with the question of how life can be made less unbearable in these planets.`
+		description `	[Synthetic]: There is enough materials on the planet to begin a small scale production of soft rubbery products. The locals are excited at the prospect of finding oil on the planet.`
+	government KW.Sol
+	outfitter "KW.Sol.Lepo 1"
+
+planet KW.S.026.0.Caldera
+	"display name" Caldera
+	landscape land/water28
+	attributes research terraform isolated
+	description "A planet with an atmosphere and the right temperature has the potential to be the next paradise world. It is currently reserved by System Bet, on behalf of Sol, for a terraform project to render it livable for intelligent aquatic life."
+		port "'BC-Flora and Fauna'"
+		recharges
+			fuel
+		services
+			trading
+			"job board"
+			"offers missions"
+		description `The symbiotic metallobiological vessel 'Flora and Fauna' had crash-landed into the frigid waters of the planet in 2019. The intelligence inherent within the vessel is still alive. Now, this station manages a terraforming effort to warm the planet and clean the oceans of volcanic minerals, for some oceanic life to be transferred from Sol to this new home.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Research]: A station dedicated to terraforming is expected to perform an investigation of rocks, climate and nature. Geological and organic samples are occasionally shipped to the Betian homeworld for their analysis.`
+		description `	[Isolated]: The planet is either restricted or out of reach from ordinary jobs.`
+	government KW.Bet
+
+planet KW.S.027.0.Ian
+	"display name" Ian
+	landscape land/fog10
+	description "The wetlands of Ian is a rarity, and shows much promise as the cradle of a civilization. However, the planet hosts a particularly toxic atmosphere which subdues any species sans Machines, and the characteristicall soft ground and torrential rains make traversal difficult for even Sentient Machines to reside in."
+	government Uninhabited

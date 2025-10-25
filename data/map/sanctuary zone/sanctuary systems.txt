@@ -1,0 +1,691 @@
+system KW.SZ.000.Sanctuary
+	pos 20327.222 -12176.116
+	government KW.Sanctuary
+	attributes "sanctuary zone"
+	arrival 330
+	habitable 2200
+	belt 650
+	haze _menu/haze-ghila
+	link KW.SZ.005.Passage
+	minables platinum 40 4.5
+	minables iron 142 2
+	minables copper 76 2.8
+	trade Clothing 305
+	trade Electronics 610
+	trade Equipment 465
+	trade Food 238
+	trade "Heavy Metals" 1113
+	trade Industrial 530
+	trade "Luxury Goods" 1465
+	trade Medical 778
+	trade Metal 372
+	trade Plastic 441
+	object
+		sprite star/f3
+		period 10
+	object
+		sprite planet/dyson1
+			scale 0.5
+		distance 61.926
+		period 36
+		offset 160
+	object
+		sprite planet/dyson2
+			scale 0.5
+		distance 48.76
+		period 36
+		offset 90
+	object
+		sprite planet/dyson3
+			scale 0.5
+		distance 66.8
+		period 36
+		offset 270
+	object "KW.SZ.000.1.Sanctum Minor"
+		sprite planet/dust2-b
+		distance 1965.819
+		period 89
+		offset -10
+	object KW.SZ.000.0.Sanctum
+		sprite planet/forest12
+		distance 2269.329
+		period 79
+	object
+		sprite planet/ice8
+		distance 4712.168
+		period 225
+
+system KW.SZ.001.Gateway
+	pos 20069.268 -11985.042
+	government Uninhabited
+	attributes "sanctuary zone"
+	arrival 500
+	habitable 100
+	haze _menu/haze-ghila
+	link "KW.SZ.002.The Door"
+	link KW.SZ.008.Fork
+	minables lead 5 1
+	object
+		sprite star/neutron-core
+	object
+		sprite star/neutron
+		period 100
+	object
+		sprite planet/gas3-hot
+			scale 0.75
+		distance 1187.825
+		period 199
+	object
+		sprite planet/gas8-b
+			scale 0.6
+		distance 2576.989
+		period 450
+
+system "KW.SZ.002.The Door"
+	pos 20010.074 -12000.296
+	government Uninhabited
+	attributes "sanctuary zone"
+	arrival 1000
+	habitable 100000
+	belt 15000
+	haze _menu/haze-black
+	link KW.SZ.001.Gateway
+	object
+		sprite star/black-hole-still
+			scale 1.5
+		period 750
+		hazard "Small Black Hole Accretion Disk" 1
+		hazard "Small Black Hole Event Horizon" 1
+		hazard "Small Black Hole Gravity" 1
+	object "KW.WH.Sanctuary Wormhole"
+		sprite star/black-hole-still-core
+			scale 1.5
+		period 750
+	object
+		sprite planet/dust1
+			scale 0.5
+		distance 1110.9
+		period 829
+
+system KW.SZ.003.Arch
+	pos 20090.319 -11935.042
+	government Uninhabited
+	attributes "sanctuary zone"
+	arrival 4050
+	habitable 4050
+	belt 2500
+	haze _menu/haze-ghila
+	link KW.SZ.008.Fork
+	link KW.SZ.022.Obstacle
+	minables silicon 66 10
+	object
+		sprite star/g-giant
+		period 100
+	object
+		sprite planet/ice1
+		distance 733
+		period 124.735
+		object
+			sprite planet/luna
+			distance 322
+			period 218.416
+	object
+		sprite planet/uranus
+		distance 1487
+		period 360.412
+	object
+		sprite planet/gas1-b
+		distance 6078
+		period 2978.335
+	object
+		sprite planet/gas7-hot
+		distance 8037
+		period 4528.699
+		object
+			sprite planet/miranda-b
+			distance 194
+			period 127.825
+
+system KW.SZ.004.Opening
+	pos 20111.801 -12071.486
+	government Uninhabited
+	arrival 3500
+	habitable 3500
+	haze _menu/haze-ghila
+	link KW.SZ.007.Corridor
+	link KW.SZ.008.Fork
+	object
+		sprite star/k0-old
+		distance 281.886
+		period 177.949
+		offset -30
+	object
+		sprite star/k5
+		distance 615.846
+		period 101
+	object
+		sprite star/k-giant
+		distance 201.808
+		period 177.949
+		offset 150
+	object
+		sprite planet/ice3
+		distance 4233.572
+		period 1021.613
+		object
+			sprite planet/rock0-b
+			distance 231
+			period 132.715
+	object
+		sprite planet/gas9-b
+		distance 4987.187
+		period 1758.227
+
+system KW.SZ.005.Passage
+	pos 20273.875 -12187.338
+	government Uninhabited
+	attributes "sanctuary zone"
+	arrival 2200
+	habitable 2200
+	haze _menu/haze-ghila
+	link KW.SZ.000.Sanctuary
+	link KW.SZ.009.Crossroads
+	object
+		sprite star/f3
+		period 100
+	object
+		sprite planet/rock16-b
+		distance 449
+		period 81.137
+		object
+			sprite planet/ice0-b
+			distance 137
+			period 60.615
+	object
+		sprite planet/browndwarf-y
+		distance 1473
+		period 482.117
+		object
+			sprite planet/io-b
+			distance 290
+			period 186.68
+	object
+		sprite planet/gas7-b
+		distance 2612
+		period 1138.435
+		object
+			sprite planet/desert4
+			distance 244
+			period 180.3
+	object
+		sprite planet/debris1
+		distance 4651
+		period 2705.006
+	object
+		sprite planet/browndwarf-y-rogue
+		distance 9772
+		period 8238.039
+	object
+		sprite planet/browndwarf-l
+		distance 13232
+		period 12980.365
+		object
+			sprite planet/miranda-b
+			distance 301
+			period 247.037
+
+system KW.SZ.006.Directory
+	pos 20202.171 -12021.708
+	government Uninhabited
+	attributes "sanctuary zone"
+	arrival 718.784
+	habitable 718.784
+	haze _menu/haze-ghila
+	link KW.SZ.008.Fork
+	link KW.SZ.020.Tunnel
+	link KW.SZ.023.Break
+	object
+		sprite star/f-dwarf
+		distance 91.144
+		period 42.744
+	object
+		sprite star/g5
+		distance 7.356
+		period 42.744
+		offset 180
+	object
+		sprite planet/lava7
+		distance 258
+		period 61.829
+	object
+		sprite planet/desert10
+		distance 777
+		period 323.141
+		object "KW.SZ.006.0.Warm Point"
+			sprite planet/forest3
+				scale 0.6
+			distance 174
+			period 86.761
+	object
+		sprite planet/ocean7-b
+		distance 1494
+		period 861.562
+	object
+		sprite planet/luna-b
+		distance 3507
+		period 3098.593
+	object
+		sprite planet/vulpa
+		distance 4063
+		period 3863.947
+		object
+			sprite planet/dust3-b
+			distance 288
+			period 184.752
+
+system KW.SZ.007.Corridor
+	pos 20143.801 -12127.634
+	government Uninhabited
+	attributes "sanctuary zone"
+	arrival 1252.25
+	habitable 1252.248
+	haze _menu/haze-ghila
+	link KW.SZ.004.Opening
+	link KW.SZ.011.Highway
+	link KW.SZ.021.Destination
+	object
+		sprite star/b-dwarf
+		distance 94.214
+		period 46.726
+		offset 180
+	object
+		sprite star/g8
+		distance 9.286
+		period 46.726
+	object
+		sprite planet/jupiter-b
+		distance 6287
+		period 5634.82
+		object
+			sprite planet/dust4-b
+			distance 307
+			period 167.296
+		object
+			sprite planet/rock3-b
+			distance 449
+			period 359.642
+
+system KW.SZ.008.Fork
+	pos 20125.727 -12007.782
+	government Uninhabited
+	attributes "sanctuary zone"
+	arrival 1325
+	habitable 1325
+	haze _menu/haze-ghila
+	link KW.SZ.001.Gateway
+	link KW.SZ.003.Arch
+	link KW.SZ.004.Opening
+	link KW.SZ.006.Directory
+	minables aluminum 14 12
+	object
+		sprite star/o-dwarf
+		period 100
+	object
+		sprite planet/dust2-b
+		distance 2272.551
+		period 68.589
+	object
+		sprite planet/rock0
+		distance 2716.059
+		period 1278.316
+	object
+		sprite planet/gas16-b
+		distance 5288.306
+		period 3658.951
+
+system KW.SZ.009.Crossroads
+	pos 20219.764 -12152.264
+	government KW.Fleet0
+	arrival 2160
+	habitable 2160
+	haze _menu/haze-ghila
+	link KW.SZ.005.Passage
+	link KW.SZ.011.Highway
+	link KW.SZ.024.Jump
+	trade Clothing 168
+	trade Electronics 877
+	trade Equipment 412
+	trade Food 472
+	trade "Heavy Metals" 1160
+	trade Industrial 751
+	trade "Luxury Goods" 1120
+	trade Medical 771
+	trade Metal 529
+	trade Plastic 314
+	object
+		sprite star/g0-old
+		period 100
+	object
+		sprite planet/mars
+		distance 415
+		period 72.762
+	object
+		sprite planet/ice3-b
+		distance 876
+		period 223.146
+	object
+		sprite planet/rock5-b
+		distance 1566
+		period 533.36
+	object
+		sprite planet/uranus-b
+		distance 2500
+		period 1075.829
+		object
+			sprite planet/rock7-b
+			distance 221
+			period 155.418
+	object
+		sprite planet/jupiter-b
+		distance 3683
+		period 1923.693
+		object
+			sprite planet/tethys-b
+			distance 281
+			period 290.104
+		object
+			sprite planet/rock20
+			distance 405
+			period 308.094
+		object KW.SZ.009.0.Keep
+			sprite planet/station15
+				scale 0.8
+			distance 586
+			period 536.225
+	object
+		sprite planet/debris0
+		distance 14636
+		period 15239.36
+		object
+			sprite planet/dust1
+			distance 260
+			period 130.388
+
+system KW.SZ.010.Endpoint
+	pos 20233.097 -11971.819
+	government Uninhabited
+	arrival 5000
+	habitable 6075
+	haze _menu/haze-ghila
+	object
+		sprite star/g-supergiant
+		distance 1939.606
+		period 586.063
+		offset 180
+	object
+		sprite "star/big black hole"
+	object
+		sprite "star/big black hole core"
+		hazard "Black Hole Event Horizon" 1
+		hazard "Black Hole Gravity" 1
+		hazard "Black Hole Accretion Disk" 1
+
+system KW.SZ.011.Highway
+	pos 20158.838 -12192.745
+	government Uninhabited
+	arrival 5000
+	habitable 8650
+	haze _menu/haze-ghila
+	link KW.SZ.007.Corridor
+	link KW.SZ.009.Crossroads
+	minables iron 57 6
+	minables aluminum 1 1
+	object
+		sprite star/o8
+		distance 17.511
+		period 26.065
+	object
+		sprite star/m4
+		distance 91.489
+		period 26.065
+		offset 180
+	object
+		sprite planet/gas10-hot
+		distance 2403
+		period 506.62
+		object
+			sprite planet/dust7
+			distance 214
+			period 118.337
+		object
+			sprite planet/ice8-b
+			distance 350
+			period 247.516
+	object
+		sprite planet/gas9
+		distance 3739
+		period 983.298
+	object
+		sprite planet/forest12
+		distance 4791
+		period 1426.235
+
+system KW.SZ.020.Tunnel
+	pos 20252.394 -12076.301
+	government Uninhabited
+	arrival 3429.65
+	habitable 3429.65
+	haze _menu/haze-ghila
+	link KW.SZ.006.Directory
+	object
+		sprite star/k3
+		distance 100.858
+		period 59.141
+		offset 180
+	object
+		sprite star/a3
+		distance 58.142
+		period 59.141
+	object
+		sprite planet/ice4-b
+		distance 913.84
+		period 153.104
+		object
+			sprite planet/rock0-b
+			distance 167
+			period 81.578
+	object
+		sprite planet/rock17-b
+		distance 1427
+		period 368.189
+	object
+		sprite planet/gas7-hot
+		distance 2013
+		period 616.88
+		object
+			sprite planet/dust3
+			distance 199
+			period 106.116
+	object
+		sprite planet/gas8
+		distance 3750
+		period 1568.491
+		object
+			sprite planet/miranda
+			distance 327
+			period 279.726
+		object
+			sprite planet/rock14
+			distance 445
+			period 245.673
+
+system KW.SZ.021.Destination
+	pos 20076.69 -12164.894
+	government Uninhabited
+	arrival 500
+	habitable 355
+	belt 1800
+	haze _menu/haze-ghila
+	link KW.SZ.007.Corridor
+	minables iron 15 4
+	minables aluminum 8 6.2
+	object
+		sprite star/f-dwarf
+		period 10
+	object
+		sprite planet/neptune
+		distance 1171
+		period 850.709
+		object
+			sprite planet/io-b
+			distance 217
+			period 120.834
+	object
+		sprite planet/rock2-b
+		distance 1909
+		period 1770.74
+	object
+		sprite planet/dust7-b
+		distance 2197
+		period 2186.205
+
+system KW.SZ.022.Obstacle
+	pos 20126.468 -11910.079
+	government Uninhabited
+	habitable 7900
+	haze _menu/haze-ghila
+	link KW.SZ.003.Arch
+	minables copper 62 10
+	minables gold 14 3
+	object
+		sprite star/a-giant
+		period 100
+	object
+		sprite planet/mercury-b
+		distance 455
+		period 43.678
+	object
+		sprite planet/gas10-b
+		distance 853
+		period 112.117
+	object
+		sprite planet/gas6-hot
+		distance 1480
+		period 256.235
+	object
+		sprite planet/browndwarf-t
+		distance 7584
+		period 2972.309
+		object
+			sprite planet/dust7
+			distance 298
+			period 194.458
+
+system KW.SZ.023.Break
+	pos 20279.356 -11987.708
+	government Uninhabited
+	arrival 5000
+	habitable 10000.061
+	haze _menu/haze-ghila
+	link KW.SZ.006.Directory
+	minables aluminum 21 12
+	minables copper 88 4.5
+	minables gold 4 2
+	object
+		sprite star/m-dwarf
+		distance 162.428
+		period 52.094
+		offset 180
+	object
+		sprite star/o5
+		distance 1.072
+		period 52.094
+	object
+		sprite planet/gas6-b
+		distance 7894
+		period 2805.462
+
+system KW.SZ.024.Jump
+	pos 20176.245 -12086.375
+	government KW.Fleet0
+	arrival 3444.89
+	habitable 3444.895
+	haze _menu/haze-ghila
+	link KW.SZ.009.Crossroads
+	trade Clothing 192
+	trade Electronics 860
+	trade Equipment 421
+	trade Food 525
+	trade "Heavy Metals" 1228
+	trade Industrial 759
+	trade "Luxury Goods" 1174
+	trade Medical 812
+	trade Metal 568
+	trade Plastic 302
+	object
+		sprite star/m0
+		distance 152.241
+		period 57.837
+		offset 180
+	object
+		sprite star/f5-old
+		distance 35.259
+		period 57.837
+	object
+		sprite planet/rock21
+		distance 337
+		period 42.162
+	object KW.SZ.024.0.Citadel
+		sprite planet/ocean8-b
+		distance 3146.372
+		period 516.772
+	object
+		sprite planet/rock14-b
+		distance 1292
+		period 316.494
+	object
+		sprite planet/gas0-hot
+		distance 2507
+		period 855.467
+		object
+			sprite planet/dust3
+			distance 219
+			period 122.509
+	object
+		sprite planet/gas13-b
+		distance 4194
+		period 1851.035
+
+system KW.SZ.025.Blockage
+	pos 20036.542 -12220.153
+	government Uninhabited
+	arrival 5000
+	habitable 17025
+	haze _menu/haze-ghila
+	minables platinum 45 7
+	minables tungsten 76 15
+	object
+		sprite star/b-supergiant
+		period 100
+	object
+		sprite planet/venus
+		distance 1732
+		period 220.973
+	object
+		sprite planet/gas10
+		distance 2530
+		period 390.119
+		object
+			sprite planet/rock11-b
+				scale 0.7
+			distance 222
+			period 102.875
+	object
+		sprite planet/jupiter
+		distance 4321
+		period 870.749
+		object
+			sprite planet/dust0
+			distance 276
+			period 282.396
+

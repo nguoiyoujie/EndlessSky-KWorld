@@ -1,0 +1,9 @@
+planet KW.MWC.003.0.Solitude
+	"display name" Solitude
+	attributes "requires: ramscoop"
+	landscape "scene/sagittarius a"
+	description "It is a curious sight to see solid ground in the burning furnace of the galaxy. Even more curious to see an actual functioning port made with the few alloyed refractories strudy enough to withstand the heat. You can't help but wonder if this piece of anomaly is a brilliance of nature or an intelligent species."
+	spaceport "The port is simple but efficient. A vasy array of fins spread across the barren rock had siphoned tons of stellar matter, and collected it within rocky caverns. Only a ramscoop made of rock can handle the pressure arising from such pooling of stellar fuel. Your ship would be an inferno if you hooked the wrong inlet to the device."
+	government Uninhabited
+	bribe 0
+	security 0

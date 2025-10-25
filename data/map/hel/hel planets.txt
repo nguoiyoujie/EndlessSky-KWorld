@@ -1,0 +1,56 @@
+planet KW.H.000.0.Purgatory
+	"display name" Purgatory
+	landscape land/lava14
+	description "The road to Hel is paved with good intentions... and mortar, lots of it. Apparently, humans knew it; they called it 'Molcajete', but they don't use it for intrastructure. Here, materials are more dense and resist degradation upon exposure to the intense heat that is characteristic of a lava planet."
+	description "	The Hel species is a people of superhuman strength and fiery temper, breaking the most sturdy of rocks with ease. Their world received the patronage of System Bet and were gifted the means to travel across stars. Though brash and quick to temper, they rose in prominence into a fully fledged member in the galactic whole."
+	description "	The representative of Hel is World Controller SATAN, part demonic form and part mechanical. You actually aren't sure if the description of their body type translates correctly to 'demonic', but there is few evidence arguing otherwise."
+	spaceport "Most of Hel's ships were built to resist high temperatures, so they can dock on land just fine. Most travellers would, however, dock in a airborne array of bays to avoid getting hit by ground lava."
+	government KW.Hel
+
+planet KW.H.002.0.Mantis
+	"display name" Mantis
+	landscape land/lava10
+	description WIP
+	spaceport WIP
+	government KW.Hel
+
+planet KW.H.005.0.Skivy
+	"display name" Skivy
+	landscape land/desert15
+	description WIP
+	spaceport WIP
+	government KW.Hel
+
+planet KW.H.014.0.Consterna
+	"display name" Consterna
+	landscape land/desert4
+	description WIP
+	government Uninhabited
+
+planet KW.H.020.0.Noise
+	"display name" Noise
+	landscape land/lava10
+	description WIP
+	spaceport WIP
+	government KW.Hel
+
+planet KW.H.011.0.Breathtaker
+	"display name" Breathtaker
+	landscape land/badlands7
+	description WIP
+	spaceport WIP
+	government Uninhabited
+
+planet "KW.H.012.0.Cool Son"
+	"display name" "Cool Son"
+	landscape land/fog13
+	description WIP
+	spaceport WIP
+	government KW.Machines
+
+planet KW.H.012.1.Compromise
+	"display name" Compromise
+	landscape land/haze1
+	description WIP
+	spaceport WIP
+	government KW.Hel

@@ -1,0 +1,116 @@
+
+## Naming Conventions
+#	As far as possible, use prefix 'KW.' in front of internal names to distinguish items from vanilla ES (and other plugins)
+#
+## System Names
+#		KW.<region_code>.<system_index>.<name>
+#			<region_code>
+#				Region code for a sector in space. Ideally, use 1-2 characters. For regions alloted to major factions, use their initials.
+#				Try to limit each region to less than 40 systems. We don't need that many.
+#			<system_index>
+#				A numeric index representing each system within a region.
+#				[KW.<region_code>.<system_index>] should uniquely identify a world.
+#				The capital homeworld / most notable world should be numbered 000.
+#				For faction regions, major worlds, which are named after the faction, should be next in order.
+#				Placement of remaining worlds is not important, only that the index is unique.
+#			<name>
+#				The display name of the world. This allows for easier reference and search, and recovery in case the editor erases this information.
+#
+## Planet Names
+#		KW.<region_code>.<system_index>.<planet_index>.<name>
+#			<region_code> <system_index>
+#				Identical to the system it is in.
+#			<planet_index>
+#				A numeric index representing each world within a system.
+#				Placement of planets is not important, only that the index is unique.
+#
+## Wormhole Names
+#		KW.WH.<name>
+#			WH represents 'Wormhole'
+#			<name>
+#				The intuitive name for the wormhole path
+#
+
+
+# planet attributes used
+## Affluence / Density
+#	urban
+#	rural
+#
+## Scale
+#	large			Allow for larger scale operations
+#
+## Industry
+#	research
+#	analysis
+#	tourism
+#	mining			Produce Metal/Heavy Metal pre-products
+#	synthetic		Produce Clothing/Plastic pre-products
+#	factory			Produce Equipment/Construction and intermediate products
+#	hitech			Produce Industrial/Electronics/Luxury Goods
+#	farming			Produce Food products
+#	education
+#	military		Produce Military
+#	shipworks		Receive Ship Systems/Ship Alloys
+#	logistics		Act as intermediate waypoints for goods transit 
+#
+## Routes (Cargo)
+#	["research samples"] 		research -> analysis
+#	["Food"] 					farming -> any
+#	["Clothing"] 				synthetic -> any
+#	["Metal"] 					mining -> factory
+#	["Plastic"] 				synthetic -> factory / urban / rural
+#	["Equipment"] 				factory -> any
+#	["Industrial"] 				hitech -> factory
+#	["Medical"] 				hitech -> any
+#	["Electronics"] 			factory / hitech -> any
+#	["Heavy Metals"] 			mining -> factory / hitech
+#	["Luxury Goods"] 			hitech -> any
+#	["Construction"] 			factory -> any
+#	["Military"] 				factory / hitech -> military
+#	["Ship Systems"] 			NA
+#	["Ship Alloys"] 			hitech -> shipworks
+#	
+## Mining
+#	silicon-source
+#	lead-source
+#	iron-source
+#	aluminum-source
+#	titanium-source
+#	copper-source
+#	neodymium-source
+#	tungsten-source
+#	uranium-source
+#	silver-source
+#	gold-source
+#	platinum-source
+#	yottrite-source
+#	
+## Special
+#	gaia			Provides access to the Gaia interface
+#	archive			Provides access to the Archive
+#	beacon			Provides rescue missions
+#	rich
+#	terraform
+#	isolated		Don't give this planet generic jobs
+#	
+
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+
+
+

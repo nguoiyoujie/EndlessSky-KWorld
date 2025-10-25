@@ -1,0 +1,312 @@
+planet "KW.B.000.0A.Unes"
+	"display name" "Unes/First City"
+	attributes homeworld urban hitech logistics analysis large gaia
+	landscape land/city11
+	description `The bustling capital of Bet never sleeps. The planet is generally into seven districts - six mega-metropolis states, each governed by an officer called a 'Section Mother', and the seventh being the mesh of diaspora gluing the six cities. All six Section Mothers report to the planetary governor, who in turn reports to the World Controller - the overall representive of the Betians to the wider world.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The spaceport in the First City is a multi-floor wonder of architecture, sporting six levels each towering hundreds of meters high and accomodating space-faring and local vessels up to tens of thousands of tonnage. Each dock level represents the prestige of each of the Six Cities, while the ground floor represented the Diaspora in between. You are alloted the appropriate dock for your weight and land without fanfare. The First City also boasts a Regional Archive open to travellers and state officers alike. There is much to explore here.`
+		description `	The following are traits inherent within this city:`
+		description `	[Urban/Large]: You are never sure about the true scale of an alien population across several stars, but the First City alone having a census of 15 billion puts humans to shame.`
+		description `	[Logistics/High-tech/Analysis]: The First City prides itself with top of the line biological, chemical, genetic, behavioral and fertility research and production. It is one of the few places that produces artifical organs for other civilizations. It is rumored that Bet is in talks with Sol about resolving a 'population crisis', but Bet's opinion tends towards having Sol figure out their faults by themselves.`
+		description `	[Gaia]: The First City has direct access to the planetary Gaia system installed within the mantle. Should you be fortunate, you may be able to access its records.`
+	government KW.Bet
+
+planet "KW.B.000.0B.Dres"
+	"display name" "Dres/Second City"
+	attributes homeworld urban factory synthetic large
+	landscape land/city11
+	description `The second megapolity of Bet Prime is an industrial powerhouse, with exports of some product categories reaching 80% of all trade volume in Betian space. Controversially, this attitude is also prevalent in child-making, with the Section Mother issuing quotas, state beds and quality control for the population to concieve and produce a marching army of offsprings every year.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The spaceport in the Second City is seated upon a terraced hill, with each terrace step transformed into a row of landing platforms. Turbolifts and escalators litter across the stretches of the landing surface as armies of workers report to a dock and pass cargo and equipment with military precision. The station is wide and spacious to accomodate the flood of people, most of which are their own.`
+		description `	The following are traits inherent within this city:`
+		description `	[Urban/Large]: If the statistics of the First City keeps you in awe, the Second City's roster of 48 billion is outright terrifying. What is even more frightening is that the birth and death rates far surpass any other civilization of similar lifespans.`
+		description `	[Factory/Synthetic]: Having a large population pool meant a large workforce. The Second City is so hungry for resources that it alone consumes 45% of mineral exports from the Mining Belt between Midi and Silvi.`
+	government KW.Bet
+
+planet "KW.B.000.0C.Trei"
+	"display name" "Trei/Third City"
+	attributes homeworld urban education
+	landscape land/city11
+	description `The Third City's major export is education. The planet's most prominent universities are housed in this location, and entire city blocks are reserved for field trips, simulation exercises, and teaching labs. Yearly, a small number of corporations and research organizations set up offices in the city to offer competitive wages and contracts for new batches of graduates.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description "The Third City's ports are dedicated mostly to passenger transport, as it hosts the planet's largest schools and training centers."
+		description `	The following are traits inherent within this city:`
+		description `	[Urban]: The population of 8 billion is on par with Earth, but you remind yourself that this is less than one tenth of the planet's surface area that is accounted for.`
+		description `	[Education]: The mass of industry and commerce in the First and Second Cities had pushed the beacons of education elsewhere. Trei is the favorite destination for scholars and learners alike.`
+	government KW.Bet
+
+planet "KW.B.000.0D.Quad"
+	"display name" "Quad/Fourth City"
+	attributes homeworld urban farming synthetic
+	landscape land/city11
+	description `The Fourth City had struck windfall with their development of a unique strain of plant, beating out many of their competitors in topics of food and fiber production. Whether it is considered a fortune or a misfortune that the soul of an entire city state had been hijacked by a single commodity... is something for future generations to ponder.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description "The Fourth City's ports are filled with grain, grain and more grain. The sheer dazzling pearls of edible seed acorss the area incites within you a great worry for the future of humankind."
+		description `	The following are traits inherent within this city:`
+		description `	[Urban]: The population of 11 billion Betians is considerable. The population of grain is uncountable...`
+		description `	[Farming/Synthetic]: The hyperfocus on food and fibers have made the city a net exporter of food and importer of everything else. This may sound like a bad idea to be reliant of imports, but then you look at the records and notice some planets regularly donate their scarce equipment to maintain a favorable status as a trading partner. It seems the Fourth City knows what it is doing.`
+	government KW.Bet
+
+planet "KW.B.000.0E.Quin"
+	"display name" "Quin/Fifth City"
+	attributes homeworld urban farming hitech tourism
+	landscape land/city11
+	description `The Fifth City could simply not compete with its sister city in the food market, but it did have an export of its own. The development of organs and body replicas had been controversial in the past, but the other cities found significant utility in having a stable and reliable tissue and organ supply. Coined the 'Full Body Appratus', this term had even found itself in Sol in discussions about artifical organ production. You might find it prudent to quietly ignore the other, non-medical uses of lab-made organs.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The Fifth City's holds a modest port, with a section of docks carved out and reserved for the delivery of bodies. It is a sterile area and you, a human with questionable microbes, would never be allowed in that section. Fortunately, the public-facing port is still a decent place to be with its own bazaar at its entrance.`
+		description `	The following are traits inherent within this city:`
+		description `	[Urban]: The population of 5 billion Betians is considerable. You wonder if they have more artificial bodies.`
+		description `	[Farming/High-Tech/Tourism]: Betians are wildly curious about life and biological processes, that many would watch an embryo develop from fetal tissue till birth, in real time. They seem the kind of people who would crack open an egg and observe the developing chick inside. The existence of this city and its trade seems morbid, but if the culture holds it with high regard... what kind of complaint would you have?`
+	government KW.Bet
+
+planet "KW.B.000.0F.Sex"
+	"display name" "Sex/Sixth City"
+	attributes homeworld urban analysis beacon archive
+	landscape land/city11
+	description `It is a curious sight to see a city being rebuilt from a fresh ruin of its past self. The city used to be governed by a Section Mother who was promoted into a very prestigious post within the Imperial family some 700 years ago. Unfortunately, successor after successor mismanaged the city and most residents fled to the other Cities and the Disapora.`
+	description `	Recently, in 2021, the former Section Mother was freed from her position and was reinstated Section Mother, and began projects to bring the city towards its former glory. Rich with the experience she gathered from her tour in Sanctuary, Hel, Fel and Sol, she had taken a 'hands-off' approach to her choice of rule - setting up elections for the city to elect their own town mayors. In return, the people in this city are fiercely independent and operate with high initiative, a bright spark in an otherwise droning society.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The Sixth City's port is modest but functional, neatly kept clean and running despite the abandoned buildings surrounding this zone. It is almost a symbol of hope and defiance against those who had abandoned this city.`
+		description `	The following are traits inherent within this city:`
+		description `	[Urban]: While the Sixth City's infrastructure is mostly devoid of people, the fact that it still sustains more than 500 million people is nothing to be scoffed at.`
+		description `	[Analysis]: The Sixth City used to host the planet's genetic research division. Even after a period of ruination, a fraction of this past glory still exists, as this city permits forms of genetic manipulation that is forbidden in other more populous cities.`
+		description `	[Beacon]: The Sixth City have constant lookouts for estranged people. They are happy to receive a helping hand in this regard.`
+		description `	[Archive]: The Sixth City has direct access to the Regional Archive network, where the Archives of neighoring Systems contribute a copy of their record to. The systems involved are: Bet, Fel, Hel, Phi, Sol. Should you be fortunate, you may be able to access its hallowed records.`
+	government KW.Bet
+
+planet KW.B.000.1.Fester
+	"display name" Fester
+	attributes urban factory synthetic large
+	landscape land/city20
+	description "Fester is the secondary home of the Betian people. Originally a rock planet, centuries of terraforming and landscaping efforts have yielded a planet with living conditions rivaling their capital. This rare feat is a symbol of pride of the Betians and one of envy to other comparable societies."
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The Betian spaceport is grand and elaborate, complete with a ship-rail system capable of pulling a thousand-ton ship from shipyard to outfitter. Each corridor and plaza is teeming with vibrant plantlife and buzzing with activity, you almost forget you were not on Earth. The local metropolitan station could take you to various districts for a shopping spree, if you so choose.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Urban/Large]: The Betians had populated merely 35% of the planet surface. Nevertheless, a population of 15 billion is no less impressive.`
+		description `	[Factory/Synthetic]: The industrial sector boasts a main export of polymer and ceramic bricks to other developed worlds. These lightweight materials offered toughness on par with construction materials, and are one of the favorite materials for ship building.`
+	government KW.Bet
+
+planet KW.B.000.2.Ward
+	"display name" Ward
+	attributes military
+	landscape land/space4
+	description `Ward is a Bet military installation dedicated to the protection of the Betian homeworld. While the best of Betian cruisers serve the Second Fleet, this station boasts a sizeable garrison of fighters and interceptors to complement the planetary defenses and local forces from incoming threats.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The non-military side of the port is clean and neatly maintained. You can see the numerous bunks in formation extending along the walls of hangar entrance as you enter. Bet, being one of the more populous Systems, had prepared for thousands... perhaps tens of thousands, to man an exceedingly large space-borne carrier.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Military]: Ward is the primary base of operations for the defense of the Betian homeworld.`
+	government KW.Bet
+
+planet KW.B.001.0.Respite
+	"display name" Respite
+	attributes urban factory hitech large
+	landscape land/city13-sfiera
+	description `The second world of Bet is divided into two major regions - an industrial megacomplex several times the size of human cities, dedicated to the process of raw materials coming from the mining belt leading to Silvi, and a rural resting place for those who have retired from a life of work, by means of affluence or injury. For those who are richer, the paradise oasis Amici is often the better pick for a retirement home.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The port is diligently demarcated into zones, most of which are reserved for various corporations, or vendors serving logistical operations in the industrial sector. There is no direct port to the rurals; rather, passenger vessels would either land on one of the public tiles and disembark into the local train stations, or one of the corporate-owned lots for a more prestigious transit.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Urban/Large]: The profitable venture of mining and materials processing have led Betians to migrate from the homeworlds to Respite, ballooning the population to a respectable 6 billion.`
+		description `	[Factory/High-Tech]: The proximity with the Mining Belts allowed for a flux of raw materials. The planet made most of its sustenance from industrial activity processing these materials into items for the homeworld.`
+	government KW.Bet
+
+planet KW.B.001.1.Brig
+	"display name" Brig
+	attributes military
+	landscape land/desert14
+	description `The Brig serves both as a military outpost, and as a prison for those who dare run into the law against the authorities. It is rare to find inmates from the homeworld, since each of the Six Cities run their own law, and residents can evade punishment of most petty crime by relocating to a more tolerant city. In effect, this moon caters mostly towards the planet it is orbiting.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The officer handling your arrival looks up to you, expecting you to declare which criminal you are visiting. He does not look amused when you declare you are merely visiting, but he lets you pass nonetheless.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Military]: Brig is the both a major base with oversight over the Bet-Sol route, and a prison for criminals from Respite and surrounding systems.`
+	government KW.Bet
+
+planet KW.B.002.0.Consulate
+	"display name" Consulate
+	attributes urban
+	landscape land/city5
+	description `Compared to Bet Prime, the third major system of Bet hosts a pinch worth of population. Nevertheless, its strategic importance as an adjacent system to the Waypoints towards the galactic core is second to none.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The spaceport is not as grand as other Betian major worlds, but its size still drawfs any facility Sol had come up with. A flatland ship plaza with rows and columns of resting vessels bears a striking resemblance to a parking lot or an airport on Sol. There is passage on each lot leading underground to evade the cold and fumes and debris from repair works being worked on the surface.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Urban]: Despite the smaller population, the urban areas are packed in greater density than other Betian homeworlds to minimize exposure to the elements.`
+	government KW.Bet
+
+planet "KW.B.007.0.Station M"
+	"display name" "Station M"
+	attributes research
+	landscape land/station0
+	description `An aged satellite built in the earlier era of Betian space travel, Station M keeps itself afloat by cultivating novel organisims specializing in the cold and gasless environments. It is said that Station M landed itself a lucerative deal with another government for the fruits of its research, so you wonder why the station had yet to get a new coat of paint.`
+	port
+		recharges
+			fuel
+		services
+			trading
+			"job board"
+		description `Audible hisses is rarely what you'd like to hear in space, as it usually meant venting, and venting is often... not good. Yet that is the sound that has become characteristic of this station's docking procedures. While your ship has not raised any alarm, you just know today will yield half the sleep you usually have.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Research]: This research station dabbles on botanic and argicultural exploration in hostile environments. The researches are not immediately keen to share their work with you.`
+	government KW.Bet
+
+planet KW.B.010.0.Avi
+	"display name" Avi
+	landscape land/badlands5
+	description `The smooth edges of this planet is a testament to its windy atmosphere, shaving the stony caps off mountains and grinding them into dust. Fortunately, the ground rarely has a tremor which allows any curious resident to nest within its hollows.`
+	port
+		recharges
+			fuel
+		services
+			trading
+			"job board"
+			"offers missions"
+		description `This otherwise unremarkable outpost is home to a refueling station, accessible only by multiple cave entrances. Depending on the direction of the wind, one entrance would have low enough turbulence and shear for a relatively safe transit.`
+		description `	[Rural]: A small town resides with the cave system, serving as a place of rest for the traveller, merchant and resident who wanted a break from hectic City life.`
+	government KW.Bet
+
+planet KW.B.014.0.Amicable
+	"display name" Amicable
+	attributes rural rich
+	landscape land/dune0
+	description `The moon had gained much of its atmosphere from its nearby giant, and it shows in the pigment of its oceans. The planet is rich in cobalt, at levels toxic to humans but healthy to Bet natives. Due to colonizing limits, the planet is at best a resort for the more affluent. Nevertheless, this planet has the potential to be of greater service.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+		description `The main docks border an ocean for the benefit of Betian residents, providing for their norishment and energy needs. Not far inland is a reservoir host to a couple of boats and a fishing spot. Few fishes could live in these waters so they brought in an genetically altered species. This place looks more like a resort than a logistics hub.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Rural/Rich]: This is a home for retirees and the affluent, to live their luxurious lifestyles away from the cacophony of urban life.`
+	government KW.Bet
+
+planet KW.B.018.0.Fis
+	"display name" Fis
+	attributes research
+	landscape land/badlands11
+	description `For a planet that spends part of its life within the habitable zone, the lands are bereft of life. The planet hosts a small research outpost focused on sustaining life on the moon of a brown dwarf. A domed habitat rests closeby, though no plant could survive outside for long.`
+	port
+		recharges
+			energy
+			fuel
+		services
+			trading
+			"job board"
+			"offers missions"
+		description  `The dock is minute, but there is a vessel on site that can hook a visiting ship to its fueling stations. Damaged ships that cannot make it to other shipyards often land on the rock plains that surround the outpost, though no hull repairs could be offered.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Research]: A research facility on site regularly dispatches drones to plant, observe and collect botanical samples. The researches are not immediately keen to share their work with you.`
+	government KW.Bet
+
+planet "KW.B.019.Bright Night"
+	"display name" "Bright Night"
+	attributes mining factory isolated
+	landscape land/sky3
+	description `The rough and barren landscaape is occupied by the Sentient Machines, one of the few people that could withstand the radiation of two white stars. The population is miniscule, but sufficient to form a functioning city with its own amenities, industry and even its own political representation separate from the rest of the Machines. Labor and assembly of heavy materials are their speciality,, so residents often travel to nearby system, or the Betian mining belt, to obtain the needed minerals to sustain their lifestyle.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+		description  `The spaceport is grand and spacious, if only because they were ment to hold ships several times your size. Given that their space-faring vessels are often Machines themselves, the facilities here could be likened to that of a spa resort. As for you, stepping out of your ship would cook you faster than aa sauna would, so you'd better stay where you are.`
+		description `	The Machines are a proud people. Anyone who wished to enlist the Machines into their crew would be... politely refused.`
+		description `	The following are traits inherent within this planet:`
+		description `	[Mining/Factory]: The Machines take care of their own, from mining to processing to production of parts to sustain their livelihood.`
+		description `	[Isolated]: The Machines on this planet are not very interested in accepting Betian trades.`
+	government KW.Machines
+
+planet "KW.B.025.0.Grey Tint"
+	"display name" "Grey Tint"
+	attributes rural farming synthetic mining
+	landscape land/fields27
+	description `The thick atmosphere inherited from its parent gas giant enabled the planet to host its own version of lifeforms, the most advanced of which was a type of bluish moss that florish in cooking temperatures. The Betians that investigated the planet, and managed to splice the genetics of local flora enough to produce some kind of farm crop. This crop, and the oils and fuel derivatives it produces, now sustains the station and are considered exotic goods on the Bet homeworld.`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"hire crew"
+		description  `The landing docks are outdoors, owing to the tempered weather provided by the permanent cloud cover. At times, warnings of hostile wind conditions would blare and captains would rush to their ships to stablize them or lift off to avoid an extra salad dressing over their exterior hull. `
+		description `	The following are traits inherent within this planet:`
+		description `	[Rural]: The climate does not offer good prospects for the development of a fully fledged city. On the other hand, that means greater share of land for crops.`
+		description `	[Farming/Synthetic]: When fried with oil, the moss produced in this planet make for a crispy delicacy loved by people all over Betian space, not unlike Earth's seaweed.`
+	government KW.Bet

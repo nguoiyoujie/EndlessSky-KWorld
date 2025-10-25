@@ -1,0 +1,156 @@
+government KW.Sanctuary
+	"display name" Sanctuary
+	swizzle 11
+	color 0.853 0.97 1
+	"player reputation" 1
+
+government KW.Alph
+	"display name" Alph
+	swizzle 6
+	color 0.828 0 0
+	"player reputation" 1
+
+government KW.Det
+	"display name" Det
+	swizzle 3
+	color 0.323 0.701 0.356
+	"player reputation" 1
+
+government KW.Edrin
+	"display name" Edrin
+	swizzle 15
+	color 0 0.358 0.451
+	"player reputation" 1
+
+government KW.Phi
+	"display name" Phi
+	swizzle 5
+	color 0.049 0.327 0.995
+	"player reputation" 1
+
+government KW.Xil
+	"display name" Xil
+	swizzle 4
+	color 0.685 0.618 1
+	"player reputation" 1
+
+government KW.Rho
+	"display name" Rho
+	swizzle 1
+	color 0.961 0.301 0.457
+	"player reputation" 1
+
+government KW.Sol
+	"display name" Sol
+	swizzle 3
+	color 0.156 0.838 0.136
+	"player reputation" 1
+
+government KW.Canc
+	"display name" Canc
+	swizzle 22
+	color 0.863 0.747 0.076
+	"player reputation" 1
+
+government KW.Ker
+	"display name" Ker
+	swizzle 23
+	color 0.872 0.902 0.385
+	"player reputation" 1
+
+government KW.Mid
+	"display name" Mid
+	swizzle 3
+	color 0.377 0.985 0.52
+	"player reputation" 1
+
+government KW.Nat
+	"display name" Nat
+	swizzle 21
+	color 0.451 0.36 0.011
+	"player reputation" 1
+
+government KW.Fel
+	"display name" Fel
+	swizzle 19
+	color 0.545 0.917 0.252
+	"player reputation" 1
+
+government KW.Hel
+	"display name" Hel
+	color 1 0.531 0.363
+	"player reputation" 1
+
+government KW.Upsn
+	"display name" Upsn
+	swizzle 12
+	color 0.132 0.183 1
+	"player reputation" 1
+
+government KW.Lmd
+	"display name" Lmd
+	swizzle 26
+	color 0.705 0.474 0.887
+	"player reputation" 1
+
+government KW.Gamn
+	"display name" Gamn
+	swizzle 25
+	color 0.604 0 0.892
+	"player reputation" 1
+
+government KW.Bet
+	"display name" Bet
+	swizzle 14
+	color 0 0.588 1
+	"player reputation" 1
+
+government KW.Dgt
+	"display name" Dgt
+	swizzle 18
+	color 0.108 0.48 0.059
+	"player reputation" 1
+
+government KW.Machines
+	"display name" "Sentient Machines"
+	swizzle 6
+	color 0.554 0.348 0.348
+	"player reputation" 1
+
+
+government KW.Fleet1
+	"display name" "First Fleet"
+	swizzle 6
+	color 0.828 0 0
+	"player reputation" 1
+
+government KW.Fleet2
+	"display name" "Second Fleet"
+	swizzle 14
+	color 0 0.588 1
+	"player reputation" 1
+
+government KW.Fleet4
+	"display name" "Fourth Fleet"
+	swizzle 15
+	color 0 0.358 0.451
+	"player reputation" 1
+
+government KW.Fleet3
+	"display name" "Third Fleet"
+	swizzle 21
+	color 0.451 0.36 0.011
+	"player reputation" 1
+
+government KW.Fleet5
+	"display name" "Fifth Fleet"
+	swizzle 22
+	color 0.863 0.747 0.076
+	"player reputation" 1
+
+government KW.Fleet0
+	"display name" "Imperial Guards"
+	swizzle 11
+	color 0.853 0.97 1
+	"player reputation" 1
+

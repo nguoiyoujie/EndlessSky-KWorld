@@ -1,0 +1,1338 @@
+system KW.B.000.Bet
+	"display name" Bet
+	pos 9946.037 -8999.74
+	government KW.Bet
+	attributes copper-source
+	arrival 550
+	habitable 550
+	belt 450
+	haze _menu/haze-33
+	link KW.B.003.Eiaja
+	link KW.B.009.Sesci
+	link KW.B.015.Meni
+	minables copper 16 2
+	trade Clothing 337
+	trade Electronics 688
+	trade Equipment 547
+	trade Food 546
+	trade "Heavy Metals" 1181
+	trade Industrial 790
+	trade "Luxury Goods" 1511
+	trade Medical 499
+	trade Metal 523
+	trade Plastic 410
+	object
+		sprite star/g8
+			scale 1.5
+		period 100
+	object
+		sprite planet/dust5
+			scale 0.3
+		distance 110.037
+		period 35
+	object
+		sprite planet/dust2-b
+			scale 0.4
+		distance 168.171
+		period 51
+	object KW.B.000.1.Fester
+		sprite planet/ocean2-b
+			scale 0.6
+		distance 420.769
+		period 299
+	object
+		sprite planet/forest12
+		distance 639.287
+		period 472
+		object "KW.B.000.0A.Unes"
+			sprite planet/_poi
+				scale 0.5
+			distance 140
+			period 472
+			offset 0
+		object "KW.B.000.0B.Dres"
+			sprite planet/_poi
+				scale 0.5
+			distance 140
+			period 472
+			offset 60
+		object "KW.B.000.0C.Trei"
+			sprite planet/_poi
+				scale 0.5
+			distance 140
+			period 472
+			offset 120
+		object "KW.B.000.0D.Quad"
+			sprite planet/_poi
+				scale 0.5
+			distance 140
+			period 472
+			offset 180
+		object "KW.B.000.0E.Quin"
+			sprite planet/_poi
+				scale 0.5
+			distance 140
+			period 472
+			offset 240
+		object "KW.B.000.0F.Sex"
+			sprite planet/_poi
+				scale 0.5
+			distance 140
+			period 472
+			offset 300
+	object
+		sprite planet/cloud5
+		distance 2583.24
+		period 525
+		object KW.B.000.2.Ward
+			sprite planet/station-outpost-a0
+				scale 0.5
+			distance 240
+			period 36
+
+system "KW.B.001.Bet II"
+	"display name" "Bet II"
+	pos 10102.092 -8870.131
+	government KW.Bet
+	attributes copper-source
+	habitable 1200
+	belt 400
+	haze _menu/haze-33
+	link KW.B.011.Mini
+	link KW.B.012.Bracha
+	link KW.B.014.Amici
+	minables copper 36 11
+	trade Clothing 299
+	trade Electronics 792
+	trade Equipment 617
+	trade Food 547
+	trade "Heavy Metals" 751
+	trade Industrial 868
+	trade "Luxury Goods" 1442
+	trade Medical 640
+	trade Metal 445
+	trade Plastic 389
+	object
+		sprite star/m0
+			scale 3
+		period 100
+	object
+		sprite planet/oberon
+			scale 0.8
+		distance 803
+		period 51
+	object KW.B.001.0.Respite
+		sprite planet/ocean3
+		distance 1150
+		period 513
+		object KW.B.001.1.Brig
+			sprite planet/desert5
+				scale 0.3
+			distance 240
+			period 45
+
+system "KW.B.002.Bet III"
+	"display name" "Bet III"
+	pos 9834.315 -9188.425
+	government KW.Bet
+	attributes silver-source iron-source
+	arrival 500
+	habitable 450
+	belt 1800
+	haze _menu/haze-sarifa
+	link KW.B.008.Maci
+	minables silver 24 2.5
+	minables iron 80 1.5
+	trade Clothing 309
+	trade Electronics 875
+	trade Equipment 383
+	trade Food 274
+	trade "Heavy Metals" 1090
+	trade Industrial 750
+	trade "Luxury Goods" 1023
+	trade Medical 766
+	trade Metal 285
+	trade Plastic 326
+	object
+		sprite star/k3
+		period 80
+	object
+		sprite planet/rock12-b
+			scale 0.3
+		distance 241.474
+		period 106
+	object
+		sprite planet/rock6
+			scale 0.4
+		distance 839.077
+		period 160
+	object KW.B.002.0.Consulate
+		sprite planet/rock19
+			scale 0.9
+		distance 1136.875
+		period 540
+	object
+		sprite planet/gas16
+		distance 2725.616
+		period 1190
+
+system KW.B.003.Eiaja
+	"display name" Eiaja
+	pos 9978.782 -9013.56
+	government Uninhabited
+	arrival 5000
+	habitable 17025
+	haze _menu/haze-33
+	link KW.B.000.Bet
+	link KW.B.004.Fauja
+	link KW.B.005.Femici
+	object
+		sprite star/b-supergiant
+		period 100
+	object
+		sprite planet/gas11-b
+		distance 611
+		period 46.3
+	object
+		sprite planet/mercury
+		distance 1144
+		period 118.619
+	object
+		sprite planet/browndwarf-y
+		distance 2132
+		period 301.785
+		object
+			sprite planet/miranda-b
+			distance 268
+			period 207.546
+		object
+			sprite "planet/yniu ena"
+			distance 394
+			period 295.628
+	object
+		sprite planet/saturn
+		distance 4652
+		period 972.693
+
+system KW.B.004.Fauja
+	"display name" Fauja
+	pos 10014.042 -8988.078
+	government Uninhabited
+	attributes tungsten-source iron-source
+	arrival 5000
+	habitable 5600
+	belt 3000
+	haze _menu/haze-33
+	link KW.B.003.Eiaja
+	link KW.B.010.Venci
+	minables tungsten 10 1.5
+	minables iron 36 4
+	object
+		sprite star/f-giant
+		period 10
+	object
+		sprite planet/miranda
+		distance 313
+		period 29.599
+	object
+		sprite planet/desert6-b
+		distance 937
+		period 153.312
+	object
+		sprite planet/gas17-b
+		distance 1567
+		period 331.566
+	object
+		sprite planet/gas3-b
+		distance 3990
+		period 1347.179
+		object
+			sprite planet/rock14-b
+			distance 483
+			period 26.381
+	object
+		sprite planet/jupiter-b
+		distance 10170
+		period 5482.106
+		object
+			sprite planet/ice0-b
+			distance 264
+			period 162.146
+
+system KW.B.005.Femici
+	"display name" Femici
+	pos 9977.893 -9054.893
+	government Uninhabited
+	arrival 500
+	habitable 35
+	haze _menu/haze-133
+	link KW.B.003.Eiaja
+	link KW.B.007.Leija
+	object
+		sprite star/m-dwarf
+		period 10
+	object
+		sprite planet/gas0
+		distance 963
+		period 2020.53
+	object
+		sprite planet/gas12
+		distance 1868
+		period 5458.726
+		object
+			sprite planet/rock7
+			distance 307
+			period 254.46
+	object
+		sprite planet/gas4-b
+		distance 2870
+		period 10395.582
+		object
+			sprite planet/callisto
+			distance 252
+			period 104.693
+	object
+		sprite planet/dust0
+		distance 3445
+		period 13671.3
+
+system KW.B.006.Barke
+	"display name" Barke
+	pos 9896.56 -9064.672
+	government Uninhabited
+	habitable 100
+	haze _menu/haze-67
+	link KW.B.007.Leija
+	link KW.B.015.Meni
+	link KW.B.020.Micaja
+	object
+		sprite star/k-dwarf
+		period 10
+	object
+		sprite planet/titan
+		distance 217
+		period 127.864
+	object
+		sprite planet/neptune-b
+		distance 849
+		period 989.513
+		object
+			sprite planet/miranda
+			distance 227
+			period 161.79
+		object
+			sprite "planet/yniu ena"
+			distance 388
+			period 288.9
+	object
+		sprite planet/gas13
+		distance 2546
+		period 5138.633
+	object
+		sprite planet/gas4-b
+		distance 3265
+		period 7462.507
+		object
+			sprite planet/callisto-b
+			distance 288
+			period 127.911
+	object
+		sprite planet/neptune
+		distance 7981
+		period 28519.766
+	object
+		sprite planet/asura
+		distance 13511
+		period 62819.031
+		object
+			sprite planet/miranda-b
+			distance 220
+			period 154.364
+
+system KW.B.007.Leija
+	"display name" Leija
+	pos 9921.894 -9093.116
+	government Uninhabited
+	arrival 750
+	habitable 750
+	haze _menu/haze-133
+	link KW.B.005.Femici
+	link KW.B.006.Barke
+	link KW.B.008.Maci
+	object
+		sprite star/a-dwarf
+		distance 100.661
+		period 65.071
+		offset 180
+	object
+		sprite star/m4
+		distance 12.839
+		period 65.071
+	object
+		sprite planet/gas3-b
+		distance 1336.535
+		period 314.515
+	object
+		sprite planet/browndwarf-t
+		distance 1986
+		period 1292.701
+		object
+			sprite planet/ice7
+			distance 283
+			period 124.594
+		object
+			sprite planet/dust7-b
+			distance 408
+			period 311.524
+	object
+		sprite planet/gas7-b
+		distance 3728
+		period 3324.629
+		object
+			sprite planet/lava0-b
+			distance 284
+			period 125.255
+	object
+		sprite planet/dust1-b
+		distance 5147
+		period 5393.375
+
+system KW.B.008.Maci
+	"display name" Maci
+	pos 9865.597 -9119.782
+	government Uninhabited
+	habitable 135
+	haze _menu/haze-133
+	link "KW.B.002.Bet III"
+	link KW.B.007.Leija
+	object
+		sprite star/m8
+		period 10
+	object
+		sprite planet/cloud3
+		distance 711.994
+		period 299.505
+		object
+			sprite planet/ice7-b
+			distance 196
+			period 71.813
+	object
+		sprite planet/gas8
+		distance 2137.527
+		period 1686.801
+	object
+		sprite planet/gas11-b
+		distance 2726.658
+		period 2982.718
+	object
+		sprite planet/browndwarf-l
+		distance 4781
+		period 11380.759
+		object
+			sprite planet/browndwarf-l-rogue
+			distance 454
+			period 26.714
+	object
+		sprite planet/gas14
+		distance 5796
+		period 15190.976
+	object
+		sprite planet/gas0-hot
+		distance 9136
+		period 30062.649
+		object
+			sprite planet/callisto
+			distance 264
+			period 112.26
+
+system KW.B.009.Sesci
+	"display name" Sesci
+	pos 9979.524 -8958.598
+	government Uninhabited
+	arrival 4500
+	habitable 4500
+	haze _menu/haze-33
+	link KW.B.000.Bet
+	link KW.B.010.Venci
+	object
+		sprite star/k-supergiant
+		period 100
+	object
+		sprite planet/jupiter-b
+		distance 995
+		period 187.149
+		object
+			sprite planet/ice7
+			distance 285
+			period 125.917
+	object
+		sprite planet/neptune-b
+		distance 1831
+		period 467.182
+	object
+		sprite planet/gas12
+		distance 2619.43
+		period 930.253
+	object
+		sprite planet/gas8-b
+		distance 7664.237
+		period 2295.533
+		object
+			sprite planet/tethys-b
+			distance 347
+			period 398.097
+
+system KW.B.010.Venci
+	"display name" Venci
+	pos 9995.671 -8919.338
+	government KW.Bet
+	habitable 4050
+	haze _menu/haze-33
+	link "KW.AB.000.Route B0"
+	link KW.B.004.Fauja
+	link KW.B.009.Sesci
+	link KW.B.011.Mini
+	trade Clothing 203
+	trade Electronics 601
+	trade Equipment 640
+	trade Food 561
+	trade Medical 690
+	trade Metal 238
+	trade Plastic 478
+	object
+		sprite star/g-giant
+		period 100
+	object
+		sprite planet/ice1
+		distance 543
+		period 79.53
+		object
+			sprite planet/dust7-b
+			distance 171
+			period 84.527
+	object KW.B.010.0.Avi
+		sprite planet/rock11
+		distance 2515.052
+		period 307.966
+	object
+		sprite planet/rock7
+		distance 2301
+		period 693.757
+	object
+		sprite planet/gas3
+		distance 3407.058
+		period 955.809
+		object
+			sprite planet/dust0-b
+			distance 274.111
+			period 216.228
+
+system KW.B.011.Mini
+	"display name" Mini
+	pos 10019.671 -8873.116
+	government Uninhabited
+	arrival 625
+	habitable 625
+	haze _menu/haze-33
+	link "KW.B.001.Bet II"
+	link KW.B.010.Venci
+	link KW.B.012.Bracha
+	link KW.B.022.Midi
+	object
+		sprite star/g5
+		period 10
+	object
+		sprite planet/lava2
+		distance 302
+		period 83.971
+	object
+		sprite planet/lava7
+		distance 749
+		period 327.976
+	object
+		sprite planet/venus-b
+		distance 1245
+		period 702.868
+		object
+			sprite planet/rock21
+			distance 191
+			period 32.53
+	object
+		sprite planet/gas5-b
+		distance 3223
+		period 2927.591
+
+system KW.B.012.Bracha
+	"display name" Bracha
+	pos 10121.894 -8828.672
+	government Uninhabited
+	attributes aluminum-source
+	arrival 500
+	habitable 30
+	belt 1000
+	haze _menu/haze-33
+	link "KW.B.001.Bet II"
+	link KW.B.011.Mini
+	link KW.B.013.Moraja
+	minables aluminum 19 1.2
+	object
+		sprite star/l-dwarf
+		period 10
+	object
+		sprite planet/desert9
+		distance 281
+		period 344
+	object
+		sprite planet/gas2
+		distance 1248
+		period 3219.743
+	object
+		sprite planet/jupiter-b
+		distance 2676
+		period 10109.473
+		object
+			sprite planet/dust5
+			distance 281
+			period 123.276
+	object
+		sprite planet/gas17
+		distance 4115
+		period 19277.651
+		object
+			sprite planet/oberon-b
+			distance 224
+			period 206.474
+
+system KW.B.013.Moraja
+	"display name" Moraja
+	pos 10153.893 -8795.338
+	government Uninhabited
+	arrival 1715
+	habitable 1715
+	haze _menu/haze-33
+	link KW.B.012.Bracha
+	link KW.B.017.Mora
+	object
+		sprite star/f5
+		period 10
+	object
+		sprite planet/rock15
+		distance 321
+		period 55.55
+	object
+		sprite planet/gas3-hot
+		distance 869
+		period 247.433
+	object
+		sprite planet/gas8
+		distance 1941
+		period 825.974
+	object
+		sprite planet/gas2-hot
+		distance 3931
+		period 2380.578
+		object
+			sprite planet/dust7
+			distance 227
+			period 129.282
+
+system KW.B.014.Amici
+	"display name" Amici
+	pos 10108.116 -8917.116
+	government KW.Bet
+	arrival 1051.19
+	habitable 1051.19
+	haze _menu/haze-33
+	link "KW.B.001.Bet II"
+	trade Clothing 321
+	trade Electronics 774
+	trade Equipment 593
+	trade Food 583
+	trade "Heavy Metals" 749
+	trade "Luxury Goods" 1500
+	trade Medical 645
+	trade Metal 447
+	trade Plastic 367
+	object
+		sprite star/k3
+		distance 182.948
+		period 78.112
+	object
+		sprite star/k5-old
+		distance 48.052
+		period 78.112
+		offset 180
+	object
+		sprite planet/gas3
+		distance 906
+		period 336.443
+		object
+			sprite planet/rock17
+			distance 289
+			period 302.581
+		object
+			sprite planet/rock11
+			distance 432
+			period 279.257
+		object
+			sprite planet/ice0
+			distance 551
+			period 488.909
+	object
+		sprite planet/gas6-b
+		distance 2443
+		period 1489.72
+		object KW.B.014.0.Amicable
+			sprite planet/forest12
+			distance 490
+			period 56.461
+		object
+			sprite planet/europa-b
+			distance 728
+			period 929.199
+	object
+		sprite planet/dust1-b
+		distance 3521
+		period 2577.617
+	object
+		sprite planet/gas8-b
+		distance 4274
+		period 3447.237
+		object
+			sprite planet/io
+			distance 346
+			period 243.285
+		object
+			sprite planet/luna-b
+			distance 497
+			period 418.828
+	object
+		sprite planet/gas5
+		distance 7010
+		period 7240.965
+		object
+			sprite planet/io-b
+			distance 268
+			period 165.845
+
+system KW.B.015.Meni
+	"display name" Meni
+	pos 9904.116 -9031.782
+	government KW.Bet
+	habitable 3000
+	haze _menu/haze-67
+	link KW.B.000.Bet
+	link KW.B.006.Barke
+	trade Clothing 369
+	trade Food 575
+	trade Metal 476
+	trade Plastic 432
+	object
+		sprite star/k-giant
+		period 100
+	object
+		sprite planet/ocean4-b
+		distance 743
+		period 147.905
+		object
+			sprite planet/rhea
+			distance 175
+			period 72.001
+	object
+		sprite planet/uranus-b
+		distance 1537
+		period 440.058
+	object
+		sprite planet/gas6
+		distance 2699
+		period 1024.009
+	object
+		sprite planet/gas10
+		distance 5081
+		period 2644.985
+		object
+			sprite planet/europa-b
+			distance 234
+			period 169.331
+		object "KW.B.007.0.Station M"
+			sprite planet/station12
+				scale 0.8
+			distance 469
+			period 47.009
+	object
+		sprite planet/gas4
+		distance 6901
+		period 4186.657
+
+system "KW.B.016.Cygnus X"
+	"display name" "Cygnus X"
+	pos 9850.903 -8844.847
+	government Uninhabited
+	arrival 5000
+	habitable 100000
+	haze _menu/haze-chanai
+	link KW.AB.001.Nemek
+	link KW.H.015.Hex
+	object
+		sprite star/o5
+		distance 807.011
+		period 916.109
+		offset 180
+	object
+		sprite star/b0
+		distance 695
+		period 916.109
+	object
+		sprite star/o8
+		distance 2502.703
+		period 462.904
+		object
+			sprite star/b8
+			distance 3911.201
+			period 140.886
+
+system KW.B.017.Mora
+	"display name" Mora
+	pos 10185.833 -8747.931
+	government Uninhabited
+	arrival 500
+	habitable 160
+	haze _menu/haze-33
+	link KW.B.013.Moraja
+	link KW.B.018.Pices
+	link KW.S.008.Deneb
+	object
+		sprite star/m5
+		period 100
+	object
+		sprite planet/gas5
+		distance 1622.844
+		period 1690.338
+		object
+			sprite planet/ice8
+			distance 262
+			period 160.307
+	object
+		sprite planet/gas4
+		distance 2348.357
+		period 3165.725
+	object
+		sprite planet/uranus
+		distance 3780.405
+		period 6035.667
+		object
+			sprite planet/ice0-b
+			distance 257
+			period 155.74
+
+system KW.B.018.Pices
+	"display name" Pices
+	pos 10235.889 -8804.153
+	government KW.Bet
+	habitable 230
+	haze _menu/haze-133
+	link KW.B.017.Mora
+	trade Clothing 272
+	trade Electronics 724
+	trade Equipment 718
+	trade Food 464
+	trade Industrial 630
+	trade Medical 444
+	trade Metal 496
+	trade Plastic 362
+	object
+		sprite star/m3
+		period 100
+	object
+		sprite planet/browndwarf-y
+		distance 550.609
+		period 362.714
+		object KW.B.018.0.Fis
+			sprite planet/oberon-b
+			distance 305
+			period 328.053
+	object
+		sprite planet/aera
+		distance 1956.863
+		period 1699.104
+		object
+			sprite planet/rock17-b
+			distance 317
+			period 347.603
+	object
+		sprite planet/dust0
+		distance 3151.38
+		period 3128.254
+	object
+		sprite planet/redias
+		distance 3818.837
+		period 4905.945
+	object
+		sprite planet/gas4-b
+		distance 9159
+		period 23118.953
+		object
+			sprite planet/luna-b
+			distance 287
+			period 183.791
+
+system KW.B.019.Coda
+	"display name" Coda
+	pos 9749.981 -9008.671
+	government KW.Machines
+	arrival 5000
+	habitable 21000
+	haze _menu/haze-chanai
+	link KW.B.021.Soji
+	object
+		sprite star/a-supergiant
+		distance 131.904
+		period 100
+		offset 180
+	object
+		sprite star/b3
+		distance 660.733
+		period 44.835
+	object "KW.B.019.Bright Night"
+		sprite planet/rock1
+		distance 1148.214
+		period 102.37
+	object
+		sprite planet/gas12-b
+		distance 1892
+		period 302.401
+		object
+			sprite planet/europa
+			distance 281
+			period 222.829
+		object
+			sprite planet/io-b
+			distance 394
+			period 295.628
+		object
+			sprite planet/oberon
+			distance 531
+			period 753.592
+	object
+		sprite planet/gas0
+		distance 5515.989
+		period 739.437
+	object
+		sprite planet/browndwarf-t-rogue
+		distance 2798.38
+		period 983.431
+	object
+		sprite planet/gas4
+		distance 7030.36
+		period 1955.917
+		object
+			sprite planet/miranda
+			distance 259
+			period 197.179
+		object
+			sprite planet/rock17
+			distance 411
+			period 513.165
+
+system KW.B.020.Micaja
+	"display name" Micaja
+	pos 9845.093 -9048.671
+	government Uninhabited
+	attributes uranium-source
+	arrival 500
+	habitable 490
+	haze _menu/haze-67
+	link KW.B.006.Barke
+	link KW.B.021.Soji
+	minables uranium 23 2.5
+	object
+		sprite star/k0
+		period 10
+	object
+		sprite planet/miranda-b
+		distance 258
+		period 74.884
+	object
+		sprite planet/gas10
+		distance 1072
+		period 634.241
+		object
+			sprite planet/europa
+			distance 227
+			period 161.79
+	object
+		sprite planet/uranus-b
+		distance 2603
+		period 2399.79
+		object
+			sprite planet/callisto
+			distance 272
+			period 117.401
+		object
+			sprite planet/tethys
+			distance 408
+			period 507.557
+
+system KW.B.021.Soji
+	"display name" Soji
+	pos 9824.648 -9011.782
+	government Uninhabited
+	attributes copper-source titanium-source
+	habitable 700
+	haze _menu/haze-33
+	link KW.B.019.Coda
+	link KW.B.020.Micaja
+	minables copper 46 4
+	minables titanium 12 3.2
+	object
+		sprite star/g3
+		period 10
+	object
+		sprite planet/rock2-b
+		distance 458
+		period 148.187
+	object
+		sprite planet/gas1
+		distance 1248
+		period 666.55
+	object
+		sprite planet/gas16-b
+		distance 2451
+		period 1834.535
+		object
+			sprite planet/ice0
+			distance 229
+			period 130.995
+	object
+		sprite planet/gas3
+		distance 3942
+		period 3741.846
+		object
+			sprite planet/rock14-b
+			distance 324
+			period 152.628
+
+system KW.B.022.Midi
+	"display name" Midi
+	pos 10018.204 -8834.037
+	government Uninhabited
+	arrival 4166.88
+	habitable 4166.881
+	haze _menu/haze-67
+	link KW.B.011.Mini
+	link KW.B.023.Brai
+	object
+		sprite star/g-giant
+		distance 153.5
+		period 95.09
+	object
+		sprite star/k0-old
+		distance 153.5
+		period 95.09
+		offset 180
+	object
+		sprite planet/desert6
+		distance 637
+		period 99.624
+	object
+		sprite planet/gas5
+		distance 1358
+		period 310.102
+		object
+			sprite planet/ice0
+			distance 271
+			period 168.638
+	object
+		sprite planet/gas11
+		distance 2386
+		period 722.204
+		object
+			sprite planet/rock14
+			distance 302
+			period 137.35
+		object
+			sprite planet/dust0
+			distance 413
+			period 516.915
+		object
+			sprite planet/io
+			distance 510
+			period 435.367
+	object
+		sprite planet/gas11-b
+		distance 3588
+		period 1331.782
+		object
+			sprite planet/dust1-b
+			distance 270
+			period 137.983
+
+system KW.B.023.Brai
+	"display name" Brai
+	pos 9983.981 -8822.185
+	government Uninhabited
+	attributes iron-source
+	arrival 3433.28
+	habitable 3433.278
+	haze _menu/haze-brown
+	link KW.B.022.Midi
+	link KW.B.024.Amari
+	minables iron 85 3.2
+	object
+		sprite star/g-dwarf
+		distance 184.841
+		period 64.239
+	object
+		sprite star/f5-old
+		distance 4.159
+		period 64.239
+		offset 180
+	object
+		sprite planet/forest3-b
+		distance 301
+		period 35.65
+	object
+		sprite planet/gas9-b
+		distance 789
+		period 151.294
+	object
+		sprite planet/lava1
+		distance 1339
+		period 334.485
+	object
+		sprite planet/gas1-b
+		distance 2575
+		period 892.013
+	object
+		sprite planet/gas5
+		distance 6141
+		period 3285.218
+
+system KW.B.024.Amari
+	"display name" Amari
+	pos 9969.759 -8782.778
+	government Uninhabited
+	attributes platinum-source silicon-source
+	arrival 500
+	habitable 150
+	haze _menu/haze-brown
+	link KW.B.023.Brai
+	link KW.B.025.Bronzi
+	minables platinum 8 1.5
+	minables silicon 18 2.8
+	object
+		sprite star/g-dwarf
+		period 10
+	object
+		sprite planet/rock2-b
+		distance 248
+		period 127.553
+	object
+		sprite planet/gas0
+		distance 847
+		period 805.081
+		object
+			sprite planet/rock17-b
+			distance 298
+			period 316.824
+
+system KW.B.025.Bronzi
+	"display name" Bronzi
+	pos 9995.093 -8752.556
+	government Uninhabited
+	attributes copper-source lead-source
+	arrival 5000
+	habitable 5600
+	haze _menu/haze-brown
+	link KW.B.024.Amari
+	link KW.B.025.Silvi
+	minables copper 125 5
+	minables lead 16 3.2
+	object
+		sprite star/f-giant
+		period 10
+	object
+		sprite planet/desert7-b
+		distance 452
+		period 51.366
+	object
+		sprite planet/dust0-b
+		distance 850
+		period 132.463
+	object
+		sprite planet/lava1-b
+		distance 1229
+		period 230.3
+	object
+		sprite planet/gas6-hot
+		distance 4374
+		period 1546.266
+	object
+		sprite planet/asura
+		distance 12548
+		period 7513.248
+
+system KW.B.025.Silvi
+	"display name" Silvi
+	pos 9981.759 -8705
+	government KW.Bet
+	attributes silver-source
+	arrival 5000
+	habitable 10000
+	haze _menu/haze-brown
+	link KW.B.025.Bronzi
+	link KW.B.026.Mercui
+	minables silver 63 4
+	trade Clothing 425
+	trade Equipment 686
+	trade Food 516
+	trade "Heavy Metals" 640
+	trade Industrial 819
+	trade Medical 483
+	trade Metal 302
+	trade Plastic 240
+	object
+		sprite star/protostar-orange
+		distance 323
+		period 290.251
+		offset 180
+	object
+		sprite star/o5
+		distance 323
+		period 290.251
+	object
+		sprite planet/cloud0-b
+		distance 641
+		period 64.915
+	object
+		sprite planet/rock7
+		distance 961
+		period 119.164
+	object
+		sprite planet/rock17
+		distance 1184
+		period 162.962
+	object
+		sprite planet/gas17
+		distance 1788
+		period 302.421
+		object "KW.B.025.0.Grey Tint"
+			sprite planet/io
+			distance 223
+			period 125.88
+		object
+			sprite planet/ice8
+			distance 369
+			period 267.942
+
+system KW.B.026.Mercui
+	"display name" Mercui
+	pos 9955.537 -8666.333
+	government Uninhabited
+	attributes uranium-source
+	arrival 500
+	habitable 320
+	belt 500
+	haze _menu/haze-brown
+	link KW.B.025.Silvi
+	link KW.B.027.Plei
+	minables uranium 22 3
+	object
+		sprite star/m0
+		period 10
+	object
+		sprite planet/gas8-b
+		distance 1197
+		period 926.032
+	object
+		sprite planet/ice8
+		distance 2403
+		period 2633.999
+	object
+		sprite planet/gas14
+		distance 3074
+		period 3811.016
+		object
+			sprite planet/rock0
+			distance 260
+			period 158.475
+		object
+			sprite planet/europa-b
+			distance 388
+			period 361.543
+
+system KW.B.027.Plei
+	"display name" Plei
+	pos 9999.981 -8635.222
+	government Uninhabited
+	attributes aluminum-source lead-source
+	habitable 596.154
+	haze _menu/haze-brown
+	link KW.B.026.Mercui
+	link KW.B.028.Amori
+	link KW.S.029.Ceris
+	minables aluminum 45 2.8
+	minables lead 55 1.5
+	object
+		sprite star/m3
+		distance 116.996
+		period 100.115
+		offset 180
+	object
+		sprite star/g8
+		distance 82.004
+		period 100.115
+	object
+		sprite "planet/zenith cold"
+		distance 352
+		period 108.192
+	object
+		sprite planet/gas8-b
+		distance 1098
+		period 596.052
+		object
+			sprite planet/ice8
+			distance 330
+			period 226.606
+		object
+			sprite planet/luna
+			distance 443
+			period 352.457
+	object
+		sprite planet/ice4-b
+		distance 1854
+		period 1307.812
+
+system KW.B.028.Amori
+	"display name" Amori
+	pos 9953.759 -8596.111
+	government Uninhabited
+	attributes gold-source
+	arrival 5000
+	habitable 10499.524
+	haze _menu/haze-133
+	link KW.B.027.Plei
+	link KW.P.015.'ere'us
+	minables gold 48 2.1
+	object
+		sprite star/a5
+		distance 149.573
+		period 63.596
+	object
+		sprite star/o5
+		distance 58.427
+		period 63.596
+		offset 180
+	object
+		sprite planet/lava6-b
+		distance 381
+		period 29.031
+	object
+		sprite planet/gas10-hot
+		distance 777
+		period 84.549
+	object
+		sprite planet/desert2
+		distance 1270
+		period 176.677
+

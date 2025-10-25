@@ -1,0 +1,95 @@
+system KW.MWC.000.Sgr-A*
+	"display name" "Sagittarius A*"
+	pos 10026.518 -10007.556
+	government Uninhabited
+	attributes "black hole" "notable star"
+	arrival 5000
+	habitable 100000
+	haze _menu/haze-full
+	hazard "Black Hole Accretion Disk" 1
+	hazard "Black Hole Event Horizon" 1
+	hazard "Black Hole Gravity" 1
+	object "KW.WH.Sanctuary Wormhole"
+		sprite star/black-hole-core
+	object
+		sprite star/black-hole
+	object
+		sprite star/b0
+		distance 2705.832
+		period 186
+	object
+		sprite star/a-dwarf
+		distance 1863.3
+		period 140
+
+system KW.MWC.001.Sgr-B2
+	"display name" "Sagittarius B2"
+	pos 9949.926 -10062.592
+	government Uninhabited
+	attributes carbon "notable star"
+	arrival 900
+	habitable 100000
+	haze _menu/haze-full
+	object
+		sprite star/carbon
+		period 1000
+	object
+		sprite star/carbon-core
+		period 1000
+	object
+		sprite planet/lava0-b
+			scale 0.5
+		distance 801.605
+		period 78.541
+
+system KW.MWC.002.Sgr-C
+	"display name" "Sagittarius C"
+	pos 10167.125 -9918.959
+	government Uninhabited
+
+system KW.MWC.003.S0-6
+	"display name" "S0-6"
+	pos 10054.57 -9973.588
+	government Uninhabited
+	arrival 5000
+	habitable 100000
+	haze _menu/haze-full
+	object
+		sprite star/k5-old
+			scale 2
+		period 100
+	object KW.MWC.003.0.Solitude
+		sprite planet/lava0
+		distance 4838.988
+		period 654.048
+	object
+		sprite star/proto-planetary-disk
+		period 500
+
+system "KW.MWC.004.The Snake"
+	"display name" "The Snake"
+	pos 10286.861 -10124.708
+	government Uninhabited
+
+system "KW.MWC.005.Thread of Life"
+	"display name" "Thread of Life"
+	pos 10282.861 -10034.931
+	government Uninhabited
+
+system "KW.MWC.006.Thread of Will"
+	"display name" "Thread of Will"
+	pos 10227.528 -9984.931
+	government Uninhabited
+
+system "KW.MWC.007.The Cane"
+	"display name" "The Cane"
+	pos 9967.12 -10225.079
+	government Uninhabited
+
+system "KW.MWC.008.Burning Hearts"
+	"display name" "Burning Hearts"
+	pos 10104.426 -9821.116
+
+system KW.MWC.009.Return
+	"display name" Return
+	pos 10102.204 -9901.56

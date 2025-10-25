@@ -1,0 +1,55 @@
+############### MISSIONS: MORRIS ###############
+#	Col. Morris was your instructor back when you were in the airforce.
+#	Advent is described as uninhabitable, but there is actually an outpost underneath the surface, not unlike the situation on Earth.
+#
+#	Intent:
+#		'Tutorial' for passenger missions.
+#		Missions are geared for transport or bunk-heavy ships
+#		Completing missions will give conversations with some lore into the internal mechanisms of Sol.
+#		Completing missions will give access to some sections of the Knowledge Archives, with more lore drops
+#
+#	Morris questline should be allowed to be skipped without major repercussions
+
+mission "KW.Sol.Morris [0]"
+	priority
+	name "[Sol] Transport Col. Morris to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Bring a colonel and his fiance to <destination>. Payment will be <payment>."
+	blocked `At port, the management officer inspects your ship, nods and says, "Captain <last>, I was told you have a pending offer that requires <capacity>. Come back once you have cleared your ship and we can start the transfer."`
+	source KW.S.000.2.Io
+	destination KW.S.000.0B.Alps
+	passengers 2
+	to offer
+		has "KW.Sol.Inbox [0]: done"
+
+	on offer
+		conversation
+			`An elderly man walks up to your ship. You recognized him to be one of your instructors in the air force. Morris was the name, and Major was his rank back then. The insignia on his shoulder indicates a Colonel rank.`
+			`	"Captain <last>." he croaks. "Finally, you got bored of the sky and crave the space beyond?"`
+
+			choice
+				`	"I have always been interested in space."`
+				`	"It is hard to appreciate the sky from a cave."`
+
+			`	"So do most of my students. Hard to fly when everyone is stuck underground." The man shuffles his feet and raises a hand, gesturing towards a lady in a green dress. The lady promptly approaches you.`
+			`	"This is Suzie. Suzie, meet Captain <last>" You shake hands cordially with the woman. "Suzie and I are taking a tour of the facilities, and the time has come for us to return to Earth. I was about to arrange my own shuttle, but I heard about your promotion. For <payment> to take us to <planet>, what do you say?"`
+			choice
+				`	"Sure, welcome aboard! ${KW.Phrase.Mission: Accept}"`
+				`	"Sorry, it might be better for you to look for a different pilot to bring you home. ${KW.Phrase.Mission: Decline}"`
+					goto reject
+			`	Col. Morris helps his woman up the steps and into your ship and hands you his luggage. You prep yourself for a little chatter for at least the next few hours.`
+				accept
+
+			label reject
+			`	Col. Morris ponders for a while, and nods understandably. "Well then, it was good meeting you. Take care of yourself." He motions to his partner and turns around, disappearing into the crowd.`
+				decline
+
+
+	on complete
+		payment 15000
+		conversation
+			`Along the journey, you learned that the Colonel was recalled to Earth to attend a session with the top brass. On Earth, you are born in the Organization a child of the Great House of Coreillius, represented by the red color of its banner. Far from being a noble, the Houses in the Underground had consumed one another and merged until today, three major Houses remain. The three Houses collectively form the population from which the Organization is formed.'`
+			`	Above the Organization, is a group of elite nobles known as the 'Committees'. In the recent past, they gave themselves the name 'Establishment', as if it's a taunt. At times, the elites call up leadership of various factions of the Underground to gather for a debate or a vote on a motion, the process is called 'Deliberation', and one motion can take several hours to be decided upon.`
+			`	Col. Morris was recalled to discuss the impact of one of such policies being deliberated. The details is kept secret, and you saw no reason to inquire further. As you bid farewell to your passengers, your thoughts wandered to the soothing idea of flying away from the tentacles of bureaucracy.`
+

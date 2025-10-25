@@ -1,0 +1,144 @@
+
+############### MISSIONS: LEPO ###############
+#	Lepo is an outpost on Arneb, 4 jumps from Sol. With 3 jumps, you can stop at Tiptoe/Rigel along the way.
+#	It is advanced enough to have some workshop and an outfitter, it is severely understaffed
+#	It starts to show when packages meant for Earth were sent to Io instead.
+#
+#	Intent:
+#		'Tutorial' for longer ranged hyperspace travel, showing the importance of having sufficient fuel and fuel conservation to reach Arneb.
+#
+#
+#	Lepo questline should be allowed to be skipped without major repercussions
+
+
+mission "KW.Sol.Lepo [0]"
+	priority
+	name "[Sol] Deliver misplaced goods to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	landing
+	source KW.S.000.2.Io
+	destination KW.S.000.0B.Alps
+	cargo "research samples" 5
+	to offer
+		has "KW.Sol.Inbox [1A]: done"
+		has "KW.Sol.Inbox [1B]: done"
+		has "KW.Sol.Inbox [1C]: done"
+
+	on offer
+		conversation
+			`A hulk of a machine approaches you. With four lines of treaded tracks, a familiar layer of red-brown skin and a flat chassis laden with crates of goods no human is expected to carry, a voice greets you. The port assistant quartermaster notifies you that one of the shipments has been delivered to Io instead of Earth.`
+			`	Looking at the crate, you find the words 'Lepo' scribled on the information sheet. You remember the scrapyard made from the hull of a fallen ship.`
+				to display
+					has "visited planet: KW.S.025.0.Lepo"
+			`	It asks if you could be assigned the task of relocating the misplaced items to <destination>.`
+
+			choice
+				`	"Sure. ${KW.Phrase.Mission: Accept}"`
+				`	"I need to settle some other job first. Let's check in later. ${KW.Phrase.Mission: Defer}"`
+					defer
+				`	"Please find another pilot to handle it. ${KW.Phrase.Mission: Decline}"`
+					decline
+
+			`	The machine hums and drives towards your ship, as you prepare to load the cargo.`
+				accept
+
+	on visit
+		dialog phrase "generic cargo on visit"
+
+	on complete
+		payment 7500
+		dialog phrase "KW.Phrase.Sol: Io delivery payment"
+
+mission "KW.Sol.Lepo [1]"
+	priority
+	name "[Sol] Deliver misplaced goods to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Deliver <cargo> to <destination>. Payment is <payment>."
+	landing
+	source KW.S.000.2.Io
+	destination KW.S.000.0B.Alps
+	cargo "research samples" 9
+	to offer
+		has "KW.Sol.Lepo [0]: done"
+		random < 60
+
+	on offer
+		conversation
+			`A hulk of a machine approaches you, again. The port assistant quartermaster notifies you that another one of the shipments has been delivered to Io instead of Earth.`
+			`	The word 'Lepo' is displayed prominently on the shipment tag. You wonder if this is a recurring occurence.`
+			`	It asks if you could be assigned the task of relocating the misplaced items to <destination>.`
+
+			choice
+				`	"I'll do it. ${KW.Phrase.Mission: Accept}"`
+				`	"I need to clear some things first. Let's check in later. ${KW.Phrase.Mission: Defer}"`
+					defer
+				`	"Please find another pilot to handle it. ${KW.Phrase.Mission: Decline}"`
+					decline
+
+			`	The machine hums and drives towards your ship, as you prepare to load the cargo.`
+				accept
+
+	on visit
+		dialog phrase "generic cargo on visit"
+
+	on complete
+		payment 14000
+		dialog phrase "KW.Phrase.Sol: Io delivery payment"
+
+mission "KW.Sol.Lepo [2]"
+	priority
+	name "[Sol] Bring inspector to <planet>"
+	color selected "KW.Color: secondary missions selected"
+	color unselected "KW.Color: secondary missions unselected"
+	description "Transport an inspector to <destination>. Payment is <payment>."
+	landing
+	source KW.S.000.2.Io
+	destination KW.S.025.0.Lepo
+	passengers 1
+	to offer
+		has "KW.Sol.Lepo [1]: done"
+		random < 60
+
+	on offer
+		conversation
+			`The android calls you over. You were not aware that a machine is capable of cursing, but the grating sounds are fresh as you walk over. The words were not directed to you, however, as the android shoos its assistant away as you stand next to it.`
+			`	"I was told you were familiar with shipments from '<destination>'?"`
+
+			choice
+				`	Is there a problem?`
+				`	Is it another mistaken delivery?`
+
+			`	"They did it again. This time I have another courier making the correction. As for you, I have a different kind of job."`
+			`	"I am sending an inspector to <destination> to find out what's going on in their heads. Preferably without surgery." The machine clicks furiously. "To do that, I need a pilot with hyperdrive permit."`
+			`	The android looks towards your ship. "You have the means to bring one of us there. Recommend some fuel storage to last the journey, or the Fuel Recycler. Can you do it?"`
+				to display
+					has "ship attribute: hyperdrive"
+					not "ship attribute: jump drive"
+			`	The android looks towards your ship. "Impressive that you have a jump drive installed. I won't question how you did it, but it is good enough for the job. I might even open some jobs to Marigold for you. Can you make the trip to <destination>?"`
+				to display
+					has "ship attribute: jump drive"
+			`	The android looks towards your ship. "You will need to purchase a Basic Chronodrive from the outfitter. And probably some fuel pods to sustain your journey. Will you do it?"`
+				to display
+					not "ship attribute: hyperdrive"
+					not "ship attribute: jump drive"
+
+			choice
+				`	"I'm in. ${KW.Phrase.Mission: Accept}"`
+				`	"Give me a bit of time to prepare. ${KW.Phrase.Mission: Defer}"`
+					defer
+				`	"Please find another pilot to handle it. ${KW.Phrase.Mission: Decline}"`
+					decline
+
+			`	The machine nods approvingly. It signals one of its assistants, which promptly greets you and boards your ship.`
+				accept
+
+	on complete
+		payment 5500
+		dialog
+			"You drop off the mechanical inspector at the run-down port. As it moves briskly in the direction of the portmaster's office, you hear the familiar notification that <payment> has been transferred to you."
+
+
+

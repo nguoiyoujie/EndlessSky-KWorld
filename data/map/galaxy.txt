@@ -1,0 +1,8 @@
+galaxy "KW.Milky Way"
+	pos 10000 -10000
+	sprite kworld/galaxy/kw-milky-way-large
+
+galaxy "KW.Sanctuary Zone"
+	pos 20000 -12000
+	sprite star/black-hole-still
+

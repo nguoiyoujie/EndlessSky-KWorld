@@ -1,0 +1,94 @@
+system KW.F.000.Fel
+	pos 9280.667 -9260.667
+	government KW.Fel
+	link KW.F.001.Krychycyk
+	link KW.F.002.Kraihivhk
+	link KW.F.004.Kyki
+	trade Clothing 201
+	trade Electronics 853
+	trade Equipment 456
+	trade Food 320
+	trade "Heavy Metals" 887
+	trade Industrial 579
+	trade "Luxury Goods" 1282
+	trade Medical 757
+	trade Metal 333
+	trade Plastic 530
+
+system KW.F.001.Krychycyk
+	pos 9255.162 -9237.616
+	link KW.F.000.Fel
+	link KW.F.003.Fykikhihk
+
+system KW.F.002.Kraihivhk
+	pos 9242.94 -9280.653
+	link KW.F.000.Fel
+	link KW.F.013.Fydihycyk
+
+system KW.F.003.Fykikhihk
+	pos 9251.088 -9205.69
+	link KW.F.001.Krychycyk
+	link KW.F.010.Krainyk
+
+system KW.F.004.Kyki
+	pos 9319.236 -9240.949
+	link KW.F.000.Fel
+	link KW.F.005.Vihyk
+
+system KW.F.005.Vihyk
+	pos 9365.162 -9215.912
+	link KW.F.004.Kyki
+	link KW.F.006.Chyiknyk
+	link KW.F.008.Fydikykek
+
+system KW.F.006.Chyiknyk
+	pos 9314.644 -9193.69
+	link KW.F.005.Vihyk
+	link KW.F.007.Yidihycyk
+	link KW.F.010.Krainyk
+
+system KW.F.007.Yidihycyk
+	pos 9322.94 -9156.505
+	link KW.F.006.Chyiknyk
+	link KW.F.009.Fydichycyk
+	link KW.F.010.Krainyk
+
+system KW.F.008.Fydikykek
+	pos 9424.125 -9193.986
+	link KW.F.005.Vihyk
+
+system KW.F.009.Fydichycyk
+	pos 9322.792 -9119.912
+	link KW.F.007.Yidihycyk
+	link KW.F.011.Vihikinyk
+
+system KW.F.010.Krainyk
+	pos 9273.458 -9174.579
+	link KW.F.003.Fykikhihk
+	link KW.F.006.Chyiknyk
+	link KW.F.007.Yidihycyk
+
+system KW.F.011.Vihikinyk
+	pos 9305.755 -9065.986
+	link KW.F.009.Fydichycyk
+	link KW.F.012.Nihinyk
+
+system KW.F.012.Nihinyk
+	pos 9383.532 -9036.208
+	link KW.F.011.Vihikinyk
+	link KW.H.023.Ara
+
+system KW.F.013.Fydihycyk
+	pos 9219.977 -9322.431
+	link KW.F.002.Kraihivhk
+	link KW.F.014.Kraihihk
+
+system KW.F.014.Kraihihk
+	pos 9169.31 -9339.319
+	link KW.F.013.Fydihycyk
+	link KW.F.015.Krynk
+
+system KW.F.015.Krynk
+	pos 9111.532 -9327.764
+	link "KW.AB.010.Exit F"
+	link KW.F.014.Kraihihk

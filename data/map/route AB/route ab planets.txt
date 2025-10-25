@@ -1,0 +1,15 @@
+planet "KW.AB.003.0.Truce B"
+	"display name" "Truce B"
+	landscape land/sivael3
+	description "This system had been claimed by multiple parties, notably 'Bet' as one of the highway towards Alph, and 'Hel' as a mining outpost. At some point, 'Phi' too submitted a claim. The contest was eventually resolved alloting Bet and Hel one planet each. However, owing to the system being part of a critical interspace route, governance of both planets would be performed by the Machines acting for the arbiter of the dispute. You could imagine that either worlds were none too thrilled by this outcome."
+	spaceport "Being the major port of this system, the gates are bustling with activity. Despite the authorities' best efforts, traffic would sometimes bloat and curses travel through intercom channels directing your attention to the nearest blockage. When the mechanical voice of a port official speaks up, however, the tension would take a silent form. It seems no one wants to incur the wrath of a Machine."
+	government KW.Machines
+
+planet "KW.AB.003.1.Truce H"
+	"display name" "Truce H"
+	landscape land/nasa2
+	description "You could tell that the Hel people are not fond of taking orders from a Machine governor, and the governor is acutely aware of their inherent pride. The miniscule government allowed Hel elements near complete autonomy over mining and logistics operations on the moon, with the subtle threat of calling the Second Fleet if Hel representatives would cause a scene. Hel maintains a small military garrison parked near their largest mining encampment, just in case."
+	description "You feel it wise to not entangle yourself with the politics of other worlds."
+	spaceport "The official overseeing your landing winks curiously at your choice to land here rather than the larger port at Truce B. You make an excuse that it was too crowded. The clerk frowns but nods understandly, not caring to check the veracity of your words. The official asks if you are here to check out Hel-made outfits. You nod and complain about the 'design choices' Betians made for their ships and how it limited their potential. That seems to brighten his day as he gives you the location of the local outfitter workshop."
+	government KW.Machines
+	outfitter "Basic Outfits"

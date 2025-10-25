@@ -1,0 +1,105 @@
+############### MISSION GENERICS ###############
+
+phrase "KW.Phrase.Mission: Accept"
+	word
+		`[Accept mission.]`
+
+phrase "KW.Phrase.Mission: Defer"
+	word
+		`[Defer mission. Mission will be offered again on next landing.]`
+
+phrase "KW.Phrase.Mission: Decline"
+	word
+		`[Decline mission. Mission will not be offered again.]`
+
+############### JOB DESCRIPTIONS ###############
+
+phrase "KW.Phrase.Job: passenger offer"
+	word
+		`Bring <fare> to <destination>. Payment is <payment>.`
+
+phrase "KW.Phrase.Job: stranded offer"
+	word
+		`A distress signal indicates a stranded group of <bunks> travellers on <stopovers>. Bring them back to <origin> for a reward of <payment>.`
+
+phrase "KW.Phrase.Job: stranded stopover"
+	word
+		`You `
+	word
+		`quickly `
+		``
+	word
+		`locate `
+		`find `
+		`hail `
+	word
+		`the lost party. `
+		`the stranded group. `
+	word
+		`They are thankful and cuddle up for the return trip to <origin>.`
+
+phrase "KW.Phrase.Job: inspector offer"
+	word
+		`An inspection is due for <destination>. Bring the inspector there and return with it to <origin>. You will be paid <payment> for your troubles.`
+
+phrase "KW.Phrase.Job: inspector stopover"
+	word
+		`The inspector was `
+	word
+		`pleased `
+		`happy `
+		`content `
+		`concerned `
+		`doubtful `
+		`furious `
+	word
+		`about the state of the local facility. With the inspection done, the inspector beckons to you to bring him back to <origin>.`
+
+phrase "KW.Phrase.Job: workers offer"
+	word
+		`A group of <bunks> workers needs transport to work at <destination>. They will pay you <payment>.`
+
+phrase "KW.Phrase.Job: farmers offer"
+	word
+		`A group of <bunks> farmers needs transport to work at <destination>. They will pay you <payment>.`
+
+phrase "KW.Phrase.Job: tourists offer"
+	word
+		`A family of <bunks> wishes to `
+		`A group of <bunks> wishes to `
+	word
+		`make a tour to `
+		`take a vacation at `
+		`see the sights in `
+		`relax in `
+	word
+		`<destination>. They will pay you <payment>.`
+
+phrase "KW.Phrase.Job: timed students offer"
+	word
+		`A group of <bunks> students are enrolling in a school at <destination>, which commences on <date>. They will pay you <payment>.`
+
+phrase "KW.Phrase.Job: timed researcher offer"
+	word
+		`A researcher needs transport to <destination> by <date> to collect samples. They will pay you <payment>.`
+
+phrase "KW.Phrase.Job: timed researchers offer"
+	word
+		`A team of <bunks> researchers needs transport to <destination> by <date> to collect samples. They will pay you <payment>.`
+
+phrase "KW.Phrase.Job: cargo offer"
+	word
+		`Deliver <cargo> to <destination>. Payment is <payment>.`
+
+phrase "KW.Phrase.Job: timed cargo offer"
+	word
+		`A shipment of <cargo> is due for <destination> by <date>. Payment is <payment>.`
+
+phrase "KW.Phrase.Job: timed research sample offer"
+	word
+		`A batch of <cargo> is requested by <destination> by <date> for cross-reference studies. Payment is <payment>.`
+
+phrase "KW.Phrase.Job: mineral offer"
+	word
+		`Harvest <amount> tons of <mineral> and return to <destination> by <date>. Payment is <payment>.`
+

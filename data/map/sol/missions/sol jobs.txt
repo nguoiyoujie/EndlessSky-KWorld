@@ -1,0 +1,275 @@
+
+############### SOL INTRASYSTEM JOBS (CARGO) ###############
+
+mission "KW.Sol.Cargo [Earth,0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo random 3 2 .25
+	to offer
+		or
+			random < 60
+			and
+				not "ship attribute: hyperdrive"
+				not "ship attribute: jump drive"
+				random < 80
+	source
+		system KW.S.000.Sol
+		not attributes earth
+	destination
+		system KW.S.000.Sol
+		attributes earth
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+		
+mission "KW.Sol.Cargo [Earth,1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo random 3 2 .25
+	to offer
+		or
+			random < 60
+			and
+				not "ship attribute: hyperdrive"
+				not "ship attribute: jump drive"
+				random < 80
+	source
+		system KW.S.000.Sol
+		not attributes earth
+	destination
+		system KW.S.000.Sol
+		attributes earth
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Sol.Cargo [Not Earth,0]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo random 3 2 .4
+	to offer
+		or
+			random < 60
+			and
+				not "ship attribute: hyperdrive"
+				not "ship attribute: jump drive"
+				random < 80
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination
+		system KW.S.000.Sol
+		not attributes earth
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+mission "KW.Sol.Cargo [Not Earth,1]"
+	name "Delivery to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: cargo offer}"
+	cargo random 3 2 .2
+	to offer
+		or
+			random < 60
+			and
+				not "ship attribute: hyperdrive"
+				not "ship attribute: jump drive"
+				random < 80
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination
+		system KW.S.000.Sol
+		not attributes earth
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic cargo delivery payment"
+
+############### SOL INTRASYSTEM JOBS (PASSENGER) ###############
+
+mission "KW.Sol.Passenger [Earth,0]"
+	name "Passenger transport to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: passenger offer}"
+	passengers 1 10 .9
+	to offer
+		or
+			random < 60
+			and
+				not "ship attribute: hyperdrive"
+				not "ship attribute: jump drive"
+				random < 75
+	source
+		system KW.S.000.Sol
+		not attributes earth
+	destination
+		system KW.S.000.Sol
+		attributes earth
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic passenger dropoff payment"
+
+mission "KW.Sol.Passenger [Earth,1]"
+	name "Passenger transport to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: passenger offer}"
+	passengers 1 10 .9
+	to offer
+		or
+			random < 60
+			and
+				not "ship attribute: hyperdrive"
+				not "ship attribute: jump drive"
+				random < 75
+	source
+		system KW.S.000.Sol
+		not attributes earth
+	destination
+		system KW.S.000.Sol
+		attributes earth
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic passenger dropoff payment"
+
+mission "KW.Sol.Passenger [Not Earth,0]"
+	name "Passenger transport to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: passenger offer}"
+	passengers 1 10 .9
+	to offer
+		or
+			random < 60
+			and
+				not "ship attribute: hyperdrive"
+				not "ship attribute: jump drive"
+				random < 50
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination
+		system KW.S.000.Sol
+		not attributes earth
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic passenger dropoff payment"
+
+mission "KW.Sol.Passenger [Not Earth,1]"
+	name "Passenger transport to <planet>"
+	job
+	repeat
+	description "${KW.Phrase.Job: passenger offer}"
+	passengers 1 10 .9
+	to offer
+		or
+			random < 60
+			and
+				not "ship attribute: hyperdrive"
+				not "ship attribute: jump drive"
+				random < 75
+	source
+		system KW.S.000.Sol
+		attributes earth
+	destination
+		system KW.S.000.Sol
+		not attributes earth
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment 0 125
+		dialog phrase "generic passenger dropoff payment"
+
+
+############### SOL INTERSYSTEM JOBS (RESEARCH SAMPLES / LEPO) ###############
+# Lepo is a 'special' Sol outpost, and the only one in the beginning of the game developed enough to maintain an outfitter.
+# It is severely understaffed, so they often make mistakes in their shipments.
+
+mission "KW.Sol.Research Samples [Lepo.A]"
+	job
+	repeat
+	name "Deliver research samples to <planet>"
+	description "${KW.Phrase.Job: timed cargo offer}"
+	cargo "research samples" 15 3 .1
+	deadline
+	to offer
+		or
+			and
+				not "KW.Sol.Lepo [2]: done"
+				random < 60
+			random < 1
+	source KW.S.025.0.Lepo
+	destination KW.S.000.2.Io
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		dialog phrase "generic cargo delivery payment"
+		payment 1500 160
+
+mission "KW.Sol.Research Samples [Lepo.B]"
+	job
+	repeat
+	name "Deliver research samples to <planet>"
+	description "${KW.Phrase.Job: timed cargo offer}"
+	cargo "research samples" 15 3 .1
+	deadline
+	to offer
+		has "KW.Sol.Lepo [2]: done"
+		random < 60
+	source KW.S.025.0.Lepo
+	destination
+		government "KW.Sol"
+		attributes "analysis"
+		distance 1 12
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		dialog phrase "generic cargo delivery payment"
+		payment 1500 160
+
+############### SOL INTERSYSTEM JOBS (INSPECTOR) ###############
+# After Lepo, the machines on Io allows you to assist in ferrying inspectors on remote stations.
+mission "KW.Sol.Inspector [0]"
+	name "Bring inspector to <stopover>"
+	job
+	repeat
+	description "${KW.Phrase.Job: inspector offer}"
+	passengers 1
+	to offer
+		random < 25
+		has "KW.Sol.Lepo [2]: done"
+	source "KW.S.000.0.Io"
+	stopover
+		distance 2 8
+		government "KW.Sol"
+	on stopover
+		dialog phrase "KW.Phrase.Job: inspector stopover"
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment
+		payment 2500
+		dialog phrase "generic passenger dropoff payment"

@@ -1,0 +1,25 @@
+
+############### JOB RELATED EVENTS ###############
+
+event "KW.Sol.Inbox 3A available"
+
+
+event "KW.Sol.Sol Cargo Refit in Io"
+	planet KW.S.000.1.Io
+		add outfitter "KW.Sol.Io 1B"
+
+event "KW.Sol.Sol Tech 2"
+	planet KW.S.000.0A.Yekaterinburg
+		add outfitter "KW.Sol.Earth 2"
+	planet KW.S.000.1.Io
+		add outfitter "KW.Sol.Io 2"
+
+event "KW.Sol.Advent 1 available"
+
+event "KW.Sol.Advent Workshop 1"
+	planet KW.S.001.0.Advent
+
+
+
+
+###############

@@ -1,0 +1,121 @@
+system KW.A.000.Alph
+	pos 9383.315 -10461.723
+	government KW.Alph
+	link KW.A.006.Amrachi
+	link KW.A.013.Hofti
+	link "KW.A.021.Traif Avathi"
+
+system "KW.A.001.Alph II"
+	pos 9181.167 -10903.389
+	government KW.Alph
+	link KW.A.003.Kraif
+	link KW.A.004.Drachi
+	link KW.A.009.Veniti
+
+system "KW.A.002.Alph III"
+	pos 9518.519 -10260.778
+	government KW.Alph
+	link KW.A.010.Motif
+	link KW.A.012.Avathi
+
+system KW.A.003.Kraif
+	pos 9248.338 -10846.445
+	government KW.Alph
+	link "KW.A.001.Alph II"
+	link KW.A.004.Drachi
+
+system KW.A.004.Drachi
+	pos 9215.005 -10768.444
+	government KW.Alph
+	link "KW.A.001.Alph II"
+	link KW.A.003.Kraif
+	link KW.A.005.Veti
+	link KW.A.008.Weof
+
+system KW.A.006.Amrachi
+	pos 9323.005 -10489.778
+	link KW.A.000.Alph
+
+system KW.A.005.Veti
+	pos 9367.005 -10597.778
+	government KW.Alph
+	link KW.A.004.Drachi
+
+system KW.A.007.Ruhi
+	pos 9206.783 -10619.777
+	link KW.A.008.Weof
+	link "KW.AB.017.Route A0"
+
+system KW.A.008.Weof
+	pos 9202.338 -10691.778
+	link KW.A.004.Drachi
+	link KW.A.007.Ruhi
+	link "KW.AB.017.Route A0"
+
+system KW.A.009.Veniti
+	pos 9265.671 -10975.111
+	government KW.Alph
+	link "KW.A.001.Alph II"
+	link KW.R.000.Rho
+
+system KW.A.010.Motif
+	pos 9603.671 -10191.778
+	link "KW.A.002.Alph III"
+	link KW.A.011.Wrai
+
+system KW.A.011.Wrai
+	pos 9690.338 -10208.444
+	link KW.A.010.Motif
+	link KW.A.W1.Enermata
+
+system KW.A.012.Avathi
+	pos 9499.449 -10224.888
+	link "KW.A.002.Alph III"
+
+system KW.A.013.Hofti
+	pos 9344.273 -10416.324
+	link KW.A.000.Alph
+	link "KW.A.014.Ruchi Nar"
+
+system "KW.A.014.Ruchi Nar"
+	pos 9299.458 -10399.583
+	link KW.A.013.Hofti
+	link "KW.A.015.Ruchi Tar"
+	link "KW.A.016.Ruchi Vot"
+	link "KW.A.017.Ruchi Avathi"
+
+system "KW.A.015.Ruchi Tar"
+	pos 9272.051 -10419.435
+	link "KW.A.014.Ruchi Nar"
+
+system "KW.A.016.Ruchi Vot"
+	pos 9304.94 -10442.546
+	link "KW.A.014.Ruchi Nar"
+
+system "KW.A.017.Ruchi Avathi"
+	pos 9281.829 -10380.546
+	link "KW.A.014.Ruchi Nar"
+
+system "KW.A.018.Traif Nar"
+	pos 9470.718 -10472.324
+	link "KW.A.019.Traif Tar"
+
+system "KW.A.019.Traif Tar"
+	pos 9445.384 -10499.88
+	link "KW.A.018.Traif Nar"
+	link "KW.A.020.Traif Vot"
+	link "KW.A.021.Traif Avathi"
+
+system "KW.A.020.Traif Vot"
+	pos 9464.495 -10524.769
+	link "KW.A.019.Traif Tar"
+
+system "KW.A.021.Traif Avathi"
+	pos 9412.495 -10482.843
+	link KW.A.000.Alph
+	link "KW.A.019.Traif Tar"
+
+system KW.A.W1.Enermata
+	pos 9764.347 -10154.032
+	government KW.Fleet1
+	link KW.A.011.Wrai

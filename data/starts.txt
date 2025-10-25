@@ -1,0 +1,103 @@
+start "k.world test"
+	name "[K. World] Test"
+	description `This is a test scenario`
+	thumbnail "scene/sunset"
+	date 13 1 2040
+	system "KW.S.000.Sol"
+	planet "KW.S.000.0A.Yekaterinburg"
+	conversation "k.world intro"
+	account
+		credits 330000
+		score 400
+		mortgage Mortgage
+			principal 330000
+			interest 0.004
+			term 365
+	set "license: Pilot's"
+	set "species: human"
+
+
+conversation "k.world intro"
+	scene "land/station4"
+	action
+		log `Finally, after years of study and working as an air corpsman, you finally make your first step into the field of space.`
+		log "The down payment on your first starship is not a pretty sight to bear, but this is better than waiting half a lifetime for another chance."
+		log "Factions" "Sol" `You were born a member of an underground civilization buried beneath the cities of nations. Known collectively as the 'Underground', your fellow men has contact with life beyond the Solar System and advanced beyond the other humans on the surface. The government forbids most of its people from interacting with the 'Surface', and keeps exposure with the other worlds to a minimum necessary for diplomacy.`
+			`The organization of the Underground is far from united. In fact, your origin could be traced to the Caspian, and the city there is divided into the 'Organization' and the 'Coalition of States'. Moreover, the population are also segregated into different Houses, which had coalesced into three Great Houses, flying the colors of red, blue and green. It is a mess, and it enhances your desire to leave the planet behind.`
+			`The leadership of Sol (at least, the underground part of it) is known as the 'World Controller'. The first World Controller was selected as one 'Henry Richard', whose name nor face you recognize. Apparently his base of operations is somewhere in Asia, but he is hardly on Earth. There might be a government out there he is reporting to. Perhaps you might have a chance to meet him.`
+		log "Factions" "Sentient Machines" `The human underground cohabit with an autonomous species called the 'Machines'. They call themselves 'Sentient Machines' and expect us to take their word for it. It is however clear that they are far more advanced than the predictive AI we humans possess, and have overarching status in outer space. For the moment, they are the bridge between our world and the stars out there.`
+
+	`For years you have dreamed of reaching the sky and roaming the boundless space. All your life have been confined to the underground, where a hidden civilization roam beneath nations pinning for the eventual entry to the surface and beyond.`
+	`	The city where you lived in was 'Yekaterinburg', a monolith beneath the city of the same name, and the most populous city amounting to 1.5 million people. It was said that the underground base began construction during the Second World War, and was finished in the 1950s, undiscovered by the Soviet Union. The details of this feat is hazy to you, as you desperately struggle to snatch the little nap you had planned to take during your journey - a maglev line towards a subsection of the city that may realise your dreams.`
+	`	The journey was uneventful, and you managed to bring yourself to the city starport terminal, some 'five basement levels' below ground and host to some of the delightful aircraft and spacecraft designs the globe has to offer to you.`
+
+	choice
+		`	(Enter the spaceport.)`
+
+	scene "land/station53"
+
+	`	At its entrance is a line of automated security kiosks. You approach one, retrieve your ID card and hold it against a scanner. Details of your application appear on the screen. You make a cursory review before accepting, and then pick up a stylus to acknowledge:`
+	name
+
+	`	The kiosk indicates you to wait, and seconds later, and man dressed smartly in military attire, emblazoned with blue stripes, greets you.`
+	`	"Captain Hardner is the name. We briefly met at the cadet school. Finally, I get to call you Captain too, <first> <last>!"`
+
+	choice
+		`	"It's my pleasure."`
+		`	"Cadet school? You were also transferred from the airforce?"`
+			goto airmen
+		`	"That'll have to wait. For now, I am a captain without a ship."`
+			goto noship
+
+	`	"Great! Follow me."`
+		goto viewship
+
+	label airmen
+	`	"You tread a path many have taken before you," he shrugs. "Hard to pass the simulation tests without been trained to fly another vehicle. It is either that or an oceanliner."`
+	`	"In case, you must be eager to see your new ship. Follow me."`
+		goto viewship
+
+	label noship
+	`	Hardner winks, "Well, that is going to change. Follow me."`
+
+	label viewship
+	`	The officer brings you across a stream of corridors, passing into the military section of the port. One of the hangar bay doors was open, and stood a worn, but still gleaming barge.`
+	`	"That's 'Dusty Pearl', a dainty little barge. I was going to retire it, but you came along. Quite a fortune for you, since you get to receive a space-worthy vessel at almost scrap value."`
+	`	He pulls up a handheld pad and dials in a few numbers on a digital keyboard. "The paperwork is in order, and engineering had just looked through the ship. No defects. Good to go." He pasues for a few seconds. "My boss told me take you took a loan to afford the ship. I'd advise you go to Io and check the job board there. There is also a contact you can meet there at the spaceport who can arrange some tasks to keep you in the black."`
+
+	choice
+		`	"Thanks for your concern. This ship will do nicely."`
+			goto transfer
+		`	"Is there another ship I can take?"`
+			goto othership
+
+	label othership
+	`	He shakes his head. "You will have to travel to Io, where the fleet parks most of their space-faring vessels. Until our government believes the time is ripe to show ourselves to the surface, I don't think we'll ever get a shipyard going. That is another dream to look forward to."`
+	choice
+		`	"One dream at a time."`
+		`	"Everything starts from a vision."`
+
+	label transfer
+	action
+		set "kw start: Mini Barge"
+		give ship "Mini Barge (KW Start)" "Dusty Pearl"
+		payment -115350 #30%
+		#debug
+		payment 10000000
+	`	"That's the spirit." He smiles. "I think the handover is done, and I have another pilot to meet. I hope to hear more from you when you are back from your adventure."`
+		decline
+
+
+ship "KW.Mini Barge" "Mini Barge (KW Start)"
+	outfits
+		"KW.CDX-PV-100 Photovoltaic Cell" 2
+		"KW.CDX-FE-100 Fuel Cell"
+		"KW.CDX-B-100 Battery"
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-1250S Ion Steering"
+
+
+
+
+
+

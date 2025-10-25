@@ -1,0 +1,929 @@
+############### GENERIC INTERSYSTEM JOBS ###############
+# Note: Generic jobs should have a destination at least one jump away. For intrasystem jobs, define them individually
+# allow to show on non-visited, 'disclosing' undiscovered outposts
+
+### ASTEROID MINING ###
+# Because asteroid mining requires specialized tools and a conscious effort to harvest them, offer at least +50% margin.
+# The size of requested materials should be based on payout
+#	50k-100k
+#	100k-250k for large
+# For precious metals (silver, gold, platinum), increase scale to
+#	100k-200k
+#	200k-500k for large
+# Unfortunately, Endless Sky lack substitution logic for outfit and numeric amounts, so several copies may need to be hand-copied
+
+# SILICON: 400 #
+mission "KW.Generic.Mining [Silicon]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Silicon"
+		"<amount>" "75"
+	to offer
+		or
+			and
+				"cargo space" < 200
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes silicon-source
+			not
+				neighbor attributes silicon-source
+			not
+				neighbor
+					neighbor attributes silicon-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes silicon-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 61500 # [+105%] Silicon: 400 x 75 = 30000
+		outfit "Silicon" -75
+		dialog phrase "generic mineral delivery payment"
+
+
+mission "KW.Generic.Bulk Mining [Silicon]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Silicon"
+		"<amount>" "250"
+	to offer
+		random < 25
+		"cargo space" > 200
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes silicon-source
+			not
+				neighbor attributes silicon-source
+			not
+				neighbor
+					neighbor attributes silicon-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes silicon-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 275000 # [+175%] Silicon: 400 x 250 = 100000
+		outfit "Silicon" -250
+		dialog phrase "generic mineral delivery payment"
+
+# LEAD: 900 #
+mission "KW.Generic.Mining [Lead]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Lead"
+		"<amount>" "36"
+	to offer
+		or
+			and
+				"cargo space" < 100
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes lead-source
+			not
+				neighbor attributes lead-source
+			not
+				neighbor
+					neighbor attributes lead-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes lead-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 57500 # [+77%] Lead: 900 x 36 = 32400
+		outfit "Lead" -36
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Lead]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Lead"
+		"<amount>" "125"
+	to offer
+		random < 25
+		"cargo space" > 100
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes lead-source
+			not
+				neighbor attributes lead-source
+			not
+				neighbor
+					neighbor attributes lead-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes lead-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 247500 # [+120%] Lead: 900 x 125 = 112500
+		outfit "Lead" -125
+		dialog phrase "generic mineral delivery payment"
+
+# IRON: 1200 #
+mission "KW.Generic.Mining [Iron]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Iron"
+		"<amount>" "25"
+	to offer
+		or
+			and
+				"cargo space" < 80
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes iron-source
+			not
+				neighbor attributes iron-source
+			not
+				neighbor
+					neighbor attributes iron-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes iron-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 55000 # [+83%] Iron: 1200 x 25 = 30000
+		outfit "Iron" -25
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Iron]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Iron"
+		"<amount>" "100"
+	to offer
+		random < 25
+		"cargo space" > 80
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes iron-source
+			not
+				neighbor attributes iron-source
+			not
+				neighbor
+					neighbor attributes iron-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes iron-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 240000 # [+100%] Iron: 1200 x 100 = 120000
+		outfit "Iron" -100
+		dialog phrase "generic mineral delivery payment"
+
+# ALUMINUM: 1800 #
+mission "KW.Generic.Mining [Aluminum]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Aluminum"
+		"<amount>" "18"
+	to offer
+		or
+			and
+				"cargo space" < 70
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes aluminum-source
+			not
+				neighbor attributes aluminum-source
+			not
+				neighbor
+					neighbor attributes aluminum-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes aluminum-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 56700 # [+75%] Aluminum: 1800 x 18 = 32400
+		outfit "Aluminum" -18
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Aluminum]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Aluminum"
+		"<amount>" "80"
+	to offer
+		random < 25
+		"cargo space" > 70
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes aluminum-source
+			not
+				neighbor attributes aluminum-source
+			not
+				neighbor
+					neighbor attributes aluminum-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes aluminum-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 280000 # [+94%] Aluminum: 1800 x 80 = 144000
+		outfit "Aluminum" -80
+		dialog phrase "generic mineral delivery payment"
+
+# TITANIUM: 2500 #
+mission "KW.Generic.Mining [Titanium]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Titanium"
+		"<amount>" "16"
+	to offer
+		or
+			and
+				"cargo space" < 50
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes titanium-source
+			not
+				neighbor attributes titanium-source
+			not
+				neighbor
+					neighbor attributes titanium-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes titanium-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 69000 # [+73%] Titanium: 2500 x 16 = 40000
+		outfit "Titanium" -16
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Titanium]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Titanium"
+		"<amount>" "64"
+	to offer
+		random < 25
+		"cargo space" > 50
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes titanium-source
+			not
+				neighbor attributes titanium-source
+			not
+				neighbor
+					neighbor attributes titanium-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes titanium-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 308000 # [+92%] Titanium: 2500 x 64 = 160000
+		outfit "Titanium" -64
+		dialog phrase "generic mineral delivery payment"
+
+# COPPER: 3000 #
+mission "KW.Generic.Mining [Copper]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Copper"
+		"<amount>" "12"
+	to offer
+		or
+			and
+				"cargo space" < 40
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes copper-source
+			not
+				neighbor attributes copper-source
+			not
+				neighbor
+					neighbor attributes copper-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes copper-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 61200 # [+70%] Copper: 3000 x 12 = 36000
+		outfit "Copper" -12
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Copper]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Copper"
+		"<amount>" "50"
+	to offer
+		random < 25
+		"cargo space" > 40
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes copper-source
+			not
+				neighbor attributes copper-source
+			not
+				neighbor
+					neighbor attributes copper-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes copper-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 285000 # [+90%] Copper: 3000 x 50 = 150000
+		outfit "Copper" -50
+		dialog phrase "generic mineral delivery payment"
+
+# NEODYMIUM: 3800 #
+mission "KW.Generic.Mining [Neodymium]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Neodymium"
+		"<amount>" "10"
+	to offer
+		or
+			and
+				"cargo space" < 35
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes neodymium-source
+			not
+				neighbor attributes neodymium-source
+			not
+				neighbor
+					neighbor attributes neodymium-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes neodymium-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 64500 # [+70%] Neodymium: 3800 x 10 = 38000
+		outfit "Neodymium" -10
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Neodymium]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Neodymium"
+		"<amount>" "45"
+	to offer
+		random < 25
+		"cargo space" > 35
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes neodymium-source
+			not
+				neighbor attributes neodymium-source
+			not
+				neighbor
+					neighbor attributes neodymium-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes neodymium-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 325000 # [+90%] Neodymium: 3800 x 45 = 171000
+		outfit "Neodymium" -45
+		dialog phrase "generic mineral delivery payment"
+
+# TUNGSTEN: 4500 #
+mission "KW.Generic.Mining [Tungsten]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Tungsten"
+		"<amount>" "9"
+	to offer
+		or
+			and
+				"cargo space" < 30
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes tungsten-source
+			not
+				neighbor attributes tungsten-source
+			not
+				neighbor
+					neighbor attributes tungsten-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes tungsten-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 67800 # [+67%] Tungsten: 4500 x 9 = 40500
+		outfit "Tungsten" -9
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Tungsten]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Tungsten"
+		"<amount>" "42"
+	to offer
+		random < 25
+		"cargo space" > 30
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes tungsten-source
+			not
+				neighbor attributes tungsten-source
+			not
+				neighbor
+					neighbor attributes tungsten-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes tungsten-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 350000 # [+85%] Tungsten: 4500 x 42 = 189000
+		outfit "Tungsten" -42
+		dialog phrase "generic mineral delivery payment"
+
+# URANIUM: 5000 #
+mission "KW.Generic.Mining [Uranium]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Uranium"
+		"<amount>" "8"
+	to offer
+		or
+			and
+				"cargo space" < 25
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes uranium-source
+			not
+				neighbor attributes uranium-source
+			not
+				neighbor
+					neighbor attributes uranium-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes uranium-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 66600 # [+67%] Uranium: 5000 x 8 = 40000
+		outfit "Uranium" -8
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Uranium]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Uranium"
+		"<amount>" "38"
+	to offer
+		random < 25
+		"cargo space" > 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes uranium-source
+			not
+				neighbor attributes uranium-source
+			not
+				neighbor
+					neighbor attributes uranium-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes uranium-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 347000 # [+83%] Uranium: 4500 x 42 = 190000
+		outfit "Uranium" -38
+		dialog phrase "generic mineral delivery payment"
+
+# SILVER: 6000 #
+mission "KW.Generic.Mining [Silver]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Silver"
+		"<amount>" "21"
+	to offer
+		or
+			and
+				"cargo space" < 40
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes silver-source
+			not
+				neighbor attributes silver-source
+			not
+				neighbor
+					neighbor attributes silver-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes silver-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 196000 # [+55%] Silver: 6000 x 21 = 126000
+		outfit "Silver" -21
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Silver]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Silver"
+		"<amount>" "55"
+	to offer
+		random < 25
+		"cargo space" > 40
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes silver-source
+			not
+				neighbor attributes silver-source
+			not
+				neighbor
+					neighbor attributes silver-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes silver-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 594000 # [+80%] Silver: 6000 x 55 = 330000
+		outfit "Silver" -55
+		dialog phrase "generic mineral delivery payment"
+
+# GOLD: 8000 #
+mission "KW.Generic.Mining [Gold]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Gold"
+		"<amount>" "18"
+	to offer
+		or
+			and
+				"cargo space" < 30
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes gold-source
+			not
+				neighbor attributes gold-source
+			not
+				neighbor
+					neighbor attributes gold-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes gold-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 220000 # [+53%] Gold: 8000 x 18 = 144000
+		outfit "Gold" -18
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Gold]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Gold"
+		"<amount>" "42"
+	to offer
+		random < 25
+		"cargo space" > 30
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes gold-source
+			not
+				neighbor attributes gold-source
+			not
+				neighbor
+					neighbor attributes gold-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes gold-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 597000 # [+78%] Gold: 8000 x 42 = 336000
+		outfit "Gold" -42
+		dialog phrase "generic mineral delivery payment"
+
+# PLATINUM: 10000 #
+mission "KW.Generic.Mining [Platinum]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Platinum"
+		"<amount>" "15"
+	to offer
+		or
+			and
+				"cargo space" < 30
+				random < 40
+			random < 25
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		not attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes platinum-source
+			not
+				neighbor attributes platinum-source
+			not
+				neighbor
+					neighbor attributes platinum-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes platinum-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 225000 # [+50%] Platinum: 10000 x 15 = 150000
+		outfit "Platinum" -15
+		dialog phrase "generic mineral delivery payment"
+
+mission "KW.Generic.Bulk Mining [Platinum]" 
+	name "Harvest <mineral> to <planet>"
+	job
+	repeat
+	deadline 7
+	description "${KW.Phrase.Job: mineral offer}"
+	substitutions
+		"<mineral>" "Platinum"
+		"<amount>" "40"
+	to offer
+		random < 25
+		"cargo space" > 30
+		has "job-board: enable generic mining jobs"
+	source
+		attributes mining factory logistics
+		attributes large
+		not attributes isolated
+		not # neighbor to a mineral source up to 3 jumps away, possibly in same system
+			not attributes platinum-source
+			not
+				neighbor attributes platinum-source
+			not
+				neighbor
+					neighbor attributes platinum-source
+			not
+				neighbor
+					neighbor
+						neighbor attributes platinum-source
+
+	on visit
+		dialog phrase "generic mineral on visit"
+	on complete
+		payment 700000 # [+75%] Platinum: 10000 x 40 = 400000
+		outfit "Platinum" -40
+		dialog phrase "generic mineral delivery payment"
+
+# YOTTRITE: 200000 #
+# no generic jobs for Yottrite
