@@ -1,94 +1,699 @@
 system KW.F.000.Fel
 	pos 9280.667 -9260.667
 	government KW.Fel
+	arrival 4500
+	habitable 4500
+	haze _menu/haze-67
 	link KW.F.001.Krychycyk
 	link KW.F.002.Kraihivhk
 	link KW.F.004.Kyki
-	trade Clothing 201
-	trade Electronics 853
-	trade Equipment 456
-	trade Food 320
-	trade "Heavy Metals" 887
-	trade Industrial 579
-	trade "Luxury Goods" 1282
-	trade Medical 757
-	trade Metal 333
-	trade Plastic 530
+	trade Clothing 250
+	trade Electronics 862
+	trade Equipment 481
+	trade Food 394
+	trade "Heavy Metals" 1237
+	trade Industrial 589
+	trade "Luxury Goods" 1512
+	trade Medical 834
+	trade Metal 251
+	trade Plastic 406
+	object
+		sprite star/k-supergiant
+		period 100
+	object
+		sprite planet/ice6-b
+		distance 908.871
+		period 163.383
+	object
+		sprite planet/forest4
+			scale 2
+		distance 4271.482
+		period 1664.645
+	object
+		sprite planet/gas9-b
+		distance 6076.623
+		period 2824.536
+		object
+			sprite planet/dust7-b
+			distance 246
+			period 145.849
+		object
+			sprite planet/rock0
+			distance 400
+			period 302.406
+		object
+			sprite planet/dust1-b
+			distance 522
+			period 370.923
+	object
+		sprite planet/gas3
+		distance 11297
+		period 7159.759
+		object
+			sprite planet/dust3-b
+			distance 321
+			period 217.399
 
 system KW.F.001.Krychycyk
 	pos 9255.162 -9237.616
+	government Uninhabited
+	arrival 3200
+	habitable 3200
+	haze _menu/haze-33
 	link KW.F.000.Fel
 	link KW.F.003.Fykikhihk
+	object
+		sprite star/a5
+		period 10
+	object
+		sprite planet/gas0-b
+		distance 1170.62
+		period 158.502
+	object
+		sprite planet/gas3
+		distance 1818
+		period 548.12
+		object
+			sprite planet/rock7-b
+			distance 312
+			period 260.702
+	object
+		sprite planet/gas8-b
+		distance 3285
+		period 1331.337
+	object
+		sprite planet/gas2-b
+		distance 6749.635
+		period 3361.382
+		object
+			sprite planet/ice0
+			distance 282
+			period 179.009
+		object
+			sprite planet/rock20
+			distance 414
+			period 318.421
+	object
+		sprite planet/gas4-b
+		distance 8149.9
+		period 5239.04
 
 system KW.F.002.Kraihivhk
 	pos 9242.94 -9280.653
+	government KW.Fel
+	arrival 700
+	habitable 700
+	haze _menu/haze-33
 	link KW.F.000.Fel
 	link KW.F.013.Fydihycyk
+	trade Clothing 226
+	trade Electronics 841
+	trade Equipment 436
+	trade Food 383
+	trade "Heavy Metals" 1255
+	trade Industrial 587
+	trade "Luxury Goods" 1505
+	trade Medical 814
+	trade Metal 281
+	trade Plastic 371
+	object
+		sprite star/g3
+		period 10
+	object
+		sprite planet/gas10-hot
+		distance 358
+		period 102.408
+	object
+		sprite planet/forest4-b
+		distance 841.927
+		period 469.512
+	object
+		sprite planet/gas6
+		distance 2813
+		period 2255.618
+		object
+			sprite planet/miranda
+			distance 390
+			period 364.342
+		object
+			sprite "planet/asteroid base"
+			distance 507
+			period 298.765
+		object
+			sprite planet/ice7
+			distance 666
+			period 449.81
+	object
+		sprite planet/uranus-b
+		distance 4595
+		period 4709.114
 
 system KW.F.003.Fykikhihk
 	pos 9251.088 -9205.69
+	government Uninhabited
+	arrival 500
+	habitable 355
 	link KW.F.001.Krychycyk
 	link KW.F.010.Krainyk
+	object
+		sprite star/f-dwarf
+		period 10
+	object
+		sprite planet/lava6
+		distance 272
+		period 95.236
+	object
+		sprite planet/rock5
+		distance 1187
+		period 868.204
+	object
+		sprite planet/gas5-b
+		distance 3672
+		period 4723.891
+		object
+			sprite planet/rock14
+			distance 306
+			period 140.088
+		object
+			sprite planet/callisto
+			distance 479
+			period 274.36
+	object
+		sprite planet/gas2
+		distance 7248
+		period 13100.054
+		object
+			sprite planet/rhea
+			distance 316
+			period 174.707
+		object
+			sprite planet/luna
+			distance 423
+			period 328.86
+		object
+			sprite planet/luna-b
+			distance 594
+			period 547.243
+	object
+		sprite planet/neptune-b
+		distance 19416
+		period 57436.168
 
 system KW.F.004.Kyki
 	pos 9319.236 -9240.949
+	government KW.Fel
+	arrival 500
+	habitable 135
+	haze _menu/haze-67
 	link KW.F.000.Fel
 	link KW.F.005.Vihyk
+	trade Clothing 259
+	trade Electronics 866
+	trade Equipment 454
+	trade Food 449
+	trade "Heavy Metals" 1161
+	trade Industrial 633
+	trade "Luxury Goods" 1453
+	trade Medical 775
+	trade Metal 287
+	trade Plastic 406
+	object
+		sprite star/m8
+		distance 165.003
+		period 59.249
+	object
+		sprite star/giant
+		distance 19.497
+		period 59.249
+		offset 180
+	object
+		sprite planet/ice12
+		distance 386
+		period 261.08
+	object
+		sprite planet/dust0-b
+		distance 759
+		period 719.873
+	object
+		sprite planet/gas6
+		distance 1781.631
+		period 2588.926
+	object
+		sprite planet/gas7
+		distance 3147
+		period 6077.685
+	object
+		sprite planet/gas12
+		distance 4298
+		period 9700.469
+		object
+			sprite planet/europa-b
+			distance 312
+			period 260.702
+		object
+			sprite planet/rock17
+			distance 462
+			period 611.586
 
 system KW.F.005.Vihyk
 	pos 9365.162 -9215.912
+	government Uninhabited
+	arrival 5000
+	habitable 11350
+	haze _menu/haze-133
 	link KW.F.004.Kyki
 	link KW.F.006.Chyiknyk
 	link KW.F.008.Fydikykek
+	object
+		sprite star/b-giant
+		period 100
+	object
+		sprite planet/mercury-b
+		distance 453
+		period 36.2
+	object
+		sprite planet/gas9
+		distance 1967
+		period 327.543
+		object
+			sprite planet/tethys
+			distance 265
+			period 265.683
+	object
+		sprite planet/gas13-b
+		distance 5299.034
+		period 880.545
+		object
+			sprite planet/rock14
+			distance 304
+			period 138.716
+		object
+			sprite planet/miranda
+			distance 447
+			period 447.068
+	object
+		sprite planet/uranus
+		distance 6862
+		period 2134.215
+		object
+			sprite planet/callisto
+			distance 244
+			period 99.748
+		object
+			sprite planet/desert4
+			distance 403
+			period 382.71
 
 system KW.F.006.Chyiknyk
 	pos 9314.644 -9193.69
+	government Uninhabited
+	arrival 750
+	habitable 750
+	haze _menu/haze-33
 	link KW.F.005.Vihyk
 	link KW.F.007.Yidihycyk
 	link KW.F.010.Krainyk
+	object
+		sprite star/a-dwarf
+		period 10
+	object
+		sprite planet/rock7-b
+		distance 203
+		period 42.245
+	object
+		sprite planet/saturn
+		distance 806
+		period 334.22
+		object
+			sprite planet/dust1-b
+			distance 294
+			period 156.783
+	object
+		sprite planet/gas2
+		distance 1496
+		period 845.136
+	object
+		sprite planet/jupiter
+		distance 3825
+		period 3455.226
+		object
+			sprite planet/dust4
+			distance 268
+			period 136.452
 
 system KW.F.007.Yidihycyk
 	pos 9322.94 -9156.505
+	government Uninhabited
+	arrival 500
+	habitable 135
+	haze _menu/haze-33
 	link KW.F.006.Chyiknyk
 	link KW.F.009.Fydichycyk
 	link KW.F.010.Krainyk
+	object
+		sprite star/m8
+		period 10
+	object
+		sprite planet/gas3-hot
+		distance 470.276
+		period 319.909
+		object
+			sprite planet/ice8
+			distance 175
+			period 87.51
+	object
+		sprite planet/lava7
+		distance 920
+		period 960.671
+	object
+		sprite planet/gas11-b
+		distance 1508.399
+		period 1652.903
+	object
+		sprite planet/lava0
+		distance 3108
+		period 5965.057
+	object
+		sprite planet/gas6
+		distance 5255
+		period 13114.514
 
 system KW.F.008.Fydikykek
 	pos 9424.125 -9193.986
+	government Uninhabited
+	arrival 1325
+	habitable 1325
+	haze _menu/haze-133
 	link KW.F.005.Vihyk
+	object
+		sprite star/o-dwarf
+		period 10
+	object
+		sprite planet/venus-b
+		distance 311
+		period 60.269
+	object
+		sprite planet/ice0
+		distance 862
+		period 278.108
+	object
+		sprite planet/gas5-b
+		distance 2236
+		period 1161.876
+		object
+			sprite planet/miranda-b
+			distance 284
+			period 226.407
+	object
+		sprite planet/gas15
+		distance 4853
+		period 3715.074
+		object
+			sprite planet/dust3-b
+			distance 227
+			period 129.282
 
 system KW.F.009.Fydichycyk
 	pos 9322.792 -9119.912
+	government Uninhabited
+	arrival 1125
+	habitable 1125
+	haze _menu/haze-33
 	link KW.F.007.Yidihycyk
 	link KW.F.011.Vihikinyk
+	object
+		sprite star/b-dwarf
+		period 10
+	object
+		sprite planet/ganymede-b
+		distance 214
+		period 37.334
+	object
+		sprite planet/browndwarf-l
+		distance 1275.781
+		period 1479.992
+	object
+		sprite planet/gas11
+		distance 4549.101
+		period 6878.434
+		object
+			sprite planet/desert4
+			distance 247
+			period 183.636
+		object
+			sprite planet/dust1-b
+			distance 362
+			period 214.211
 
 system KW.F.010.Krainyk
 	pos 9273.458 -9174.579
+	government Uninhabited
+	arrival 2240.68
+	habitable 2240.675
+	haze _menu/haze-33
 	link KW.F.003.Fykikhihk
 	link KW.F.006.Chyiknyk
 	link KW.F.007.Yidihycyk
+	object
+		sprite star/k5
+		distance 81.732
+		period 59.55
+		offset 180
+	object
+		sprite star/f3
+		distance 69.768
+		period 59.55
+	object
+		sprite planet/desert1-b
+		distance 507.319
+		period 57
+	object
+		sprite planet/rock2-b
+		distance 1385.834
+		period 249.78
+		object
+			sprite planet/ice0
+			distance 207
+			period 112.579
+	object
+		sprite planet/gas4-b
+		distance 2303
+		period 933.924
+		object
+			sprite planet/rock17-b
+			distance 271
+			period 274.757
 
 system KW.F.011.Vihikinyk
 	pos 9305.755 -9065.986
+	government Uninhabited
+	arrival 500
+	habitable 160
+	haze _menu/haze-33
 	link KW.F.009.Fydichycyk
 	link KW.F.012.Nihinyk
+	object
+		sprite star/m5
+		period 10
+	object
+		sprite planet/ice4-b
+		distance 399
+		period 252.034
+		object
+			sprite planet/rock3
+			distance 160
+			period 76.503
+	object
+		sprite planet/rock10
+		distance 985
+		period 977.585
+	object
+		sprite planet/ice1
+		distance 2592
+		period 4173.04
+		object
+			sprite planet/miranda
+			distance 233.912
+			period 1197.217
+		object
+			sprite planet/oberon
+			distance 333.732
+			period 1849.098
+	object
+		sprite planet/uranus
+		distance 5948
+		period 14506.293
+		object
+			sprite planet/ice8-b
+			distance 232
+			period 133.577
+		object
+			sprite planet/dust0-b
+			distance 379
+			period 454.416
+	object
+		sprite planet/gas8-b
+		distance 7372
+		period 20016.032
+	object
+		sprite planet/gas2-b
+		distance 8359
+		period 24167.487
+		object
+			sprite planet/rock16
+				scale 0.5
+			distance 290
+			period 186.68
 
 system KW.F.012.Nihinyk
 	pos 9383.532 -9036.208
+	government Uninhabited
+	arrival 500
+	habitable 230
+	haze _menu/haze-67
 	link KW.F.011.Vihikinyk
 	link KW.H.023.Ara
+	object
+		sprite star/m3
+		period 10
+	object
+		sprite planet/rhea-b
+		distance 310
+		period 143.959
+	object
+		sprite planet/gas16-b
+		distance 932
+		period 750.447
+	object
+		sprite planet/gas10-b
+		distance 2501
+		period 3298.881
+		object
+			sprite planet/callisto
+			distance 245
+			period 100.361
+	object
+		sprite planet/oberon-b
+		distance 3506
+		period 5475.376
 
 system KW.F.013.Fydihycyk
 	pos 9219.977 -9322.431
+	government Uninhabited
+	arrival 500
+	habitable 30
+	haze _menu/haze-33
 	link KW.F.002.Kraihivhk
 	link KW.F.014.Kraihihk
+	object
+		sprite star/l-dwarf
+		period 10
+	object
+		sprite planet/rock17
+		distance 270
+		period 324
+	object
+		sprite planet/gas4-b
+		distance 1172
+		period 2930.156
+		object
+			sprite planet/europa-b
+			distance 274
+			period 214.555
+		object
+			sprite planet/dust0-b
+			distance 368
+			period 434.777
+	object
+		sprite planet/gas8-b
+		distance 3378.639
+		period 24598.124
+		object
+			sprite planet/dust4-b
+			distance 348
+			period 201.905
+		object
+			sprite planet/desert4
+			distance 497
+			period 524.139
 
 system KW.F.014.Kraihihk
 	pos 9169.31 -9339.319
+	government KW.Fel
+	arrival 500
+	habitable 370
+	haze _menu/haze-33
 	link KW.F.013.Fydihycyk
 	link KW.F.015.Krynk
+	object
+		sprite star/k8
+		period 10
+	object
+		sprite planet/desert3
+		distance 343
+		period 132.099
+	object
+		sprite planet/ocean9
+		distance 2054.435
+		period 611.785
+	object
+		sprite planet/forest4-b
+		distance 720.986
+		period 1053.33
 
 system KW.F.015.Krynk
 	pos 9111.532 -9327.764
-	link "KW.AB.010.Exit F"
+	government KW.Fel
+	arrival 500
+	habitable 450
+	haze _menu/haze-33
 	link KW.F.014.Kraihihk
+	link KW.F.016.Fynk
+	object
+		sprite star/k3
+		period 10
+	object
+		sprite planet/aviskir
+		distance 424
+		period 164.628
+		object
+			sprite planet/europa
+			distance 170
+			period 104.854
+	object
+		sprite planet/gas17
+		distance 1154
+		period 739.201
+		object
+			sprite planet/io-b
+			distance 232
+			period 133.577
+		object
+			sprite planet/ice0
+			distance 337
+			period 233.854
+	object
+		sprite planet/gas5-b
+		distance 3307
+		period 3585.957
+		object
+			sprite planet/dust7
+			distance 301
+			period 197.401
+		object
+			sprite planet/ice0-b
+			distance 460
+			period 372.939
+		object
+			sprite planet/ice7-b
+			distance 635
+			period 418.773
+	object
+		sprite planet/jupiter
+		distance 8695
+		period 15288.262
+		object
+			sprite planet/rhea-b
+			distance 309
+			period 168.934
+

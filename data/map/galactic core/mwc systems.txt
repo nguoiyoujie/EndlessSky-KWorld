@@ -27,7 +27,7 @@ system KW.MWC.001.Sgr-B2
 	pos 9949.926 -10062.592
 	government Uninhabited
 	attributes carbon "notable star"
-	arrival 900
+	arrival 5000
 	habitable 100000
 	haze _menu/haze-full
 	object
@@ -46,6 +46,28 @@ system KW.MWC.002.Sgr-C
 	"display name" "Sagittarius C"
 	pos 10167.125 -9918.959
 	government Uninhabited
+	arrival 5000
+	habitable 8650
+	haze _menu/haze-full
+	object
+		sprite star/o8
+		period 10
+	object
+		sprite star/g5
+		distance 2401.798
+		period 506.24
+		object
+			sprite star/o-giant
+			distance 4625.856
+			period 761.994
+	object
+		sprite planet/debris1
+		distance 4313
+		period 1218.207
+	object
+		sprite planet/luna
+		distance 8251
+		period 3223.382
 
 system KW.MWC.003.S0-6
 	"display name" "S0-6"
@@ -70,16 +92,58 @@ system "KW.MWC.004.The Snake"
 	"display name" "The Snake"
 	pos 10286.861 -10124.708
 	government Uninhabited
+	arrival 2160
+	habitable 2160
+	haze _menu/haze-full
+	minables neodymium 15 20
+	object
+		sprite star/g0-old
+		period 10
+	object
+		sprite planet/gas9
+		distance 2782
+		period 1262.9
 
 system "KW.MWC.005.Thread of Life"
 	"display name" "Thread of Life"
 	pos 10282.861 -10034.931
 	government Uninhabited
+	arrival 5000
+	habitable 33450
+	haze _menu/haze-full
+	minables neodymium 65 16
+	object
+		sprite star/o-supergiant
+		period 10
+	object
+		sprite planet/vesvi
+		distance 16033
+		period 4440.012
+		object
+			sprite planet/dust4
+			distance 443
+			period 289.991
 
 system "KW.MWC.006.Thread of Will"
 	"display name" "Thread of Will"
 	pos 10227.528 -9984.931
 	government Uninhabited
+	arrival 5000
+	habitable 6075
+	haze _menu/haze-full
+	object
+		sprite star/g-supergiant
+		distance 781
+		period 1091.306
+	object
+		sprite star/b0
+		distance 781
+		period 1091.306
+		offset 180
+	object
+		sprite planet/browndwarf-t-rogue
+		distance 7372
+		period 3248.365
 
 system "KW.MWC.007.The Cane"
 	"display name" "The Cane"
@@ -89,7 +153,48 @@ system "KW.MWC.007.The Cane"
 system "KW.MWC.008.Burning Hearts"
 	"display name" "Burning Hearts"
 	pos 10104.426 -9821.116
+	government Uninhabited
+	arrival 5000
+	habitable 11516.971
+	haze _menu/haze-chanai
+	object
+		sprite star/g5
+		distance 156.622
+		period 63.826
+		offset 180
+	object
+		sprite star/o3
+		distance 47.378
+		period 63.826
+	object
+		sprite planet/browndwarf-l-rogue
+		distance 935.053
+		period 188.177
+	object
+		sprite planet/gas0-b
+		distance 3569.17
+		period 397.27
+	object
+		sprite planet/gas7-hot
+		distance 5379
+		period 1470.426
 
 system KW.MWC.009.Return
 	"display name" Return
 	pos 10102.204 -9901.56
+	government Uninhabited
+	arrival 5000
+	habitable 11350
+	haze _menu/haze-full
+	object
+		sprite star/b-giant
+		period 100
+	object
+		sprite planet/desert7
+		distance 1215.938
+		period 119.087
+	object
+		sprite planet/gas4
+		distance 1814.937
+		period 264.564
+

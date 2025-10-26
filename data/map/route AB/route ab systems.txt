@@ -295,23 +295,113 @@ system KW.AB.007.0x145
 system KW.AB.008.0x155
 	"display name" 0x155
 	pos 8867.949 -9043.722
+	government Uninhabited
+	arrival 5000
+	habitable 13720
+	haze _menu/haze-brown
 	link KW.AB.007.0x145
 	link KW.AB.009.2kP
+	object
+		sprite star/o0
+		period 10
+	object
+		sprite planet/callisto
+		distance 345
+		period 21.883
+	object
+		sprite planet/rock4-b
+		distance 857
+		period 85.675
+	object
+		sprite planet/forest6
+		distance 1559.783
+		period 159.881
+	object
+		sprite planet/uranus
+		distance 3553.772
+		period 292.703
 
 system KW.AB.009.2kP
 	"display name" 2kP
 	pos 8805.449 -9242.222
+	government Uninhabited
+	arrival 3000
+	habitable 3000
+	haze _menu/haze-133
 	link "KW.01.006.01-5 (Dgt II)"
+	link KW.01.a03.Reconstruction
 	link KW.AB.008.0x155
 	link "KW.AB.010.Exit F"
 	link "KW.AB.011.Interstellar Plains"
+	object
+		sprite star/a8
+		period 10
+	object
+		sprite planet/desert1-b
+		distance 417
+		period 62.188
+	object
+		sprite planet/gas2-hot
+		distance 1212.008
+		period 1069.873
+	object
+		sprite planet/gas0-hot
+		distance 4423.72
+		period 4070.718
+		object
+			sprite planet/oberon-b
+			distance 211
+			period 188.764
+		object
+			sprite planet/luna
+			distance 352
+			period 249.64
 
 system "KW.AB.010.Exit F"
 	"display name" "Exit F"
-	pos 9062.949 -9374.222
+	pos 8981.319 -9407.407
+	government Uninhabited
+	arrival 5000
+	habitable 13720
+	haze _menu/haze-133
 	link KW.AB.009.2kP
 	link "KW.AB.011.Interstellar Plains"
-	link KW.F.015.Krynk
+	link KW.F.019.Fydihyk
+	object
+		sprite star/o0
+		period 100
+	object
+		sprite planet/desert7-b
+		distance 356
+		period 22.938
+	object
+		sprite planet/gas10-hot
+		distance 1109
+		period 126.119
+	object
+		sprite planet/saturn
+		distance 2583
+		period 448.301
+	object
+		sprite planet/vulpa
+		distance 5512
+		period 1397.484
+		object
+			sprite planet/rock7
+			distance 315
+			period 264.471
+	object
+		sprite planet/gas11
+		distance 8073
+		period 2477.053
+		object
+			sprite planet/rock3
+			distance 255
+			period 153.926
+		object
+			sprite planet/ice7-b
+			distance 397
+			period 207.016
 
 system "KW.AB.011.Interstellar Plains"
 	"display name" "Interstellar Plains"
@@ -325,13 +415,15 @@ system KW.AB.012.Wah
 	pos 8718.949 -9748.222
 	link "KW.AB.011.Interstellar Plains"
 	link "KW.AB.013.Exit N"
+	link KW.F.036.Squid
 
 system "KW.AB.013.Exit N"
 	"display name" "Exit N"
 	pos 8734.449 -9971.722
 	link KW.AB.012.Wah
 	link "KW.AB.014.Al Core"
-	link KW.N.000.Nat
+	link KW.F.034.Dolphin
+	link KW.N.008.Armillari
 
 system "KW.AB.014.Al Core"
 	"display name" "Al Core"
@@ -354,6 +446,43 @@ system KW.AB.016.Qulek
 system "KW.AB.017.Route A0"
 	"display name" "Route A0"
 	pos 9134.782 -10637.944
+	government Uninhabited
+	habitable 10028.086
+	haze _menu/haze-red
 	link KW.A.007.Ruhi
 	link KW.A.008.Weof
 	link KW.AB.016.Qulek
+	object
+		sprite star/a-dwarf
+		distance 175.222
+		period 59.402
+		offset 180
+	object
+		sprite star/o5
+		distance 4.278
+		period 59.402
+	object
+		sprite planet/lava5-b
+		distance 317
+		period 22.544
+	object
+		sprite planet/gas17-b
+		distance 765
+		period 84.517
+	object
+		sprite planet/rock11-b
+		distance 1180
+		period 161.91
+	object
+		sprite planet/gas2-hot
+		distance 3117.783
+		period 473.464
+		object
+			sprite planet/ice0
+			distance 214
+			period 118.337
+		object
+			sprite planet/dust5-b
+			distance 358
+			period 177.273
+
