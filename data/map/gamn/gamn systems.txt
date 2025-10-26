@@ -1,0 +1,9 @@
+system KW.G.000.Gamn
+	pos 10853.25 -9948.5
+	government KW.Gamn
+	link KW.C.000.Canc
+	link KW.L.000.Lmd
+
+system KW.G.001.M'rthaj
+	pos 10802.176 -9995.884
+

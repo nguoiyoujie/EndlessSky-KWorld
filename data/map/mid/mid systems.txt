@@ -1,0 +1,7 @@
+system KW.M.000.Mid
+	pos 11969.481 -10714.972
+	government KW.Mid
+	link KW.C.000.Canc
+	link KW.D.000.Det
+	link "KW.E.003.E'mek Il"
+

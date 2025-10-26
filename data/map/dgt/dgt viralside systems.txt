@@ -1,0 +1,47 @@
+system "KW.01.v01.Scarred Man"
+	pos 8586.829 -9363.574
+	government KW.PirateScarred
+	"jump range" 60
+	link KW.01.v04.Harlie
+	link "KW.01.v06.Pervading Animal"
+
+system KW.01.v02.Creaper
+	pos 8591.866 -9446.537
+	"jump range" 50
+
+system KW.01.v03.Davi-PDP
+	pos 8558.088 -9476.463
+	"jump range" 60
+
+system KW.01.v04.Harlie
+	pos 8628.606 -9385.796
+	"jump range" 65
+	link "KW.01.v01.Scarred Man"
+
+system KW.01.v05.Wabbit
+	pos 8595.718 -9406.833
+	"jump range" 45
+
+system "KW.01.v06.Pervading Animal"
+	pos 8549.792 -9341.944
+	"jump range" 75
+	link "KW.01.v01.Scarred Man"
+	link "KW.01.v07.Untrusted Trust"
+
+system "KW.01.v07.Untrusted Trust"
+	pos 8496.458 -9328.019
+	"jump range" 75
+	link "KW.01.v06.Pervading Animal"
+
+system KW.01.v08.Brainboot
+	pos 8658.829 -9355.574
+	"jump range" 50
+
+system KW.01.v09.Cascade
+	pos 8596.606 -9286.833
+	"jump range" 60
+
+system KW.01.v10.Ghostball
+	pos 8621.199 -9327.426
+	"jump range" 55
+

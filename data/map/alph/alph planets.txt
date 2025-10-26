@@ -1,0 +1,293 @@
+planet "KW.A.000.0A.Axis Mundi"
+	"display name" "Axis Mundi"
+	attributes homeworld urban large gaia
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.000.0B.Yggdrasil"
+	"display name" "Yggdrasil"
+	attributes homeworld 
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.000.0C.Tetejetlen fa"
+	"display name" "Tetejetlen fa"
+	attributes homeworld 
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.000.1.Trefoil"
+	"display name" "Trefoil"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.001.0.Bloosom"
+	"display name" "Bloosom"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.002.0.Taproot"
+	"display name" "Taproot"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.003.0.Spur"
+	"display name" "Spur"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.004.0.Stolon"
+	"display name" "Stolon"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.005.0.Heartwood"
+	"display name" "Heartwood"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.005.1.Pith"
+	"display name" "Pith"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.008.0.Vine"
+	"display name" "Vine"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.009.0.Crown"
+	"display name" "Crown"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.012.0.Bulb"
+	"display name" "Bulb"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.013.0.Axil"
+	"display name" "Axil"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.014.0.Petiole"
+	"display name" "Petiole"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.016.0.Reticulate"
+	"display name" "Reticulate"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet "KW.A.019.0.Stoma"
+	"display name" "Stoma"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+

@@ -1,0 +1,7 @@
+system KW.K.000.Ker
+	pos 8060.208 -11973.333
+	government KW.Ker
+	link KW.U.000.Upsn
+
+system KW.K.001.Superlight
+	pos 8046.898 -12004.852

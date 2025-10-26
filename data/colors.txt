@@ -1,11 +1,39 @@
 
-color "KW.Color: main missions selected" 0. 1. .7
+color "KW.Color: main missions selected" 0 1. .7
 color "KW.Color: main missions unselected" .3 .8 .5
 
-color "KW.Color: secondary missions selected" 0. .7 1.
+color "KW.Color: secondary missions selected" 0 .7 1.
 color "KW.Color: secondary missions unselected" .3 .5 .8
 
-color "KW.Color: locale missions selected" .9 1. 0.
+color "KW.Color: locale missions selected" .9 1. 0
 color "KW.Color: locale missions unselected" .5 .6 .3
 
-color "KW.Color: Wormhole.Sanctuary" .3 .1 .8
+color "KW.Color: Wormhole.Alph" .9 .1 .1
+
+
+
+color "KW.Color: Faction.Merchant" 1 1 1 #no supposed to own planets
+color "KW.Color: Faction.Pirate" .78 0 0
+color "KW.Color: Faction.Machine" .554 .348 .348
+
+color "KW.Color: Faction.Alph" .828 0 0
+color "KW.Color: Faction.Bet" 0 .588 1
+color "KW.Color: Faction.Canc" .863 .747 .076
+color "KW.Color: Faction.Det" .323 .701 .356
+color "KW.Color: Faction.Dgt" .108 .48 .059
+color "KW.Color: Faction.Edrin" 0 .358 .451
+color "KW.Color: Faction.Xil" .685 .618 1
+color "KW.Color: Faction.Ker" .872 .902 .385
+color "KW.Color: Faction.Mid" .377 .985 .52
+color "KW.Color: Faction.Nat" .451 .36 .011
+color "KW.Color: Faction.Hel" 1 .531 .363
+color "KW.Color: Faction.Fel" .545 .917 .252
+color "KW.Color: Faction.Upsn" .132 .183 1
+color "KW.Color: Faction.Phi" .049 .327 .995
+color "KW.Color: Faction.Lmd" .705 .474 .887
+color "KW.Color: Faction.Rho" .961 .301 .457
+color "KW.Color: Faction.Gamn" .604 0 .892
+color "KW.Color: Faction.Sol" .156 .838 .136
+
+color "KW.Color: Faction.Fleet" .828 .588 .451
+

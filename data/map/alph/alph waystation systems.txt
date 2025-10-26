@@ -1,0 +1,110 @@
+system KW.A.W1.Enermata
+	pos 9764.347 -10154.032
+	government KW.Fleet1
+	arrival 5000
+	habitable 17922.35
+	haze _menu/haze-sarifa
+	link KW.A.011.Wrai
+	object
+		sprite star/b-supergiant
+		distance 339
+		period 312.083
+		offset 180
+	object
+		sprite star/f-giant
+		distance 339
+		period 312.083
+	object
+		sprite planet/gas1-b
+		distance 1017
+		period 96.905
+	object
+		sprite planet/ice4-b
+		distance 1687
+		period 207.031
+	object "Alph Wormhole Series A"
+		sprite planet/_local
+			scale 4
+		distance 2420
+		offset 120
+		object
+			sprite planet/station-depot-a0
+			distance 359.019
+			period 239.078
+	object
+		sprite planet/vulpa
+		distance 4043
+		period 768.101
+		object
+			sprite planet/dust4
+			distance 333
+			period 188.993
+		object
+			sprite planet/desert4-b
+			distance 480
+			period 497.478
+
+system KW.A.W2.Entri
+	pos 9896.125 -10118.315
+	government KW.Fleet1
+	arrival 2526.2
+	habitable 2526.203
+	haze _menu/haze-full
+	link "KW.A.W3.Casi Spli"
+	object
+		sprite star/f8
+		distance 142.79
+		period 56.76
+	object
+		sprite star/g0-old
+		distance 47.21
+		period 56.76
+		offset 180
+	object
+		sprite planet/gas17-b
+		distance 2140
+		period 787.855
+		object
+			sprite planet/ice7
+			distance 249
+			period 102.829
+		object
+			sprite planet/europa
+			distance 367
+			period 332.591
+		object
+			sprite planet/dust5
+			distance 480
+			period 275.22
+	object
+		sprite planet/gas4
+		distance 3278
+		period 1493.617
+		object
+			sprite planet/dust0-b
+			distance 244
+			period 234.736
+	object "Alph Wormhole Series A"
+		sprite planet/_local
+			scale 4
+		distance 1309.471
+		offset -60
+
+system "KW.A.W3.Casi Spli"
+	pos 9990.347 -10139.426
+	link KW.A.W2.Entri
+	link KW.A.W4.Merri
+
+system KW.A.W4.Merri
+	pos 10126.051 -10185.278
+	link "KW.A.W3.Casi Spli"
+	link KW.A.W5.Choni
+
+system KW.A.W5.Choni
+	pos 10201.384 -10280.611
+	link KW.A.W4.Merri
+	link KW.A.W6.Armpit
+
+system KW.A.W6.Armpit
+	pos 10299.458 -10384.981
+	link KW.A.W5.Choni

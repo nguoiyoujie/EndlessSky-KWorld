@@ -1,0 +1,42 @@
+system KW.01.a01.Endpoint
+	pos 8692.162 -9272.759
+	"jump range" 75
+	link "KW.01.006.01-5 (Dgt II)"
+	link KW.01.a04.Disarm
+	link KW.01.a06.Signature
+
+system KW.01.a02.Firewall
+	pos 8657.792 -9318.981
+	"jump range" 25
+	link KW.01.a04.Disarm
+	link KW.01.a05.UTM-NGFW
+
+system KW.01.a03.Reconstruction
+	pos 8740.162 -9251.13
+	link "KW.01.006.01-5 (Dgt II)"
+	link KW.AB.009.2kP
+
+system KW.01.a04.Disarm
+	pos 8692.458 -9309.796
+	"jump range" 45
+	link KW.01.a01.Endpoint
+	link KW.01.a02.Firewall
+
+system KW.01.a05.UTM-NGFW
+	pos 8648.606 -9289.056
+	"jump range" 25
+	link KW.01.a02.Firewall
+	link KW.01.a06.Signature
+
+system KW.01.a06.Signature
+	pos 8658.681 -9260.019
+	"jump range" 40
+	link KW.01.a01.Endpoint
+	link KW.01.a05.UTM-NGFW
+	link KW.01.a07.Blocker
+
+system KW.01.a07.Blocker
+	pos 8630.532 -9252.611
+	"jump range" 25
+	link KW.01.a06.Signature
+

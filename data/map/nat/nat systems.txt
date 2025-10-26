@@ -1,0 +1,135 @@
+system KW.N.000.Nat
+	pos 8612.25 -9918.167
+	government KW.Nat
+	arrival 4590
+	habitable 4590
+	haze _menu/haze-ghila
+	link KW.N.001.Obligat
+	link KW.N.003.Ecto
+	link KW.N.004.Endo
+	link KW.N.005.Meso
+	object
+		sprite star/g0-old
+		distance 162
+		period 103.096
+	object
+		sprite star/g-giant
+		distance 162
+		period 103.096
+		offset 180
+	object
+		sprite planet/ice2
+		distance 560
+		period 78.241
+	object
+		sprite planet/water1
+		distance 1026
+		period 194.033
+		object
+			sprite planet/dust3-b
+			distance 183
+			period 93.579
+	object
+		sprite planet/ocean0-b
+		distance 1587
+		period 373.267
+	object
+		sprite planet/neptune-b
+		distance 2141
+		period 584.896
+	object
+		sprite planet/forest12
+		distance 4667.344
+		period 2198.594
+		object
+			sprite planet/europa-b
+			distance 223
+			period 157.532
+		object
+			sprite planet/ice0
+			distance 364
+			period 262.514
+		object
+			sprite planet/io
+			distance 528
+			period 458.618
+	object
+		sprite planet/gas4-b
+		distance 6706
+		period 3242.268
+		object
+			sprite planet/dust0
+			distance 245
+			period 236.18
+
+system KW.N.001.Obligat
+	pos 8638.884 -9936.981
+	link KW.N.000.Nat
+	link KW.N.002.Facultat
+	link KW.N.007.Rickettsi
+
+system KW.N.002.Facultat
+	pos 8666.144 -9920.685
+	link KW.N.001.Obligat
+	link KW.N.008.Armillari
+
+system KW.N.003.Ecto
+	pos 8617.551 -9877.426
+	link KW.N.000.Nat
+	link KW.N.009.Lice
+	link KW.N.010.Flea
+	link KW.N.011.Mite
+
+system KW.N.004.Endo
+	pos 8580.514 -9903.204
+	link KW.N.000.Nat
+	link KW.N.009.Plasmodi
+	link KW.N.012.Filariasi
+	link KW.N.013.Schistosoma
+
+system KW.N.005.Meso
+	pos 8590.884 -9936.981
+	link KW.N.000.Nat
+	link "KW.N.006.Cope Pod"
+
+system "KW.N.006.Cope Pod"
+	pos 8571.032 -9961.87
+	link KW.N.005.Meso
+
+system KW.N.007.Rickettsi
+	pos 8656.366 -9961.87
+	link KW.N.001.Obligat
+
+system KW.N.008.Armillari
+	pos 8698.44 -9931.352
+	link "KW.AB.013.Exit N"
+	link KW.N.002.Facultat
+
+system KW.N.009.Lice
+	pos 8586.44 -9856.981
+	link KW.N.003.Ecto
+
+system KW.N.009.Plasmodi
+	pos 8542.292 -9895.796
+	link KW.N.004.Endo
+
+system KW.N.010.Flea
+	pos 8616.958 -9840.093
+	link KW.N.003.Ecto
+
+system KW.N.011.Mite
+	pos 8645.995 -9864.093
+	link KW.N.003.Ecto
+
+system KW.N.012.Filariasi
+	pos 8571.921 -9879.796
+	link KW.N.004.Endo
+
+system KW.N.013.Schistosoma
+	pos 8561.255 -9928.093
+	link KW.N.004.Endo
+
+system "KW.N.014.Simulium's Den"
+	pos 8599.329 -9747.796
+	government KW.PirateSimulium
+	"jump range" 75

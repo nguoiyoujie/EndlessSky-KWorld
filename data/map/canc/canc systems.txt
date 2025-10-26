@@ -1,0 +1,13 @@
+system KW.C.000.Canc
+	pos 11390.583 -9865.833
+	government KW.Canc
+	link "KW.C.001.Canc II"
+	link KW.G.000.Gamn
+	link KW.L.000.Lmd
+	link KW.M.000.Mid
+
+system "KW.C.001.Canc II"
+	pos 11378.583 -9657.333
+	government KW.Canc
+	link KW.C.000.Canc
+
