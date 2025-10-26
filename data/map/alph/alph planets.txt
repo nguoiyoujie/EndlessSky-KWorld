@@ -273,8 +273,8 @@ planet "KW.A.016.0.Reticulate"
 		description `	WIP`
 	government KW.Alph
 
-planet "KW.A.019.0.Stoma"
-	"display name" "Stoma"
+planet "KW.A.019.0.Palmate"
+	"display name" "Palmate"
 	landscape land/city11
 	description `WIP`
 	port

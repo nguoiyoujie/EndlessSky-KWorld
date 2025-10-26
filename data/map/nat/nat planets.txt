@@ -1,0 +1,204 @@
+planet "KW.N.000.0.Naturasi"
+	"display name" "Naturasi"
+	attributes homeworld gaia
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.000.1.Ocalsi"
+	"display name" "Ocalsi"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.000.2.Feirnsi"
+	"display name" "Feirnsi"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.001.0.Ogalet"
+	"display name" "Ogalet"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.006.0.Seeth"
+	"display name" "Seeth"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.007.0.Devor"
+	"display name" "Devor"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.007.0.Devor"
+	"display name" "Devor"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.009.0.Contat"
+	"display name" "Contat"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.010.0.Markat"
+	"display name" "Markat"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.011.0.Itchat"
+	"display name" "Itchat"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.013.0.Microb"
+	"display name" "Microb"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Nat
+
+planet "KW.N.014.0.Pustule"
+	"display name" "Pustule"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.PirateSimulium

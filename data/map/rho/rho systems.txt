@@ -71,13 +71,14 @@ system KW.R.000.Rho
 			sprite planet/lava0-b
 			distance 275
 			period 119.348
-	object
+	object "KW.WH.Alph Wormhole A"
 		sprite planet/_local
 			scale 4
 		distance 3342.231
 		offset 155
-	object "KW.WH.Alph Wormhole A"
+	object 
 		sprite planet/_local
 			scale 4
 		distance 3342.23
 		offset -40
+

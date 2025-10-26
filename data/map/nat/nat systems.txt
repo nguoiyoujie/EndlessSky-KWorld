@@ -1,4 +1,5 @@
 system KW.N.000.Nat
+	"display name" Nat
 	pos 8612.25 -9918.167
 	government KW.Nat
 	arrival 4590
@@ -8,6 +9,16 @@ system KW.N.000.Nat
 	link KW.N.003.Ecto
 	link KW.N.004.Endo
 	link KW.N.005.Meso
+	trade Clothing 141
+	trade Electronics 643
+	trade Equipment 463
+	trade Food 447
+	trade "Heavy Metals" 677
+	trade Industrial 671
+	trade "Luxury Goods" 1135
+	trade Medical 586
+	trade Metal 208
+	trade Plastic 286
 	object
 		sprite star/g0-old
 		distance 162
@@ -29,7 +40,7 @@ system KW.N.000.Nat
 			sprite planet/dust3-b
 			distance 183
 			period 93.579
-	object
+	object "KW.N.000.1.Ocalsi"
 		sprite planet/ocean0-b
 		distance 1587
 		period 373.267
@@ -37,7 +48,7 @@ system KW.N.000.Nat
 		sprite planet/neptune-b
 		distance 2141
 		period 584.896
-	object
+	object "KW.N.000.0.Naturasi"
 		sprite planet/forest12
 		distance 4667.344
 		period 2198.594
@@ -45,7 +56,7 @@ system KW.N.000.Nat
 			sprite planet/europa-b
 			distance 223
 			period 157.532
-		object
+		object "KW.N.000.2.Feirnsi"
 			sprite planet/ice0
 			distance 364
 			period 262.514
@@ -63,73 +74,696 @@ system KW.N.000.Nat
 			period 236.18
 
 system KW.N.001.Obligat
+	"display name" Obligat
 	pos 8638.884 -9936.981
+	government KW.Nat
+	arrival 1310
+	habitable 1310
+	haze _menu/haze-ghila
 	link KW.N.000.Nat
 	link KW.N.002.Facultat
 	link KW.N.007.Rickettsi
+	object
+		sprite star/f8
+		period 10
+	object
+		sprite planet/dust2
+		distance 259
+		period 46.065
+	object
+		sprite planet/rock12
+		distance 1029.681
+		period 217.976
+		object
+			sprite planet/dust5-b
+			distance 201
+			period 74.578
+	object
+		sprite planet/gas4-b
+		distance 2075.699
+		period 935.589
+		object
+			sprite planet/dust5
+			distance 287
+			period 127.245
+		object "KW.N.001.0.Ogalet"
+			sprite planet/desert4
+			distance 419
+			period 405.726
+		object
+			sprite planet/ice0-b
+			distance 545
+			period 480.945
+	object
+		sprite planet/browndwarf-l
+		distance 4682
+		period 3540.556
 
 system KW.N.002.Facultat
+	"display name" Facultat
 	pos 8666.144 -9920.685
+	government Uninhabited
+	arrival 5000
+	habitable 33450
+	haze _menu/haze-ghila
 	link KW.N.001.Obligat
 	link KW.N.008.Armillari
+	object
+		sprite star/o-supergiant
+		period 100
+	object
+		sprite planet/neptune-b
+		distance 2524.518
+		period 277.415
+		object
+			sprite planet/dust0-b
+			distance 240
+			period 228.987
+	object
+		sprite planet/gas11-b
+		distance 3723
+		period 496.823
+		object
+			sprite planet/ice0
+			distance 297
+			period 193.48
+	object
+		sprite planet/gas15-b
+		distance 6113
+		period 1045.306
+		object
+			sprite planet/europa-b
+			distance 238
+			period 173.691
+	object
+		sprite planet/uranus-b
+		distance 13408
+		period 3395.533
 
 system KW.N.003.Ecto
+	"display name" Ecto
 	pos 8617.551 -9877.426
+	government Uninhabited
+	arrival 5000
+	habitable 11350
+	haze _menu/haze-ghila
 	link KW.N.000.Nat
 	link KW.N.009.Lice
 	link KW.N.010.Flea
 	link KW.N.011.Mite
+	object
+		sprite star/b-giant
+		period 100
+	object
+		sprite planet/gas3-b
+		distance 2431
+		period 450.028
+	object
+		sprite planet/gas10-hot
+		distance 3790
+		period 876.034
+		object
+			sprite planet/dust7
+			distance 205
+			period 110.951
+	object
+		sprite planet/aera
+		distance 5263
+		period 1433.548
+	object
+		sprite planet/dust1-b
+		distance 5809
+		period 1662.318
 
 system KW.N.004.Endo
+	"display name" Endo
 	pos 8580.514 -9903.204
+	government Uninhabited
+	arrival 5000
+	habitable 6684.497
+	haze _menu/haze-ghila
 	link KW.N.000.Nat
-	link KW.N.009.Plasmodi
+	link KW.N.015.Plasmodi
 	link KW.N.012.Filariasi
 	link KW.N.013.Schistosoma
+	object
+		sprite star/a0
+		distance 108.177
+		period 62.08
+	object
+		sprite star/b5
+		distance 82.823
+		period 62.08
+		offset 180
+	object
+		sprite planet/oberon-b
+		distance 318
+		period 27.744
+	object
+		sprite planet/desert8
+		distance 1223
+		period 209.25
+		object
+			sprite planet/dust1
+			distance 185
+			period 78.259
+	object
+		sprite planet/vulpa
+		distance 2359
+		period 560.554
+		object
+			sprite planet/rock20
+			distance 301
+			period 197.401
+		object
+			sprite "planet/asteroid base"
+			distance 414
+			period 220.454
+		object
+			sprite planet/desert4-b
+			distance 589
+			period 676.215
+	object
+		sprite planet/gas7-hot
+		distance 3922
+		period 1201.675
 
 system KW.N.005.Meso
+	"display name" Meso
 	pos 8590.884 -9936.981
+	government Uninhabited
+	arrival 500
+	habitable 100
+	haze _menu/haze-ghila
 	link KW.N.000.Nat
 	link "KW.N.006.Cope Pod"
+	object
+		sprite star/k-dwarf
+		period 10
+	object
+		sprite planet/gas11
+		distance 1706.739
+		period 5806.247
+		object
+			sprite planet/io
+			distance 269
+			period 166.774
+		object
+			sprite planet/ice7
+			distance 385
+			period 197.701
+		object
+			sprite planet/dust1
+			distance 563
+			period 415.471
+	object
+		sprite planet/vulpa
+		distance 4398
+		period 11666.56
+	object
+		sprite planet/redias
+		distance 8272.5
+		period 30096.442
+		object
+			sprite planet/rock7-b
+			distance 332.5
+			period 286.813
+		object
+			sprite planet/miranda
+			distance 481.5
+			period 499.812
+	object
+		sprite planet/ice8-b
+		distance 12028
+		period 52765.508
 
 system "KW.N.006.Cope Pod"
+	"display name" "Cope Pod"
 	pos 8571.032 -9961.87
+	government KW.Nat
+	arrival 2300
+	habitable 2300
+	haze _menu/haze-ghila
 	link KW.N.005.Meso
+	trade Clothing 230
+	trade Electronics 713
+	trade Equipment 368
+	trade Food 336
+	trade "Heavy Metals" 796
+	trade Industrial 748
+	trade "Luxury Goods" 1418
+	trade Medical 703
+	trade Metal 329
+	trade Plastic 468
+	object
+		sprite star/m-giant
+		period 100
+	object
+		sprite planet/ocean7
+		distance 949.429
+		period 244
+		object
+			sprite planet/rock20
+			distance 166
+			period 80.847
+	object "KW.N.006.0.Seeth"
+		sprite planet/forest3
+		distance 2139.292
+		period 825.28
+	object
+		sprite planet/vulpa
+		distance 2762.625
+		period 1211.097
+	object
+		sprite planet/gas14
+		distance 3595
+		period 1797.813
+		object
+			sprite planet/dust7
+			distance 249
+			period 148.525
 
 system KW.N.007.Rickettsi
+	"display name" Rickettsi
 	pos 8656.366 -9961.87
+	government KW.Nat
+	arrival 1715
+	habitable 1715
+	haze _menu/haze-ghila
 	link KW.N.001.Obligat
+	trade Clothing 345
+	trade Electronics 645
+	trade Equipment 703
+	trade Food 117
+	trade "Heavy Metals" 1141
+	trade Industrial 546
+	trade "Luxury Goods" 1254
+	trade Medical 554
+	trade Metal 428
+	trade Plastic 244
+	object
+		sprite star/f5
+		period 10
+	object
+		sprite planet/rock19-b
+		distance 446
+		period 90.977
+		object
+			sprite planet/dust0
+			distance 156
+			period 120
+	object "KW.N.007.0.Devor"
+		sprite planet/forest9
+		distance 1355.919
+		period 305.212
+		object
+			sprite planet/ice0
+			distance 179.5
+			period 90.907
+	object
+		sprite planet/gas11-b
+		distance 2290
+		period 1058.476
+		object
+			sprite planet/rock12
+			distance 287
+			period 151.217
+		object
+			sprite planet/rock14
+			distance 456
+			period 254.838
+	object
+		sprite planet/gas13-b
+		distance 3288
+		period 1821.066
 
 system KW.N.008.Armillari
+	"display name" Armillari
 	pos 8698.44 -9931.352
+	government Uninhabited
+	arrival 700
+	habitable 700
+	haze _menu/haze-ghila
 	link "KW.AB.013.Exit N"
 	link KW.N.002.Facultat
+	object
+		sprite star/g3
+		period 10
+	object
+		sprite planet/ocean9
+		distance 277
+		period 69.7
+	object
+		sprite planet/gas13-b
+		distance 2779
+		period 2214.847
+		object
+			sprite planet/io-b
+			distance 304
+			period 200.36
+	object
+		sprite planet/gas3-b
+		distance 5689
+		period 6487.313
+		object
+			sprite planet/desert4-b
+			distance 312
+			period 260.702
+		object
+			sprite planet/callisto
+			distance 458
+			period 256.517
 
 system KW.N.009.Lice
+	"display name" Lice
 	pos 8586.44 -9856.981
+	government KW.Nat
+	arrival 5000
+	habitable 5000
+	haze _menu/haze-ghila
 	link KW.N.003.Ecto
-
-system KW.N.009.Plasmodi
-	pos 8542.292 -9895.796
-	link KW.N.004.Endo
+	trade Clothing 297
+	trade Electronics 597
+	trade Equipment 507
+	trade Food 564
+	trade "Heavy Metals" 708
+	trade Industrial 919
+	trade "Luxury Goods" 1303
+	trade Medical 860
+	trade Metal 540
+	trade Plastic 293
+	object
+		sprite star/b8
+		period 100
+	object
+		sprite planet/rock5-b
+		distance 1052
+		period 193.018
+	object
+		sprite planet/gas7-hot
+		distance 1600
+		period 362.039
+	object
+		sprite planet/gas3
+		distance 2848
+		period 859.775
+		object
+			sprite planet/ice0-b
+			distance 318
+			period 214.359
+	object
+		sprite planet/gas12-b
+		distance 6564
+		period 3008.346
+		object
+			sprite planet/tethys-b
+			distance 294
+			period 310.467
+		object "KW.N.009.0.Contat"
+			sprite planet/ice8
+			distance 419
+			period 324.206
 
 system KW.N.010.Flea
+	"display name" Flea
 	pos 8616.958 -9840.093
+	government KW.Nat
+	arrival 5000
+	habitable 5000
+	haze _menu/haze-ghila
 	link KW.N.003.Ecto
+	trade Clothing 333
+	trade Electronics 599
+	trade Equipment 424
+	trade Food 447
+	trade "Heavy Metals" 648
+	trade Industrial 778
+	trade "Luxury Goods" 1236
+	trade Medical 836
+	trade Metal 275
+	trade Plastic 396
+	object
+		sprite star/b8
+		period 10
+	object
+		sprite planet/venus-b
+		distance 310
+		period 30.876
+	object
+		sprite planet/rock19-b
+		distance 738
+		period 113.412
+		object
+			sprite planet/rhea-b
+			distance 146
+			period 54.867
+	object
+		sprite planet/gas6-hot
+		distance 1635
+		period 373.983
+		object
+			sprite planet/rock14
+			distance 226
+			period 88.916
+	object
+		sprite planet/gas1-b
+		distance 2997
+		period 928.122
+		object
+			sprite planet/dust4-b
+			distance 484
+			period 331.167
+	object
+		sprite planet/jupiter
+		distance 5288
+		period 2175.265
+		object
+			sprite planet/ice0-b
+			distance 262
+			period 160.307
+		object "KW.N.010.0.Markat"
+			sprite planet/rock14-b
+			distance 410
+			period 217.267
 
 system KW.N.011.Mite
+	"display name" Mite
 	pos 8645.995 -9864.093
+	government KW.Nat
+	arrival 980
+	habitable 980
+	haze _menu/haze-ghila
 	link KW.N.003.Ecto
+	trade Clothing 238
+	trade Electronics 885
+	trade Equipment 541
+	trade Food 163
+	trade "Heavy Metals" 954
+	trade Industrial 715
+	trade "Luxury Goods" 1438
+	trade Medical 539
+	trade Metal 536
+	trade Plastic 531
+	object
+		sprite star/k0-old
+		distance 198
+		period 139.305
+	object
+		sprite star/protostar-yellow
+		distance 198
+		period 139.305
+		offset 180
+	object
+		sprite planet/desert3-b
+		distance 1594.866
+		period 813.829
+	object
+		sprite planet/saturn
+		distance 3620.604
+		period 2783.675
+		object
+			sprite planet/oberon-b
+			distance 262
+			period 261.184
+		object
+			sprite planet/dust3-b
+			distance 376
+			period 275.602
+	object "KW.N.011.0.Itchat"
+		sprite planet/forest12
+		distance 975.11
+		period 389.07
+		object
+			sprite planet/lava0-b
+			distance 213
+			period 81.356
 
 system KW.N.012.Filariasi
+	"display name" Filariasi
 	pos 8571.921 -9879.796
+	government Uninhabited
+	arrival 3000
+	habitable 3000
+	haze _menu/haze-ghila
 	link KW.N.004.Endo
+	object
+		sprite star/k-giant
+		period 100
+	object
+		sprite planet/rock2
+		distance 628
+		period 114.931
+		object
+			sprite planet/rock14
+			distance 168
+			period 56.988
+	object
+		sprite planet/ocean6-b
+		distance 1442
+		period 399.896
+		object
+			sprite planet/callisto
+			distance 195
+			period 71.264
+	object
+		sprite planet/vulpa
+		distance 2326
+		period 819.245
+	object
+		sprite planet/browndwarf-y-rogue
+		distance 4937
+		period 2533.343
+		object
+			sprite planet/oberon-b
+			distance 262
+			period 261.184
 
 system KW.N.013.Schistosoma
+	"display name" Schistosoma
 	pos 8561.255 -9928.093
+	government KW.Nat
+	arrival 1250
+	habitable 1250
+	haze _menu/haze-ghila
 	link KW.N.004.Endo
+	trade Clothing 209
+	trade Electronics 778
+	trade Equipment 544
+	trade Food 354
+	trade "Heavy Metals" 757
+	trade Industrial 820
+	trade "Luxury Goods" 1138
+	trade Medical 589
+	trade Metal 329
+	trade Plastic 248
+	object
+		sprite star/g5-old
+		distance 182.5
+		period 123.272
+	object
+		sprite star/protostar-yellow
+		distance 182.5
+		period 123.272
+		offset 180
+	object "KW.N.013.0.Microb"
+		sprite planet/forest0-b
+		distance 1325.437
+		period 237.51
+		object
+			sprite planet/rock0-b
+			distance 197
+			period 104.52
+	object
+		sprite planet/rock10-b
+		distance 2084.024
+		period 555.582
+	object
+		sprite planet/gas0
+		distance 2871.694
+		period 904.632
 
 system "KW.N.014.Simulium's Den"
+	"display name" "Simulium's Den"
 	pos 8599.329 -9747.796
 	government KW.PirateSimulium
+	arrival 1080
+	habitable 1080
 	"jump range" 75
+	haze _menu/haze-tear
+	trade Clothing 363
+	trade Electronics 700
+	trade Equipment 391
+	trade Food 172
+	trade "Heavy Metals" 1159
+	trade Industrial 885
+	trade "Luxury Goods" 1357
+	trade Medical 815
+	trade Metal 589
+	trade Plastic 383
+	object
+		sprite star/g0
+		period 10
+	object "KW.N.014.0.Pustule"
+		sprite planet/desert11
+		distance 831.762
+		period 87.33
+	object
+		sprite planet/uranus-b
+		distance 1492.074
+		period 499.023
+		object
+			sprite planet/rock0-b
+			distance 234
+			period 135.308
+	object
+		sprite planet/gas14
+		distance 2538.192
+		period 1519.626
+		object
+			sprite planet/ice7-b
+			distance 279
+			period 121.962
+		object
+			sprite planet/rock14
+			distance 405
+			period 213.305
+	object
+		sprite planet/rock3-b
+		distance 3983
+		period 3059.592
+
+system KW.N.015.Plasmodi
+	"display name" Plasmodi
+	pos 8542.292 -9895.796
+	government Uninhabited
+	arrival 1310
+	habitable 1310
+	haze _menu/haze-ghila
+	link KW.N.004.Endo
+	object
+		sprite star/f8
+		period 10
+	object
+		sprite planet/ice8
+		distance 347
+		period 71.436
+	object
+		sprite planet/ice9
+		distance 865
+		period 281.157
+	object
+		sprite planet/gas14-b
+		distance 1821
+		period 858.795
+		object
+			sprite planet/callisto
+			distance 261
+			period 110.352
+		object
+			sprite planet/dust5-b
+			distance 414
+			period 220.454
+	object
+		sprite planet/gas8-b
+		distance 3627
+		period 2414.047

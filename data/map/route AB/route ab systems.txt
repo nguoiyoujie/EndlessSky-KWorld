@@ -2,6 +2,7 @@ system "KW.AB.000.Route B0"
 	"display name" "Route B0"
 	pos 9954.449 -8892.722
 	government Uninhabited
+	music music/journey_8bit
 	habitable 1200
 	haze _menu/haze-33
 	link KW.AB.001.Nemek
@@ -19,6 +20,7 @@ system KW.AB.001.Nemek
 	"display name" Nemek
 	pos 9881.116 -8791.833
 	government Uninhabited
+	music music/journey_8bit
 	arrival 750
 	habitable 750
 	haze _menu/haze-33
@@ -41,6 +43,7 @@ system KW.AB.002.Varm
 	"display name" Varm
 	pos 9783.449 -8667.722
 	government Uninhabited
+	music music/journey_8bit
 	arrival 5000
 	habitable 33450
 	haze _menu/haze-133
@@ -103,6 +106,7 @@ system "KW.AB.003.Exit PH"
 	"display name" "Exit PH"
 	pos 9640.449 -8628.722
 	government KW.Machines
+	music music/journey_8bit
 	arrival 5000
 	habitable 5600
 	haze _menu/haze-33
@@ -153,6 +157,7 @@ system KW.AB.004.Murk
 	"display name" Murk
 	pos 9409.949 -8647.222
 	government Uninhabited
+	music music/journey_8bit
 	arrival 5000
 	habitable 17025
 	haze _menu/haze-33
@@ -182,6 +187,7 @@ system KW.AB.005.Wlitya
 	"display name" Wlitya
 	pos 9241.449 -8659.722
 	government Uninhabited
+	music music/journey_8bit
 	arrival 5000
 	habitable 13720
 	haze _menu/haze-67
@@ -239,6 +245,7 @@ system KW.AB.006.Eji
 	"display name" Eji
 	pos 9081.949 -8775.222
 	government Uninhabited
+	music music/journey_8bit
 	arrival 1697.79
 	habitable 1697.793
 	haze _menu/haze-67
@@ -274,6 +281,7 @@ system KW.AB.007.0x145
 	"display name" 0x145
 	pos 8948.449 -8894.722
 	government Uninhabited
+	music music/journey_8bit
 	arrival 2160
 	habitable 2160
 	haze _menu/haze-33
@@ -296,6 +304,7 @@ system KW.AB.008.0x155
 	"display name" 0x155
 	pos 8867.949 -9043.722
 	government Uninhabited
+	music music/journey_8bit
 	arrival 5000
 	habitable 13720
 	haze _menu/haze-brown
@@ -325,6 +334,7 @@ system KW.AB.009.2kP
 	"display name" 2kP
 	pos 8805.449 -9242.222
 	government Uninhabited
+	music music/journey_8bit
 	arrival 3000
 	habitable 3000
 	haze _menu/haze-133
@@ -406,47 +416,271 @@ system "KW.AB.010.Exit F"
 system "KW.AB.011.Interstellar Plains"
 	"display name" "Interstellar Plains"
 	pos 8731.449 -9496.222
+	government Uninhabited
+	music music/journey_8bit
+	arrival 5000
+	habitable 8400
+	haze _menu/haze-33
 	link KW.AB.009.2kP
 	link "KW.AB.010.Exit F"
 	link KW.AB.012.Wah
+	minables platinum 12 4
+	object
+		sprite star/f-supergiant
+		period 100
+	object
+		sprite planet/miranda-b
+		distance 601
+		period 64.303
+	object
+		sprite planet/ganymede-b
+		distance 976
+		period 133.075
+	object
+		sprite planet/browndwarf-l-rogue
+		distance 4488.565
+		period 1312.447
+		object
+			sprite planet/ice7
+			distance 325
+			period 153.335
+		object
+			sprite planet/dust7-b
+			distance 447
+			period 357.241
+	object
+		sprite planet/gas5-b
+		distance 6060
+		period 2058.872
+		object
+			sprite planet/rock17-b
+			distance 278
+			period 285.471
+		object
+			sprite planet/rhea
+			distance 425
+			period 272.497
 
 system KW.AB.012.Wah
 	"display name" Wah
 	pos 8718.949 -9748.222
+	government Uninhabited
+	music music/journey_8bit
+	arrival 5000
+	habitable 7911.424
+	haze _menu/haze-133
 	link "KW.AB.011.Interstellar Plains"
 	link "KW.AB.013.Exit N"
 	link KW.F.036.Squid
+	object
+		sprite star/k5
+		distance 193.024
+		period 85.965
+	object
+		sprite star/a-giant
+		distance 54.476
+		period 85.965
+		offset 180
+	object
+		sprite planet/water0
+		distance 392
+		period 34.903
+	object
+		sprite planet/desert8
+		distance 732
+		period 89.063
+	object
+		sprite planet/forest5-b
+		distance 1326.148
+		period 169.918
+	object
+		sprite planet/browndwarf-l-rogue
+		distance 3459.166
+		period 285.928
 
 system "KW.AB.013.Exit N"
 	"display name" "Exit N"
 	pos 8734.449 -9971.722
+	government Uninhabited
+	music music/journey_8bit
+	arrival 5000
+	habitable 22500.889
+	haze _menu/haze-133
 	link KW.AB.012.Wah
 	link "KW.AB.014.Al Core"
 	link KW.F.034.Dolphin
 	link KW.N.008.Armillari
+	object
+		sprite star/o-giant
+		distance 317.5
+		period 282.869
+		offset 180
+	object
+		sprite star/k-giant
+		distance 317.5
+		period 282.869
+	object
+		sprite planet/rock13-b
+		distance 1558
+		period 163.988
+		object
+			sprite planet/oberon
+			distance 147
+			period 109.767
+	object
+		sprite planet/gas16-b
+		distance 2278
+		period 289.928
+	object
+		sprite planet/gas16
+		distance 4072.458
+		period 514.499
 
 system "KW.AB.014.Al Core"
 	"display name" "Al Core"
 	pos 8778.449 -10175.722
+	government Uninhabited
+	music music/journey_8bit
+	arrival 5000
+	habitable 10009.027
+	haze _menu/haze-67
 	link "KW.AB.013.Exit N"
 	link "KW.AB.015.Ruhi Eth"
+	minables lead 23 3
+	object
+		sprite star/k5
+		distance 137.651
+		period 51.77
+	object
+		sprite star/o5
+		distance 38.849
+		period 51.77
+		offset 180
+	object
+		sprite planet/desert6
+		distance 366
+		period 27.995
+	object
+		sprite planet/uranus
+		distance 1193
+		period 164.75
+		object
+			sprite planet/rock0-b
+			distance 226
+			period 128.429
+		object
+			sprite planet/callisto-b
+			distance 386
+			period 198.472
+		object
+			sprite planet/miranda-b
+			distance 539
+			period 591.964
+	object
+		sprite planet/gas12
+		distance 2397
+		period 469.209
+		object
+			sprite planet/lava0-b
+			distance 316
+			period 147.01
+	object
+		sprite planet/gas12-b
+		distance 3741
+		period 914.841
+		object
+			sprite planet/miranda
+			distance 296
+			period 240.907
+		object
+			sprite planet/rhea
+			distance 408
+			period 256.312
+		object
+			sprite planet/tethys
+			distance 513
+			period 715.6
+	object
+		sprite planet/gas1
+		distance 7287
+		period 2487.065
+		object
+			sprite planet/tethys-b
+			distance 461
+			period 609.601
 
 system "KW.AB.015.Ruhi Eth"
 	"display name" "Ruhi Eth"
 	pos 8847.449 -10328.722
+	government Uninhabited
+	music music/journey_8bit
+	arrival 500
+	habitable 160
+	haze _menu/haze-67
 	link "KW.AB.014.Al Core"
 	link KW.AB.016.Qulek
+	minables iron 45 2.2
+	object
+		sprite star/m5
+		period 10
+	object
+		sprite planet/cloud7-b
+		distance 538.724
+		period 218.706
+	object
+		sprite planet/gas4
+		distance 1841.204
+		period 964.217
 
 system KW.AB.016.Qulek
 	"display name" Qulek
 	pos 8959.06 -10475.833
+	government Uninhabited
+	music music/journey_8bit
+	arrival 1451.46
+	habitable 1451.456
+	haze _menu/haze-red
 	link "KW.AB.015.Ruhi Eth"
 	link "KW.AB.017.Route A0"
+	object
+		sprite star/g5
+		distance 66.843
+		period 45.5
+	object
+		sprite star/f8
+		distance 61.157
+		period 45.5
+		offset 180
+	object
+		sprite planet/rock2-b
+		distance 470
+		period 106.981
+		object
+			sprite planet/rhea
+			distance 176
+			period 72.619
+	object
+		sprite planet/browndwarf-y-rogue
+		distance 1619.414
+		period 397.232
+	object
+		sprite planet/gas7-b
+		distance 2885.419
+		period 888.83
+	object
+		sprite planet/gas15
+		distance 9408
+		period 9580.849
+		object
+			sprite planet/dust3
+			distance 214
+			period 118.337
 
 system "KW.AB.017.Route A0"
 	"display name" "Route A0"
 	pos 9134.782 -10637.944
 	government Uninhabited
+	music music/journey_8bit
 	habitable 10028.086
 	haze _menu/haze-red
 	link KW.A.007.Ruhi

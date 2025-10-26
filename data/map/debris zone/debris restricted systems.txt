@@ -1,8 +1,39 @@
 system "KW.nA.R01.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8670.403 -9504.37
+	government Uninhabited
+	arrival 2200
+	habitable 2200
 	"jump range" 75
+	haze _menu/haze-tear
+	object
+		sprite star/m4
+		distance 82.968
+		period 51.88
+		offset 180
+	object
+		sprite star/f3
+		distance 48.032
+		period 51.88
+	object
+		sprite planet/lava1-b
+		distance 291
+		period 42.334
+	object
+		sprite planet/browndwarf-l-rogue
+		distance 777
+		period 184.706
+	object
+		sprite planet/callisto
+		distance 1536
+		period 513.376
+	object
+		sprite planet/gas15
+		distance 2772
+		period 1244.625
 
 system "KW.nA.R02.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8631.292 -9523.926
 	government Uninhabited
 	arrival 700
@@ -34,6 +65,7 @@ system "KW.nA.R02.Restricted Space"
 		period 7990.587
 
 system "KW.nA.R03.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8596.181 -9554.593
 	government Uninhabited
 	arrival 5000
@@ -81,10 +113,31 @@ system "KW.nA.R03.Restricted Space"
 			period 601.684
 
 system "KW.nA.R04.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8601.069 -9491.926
+	government Uninhabited
+	arrival 5000
+	habitable 13720
 	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/o0
+		period 10
+	object
+		sprite planet/browndwarf-y-rogue
+		distance 2057
+		period 318.592
+	object
+		sprite planet/gas15
+		distance 4538
+		period 1043.95
+		object
+			sprite planet/dust0
+			distance 228
+			period 212.03
 
 system "KW.nA.R05.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8569.069 -9518.148
 	government Uninhabited
 	arrival 500
@@ -115,8 +168,8 @@ system "KW.nA.R05.Restricted Space"
 		distance 11822
 		period 44251.657
 
-
 system "KW.nA.R06.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8578.403 -9590.389
 	government Uninhabited
 	arrival 3650
@@ -141,18 +194,118 @@ system "KW.nA.R06.Restricted Space"
 		period 6672.557
 
 system "KW.nA.R07.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8561.069 -9801.056
+	government Uninhabited
+	habitable 230
 	"jump range" 75
+	haze _menu/haze-tear
+	object
+		sprite star/m3
+		period 10
+	object
+		sprite planet/gas0-b
+		distance 1845
+		period 2090.213
+		object
+			sprite planet/dust5-b
+			distance 279
+			period 121.962
+		object
+			sprite planet/miranda-b
+			distance 444
+			period 442.574
+	object
+		sprite planet/gas11-b
+		distance 3362
+		period 5141.533
+		object
+			sprite planet/dust3-b
+			distance 291
+			period 187.646
 
 system "KW.nA.R08.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8537.958 -9765.5
+	government Uninhabited
+	arrival 5000
+	habitable 5685.103
 	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/b5
+		distance 148.171
+		period 73.948
+		offset 180
+	object
+		sprite star/k0-old
+		distance 94.829
+		period 73.948
+	object
+		sprite planet/gas13
+		distance 2600.106
+		period 606.285
+		object
+			sprite planet/dust3
+			distance 293
+			period 189.584
+	object
+		sprite planet/browndwarf-y-rogue
+		distance 3472
+		period 1085.326
+		object
+			sprite planet/callisto-b
+			distance 284
+			period 125.255
 
 system "KW.nA.R09.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8549.514 -9722.833
+	government Uninhabited
+	arrival 2122.2
+	habitable 2122.198
 	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/f5
+		distance 135.3
+		period 52.925
+		offset 180
+	object
+		sprite star/g5-old
+		distance 46.7
+		period 52.925
+	object
+		sprite planet/gas6-hot
+		distance 3077
+		period 1482.034
+		object
+			sprite planet/dust1-b
+			distance 229
+			period 107.778
+		object
+			sprite planet/tethys
+			distance 384
+			period 463.438
+	object
+		sprite planet/gas4-b
+		distance 3962
+		period 2165.403
+	object
+		sprite planet/gas3
+		distance 9301
+		period 7788.638
+		object
+			sprite planet/europa
+			distance 323
+			period 274.61
+		object
+			sprite planet/oberon-b
+			distance 436
+			period 560.692
 
 system "KW.nA.R10.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8587.292 -9698.389
 	government Uninhabited
 	arrival 5000
@@ -173,6 +326,7 @@ system "KW.nA.R10.Restricted Space"
 		period 1429.43
 
 system "KW.nA.R11.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8594.403 -9626.389
 	government Uninhabited
 	arrival 5000
@@ -197,6 +351,7 @@ system "KW.nA.R11.Restricted Space"
 		period 1063.202
 
 system "KW.nA.R12.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8640.032 -9731.13
 	government Uninhabited
 	arrival 959.544
@@ -246,6 +401,7 @@ system "KW.nA.R12.Restricted Space"
 		period 9130.868
 
 system "KW.nA.R13.Restricted Space"
+	"display name" "Restricted Space"
 	pos 8613.958 -9668.167
 	government Uninhabited
 	arrival 2322.15
@@ -267,6 +423,7 @@ system "KW.nA.R13.Restricted Space"
 		period 1100.461
 
 system "KW.nA.R99.No Return"
+	"display name" "No Return"
 	pos 8570.403 -9653.259
 	government Uninhabited
 	arrival 500
@@ -288,3 +445,4 @@ system "KW.nA.R99.No Return"
 		sprite planet/ganymede
 		distance 905.756
 		period 431.698
+

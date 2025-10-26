@@ -7,8 +7,11 @@ wormhole "Alph Wormhole Series A"
 	mappable
 	"display name" "Integumental Xylem"
 	link KW.A.000.Alph KW.A.005.Veti
+	link KW.A.005.Veti KW.A.000.Alph
 	link KW.A.009.Veniti KW.R.000.Rho
+	link KW.R.000.Rho KW.A.009.Veniti
 	link KW.A.W1.Enermata KW.A.W2.Entri
+	link KW.A.W2.Entri KW.A.W1.Enermata
 	color "KW.Color: Wormhole.Alph"
 
 planet "KW.WH.Alph Wormhole B"
@@ -18,6 +21,9 @@ wormhole "Alph Wormhole Series B"
 	mappable
 	"display name" "Integumental Phloem"
 	link KW.A.000.Alph "KW.A.002.Alph III"
+	link "KW.A.002.Alph III" KW.A.000.Alph
+	link KW.A.004.Drachi KW.A.005.Veti 
 	link KW.A.005.Veti KW.A.004.Drachi
+	link KW.A.012.Avathi "KW.A.014.Ruchi Nar"
 	link "KW.A.014.Ruchi Nar" KW.A.012.Avathi
 	color "KW.Color: Wormhole.Alph"

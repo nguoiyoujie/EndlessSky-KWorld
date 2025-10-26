@@ -32,20 +32,20 @@ system KW.A.000.Alph
 		object "KW.A.000.0A.Axis Mundi"
 			sprite planet/_poi
 				scale 0.5
-			distance 120
-			period 0
+			distance 170
+			period 230.125
 			offset 60
 		object "KW.A.000.0B.Yggdrasil"
 			sprite planet/_poi
 				scale 0.5
-			distance 120
-			period 0
+			distance 170
+			period 230.125
 			offset 180
 		object "KW.A.000.0C.Tetejetlen fa"
 			sprite planet/_poi
 				scale 0.5
-			distance 120
-			period 0
+			distance 170
+			period 230.125
 			offset -60
 		object "KW.A.000.1.Trefoil"
 			sprite planet/dust3

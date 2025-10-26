@@ -3,6 +3,7 @@ system KW.B.000.Bet
 	pos 9946.037 -8999.74
 	government KW.Bet
 	attributes copper-source
+	music music/fabricatedWorld_8bit
 	arrival 550
 	habitable 550
 	belt 450
@@ -44,37 +45,36 @@ system KW.B.000.Bet
 		sprite planet/forest12
 		distance 639.287
 		period 472
-		object "KW.B.000.0A.Unes"
+		object KW.B.000.0A.Unes
 			sprite planet/_poi
 				scale 0.5
 			distance 140
 			period 472
-			offset 0
-		object "KW.B.000.0B.Dres"
+		object KW.B.000.0B.Dres
 			sprite planet/_poi
 				scale 0.5
 			distance 140
 			period 472
 			offset 60
-		object "KW.B.000.0C.Trei"
+		object KW.B.000.0C.Trei
 			sprite planet/_poi
 				scale 0.5
 			distance 140
 			period 472
 			offset 120
-		object "KW.B.000.0D.Quad"
+		object KW.B.000.0D.Quad
 			sprite planet/_poi
 				scale 0.5
 			distance 140
 			period 472
 			offset 180
-		object "KW.B.000.0E.Quin"
+		object KW.B.000.0E.Quin
 			sprite planet/_poi
 				scale 0.5
 			distance 140
 			period 472
 			offset 240
-		object "KW.B.000.0F.Sex"
+		object KW.B.000.0F.Sex
 			sprite planet/_poi
 				scale 0.5
 			distance 140
@@ -135,7 +135,7 @@ system "KW.B.002.Bet III"
 	"display name" "Bet III"
 	pos 9834.315 -9188.425
 	government KW.Bet
-	attributes silver-source iron-source
+	attributes iron-source silver-source
 	arrival 500
 	habitable 450
 	belt 1800
@@ -218,7 +218,7 @@ system KW.B.004.Fauja
 	"display name" Fauja
 	pos 10014.042 -8988.078
 	government Uninhabited
-	attributes tungsten-source iron-source
+	attributes iron-source tungsten-source
 	arrival 5000
 	habitable 5600
 	belt 3000

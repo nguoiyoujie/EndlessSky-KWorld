@@ -1,17 +1,78 @@
-
 system KW.01.000.Dgt
 	pos 8770.083 -8829.333
 	government KW.Dgt
+	arrival 2560
+	habitable 2560
+	haze _menu/haze-67
 	link KW.01.005.D-4
 	link KW.01.009.K-8
 	link KW.01.012.H-11
 	link KW.01.013.F-12
 	link KW.AB.007.0x145
+	object
+		sprite star/f0
+		period 10
+	object
+		sprite planet/ice4-b
+		distance 397
+		period 62.535
+	object
+		sprite planet/rock10
+		distance 2672.989
+		period 260.953
+		object
+			sprite planet/rock20
+			distance 219.217
+			period 76.254
+	object
+		sprite planet/desert6-b
+		distance 4431.282
+		period 508.338
+	object
+		sprite planet/dust3
+		distance 2069.295
+		period 945.246
 
 system KW.01.001.*-0
 	pos 8551.083 -8954.167
 	government KW.Dgt
+	arrival 500
+	habitable 403.113
 	link KW.01.015.P-14
+	object
+		sprite star/m5
+		distance 76.902
+		period 49.728
+		offset 180
+	object
+		sprite star/k8
+		distance 43.598
+		period 49.728
+	object
+		sprite planet/desert7
+		distance 630.471
+		period 378.501
+	object
+		sprite planet/uranus-b
+		distance 1422
+		period 1068.307
+		object
+			sprite planet/miranda-b
+			distance 221
+			period 155.418
+	object
+		sprite planet/_local
+			scale 4
+		distance 2179.639
+		offset 30
+	object
+		sprite planet/gateway-inactive
+		distance 4367
+		period 5749.386
+		object
+			sprite planet/dust4-b
+			distance 234
+			period 111.327
 
 system KW.01.002.A-1
 	pos 8669.083 -8861.444
@@ -43,9 +104,47 @@ system KW.01.005.D-4
 system "KW.01.006.01-5 (Dgt II)"
 	pos 8719.88 -9283.722
 	government KW.Dgt
+	arrival 1325
+	habitable 1325
+	haze _menu/haze-ghila
 	link KW.01.a01.Endpoint
 	link KW.01.a03.Reconstruction
 	link KW.AB.009.2kP
+	trade Clothing 298
+	trade Electronics 659
+	trade Equipment 677
+	trade Food 426
+	trade "Heavy Metals" 1034
+	trade Industrial 881
+	trade "Luxury Goods" 1393
+	trade Medical 721
+	trade Metal 433
+	trade Plastic 365
+	object
+		sprite star/o-dwarf
+		period 100
+	object
+		sprite planet/desert0
+		distance 1223.303
+		period 470.168
+	object
+		sprite planet/miranda-b
+		distance 690
+		period 199.171
+	object
+		sprite planet/gas3
+		distance 2387.416
+		period 1281.871
+	object
+		sprite planet/gas16
+		distance 3938
+		period 2715.599
+	object
+		sprite planet/_local
+			scale 4
+		distance 1723.906
+		period 786.543
+		offset -150
 
 system KW.01.007.E-6
 	pos 8666.157 -8773.778
@@ -122,6 +221,4 @@ system KW.01.018.G-17
 system KW.01.019.S-18
 	pos 8725.713 -8599.704
 	link KW.01.017.R-16
-
-
 
