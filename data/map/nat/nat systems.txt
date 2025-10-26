@@ -40,7 +40,7 @@ system KW.N.000.Nat
 			sprite planet/dust3-b
 			distance 183
 			period 93.579
-	object "KW.N.000.1.Ocalsi"
+	object KW.N.000.1.Ocalsi
 		sprite planet/ocean0-b
 		distance 1587
 		period 373.267
@@ -48,7 +48,7 @@ system KW.N.000.Nat
 		sprite planet/neptune-b
 		distance 2141
 		period 584.896
-	object "KW.N.000.0.Naturasi"
+	object KW.N.000.0.Naturasi
 		sprite planet/forest12
 		distance 4667.344
 		period 2198.594
@@ -56,7 +56,7 @@ system KW.N.000.Nat
 			sprite planet/europa-b
 			distance 223
 			period 157.532
-		object "KW.N.000.2.Feirnsi"
+		object KW.N.000.2.Feirnsi
 			sprite planet/ice0
 			distance 364
 			period 262.514
@@ -106,7 +106,7 @@ system KW.N.001.Obligat
 			sprite planet/dust5
 			distance 287
 			period 127.245
-		object "KW.N.001.0.Ogalet"
+		object KW.N.001.0.Ogalet
 			sprite planet/desert4
 			distance 419
 			period 405.726
@@ -203,9 +203,9 @@ system KW.N.004.Endo
 	habitable 6684.497
 	haze _menu/haze-ghila
 	link KW.N.000.Nat
-	link KW.N.015.Plasmodi
 	link KW.N.012.Filariasi
 	link KW.N.013.Schistosoma
+	link KW.N.015.Plasmodi
 	object
 		sprite star/a0
 		distance 108.177
@@ -326,7 +326,7 @@ system "KW.N.006.Cope Pod"
 			sprite planet/rock20
 			distance 166
 			period 80.847
-	object "KW.N.006.0.Seeth"
+	object KW.N.006.0.Seeth
 		sprite planet/forest3
 		distance 2139.292
 		period 825.28
@@ -372,7 +372,7 @@ system KW.N.007.Rickettsi
 			sprite planet/dust0
 			distance 156
 			period 120
-	object "KW.N.007.0.Devor"
+	object KW.N.007.0.Devor
 		sprite planet/forest9
 		distance 1355.919
 		period 305.212
@@ -479,7 +479,7 @@ system KW.N.009.Lice
 			sprite planet/tethys-b
 			distance 294
 			period 310.467
-		object "KW.N.009.0.Contat"
+		object KW.N.009.0.Contat
 			sprite planet/ice8
 			distance 419
 			period 324.206
@@ -541,7 +541,7 @@ system KW.N.010.Flea
 			sprite planet/ice0-b
 			distance 262
 			period 160.307
-		object "KW.N.010.0.Markat"
+		object KW.N.010.0.Markat
 			sprite planet/rock14-b
 			distance 410
 			period 217.267
@@ -589,7 +589,7 @@ system KW.N.011.Mite
 			sprite planet/dust3-b
 			distance 376
 			period 275.602
-	object "KW.N.011.0.Itchat"
+	object KW.N.011.0.Itchat
 		sprite planet/forest12
 		distance 975.11
 		period 389.07
@@ -665,7 +665,7 @@ system KW.N.013.Schistosoma
 		distance 182.5
 		period 123.272
 		offset 180
-	object "KW.N.013.0.Microb"
+	object KW.N.013.0.Microb
 		sprite planet/forest0-b
 		distance 1325.437
 		period 237.51
@@ -690,6 +690,7 @@ system "KW.N.014.Simulium's Den"
 	habitable 1080
 	"jump range" 75
 	haze _menu/haze-tear
+	link "KW.nA.R12.Restricted Space"
 	trade Clothing 363
 	trade Electronics 700
 	trade Equipment 391
@@ -703,7 +704,7 @@ system "KW.N.014.Simulium's Den"
 	object
 		sprite star/g0
 		period 10
-	object "KW.N.014.0.Pustule"
+	object KW.N.014.0.Pustule
 		sprite planet/desert11
 		distance 831.762
 		period 87.33
@@ -767,3 +768,4 @@ system KW.N.015.Plasmodi
 		sprite planet/gas8-b
 		distance 3627
 		period 2414.047
+

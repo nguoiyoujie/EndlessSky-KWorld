@@ -95,6 +95,7 @@ system "KW.B.001.Bet II"
 	pos 10102.092 -8870.131
 	government KW.Bet
 	attributes copper-source
+	music music/fabricatedWorld_8bit
 	habitable 1200
 	belt 400
 	haze _menu/haze-33
@@ -136,6 +137,7 @@ system "KW.B.002.Bet III"
 	pos 9834.315 -9188.425
 	government KW.Bet
 	attributes iron-source silver-source
+	music music/fabricatedWorld_8bit
 	arrival 500
 	habitable 450
 	belt 1800
@@ -180,6 +182,7 @@ system KW.B.003.Eiaja
 	"display name" Eiaja
 	pos 9978.782 -9013.56
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 5000
 	habitable 17025
 	haze _menu/haze-33
@@ -219,6 +222,7 @@ system KW.B.004.Fauja
 	pos 10014.042 -8988.078
 	government Uninhabited
 	attributes iron-source tungsten-source
+	music music/fabricatedWorld_8bit
 	arrival 5000
 	habitable 5600
 	belt 3000
@@ -263,6 +267,7 @@ system KW.B.005.Femici
 	"display name" Femici
 	pos 9977.893 -9054.893
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 500
 	habitable 35
 	haze _menu/haze-133
@@ -300,6 +305,7 @@ system KW.B.006.Barke
 	"display name" Barke
 	pos 9896.56 -9064.672
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	habitable 100
 	haze _menu/haze-67
 	link KW.B.007.Leija
@@ -353,6 +359,7 @@ system KW.B.007.Leija
 	"display name" Leija
 	pos 9921.894 -9093.116
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 750
 	habitable 750
 	haze _menu/haze-133
@@ -401,6 +408,7 @@ system KW.B.008.Maci
 	"display name" Maci
 	pos 9865.597 -9119.782
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	habitable 135
 	haze _menu/haze-133
 	link "KW.B.002.Bet III"
@@ -449,6 +457,7 @@ system KW.B.009.Sesci
 	"display name" Sesci
 	pos 9979.524 -8958.598
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 4500
 	habitable 4500
 	haze _menu/haze-33
@@ -486,6 +495,7 @@ system KW.B.010.Venci
 	"display name" Venci
 	pos 9995.671 -8919.338
 	government KW.Bet
+	music music/fabricatedWorld_8bit
 	habitable 4050
 	haze _menu/haze-33
 	link "KW.AB.000.Route B0"
@@ -531,6 +541,7 @@ system KW.B.011.Mini
 	"display name" Mini
 	pos 10019.671 -8873.116
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 625
 	habitable 625
 	haze _menu/haze-33
@@ -567,6 +578,7 @@ system KW.B.012.Bracha
 	pos 10121.894 -8828.672
 	government Uninhabited
 	attributes aluminum-source
+	music music/fabricatedWorld_8bit
 	arrival 500
 	habitable 30
 	belt 1000
@@ -607,6 +619,7 @@ system KW.B.013.Moraja
 	"display name" Moraja
 	pos 10153.893 -8795.338
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 1715
 	habitable 1715
 	haze _menu/haze-33
@@ -640,6 +653,7 @@ system KW.B.014.Amici
 	"display name" Amici
 	pos 10108.116 -8917.116
 	government KW.Bet
+	music music/fabricatedWorld_8bit
 	arrival 1051.19
 	habitable 1051.19
 	haze _menu/haze-33
@@ -719,6 +733,7 @@ system KW.B.015.Meni
 	"display name" Meni
 	pos 9904.116 -9031.782
 	government KW.Bet
+	music music/fabricatedWorld_8bit
 	habitable 3000
 	haze _menu/haze-67
 	link KW.B.000.Bet
@@ -768,6 +783,7 @@ system "KW.B.016.Cygnus X"
 	"display name" "Cygnus X"
 	pos 9850.903 -8844.847
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 5000
 	habitable 100000
 	haze _menu/haze-chanai
@@ -795,6 +811,7 @@ system KW.B.017.Mora
 	"display name" Mora
 	pos 10185.833 -8747.931
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 500
 	habitable 160
 	haze _menu/haze-33
@@ -829,6 +846,7 @@ system KW.B.018.Pices
 	"display name" Pices
 	pos 10235.889 -8804.153
 	government KW.Bet
+	music music/fabricatedWorld_8bit
 	habitable 230
 	haze _menu/haze-133
 	link KW.B.017.Mora
@@ -880,6 +898,7 @@ system KW.B.019.Coda
 	"display name" Coda
 	pos 9749.981 -9008.671
 	government KW.Machines
+	music music/fabricatedWorld_8bit
 	arrival 5000
 	habitable 21000
 	haze _menu/haze-chanai
@@ -939,6 +958,7 @@ system KW.B.020.Micaja
 	pos 9845.093 -9048.671
 	government Uninhabited
 	attributes uranium-source
+	music music/fabricatedWorld_8bit
 	arrival 500
 	habitable 490
 	haze _menu/haze-67
@@ -978,6 +998,7 @@ system KW.B.021.Soji
 	pos 9824.648 -9011.782
 	government Uninhabited
 	attributes copper-source titanium-source
+	music music/fabricatedWorld_8bit
 	habitable 700
 	haze _menu/haze-33
 	link KW.B.019.Coda
@@ -1016,6 +1037,7 @@ system KW.B.022.Midi
 	"display name" Midi
 	pos 10018.204 -8834.037
 	government Uninhabited
+	music music/fabricatedWorld_8bit
 	arrival 4166.88
 	habitable 4166.881
 	haze _menu/haze-67
@@ -1072,6 +1094,7 @@ system KW.B.023.Brai
 	pos 9983.981 -8822.185
 	government Uninhabited
 	attributes iron-source
+	music music/fabricatedWorld_8bit
 	arrival 3433.28
 	habitable 3433.278
 	haze _menu/haze-brown
@@ -1113,6 +1136,7 @@ system KW.B.024.Amari
 	pos 9969.759 -8782.778
 	government Uninhabited
 	attributes platinum-source silicon-source
+	music music/fabricatedWorld_8bit
 	arrival 500
 	habitable 150
 	haze _menu/haze-brown
@@ -1141,6 +1165,7 @@ system KW.B.025.Bronzi
 	pos 9995.093 -8752.556
 	government Uninhabited
 	attributes copper-source lead-source
+	music music/fabricatedWorld_8bit
 	arrival 5000
 	habitable 5600
 	haze _menu/haze-brown
@@ -1177,6 +1202,7 @@ system KW.B.025.Silvi
 	pos 9981.759 -8705
 	government KW.Bet
 	attributes silver-source
+	music music/fabricatedWorld_8bit
 	arrival 5000
 	habitable 10000
 	haze _menu/haze-brown
@@ -1230,6 +1256,7 @@ system KW.B.026.Mercui
 	pos 9955.537 -8666.333
 	government Uninhabited
 	attributes uranium-source
+	music music/fabricatedWorld_8bit
 	arrival 500
 	habitable 320
 	belt 500
@@ -1266,6 +1293,7 @@ system KW.B.027.Plei
 	pos 9999.981 -8635.222
 	government Uninhabited
 	attributes aluminum-source lead-source
+	music music/fabricatedWorld_8bit
 	habitable 596.154
 	haze _menu/haze-brown
 	link KW.B.026.Mercui
@@ -1308,6 +1336,7 @@ system KW.B.028.Amori
 	pos 9953.759 -8596.111
 	government Uninhabited
 	attributes gold-source
+	music music/fabricatedWorld_8bit
 	arrival 5000
 	habitable 10499.524
 	haze _menu/haze-133

@@ -61,12 +61,14 @@ system KW.H.001.Limbo
 	"display name" Limbo
 	pos 9660.278 -8671.412
 	government Uninhabited
+	attributes silicon-source
 	arrival 625
 	habitable 625
 	haze _menu/haze-chanai
 	link "KW.AB.003.Exit PH"
 	link KW.H.000.Hel
 	link KW.H.002.Furia
+	minables silicon 24 8
 	object
 		sprite star/g5
 		period 10
@@ -164,6 +166,7 @@ system KW.H.003.Wraia
 	"display name" Wraia
 	pos 9572.769 -8754.079
 	government Uninhabited
+	attributes iron-source
 	arrival 750
 	habitable 750
 	haze _menu/haze-chanai
@@ -171,6 +174,7 @@ system KW.H.003.Wraia
 	link KW.H.002.Furia
 	link KW.H.004.Lustra
 	link KW.H.006.Hoora
+	minables iron 55 6.7
 	object
 		sprite star/a-dwarf
 		period 10
@@ -372,11 +376,13 @@ system KW.H.007.Greda
 	"display name" Greda
 	pos 9519.435 -8811.856
 	government Uninhabited
+	attributes aluminum-source
 	arrival 5000
 	habitable 5000
 	haze _menu/haze-133
 	link KW.H.005.Soora
 	link KW.H.010.Scorch
+	minables aluminum 44 7.6
 	object
 		sprite star/b8
 		period 10
@@ -458,10 +464,12 @@ system KW.H.009.Vida
 	"display name" Vida
 	pos 9593.509 -8854.227
 	government Uninhabited
+	attributes iron-source
 	arrival 500
 	habitable 450
 	link KW.H.008.Anra
 	link KW.H.011.Drya
+	minables iron 112 4.8
 	object
 		sprite star/k3
 		period 10
@@ -856,11 +864,13 @@ system "KW.H.017.Hot Coals"
 	"display name" "Hot Coals"
 	pos 9711.019 -8751.412
 	government Uninhabited
+	attributes iron-source
 	arrival 5000
 	habitable 8400
 	haze _menu/haze-brown
 	link "KW.H.016.Hopping Mad"
 	link KW.H.018.Canterweave
+	minables iron 36 4.5
 	object
 		sprite star/f-supergiant
 		period 100
@@ -917,12 +927,14 @@ system KW.H.019.Euphora
 	"display name" Euphora
 	pos 9681.093 -8940.227
 	government Uninhabited
+	attributes silicon-source
 	arrival 500
 	habitable 320
 	haze _menu/haze-33
 	link KW.H.012.Daria
 	link KW.H.020.Discorda
 	link KW.H.021.Diseda
+	minables silicon 38 6.5
 	object
 		sprite star/m0
 		period 10
@@ -1112,3 +1124,4 @@ system KW.H.023.Ara
 		sprite planet/browndwarf-l
 		distance 4648
 		period 5726.129
+

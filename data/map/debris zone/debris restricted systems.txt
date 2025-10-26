@@ -1,11 +1,13 @@
 system "KW.nA.R01.Restricted Space"
 	"display name" "Restricted Space"
+	hidden
 	pos 8670.403 -9504.37
 	government Uninhabited
 	arrival 2200
 	habitable 2200
 	"jump range" 75
 	haze _menu/haze-tear
+	link "KW.nA.R02.Restricted Space"
 	object
 		sprite star/m4
 		distance 82.968
@@ -40,6 +42,7 @@ system "KW.nA.R02.Restricted Space"
 	habitable 700
 	"jump range" 50
 	haze _menu/haze-tear
+	link "KW.nA.R01.Restricted Space"
 	object
 		sprite star/g3
 		period 10
@@ -352,12 +355,14 @@ system "KW.nA.R11.Restricted Space"
 
 system "KW.nA.R12.Restricted Space"
 	"display name" "Restricted Space"
+	hidden
 	pos 8640.032 -9731.13
 	government Uninhabited
 	arrival 959.544
 	habitable 959.544
 	"jump range" 50
 	haze _menu/haze-tear
+	link "KW.N.014.Simulium's Den"
 	object
 		sprite star/m8
 		distance 198.093

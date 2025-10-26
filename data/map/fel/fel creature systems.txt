@@ -1,23 +1,23 @@
 system KW.F.020.Dragonspire
-	pos 9415.986 -9539.829
+	pos 9399.986 -9541.162
 	link KW.F.021.Lion
 
 system KW.F.021.Lion
-	pos 9359.542 -9600.718
+	pos 9319.023 -9560.644
 	link KW.F.020.Dragonspire
 	link KW.F.022.Tiger
 
 system KW.F.022.Tiger
-	pos 9292.208 -9640.273
+	pos 9254.578 -9599.384
 	link KW.F.021.Lion
 	link KW.F.031.Boar
 
 system KW.F.023.Chimp
-	pos 9272.208 -9568.94
+	pos 9220.652 -9568.051
 	link KW.F.031.Boar
 
 system KW.F.024.Hippo
-	pos 9171.764 -9567.829
+	pos 9158.134 -9542.051
 	link KW.F.031.Boar
 
 system KW.F.025.Whale
@@ -75,22 +75,22 @@ system KW.F.027.Wolf
 		period 1624.681
 
 system KW.F.028.Giraffe
-	pos 9055.764 -9824.273
+	pos 9060.653 -9833.606
 	link KW.F.032.Deer
 
 system KW.F.029.Cheetah
-	pos 9178.875 -9656.94
+	pos 9137.69 -9646.57
 	link KW.F.030.Hyena
 	link KW.F.031.Boar
 
 system KW.F.030.Hyena
-	pos 9140.208 -9613.829
+	pos 9119.467 -9603.459
 	link KW.F.027.Wolf
 	link KW.F.029.Cheetah
 	link KW.F.031.Boar
 
 system KW.F.031.Boar
-	pos 9212.208 -9603.829
+	pos 9169.838 -9597.903
 	link KW.F.022.Tiger
 	link KW.F.023.Chimp
 	link KW.F.024.Hippo

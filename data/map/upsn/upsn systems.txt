@@ -1,29 +1,273 @@
 system KW.U.000.Upsn
 	pos 8594.208 -11884.833
 	government KW.Upsn
+	arrival 625
+	habitable 625
+	haze _menu/haze-33
 	link KW.K.000.Ker
 	link KW.U.001.Supragen
 	link KW.U.004.Molagen
+	trade Clothing 361
+	trade Electronics 859
+	trade Equipment 492
+	trade Food 381
+	trade "Heavy Metals" 692
+	trade Industrial 643
+	trade "Luxury Goods" 1372
+	trade Medical 720
+	trade Metal 275
+	trade Plastic 503
+	object
+		sprite star/g5
+		period 100
+	object
+		sprite planet/ocean3-b
+		distance 371.721
+		period 102.263
+	object KW.U.000.0.Silon
+		sprite planet/ice1-b
+		distance 1126.044
+		period 216.273
+		object
+			sprite planet/ice0-b
+			distance 192.131
+			period 89.014
+	object
+		sprite planet/gas12
+		distance 3655
+		period 1134.013
+		object
+			sprite planet/ice7
+			distance 301
+			period 136.668
+		object
+			sprite planet/lava0-b
+			distance 482
+			period 276.942
+	object
+		sprite planet/uranus
+		distance 9515
+		period 4763.213
+	object
+		sprite planet/_local
+			scale 4
+		distance 2200
+		offset 140
 
 system KW.U.001.Supragen
 	pos 8576.838 -11832.981
+	government Uninhabited
+	arrival 5000
+	habitable 5670.317
+	haze _menu/haze-sarifa
 	link KW.U.000.Upsn
 	link KW.U.002.Sequlae
 	link KW.U.003.Qualagen
+	object
+		sprite star/k-supergiant
+		distance 767
+		period 1062.094
+	object
+		sprite star/m-supergiant
+		distance 767
+		period 1062.094
+		offset 180
+	object
+		sprite planet/browndwarf-l-rogue
+		distance 2766
+		period 772.742
+		object
+			sprite planet/rock3
+			distance 312
+			period 208.321
+	object
+		sprite planet/gas2-b
+		distance 4917.291
+		period 1507.756
+	object
+		sprite planet/gas5-b
+		distance 6980
+		period 3097.701
 
 system KW.U.002.Sequlae
 	pos 8629.727 -11809.87
+	government Uninhabited
+	arrival 500
+	habitable 100
+	haze _menu/haze-33
 	link KW.U.001.Supragen
+	object
+		sprite star/k-dwarf
+		period 10
+	object
+		sprite planet/rock11
+		distance 264
+		period 171.58
+	object
+		sprite planet/gas5
+		distance 970
+		period 1208.419
+		object
+			sprite planet/dust4
+			distance 291
+			period 154.39
+	object
+		sprite planet/neptune
+		distance 3859
+		period 9588.974
+	object
+		sprite planet/gas15-b
+		distance 6418
+		period 20566.461
 
 system KW.U.003.Qualagen
 	pos 8543.06 -11800.537
-	link KW.U.005.Engen
+	government Uninhabited
+	arrival 980
+	habitable 980
+	haze _menu/haze-33
 	link KW.U.001.Supragen
+	link KW.U.005.Engen
+	object
+		sprite star/k0-old
+		period 10
+	object
+		sprite planet/rock9
+		distance 598
+		period 186.852
+		object
+			sprite planet/dust5-b
+			distance 172
+			period 59.035
+	object
+		sprite planet/dust0
+		distance 1157
+		period 502.86
+	object
+		sprite planet/vulpa
+		distance 1672
+		period 873.577
+		object
+			sprite planet/io
+			distance 293
+			period 189.584
+	object
+		sprite planet/gas6
+		distance 3090
+		period 2194.748
+		object
+			sprite planet/rock17
+			distance 362
+			period 424.187
+		object
+			sprite planet/dust7-b
+			distance 515
+			period 441.786
+	object
+		sprite planet/gateway-inactive
+		distance 6614
+		period 6872.951
+	object
+		sprite planet/redias
+		distance 9672.5
+		period 12155.003
+		object
+			sprite planet/dust3-b
+			distance 336.5
+			period 233.334
 
 system KW.U.004.Molagen
 	pos 8610.838 -11925.204
+	government Uninhabited
+	arrival 3650
+	habitable 3650
 	link KW.U.000.Upsn
+	object
+		sprite star/a0
+		period 10
+	object
+		sprite planet/gas15-b
+		distance 1255
+		period 294.36
+	object
+		sprite planet/neptune
+		distance 2361
+		period 759.552
+		object
+			sprite planet/dust5-b
+			distance 243
+			period 99.135
+		object
+			sprite planet/desert4
+			distance 409
+			period 391.288
+		object
+			sprite planet/dust4-b
+			distance 541
+			period 391.358
+	object
+		sprite planet/browndwarf-t-rogue
+		distance 4202.297
+		period 1707.092
+	object
+		sprite planet/gas10-b
+		distance 10220
+		period 6840.532
+		object
+			sprite planet/rock3-b
+			distance 207
+			period 112.579
+	object
+		sprite planet/gas6
+		distance 11545
+		period 8213.05
+		object
+			sprite planet/dust4
+			distance 401
+			period 249.744
 
 system KW.U.005.Engen
 	pos 8493.282 -11810.093
+	government Uninhabited
+	arrival 4051.23
+	habitable 4051.234
+	haze _menu/haze-33
 	link KW.U.003.Qualagen
+	object
+		sprite star/k-dwarf
+		distance 352.712
+		period 169.026
+	object
+		sprite star/g-giant
+		distance 7.288
+		period 169.026
+		offset 180
+	object
+		sprite planet/lava5-b
+		distance 551.284
+		period 50.275
+	object
+		sprite planet/ocean0
+		distance 920.335
+		period 148.106
+	object
+		sprite planet/gas5
+		distance 1412
+		period 333.441
+		object
+			sprite planet/rock0
+			distance 270
+			period 167.705
+	object
+		sprite planet/gas10-b
+		distance 2215
+		period 655.129
+		object
+			sprite planet/lava0
+			distance 248
+			period 102.21
+	object
+		sprite planet/luna
+		distance 3453
+		period 1275.15
+

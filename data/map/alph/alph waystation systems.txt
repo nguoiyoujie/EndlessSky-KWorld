@@ -1,5 +1,5 @@
 system KW.A.W1.Enermata
-	pos 9764.347 -10154.032
+	pos 9727.903 -10178.476
 	government KW.Fleet1
 	arrival 5000
 	habitable 17922.35
@@ -27,7 +27,7 @@ system KW.A.W1.Enermata
 			scale 4
 		distance 2420
 		offset 120
-		object
+		object KW.A.W1.0.Watari
 			sprite planet/station-depot-a0
 			distance 359.019
 			period 239.078
@@ -64,7 +64,7 @@ system KW.A.W2.Entri
 		sprite planet/gas17-b
 		distance 2140
 		period 787.855
-		object
+		object "KW.A.W2.0.Wishing Well"
 			sprite planet/ice7
 			distance 249
 			period 102.829
@@ -108,3 +108,4 @@ system KW.A.W5.Choni
 system KW.A.W6.Armpit
 	pos 10299.458 -10384.981
 	link KW.A.W5.Choni
+

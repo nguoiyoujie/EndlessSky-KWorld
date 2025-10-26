@@ -1,4 +1,3 @@
-
 system "KW.TBD.The Box"
 	pos 10069.189 -9046.977
 	link "KW.TBD.Bet-Lmd Route"
@@ -19,3 +18,19 @@ system "KW.TBD.The Mus"
 	pos 10647.782 -8634.236
 	link KW.L.000.Lmd
 	link "KW.TBD.Sol-Lmd Route"
+
+planet KW.A.020.0.Cutin
+	landscape land/city11
+	description WIP
+	government KW.Alph
+
+planet KW.A.042.0.Stonk
+	landscape land/city11
+	description WIP
+	government KW.Fleet1
+
+planet "KW.A.W2.0.Wishing Well"
+	landscape land/city11
+	description WIP
+	government KW.Fleet1
+
