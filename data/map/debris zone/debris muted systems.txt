@@ -1,0 +1,132 @@
+system KW.nA.m01.---
+	pos 8489.069 -9611.315
+	"jump range" 20
+	link KW.nA.001.Loss
+	link KW.nA.m02.---
+	link KW.nA.m03.---
+
+system KW.nA.m02.---
+	pos 8455.292 -9649.981
+	"jump range" 20
+	link KW.nA.m01.---
+	link KW.nA.m08.---
+
+system KW.nA.m03.---
+	pos 8457.514 -9578.87
+	"jump range" 25
+	link KW.nA.m01.---
+	link KW.nA.m04.---
+
+system KW.nA.m04.---
+	pos 8448.625 -9529.093
+	"jump range" 55
+	link KW.nA.m03.---
+
+system KW.nA.m05.---
+	pos 8450.847 -9494.426
+	link KW.nA.m06.---
+
+system KW.nA.m06.---
+	pos 8433.069 -9452.648
+	link KW.nA.m05.---
+
+system KW.nA.m07.---
+	pos 8411.736 -9614.426
+
+system KW.nA.m08.---
+	pos 8412.625 -9653.981
+	"jump range" 45
+	link KW.nA.m02.---
+
+system KW.nA.m09.---
+	pos 8341.958 -9560.648
+	link KW.nA.m10.---
+
+system KW.nA.m10.---
+	pos 8298.847 -9575.315
+	"jump range" 75
+	link KW.nA.m09.---
+
+system KW.nA.m11.---
+	pos 8260.181 -9552.648
+	"jump range" 50
+	link KW.nA.m12.---
+
+system KW.nA.m12.---
+	pos 8245.069 -9508.648
+	"jump range" 20
+	link KW.nA.m11.---
+	link KW.nA.m15.---
+	link KW.nA.m23.---
+
+system KW.nA.m13.---
+	pos 8333.069 -9494.87
+	"jump range" 30
+	link KW.nA.m14.---
+	link KW.nA.m15.---
+
+system KW.nA.m14.---
+	pos 8366.403 -9515.759
+	"jump range" 40
+	link KW.nA.m13.---
+
+system KW.nA.m15.---
+	pos 8289.514 -9478.87
+	"jump range" 10
+	link KW.nA.m12.---
+	link KW.nA.m13.---
+	link KW.nA.m16.---
+
+system KW.nA.m16.---
+	pos 8321.514 -9440.204
+	"jump range" 10
+	link KW.nA.m15.---
+	link KW.nA.m17.---
+	link KW.nA.m18.---
+
+system KW.nA.m17.---
+	pos 8301.069 -9407.315
+	"jump range" 15
+	link KW.nA.m16.---
+	link KW.nA.m19.---
+
+system KW.nA.m18.---
+	pos 8367.736 -9423.759
+	"jump range" 20
+	link KW.nA.m16.---
+
+system KW.nA.m19.---
+	pos 8271.292 -9384.648
+	"jump range" 35
+	link KW.nA.m17.---
+
+system KW.nA.m20.---
+	pos 8245.514 -9369.093
+	"jump range" 35
+	link KW.nA.m21.---
+
+system KW.nA.m99.Wardenstone
+	pos 8280.181 -9449.537
+	"jump range" 50
+	link KW.nA.m22.---
+
+system KW.nA.m21.---
+	pos 8238.847 -9417.093
+	"jump range" 25
+	link KW.nA.m20.---
+
+system KW.nA.m22.---
+	pos 8259.736 -9424.204
+	"jump range" 10
+	link KW.nA.m99.Wardenstone
+
+system KW.nA.m23.---
+	pos 8245.069 -9472.204
+	"jump range" 15
+	link KW.nA.m12.---
+
+system KW.nA.m98.Blackgate
+	pos 8235.292 -9447.759
+	"jump range" 40
+	link KW.nA.000.Debris
+

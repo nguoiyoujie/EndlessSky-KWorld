@@ -1,0 +1,125 @@
+
+system KW.F.020.Dragonspire
+	pos 9415.986 -9539.829
+	link KW.F.021.Lion
+
+system KW.F.021.Lion
+	pos 9359.542 -9600.718
+	link KW.F.020.Dragonspire
+	link KW.F.022.Tiger
+
+system KW.F.022.Tiger
+	pos 9292.208 -9640.273
+	link KW.F.021.Lion
+	link KW.F.031.Boar
+
+system KW.F.023.Chimp
+	pos 9272.208 -9568.94
+	link KW.F.031.Boar
+
+system KW.F.024.Hippo
+	pos 9171.764 -9567.829
+	link KW.F.031.Boar
+
+system KW.F.025.Whale
+	pos 8835.764 -9842.94
+	link KW.F.034.Dolphin
+	link KW.F.036.Squid
+
+system KW.F.026.Antelope
+	pos 9145.097 -9897.606
+	link KW.F.032.Deer
+	link KW.F.033.Elephant
+
+system KW.F.027.Wolf
+	pos 9085.097 -9584.273
+	government KW.Fel
+	arrival 5000
+	habitable 11350
+	haze _menu/haze-dark-nebula
+	link KW.F.030.Hyena
+	object
+		sprite star/b-giant
+		period 100
+	object
+		sprite planet/ice2-b
+		distance 1116
+		period 139.978
+		object
+			sprite planet/io
+			distance 145
+			period 66.001
+	object
+		sprite planet/gas15-b
+		distance 1785
+		period 283.152
+	object
+		sprite planet/gas10-b
+		distance 3642
+		period 825.224
+		object
+			sprite planet/rock17-b
+			distance 201
+			period 175.505
+	object
+		sprite planet/gas1
+		distance 4578
+		period 1162.989
+		object
+			sprite planet/luna-b
+			distance 467
+			period 381.484
+	object
+		sprite planet/_local
+			scale 4
+		distance 5720.983
+		period 1624.681
+
+system KW.F.028.Giraffe
+	pos 9055.764 -9824.273
+	link KW.F.032.Deer
+
+system KW.F.029.Cheetah
+	pos 9178.875 -9656.94
+	link KW.F.030.Hyena
+	link KW.F.031.Boar
+
+system KW.F.030.Hyena
+	pos 9140.208 -9613.829
+	link KW.F.027.Wolf
+	link KW.F.029.Cheetah
+	link KW.F.031.Boar
+
+system KW.F.031.Boar
+	pos 9212.208 -9603.829
+	link KW.F.022.Tiger
+	link KW.F.023.Chimp
+	link KW.F.024.Hippo
+	link KW.F.029.Cheetah
+	link KW.F.030.Hyena
+
+system KW.F.032.Deer
+	pos 9097.097 -9877.162
+	link KW.F.026.Antelope
+	link KW.F.028.Giraffe
+	link KW.F.033.Elephant
+
+system KW.F.033.Elephant
+	pos 9119.319 -9943.829
+	link KW.F.026.Antelope
+	link KW.F.032.Deer
+
+system KW.F.034.Dolphin
+	pos 8811.986 -9934.94
+	link "KW.AB.013.Exit N"
+	link KW.F.025.Whale
+
+system KW.F.035.Shark
+	pos 8844.431 -9778.94
+	link KW.F.036.Squid
+
+system KW.F.036.Squid
+	pos 8791.097 -9802.051
+	link KW.AB.012.Wah
+	link KW.F.025.Whale
+	link KW.F.035.Shark

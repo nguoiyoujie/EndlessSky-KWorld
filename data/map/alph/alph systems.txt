@@ -29,7 +29,25 @@ system KW.A.000.Alph
 			scale 2
 		distance 2833.425
 		period 230.125
-		object
+		object "KW.A.000.0A.Axis Mundi"
+			sprite planet/_poi
+				scale 0.5
+			distance 120
+			period 0
+			offset 60
+		object "KW.A.000.0B.Yggdrasil"
+			sprite planet/_poi
+				scale 0.5
+			distance 120
+			period 0
+			offset 180
+		object "KW.A.000.0C.Tetejetlen fa"
+			sprite planet/_poi
+				scale 0.5
+			distance 120
+			period 0
+			offset -60
+		object "KW.A.000.1.Trefoil"
 			sprite planet/dust3
 			distance 280.612
 			period 230.125
@@ -46,12 +64,12 @@ system KW.A.000.Alph
 			sprite planet/dust7
 			distance 300
 			period 196.419
-	object
+	object "KW.WH.Alph Wormhole A"
 		sprite planet/_local
 			scale 4
 		distance 2280
 		offset -8
-	object
+	object "KW.WH.Alph Wormhole B"
 		sprite planet/_local
 			scale 4
 		distance 2280
@@ -83,7 +101,7 @@ system "KW.A.001.Alph II"
 		sprite planet/ice8-b
 		distance 443
 		period 49.839
-	object
+	object "KW.A.001.0.Bloosom"
 		sprite planet/forest3-b
 			scale 2
 		distance 2355.629
@@ -112,7 +130,7 @@ system "KW.A.002.Alph III"
 	object
 		sprite star/k8
 		period 10
-	object
+	object "KW.A.002.0.Taproot"
 		sprite planet/forest3
 		distance 346.983
 		period 177.715
@@ -140,7 +158,7 @@ system "KW.A.002.Alph III"
 		sprite planet/gas6
 		distance 4565
 		period 6413.872
-	object
+	object "KW.WH.Alph Wormhole B"
 		sprite planet/_local
 			scale 4
 		distance 6026
@@ -167,7 +185,7 @@ system KW.A.003.Kraif
 	object
 		sprite star/a-giant
 		period 100
-	object
+	object "KW.A.003.0.Spur"
 		sprite planet/forest5
 		distance 1258.45
 		period 200.91
@@ -236,7 +254,7 @@ system KW.A.004.Drachi
 		sprite planet/browndwarf-l-rogue
 		distance 7104
 		period 1603.844
-		object
+		object "KW.A.004.0.Stolon"
 			sprite planet/dust5-b
 			distance 292
 			period 130.585
@@ -244,11 +262,73 @@ system KW.A.004.Drachi
 		sprite planet/gas9-b
 		distance 13856
 		period 4368.822
-	object
+	object "KW.WH.Alph Wormhole B"
 		sprite planet/_local
 			scale 4
 		distance 2000
 		offset 145
+
+system KW.A.005.Veti
+	pos 9367.005 -10597.778
+	government KW.Alph
+	arrival 854.459
+	habitable 854.459
+	haze _menu/haze-red
+	object
+		sprite star/k0
+		distance 81.661
+		period 62.052
+		offset 180
+	object
+		sprite star/g3
+		distance 72.839
+		period 62.052
+	object "KW.A.005.0.Heartwood"
+		sprite planet/forest10
+		distance 515.889
+		period 86.547
+	object
+		sprite planet/ice0-b
+		distance 778.704
+		period 266.025
+	object "KW.A.005.1.Pith"
+		sprite planet/forest12
+		distance 1201
+		period 569.546
+		object
+			sprite planet/rhea
+			distance 215
+			period 98.047
+	object
+		sprite planet/gas7
+		distance 2978
+		period 2223.829
+		object
+			sprite planet/miranda-b
+			distance 248
+			period 184.752
+		object
+			sprite planet/ice7
+			distance 393
+			period 203.895
+		object
+			sprite planet/dust4-b
+			distance 554
+			period 405.549
+	object
+		sprite planet/jupiter
+		distance 6239
+		period 6743.524
+	object "KW.WH.Alph Wormhole A"
+		sprite planet/_local
+			scale 4
+		distance 1700
+		offset 172
+	object "KW.WH.Alph Wormhole B"
+		sprite planet/_local
+			scale 4
+		distance 1700
+		offset -40
 
 system KW.A.006.Amrachi
 	pos 9323.005 -10489.778
@@ -284,68 +364,6 @@ system KW.A.006.Amrachi
 			sprite planet/oberon
 			distance 275
 			period 280.862
-
-system KW.A.005.Veti
-	pos 9367.005 -10597.778
-	government KW.Alph
-	arrival 854.459
-	habitable 854.459
-	haze _menu/haze-red
-	object
-		sprite star/k0
-		distance 81.661
-		period 62.052
-		offset 180
-	object
-		sprite star/g3
-		distance 72.839
-		period 62.052
-	object
-		sprite planet/forest10
-		distance 515.889
-		period 86.547
-	object
-		sprite planet/ice0-b
-		distance 778.704
-		period 266.025
-	object
-		sprite planet/forest12
-		distance 1201
-		period 569.546
-		object
-			sprite planet/rhea
-			distance 215
-			period 98.047
-	object
-		sprite planet/gas7
-		distance 2978
-		period 2223.829
-		object
-			sprite planet/miranda-b
-			distance 248
-			period 184.752
-		object
-			sprite planet/ice7
-			distance 393
-			period 203.895
-		object
-			sprite planet/dust4-b
-			distance 554
-			period 405.549
-	object
-		sprite planet/jupiter
-		distance 6239
-		period 6743.524
-	object
-		sprite planet/_local
-			scale 4
-		distance 1700
-		offset 172
-	object
-		sprite planet/_local
-			scale 4
-		distance 1700
-		offset -40
 
 system KW.A.007.Ruhi
 	pos 9206.783 -10619.777
@@ -392,7 +410,7 @@ system KW.A.008.Weof
 		sprite planet/ocean2
 		distance 382
 		period 119.458
-	object
+	object "KW.A.008.0.Vine"
 		sprite planet/cloud1
 		distance 885
 		period 421.245
@@ -400,7 +418,7 @@ system KW.A.008.Weof
 		sprite planet/gas17-b
 		distance 2469
 		period 1962.916
-		object
+		object 
 			sprite planet/desert4
 			distance 350.309
 			period 435.12
@@ -456,11 +474,11 @@ system KW.A.009.Veniti
 		sprite planet/gas9-b
 		distance 5270
 		period 2239.555
-		object
+		object "KW.A.009.0.Crown"
 			sprite planet/tethys
 			distance 255
 			period 250.787
-	object
+	object "KW.WH.Alph Wormhole A"
 		sprite planet/_local
 			scale 4
 		distance 1803.158
@@ -540,7 +558,7 @@ system KW.A.012.Avathi
 		sprite star/b3
 		distance 62.114
 		period 55.799
-	object
+	object "KW.A.012.0.Bulb"
 		sprite planet/forest4-b
 		distance 372
 		period 34.142
@@ -572,7 +590,7 @@ system KW.A.012.Avathi
 		sprite planet/browndwarf-t-rogue
 		distance 5908
 		period 2160.878
-	object
+	object "KW.WH.Alph Wormhole B"
 		sprite planet/_local
 			scale 4
 		distance 3659.816
@@ -593,7 +611,7 @@ system KW.A.013.Hofti
 		sprite planet/ocean6-b
 		distance 674.92
 		period 52.22
-	object
+	object "KW.A.013.0.Axil"
 		sprite planet/desert6
 		distance 1356.63
 		period 184.992
@@ -635,7 +653,7 @@ system "KW.A.014.Ruchi Nar"
 		sprite planet/aera
 		distance 2299.859
 		period 949.259
-		object
+		object "KW.A.014.0.Petiole"
 			sprite planet/dust3
 			distance 298
 			period 194.458
@@ -655,7 +673,7 @@ system "KW.A.014.Ruchi Nar"
 		sprite planet/gas7
 		distance 7094
 		period 5142.448
-	object
+	object "KW.WH.Alph Wormhole B"
 		sprite planet/_local
 			scale 4
 		distance 1600
@@ -725,7 +743,7 @@ system "KW.A.016.Ruchi Vot"
 	object
 		sprite star/o0
 		period 10
-	object
+	object "KW.A.016.0.Reticulate"
 		sprite planet/forest0
 		distance 900.867
 		period 92.337
@@ -881,7 +899,7 @@ system "KW.A.019.Traif Tar"
 		sprite planet/gas7-hot
 		distance 2062
 		period 1059.346
-		object
+		object "KW.A.019.0.Palmate"
 			sprite planet/luna-b
 			distance 193
 			period 101.353
@@ -932,7 +950,7 @@ system "KW.A.020.Traif Vot"
 			sprite planet/callisto-b
 			distance 296
 			period 133.277
-		object
+		object "KW.A.019.0.Stoma"
 			sprite planet/ice7-b
 			distance 467
 			period 264.115
@@ -987,49 +1005,386 @@ system "KW.A.021.Traif Avathi"
 		distance 7672
 		period 2927.736
 
-system KW.A.W1.Enermata
-	pos 9764.347 -10154.032
-	government KW.Fleet1
+system "KW.A.022.Menif Tar"
+	pos 9463.639 -10587.833
+	government Uninhabited
 	arrival 5000
-	habitable 17922.35
-	haze _menu/haze-sarifa
-	link KW.A.011.Wrai
+	habitable 22300
+	haze _menu/haze-red
+	link "KW.A.023.Menif Vot"
+	link "KW.A.025.Menif Avathi"
 	object
-		sprite star/b-supergiant
-		distance 339
-		period 312.083
+		sprite star/o-giant
+		period 100
+	object
+		sprite planet/ice2-b
+		distance 2089.777
+		period 255.893
+		object
+			sprite planet/dust1-b
+			distance 190
+			period 81.453
+	object
+		sprite planet/gas3
+		distance 3363.549
+		period 522.522
+		object
+			sprite planet/ice0
+			distance 324
+			period 220.454
+	object
+		sprite planet/saturn
+		distance 4656.201
+		period 851.05
+		object
+			sprite planet/callisto
+			distance 297
+			period 133.953
+		object
+			sprite planet/rock7
+			distance 452
+			period 454.59
+	object
+		sprite planet/gas15-b
+		distance 5903.108
+		period 1214.867
+		object
+			sprite planet/lava0
+			distance 220
+			period 85.399
+
+system "KW.A.023.Menif Vot"
+	pos 9491.194 -10605.611
+	government Uninhabited
+	arrival 5000
+	habitable 11850
+	haze _menu/haze-red
+	link "KW.A.022.Menif Tar"
+	object
+		sprite star/a-supergiant
+		period 100
+	object
+		sprite planet/rogue-radiating
+		distance 1626.095
+		period 240.946
+		object
+			sprite planet/miranda-b
+			distance 189
+			period 122.915
+	object
+		sprite planet/gas15
+		distance 3791.945
+		period 599.862
+		object
+			sprite planet/rock7
+			distance 234
+			period 169.331
+		object
+			sprite planet/dust0
+			distance 332
+			period 372.565
+		object
+			sprite planet/europa-b
+			distance 435
+			period 429.186
+	object
+		sprite planet/redias
+		distance 5999.5
+		period 1707.55
+
+system "KW.A.024.Menif Nar"
+	pos 9492.083 -10550.5
+	link "KW.A.025.Menif Avathi"
+
+system "KW.A.025.Menif Avathi"
+	pos 9455.639 -10563.389
+	link "KW.A.022.Menif Tar"
+	link "KW.A.024.Menif Nar"
+
+system "KW.A.026.Rosi Tar"
+	pos 9256.972 -10558.056
+	link "KW.A.028.Rosi Nar"
+	link "KW.A.029.Rosi Avathi"
+
+system "KW.A.027.Rosi Vot"
+	pos 9303.194 -10548.278
+	government Uninhabited
+	arrival 3400
+	habitable 3400
+	haze _menu/haze-33
+	link "KW.A.028.Rosi Nar"
+	object
+		sprite star/a3
+		period 10
+	object
+		sprite planet/gas8-b
+		distance 1226
+		period 294.48
+	object
+		sprite planet/gas9-b
+		distance 2666
+		period 944.302
+		object
+			sprite "planet/asteroid base"
+			distance 274
+			period 118.698
+		object
+			sprite planet/dust0-b
+			distance 396
+			period 485.33
+	object
+		sprite planet/gas5-b
+		distance 5408
+		period 2728.196
+
+system "KW.A.028.Rosi Nar"
+	pos 9274.306 -10528.722
+	link "KW.A.026.Rosi Tar"
+	link "KW.A.027.Rosi Vot"
+
+system "KW.A.029.Rosi Avathi"
+	pos 9225.417 -10541.611
+	link "KW.A.026.Rosi Tar"
+
+system "KW.A.030.Extent Tar"
+	pos 9174.75 -11074.056
+	link KW.A.031.Norai
+
+system KW.A.031.Norai
+	pos 9171.194 -11036.722
+	link "KW.A.030.Extent Tar"
+	link KW.A.032.Worei
+
+system KW.A.032.Worei
+	pos 9219.505 -11014.093
+	link KW.A.009.Veniti
+	link KW.A.031.Norai
+
+system KW.A.033.Nevahi
+	pos 9255.949 -10932.759
+	link KW.A.009.Veniti
+
+system KW.A.034.Naraif
+	pos 9266.282 -10890.537
+	government Uninhabited
+	arrival 5000
+	habitable 11500
+	haze _menu/haze-red
+	object
+		sprite star/m4
+		distance 159.475
+		period 59.985
+	object
+		sprite star/o3
+		distance 30.525
+		period 59.985
 		offset 180
 	object
-		sprite star/f-giant
-		distance 339
-		period 312.083
-	object
-		sprite planet/gas1-b
-		distance 1017
-		period 96.905
-	object
-		sprite planet/ice4-b
-		distance 1687
-		period 207.031
-	object
-		sprite planet/_local
-			scale 4
-		distance 2420
-		offset 120
-		object
-			sprite planet/station-depot-a0
-			distance 359.019
-			period 239.078
-	object
-		sprite planet/vulpa
-		distance 4043
-		period 768.101
+		sprite planet/gas4
+		distance 1353
+		period 185.634
 		object
 			sprite planet/dust4
-			distance 333
-			period 188.993
+			distance 290
+			period 153.594
 		object
-			sprite planet/desert4-b
-			distance 480
-			period 497.478
+			sprite planet/europa-b
+			distance 402
+			period 381.286
+	object
+		sprite planet/jupiter
+		distance 2502
+		period 466.812
+	object
+		sprite planet/gas6-hot
+		distance 3116
+		period 648.795
+		object
+			sprite planet/ice0-b
+			distance 222
+			period 125.035
+	object
+		sprite planet/gas10
+		distance 4442
+		period 1104.279
+
+system KW.A.035.Donoif
+	pos 9312.949 -10868.759
+	link KW.A.036.Dorathi
+
+system KW.A.036.Dorathi
+	pos 9360.505 -10830.981
+	link KW.A.035.Donoif
+
+system KW.A.037.Vector
+	pos 9291.171 -11011.87
+	link KW.A.009.Veniti
+
+system KW.A.038.Wari
+	pos 9157.394 -10709.759
+	government Uninhabited
+	arrival 1211.98
+	habitable 1211.982
+	haze _menu/haze-red
+	link KW.A.008.Weof
+	link KW.A.039.Dori
+	object
+		sprite star/g8
+		distance 81.021
+		period 62.008
+		offset 180
+	object
+		sprite star/g0
+		distance 73.979
+		period 62.008
+	object
+		sprite planet/titan
+		distance 320
+		period 65.771
+	object
+		sprite planet/desert1
+		distance 636
+		period 184.288
+	object
+		sprite planet/gas2
+		distance 1417
+		period 612.868
+	object
+		sprite planet/gas7-hot
+		distance 2854
+		period 1751.834
+		object
+			sprite planet/oberon
+			distance 194
+			period 166.417
+		object
+			sprite planet/callisto
+			distance 313
+			period 144.922
+		object
+			sprite planet/ice7
+			distance 520
+			period 310.329
+
+system KW.A.039.Dori
+	pos 9146.727 -10755.093
+	government Uninhabited
+	arrival 5000
+	habitable 5000
+	haze _menu/haze-red
+	link KW.A.004.Drachi
+	link KW.A.038.Wari
+	link KW.A.040.Circi
+	object
+		sprite star/b8
+		period 10
+	object
+		sprite planet/rock20
+		distance 332
+		period 34.22
+	object
+		sprite planet/dust0
+		distance 736
+		period 112.951
+	object
+		sprite planet/gas0-b
+		distance 2123
+		period 553.35
+		object
+			sprite planet/oberon-b
+			distance 300
+			period 320.019
+	object
+		sprite planet/aera
+		distance 7196
+		period 3453.12
+
+system KW.A.040.Circi
+	pos 9123.171 -10783.981
+	link KW.A.039.Dori
+	link KW.A.041.Armada
+
+system KW.A.041.Armada
+	pos 9097.838 -10823.759
+	government KW.Fleet1
+	link KW.A.040.Circi
+	link KW.A.042.Armori
+	link KW.A.043.Pathi
+
+system KW.A.042.Armori
+	pos 9037.356 -10841.389
+	link KW.A.041.Armada
+
+system KW.A.043.Pathi
+	pos 9130.986 -10879.463
+	link KW.A.041.Armada
+
+system KW.A.044.Passi
+	pos 9150.616 -10959.537
+	government Uninhabited
+	arrival 3000
+	habitable 3000
+	haze _menu/haze-red
+	object
+		sprite star/k-giant
+		period 100
+	object
+		sprite planet/water1
+		distance 670
+		period 126.652
+		object
+			sprite planet/rhea
+			distance 179
+			period 74.483
+	object
+		sprite planet/cloud7-b
+		distance 1212
+		period 308.144
+	object
+		sprite planet/jupiter-b
+		distance 5212
+		period 2747.932
+		object
+			sprite planet/luna-b
+			distance 265
+			period 163.068
+	object
+		sprite planet/gas2-hot
+		distance 6381
+		period 3722.481
+		object
+			sprite planet/dust0-b
+			distance 184
+			period 153.717
+		object
+			sprite planet/ice8-b
+			distance 286
+			period 182.831
+	object
+		sprite planet/gas6-hot
+		distance 9130
+		period 6370.97
+		object
+			sprite planet/dust3-b
+			distance 235
+			period 136.177
+
+system KW.A.045.Tressi
+	pos 9470.921 -10364.574
+	link KW.A.046.Korif
+	link "KW.A.047.Chasi Yor"
+
+system KW.A.046.Korif
+	pos 9502.699 -10344.648
+	link KW.A.045.Tressi
+
+system "KW.A.047.Chasi Yor"
+	pos 9484.329 -10386.426
+	link KW.A.045.Tressi
+
+system KW.A.048.Hidif
+	pos 9412.625 -10349.685
+
+system KW.A.049.Noraif
+	pos 9339.736 -10288.944
 

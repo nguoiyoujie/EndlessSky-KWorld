@@ -1,0 +1,127 @@
+
+system KW.01.000.Dgt
+	pos 8770.083 -8829.333
+	government KW.Dgt
+	link KW.01.005.D-4
+	link KW.01.009.K-8
+	link KW.01.012.H-11
+	link KW.01.013.F-12
+	link KW.AB.007.0x145
+
+system KW.01.001.*-0
+	pos 8551.083 -8954.167
+	government KW.Dgt
+	link KW.01.015.P-14
+
+system KW.01.002.A-1
+	pos 8669.083 -8861.444
+	link KW.01.003.B-2
+	link KW.01.004.C-3
+	link KW.01.005.D-4
+	link KW.01.011.N-10
+	link KW.01.013.F-12
+
+system KW.01.003.B-2
+	pos 8614.157 -8840.889
+	link KW.01.002.A-1
+	link KW.01.004.C-3
+	link KW.01.016.L-15
+
+system KW.01.004.C-3
+	pos 8648.528 -8810.074
+	link KW.01.002.A-1
+	link KW.01.003.B-2
+	link KW.01.007.E-6
+	link KW.01.011.N-10
+
+system KW.01.005.D-4
+	pos 8737.343 -8876.222
+	link KW.01.000.Dgt
+	link KW.01.002.A-1
+	link KW.01.013.F-12
+
+system "KW.01.006.01-5 (Dgt II)"
+	pos 8719.88 -9283.722
+	government KW.Dgt
+	link KW.01.a01.Endpoint
+	link KW.01.a03.Reconstruction
+	link KW.AB.009.2kP
+
+system KW.01.007.E-6
+	pos 8666.157 -8773.778
+	government KW.Dgt
+	link KW.01.004.C-3
+	link KW.01.008.X-7
+	link KW.01.012.H-11
+	link KW.01.014.U-13
+	link KW.01.016.L-15
+
+system KW.01.008.X-7
+	pos 8619.935 -8674.074
+	link KW.01.007.E-6
+	link KW.01.017.R-16
+
+system KW.01.009.K-8
+	pos 8751.158 -8773.963
+	link KW.01.000.Dgt
+	link KW.01.014.U-13
+
+system KW.01.010.M-9
+	pos 8727.121 -8786.371
+	link KW.01.014.U-13
+
+system KW.01.011.N-10
+	pos 8688.676 -8827.778
+	link KW.01.002.A-1
+	link KW.01.004.C-3
+	link KW.01.012.H-11
+
+system KW.01.012.H-11
+	pos 8722.639 -8804.889
+	link KW.01.000.Dgt
+	link KW.01.007.E-6
+	link KW.01.011.N-10
+	link KW.01.014.U-13
+
+system KW.01.013.F-12
+	pos 8721.824 -8841.037
+	link KW.01.000.Dgt
+	link KW.01.002.A-1
+	link KW.01.005.D-4
+
+system KW.01.014.U-13
+	pos 8706.269 -8764.482
+	link KW.01.007.E-6
+	link KW.01.009.K-8
+	link KW.01.010.M-9
+	link KW.01.012.H-11
+	link KW.01.018.G-17
+
+system KW.01.015.P-14
+	pos 8569.639 -8843.037
+	link KW.01.001.*-0
+	link KW.01.016.L-15
+
+system KW.01.016.L-15
+	pos 8609.861 -8791.926
+	link KW.01.003.B-2
+	link KW.01.007.E-6
+	link KW.01.015.P-14
+
+system KW.01.017.R-16
+	pos 8736.158 -8634.074
+	link KW.01.008.X-7
+	link KW.01.018.G-17
+	link KW.01.019.S-18
+
+system KW.01.018.G-17
+	pos 8726.01 -8674.963
+	link KW.01.014.U-13
+	link KW.01.017.R-16
+
+system KW.01.019.S-18
+	pos 8725.713 -8599.704
+	link KW.01.017.R-16
+
+
+

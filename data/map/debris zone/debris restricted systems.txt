@@ -1,0 +1,290 @@
+system "KW.nA.R01.Restricted Space"
+	pos 8670.403 -9504.37
+	"jump range" 75
+
+system "KW.nA.R02.Restricted Space"
+	pos 8631.292 -9523.926
+	government Uninhabited
+	arrival 700
+	habitable 700
+	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/g3
+		period 10
+	object
+		sprite planet/lava1
+		distance 358
+		period 102.408
+	object
+		sprite planet/gas9-b
+		distance 2114
+		period 1469.496
+		object
+			sprite planet/rock17
+			distance 248
+			period 240.531
+		object
+			sprite planet/ice8-b
+			distance 384
+			period 284.444
+	object
+		sprite "planet/yniu ena"
+		distance 6537
+		period 7990.587
+
+system "KW.nA.R03.Restricted Space"
+	pos 8596.181 -9554.593
+	government Uninhabited
+	arrival 5000
+	habitable 10000
+	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/o5
+		period 10
+	object
+		sprite planet/rock9-b
+		distance 392
+		period 31.045
+	object
+		sprite planet/lava2
+		distance 834
+		period 96.341
+	object
+		sprite planet/desert12
+		distance 1539.5
+		period 241.618
+		object
+			sprite planet/oberon-b
+			distance 162.5
+			period 127.578
+	object
+		sprite planet/gas1-b
+		distance 2965
+		period 645.799
+		object
+			sprite planet/lava0
+			distance 758
+			period 546.162
+	object
+		sprite planet/gas12
+		distance 6892
+		period 2288.642
+		object
+			sprite planet/rock3
+			distance 315
+			period 211.333
+		object
+			sprite planet/tethys-b
+			distance 457
+			period 601.684
+
+system "KW.nA.R04.Restricted Space"
+	pos 8601.069 -9491.926
+	"jump range" 50
+
+system "KW.nA.R05.Restricted Space"
+	pos 8569.069 -9518.148
+	government Uninhabited
+	arrival 500
+	habitable 135
+	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/m8
+		period 10
+	object
+		sprite planet/gas10-hot
+		distance 1703
+		period 2419.441
+		object
+			sprite planet/ice0
+			distance 198
+			period 105.317
+	object
+		sprite planet/callisto-b
+		distance 2386
+		period 4012.35
+	object
+		sprite planet/ice7
+		distance 5044
+		period 12332.631
+	object
+		sprite planet/gas2-hot
+		distance 11822
+		period 44251.657
+
+
+system "KW.nA.R06.Restricted Space"
+	pos 8578.403 -9590.389
+	government Uninhabited
+	arrival 3650
+	habitable 3650
+	"jump range" 50
+	haze _menu/haze-tear
+	minables iron 56 7
+	object
+		sprite star/a0
+		period 10
+	object
+		sprite planet/dust2-b
+		distance 375
+		period 48.08
+	object
+		sprite planet/lava3-b
+		distance 1365.132
+		period 207.801
+	object
+		sprite planet/tethys
+		distance 10052
+		period 6672.557
+
+system "KW.nA.R07.Restricted Space"
+	pos 8561.069 -9801.056
+	"jump range" 75
+
+system "KW.nA.R08.Restricted Space"
+	pos 8537.958 -9765.5
+	"jump range" 50
+
+system "KW.nA.R09.Restricted Space"
+	pos 8549.514 -9722.833
+	"jump range" 50
+
+system "KW.nA.R10.Restricted Space"
+	pos 8587.292 -9698.389
+	government Uninhabited
+	arrival 5000
+	habitable 6300
+	"jump range" 50
+	haze _menu/haze-tear
+	minables copper 78 5
+	object
+		sprite star/b3
+		period 10
+	object
+		sprite planet/lava5-b
+		distance 369
+		period 35.721
+	object
+		sprite planet/browndwarf-t-rogue
+		distance 4317
+		period 1429.43
+
+system "KW.nA.R11.Restricted Space"
+	pos 8594.403 -9626.389
+	government Uninhabited
+	arrival 5000
+	habitable 10000
+	"jump range" 50
+	haze _menu/haze-tear
+	minables iron 34 5
+	object
+		sprite star/o5
+		period 10
+	object
+		sprite planet/jupiter-b
+		distance 2274
+		period 433.756
+		object
+			sprite planet/miranda
+			distance 282
+			period 224.019
+	object
+		sprite planet/gas12-b
+		distance 4134
+		period 1063.202
+
+system "KW.nA.R12.Restricted Space"
+	pos 8640.032 -9731.13
+	government Uninhabited
+	arrival 959.544
+	habitable 959.544
+	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/m8
+		distance 198.093
+		period 77.938
+		offset 180
+	object
+		sprite star/k5-old
+		distance 23.407
+		period 77.938
+	object
+		sprite planet/cloud1-b
+		distance 530
+		period 157.558
+		object
+			sprite planet/europa
+			distance 205
+			period 138.849
+	object
+		sprite planet/forest2-b
+		distance 1126
+		period 487.905
+	object
+		sprite planet/gas7
+		distance 1786
+		period 974.652
+	object
+		sprite planet/gas16
+		distance 2459
+		period 1574.582
+		object
+			sprite planet/dust0
+			distance 226
+			period 209.246
+	object
+		sprite planet/lava0-b
+		distance 3195
+		period 2332.028
+	object
+		sprite planet/gas9-b
+		distance 7937
+		period 9130.868
+
+system "KW.nA.R13.Restricted Space"
+	pos 8613.958 -9668.167
+	government Uninhabited
+	arrival 2322.15
+	habitable 2322.154
+	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/m-giant
+		distance 141.259
+		period 124.933
+	object
+		sprite star/m0
+		distance 325.834
+		period 124.933
+		offset 180
+	object
+		sprite planet/forest12
+		distance 2600
+		period 1100.461
+
+system "KW.nA.R99.No Return"
+	pos 8570.403 -9653.259
+	government Uninhabited
+	arrival 500
+	habitable 355
+	"jump range" 60
+	haze _menu/haze-tear
+	object
+		sprite star/f-dwarf
+		period 10
+	object
+		sprite planet/rock12-b
+		distance 352
+		period 140.204
+		object
+			sprite planet/tethys-b
+			distance 162
+			period 126.989
+	object
+		sprite planet/ganymede
+		distance 905.756
+		period 431.698

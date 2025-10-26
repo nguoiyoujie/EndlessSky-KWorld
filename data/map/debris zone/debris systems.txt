@@ -1,0 +1,28 @@
+system KW.nA.000.Debris
+	pos 8167.806 -9456.111
+	government Uninhabited
+	"jump range" 10
+	link KW.nA.m98.Blackgate
+
+system KW.nA.001.Loss
+	pos 8517.958 -9640.815
+	government Uninhabited
+	habitable 11850
+	"jump range" 10
+	haze _menu/haze-coal
+	link KW.nA.m01.---
+	object
+		sprite star/a-supergiant
+		period 100
+	object
+		sprite planet/debris1
+		distance 547.869
+		period 156.197
+
+system KW.nA.002.Erasure
+	pos 8439.736 -9399.315
+
+system KW.nA.003.Twilight
+	pos 8355.736 -9596.204
+
+

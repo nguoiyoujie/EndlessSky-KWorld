@@ -1,0 +1,7 @@
+system KW.L.000.Lmd
+	pos 10720.583 -9217.167
+	government KW.Lmd
+	link KW.C.000.Canc
+	link KW.G.000.Gamn
+	link "KW.TBD.Bet-Lmd Route"
+	link "KW.TBD.The Mus"

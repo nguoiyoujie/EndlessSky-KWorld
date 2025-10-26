@@ -1,0 +1,29 @@
+system KW.U.000.Upsn
+	pos 8594.208 -11884.833
+	government KW.Upsn
+	link KW.K.000.Ker
+	link KW.U.001.Supragen
+	link KW.U.004.Molagen
+
+system KW.U.001.Supragen
+	pos 8576.838 -11832.981
+	link KW.U.000.Upsn
+	link KW.U.002.Sequlae
+	link KW.U.003.Qualagen
+
+system KW.U.002.Sequlae
+	pos 8629.727 -11809.87
+	link KW.U.001.Supragen
+
+system KW.U.003.Qualagen
+	pos 8543.06 -11800.537
+	link KW.U.005.Engen
+	link KW.U.001.Supragen
+
+system KW.U.004.Molagen
+	pos 8610.838 -11925.204
+	link KW.U.000.Upsn
+
+system KW.U.005.Engen
+	pos 8493.282 -11810.093
+	link KW.U.003.Qualagen

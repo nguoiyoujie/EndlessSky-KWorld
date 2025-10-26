@@ -1,0 +1,44 @@
+system KW.D.000.Det
+	pos 11459.583 -11749.833
+	government KW.Det
+	link KW.D.002.Dejr
+	link KW.D.003.Slijr
+	link KW.E.000.Edrin
+	link KW.M.000.Mid
+	link KW.X.000.Xil
+
+system "KW.D.001.Det II"
+	pos 11699.75 -12504
+	government KW.Det
+	link KW.D.006.Vjr
+
+system KW.D.002.Dejr
+	pos 11520.787 -11852.856
+	link KW.D.000.Det
+	link KW.D.003.Slijr
+	link KW.D.004.Aromdi
+	link KW.D.005.Alias
+
+system KW.D.003.Slijr
+	pos 11639.454 -11793.69
+	link KW.D.000.Det
+	link KW.D.002.Dejr
+
+system KW.D.004.Aromdi
+	pos 11466.12 -12073.69
+	link KW.D.002.Dejr
+
+system KW.D.005.Alias
+	pos 11716.787 -12012.356
+	link KW.D.002.Dejr
+	link KW.D.006.Vjr
+
+system KW.D.006.Vjr
+	pos 11678.787 -12082.356
+	link "KW.D.001.Det II"
+	link KW.D.005.Alias
+
+
+
+
+

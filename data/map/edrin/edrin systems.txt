@@ -1,0 +1,24 @@
+system KW.E.000.Edrin
+	pos 10685.583 -10816.833
+	government KW.Edrin
+	link KW.D.000.Det
+	link KW.E.001.E'kronos
+	link KW.E.002.E'spin
+	link "KW.E.003.E'mek Il"
+
+system KW.E.001.E'kronos
+	pos 10653.681 -10869.366
+	government KW.Edrin
+	link KW.E.000.Edrin
+
+system KW.E.002.E'spin
+	pos 10631.681 -10747.366
+	government KW.Edrin
+	link KW.E.000.Edrin
+
+system "KW.E.003.E'mek Il"
+	pos 10766.347 -10789.366
+	government KW.Edrin
+	link KW.E.000.Edrin
+	link KW.M.000.Mid
+

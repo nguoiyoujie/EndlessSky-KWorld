@@ -697,3 +697,146 @@ system KW.F.015.Krynk
 			distance 309
 			period 168.934
 
+system KW.F.016.Fynk
+	pos 9054.583 -9354.616
+	government Uninhabited
+	arrival 500
+	habitable 100
+	haze _menu/haze-67
+	link KW.F.015.Krynk
+	link KW.F.017.Kraki
+	link KW.F.019.Fydihyk
+	object
+		sprite star/k-dwarf
+		period 10
+	object
+		sprite planet/miranda
+		distance 211
+		period 122.598
+	object
+		sprite planet/jupiter-b
+		distance 617
+		period 613.038
+	object
+		sprite planet/gas0
+		distance 2175
+		period 4057.41
+		object
+			sprite planet/europa-b
+			distance 289
+			period 232.412
+		object
+			sprite planet/rock0
+			distance 424
+			period 330.027
+
+system KW.F.017.Kraki
+	pos 9071.472 -9400.542
+	government Uninhabited
+	arrival 2160
+	habitable 2160
+	haze _menu/haze-33
+	link KW.F.016.Fynk
+	link KW.F.018.Vihidihyk
+	object
+		sprite star/g0-old
+		period 100
+	object
+		sprite planet/desert5-b
+		distance 1488
+		period 494.012
+		object
+			sprite planet/dust5
+			distance 199
+			period 73.468
+	object
+		sprite planet/gas7-b
+		distance 3394
+		period 1701.77
+		object
+			sprite planet/rock0
+			distance 257
+			period 155.74
+
+system KW.F.018.Vihidihyk
+	pos 9057.991 -9449.282
+	government KW.Fel
+	arrival 5000
+	habitable 6434.757
+	haze _menu/haze-dark-nebula
+	link KW.F.017.Kraki
+	object
+		sprite star/f8
+		distance 102.222
+		period 44.308
+		offset 180
+	object
+		sprite star/b3
+		distance 46.778
+		period 44.308
+	object
+		sprite planet/ocean5
+		distance 336
+		period 30.712
+	object
+		sprite planet/gas5
+		distance 963
+		period 149.016
+		object
+			sprite planet/ice8-b
+			distance 275
+			period 172.385
+	object
+		sprite planet/gas15
+		distance 2049
+		period 462.495
+		object
+			sprite planet/rock20
+			distance 236
+			period 137.047
+	object
+		sprite planet/aera
+		distance 3233
+		period 916.648
+		object
+			sprite planet/europa-b
+			distance 284
+			period 226.407
+	object
+		sprite planet/_local
+			scale 4
+		distance 4214.949
+		period 1364.528
+
+system KW.F.019.Fydihyk
+	pos 9002.806 -9372.69
+	government KW.Fel
+	habitable 4690.938
+	haze _menu/haze-33
+	link "KW.AB.010.Exit F"
+	link KW.F.016.Fynk
+	object
+		sprite star/a5
+		distance 141.663
+		period 58.618
+	object
+		sprite star/f5-old
+		distance 55.337
+		period 58.618
+		offset 180
+	object
+		sprite planet/rock16-b
+		distance 363.582
+		period 40.489
+	object
+		sprite planet/forest6-b
+		distance 4047.352
+		period 1073.514
+	object
+		sprite planet/rock4
+		distance 4821.336
+		period 1522.13
+	object
+		sprite planet/gas13-b
+		distance 6737.711
+		period 2306.555
