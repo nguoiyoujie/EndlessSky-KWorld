@@ -1,0 +1,8 @@
+{
+    "endlesssky.trace.server": "verbose",
+    "files.associations": {
+        "**/*.txt": "plaintext",
+        "**/data/**/*.txt": "endlesssky",
+    },
+    "editor.insertSpaces": false
+}

@@ -97,18 +97,66 @@
 
 
 #
+#	Ship Outfit Indices
 #
+#	100XXXXX - Sanctuary
+#	101XXXXX - Alph
+#	102XXXXX - Bet
+#	103XXXXX - Canc
+#	104XXXXX - Det
+#	105XXXXX - Dgt
+#	106XXXXX - Edrin
+#	107XXXXX - Xil
+#	108XXXXX - Ker
+#	109XXXXX - Mid
+#	110XXXXX - Nat
+#	111XXXXX - Hel
+#	112XXXXX - Fel
+#	113XXXXX - Upsn
+#	114XXXXX - Phi
+#	115XXXXX - Lmd
+#	116XXXXX - Rho
+#	117XXXXX - Gamn
+#	118XXXXX - Sol
 #
+#      XXXXX
+#      00XXX - Reactors
+#      01XXX - Power (Solar)
+#      02XXX - Power (Storage)
+#      03XXX - Power (Other)
 #
+#      10XXX - Main Thruster Engines
+#      11XXX - Side Steering Engines
+#      12XXX - Rear Thruster Engines
+#      13XXX - Afterburner Engines
+#      14XXX - Composite Engines
+#      19XXX - FTL Drives
 #
+#      20XXX - Cooling (Passive)
+#      21XXX - Cooling (Active)
+#      30XXX - Fuel (Ramscoop)
+#      31XXX - Fuel (Storage)
+#      40XXX - Shield Regen & Support
+#      41XXX - Hull Regen & Support
+#      49XXX - Other Support
 #
+#      80XXX - Weapons (Non-Ammunition Gun)
+#      81XXX - Weapons (Ammunition Gun)
+#      82XXX - Weapons (Non-Ammunition Turret)
+#      83XXX - Weapons (Ammunition Turret)
+#      84XXX - Weapons (Ammunition)
+#      85XXX - Weapons (AA Turret)
+#      86XXX - Scanners
+#      87XXX - Anti-Scanners
 #
+#      90XXX - Refits
+#      98XXX - Licences
+#      99XXX - Utility / Special Items
 #
-#
-#
-#
-#
-#
+#        XXX
+#        M-- - Major producer series (usually a corporation - use 0 to represent generic items, use 9 to represent the government)
+#        -P- - Product series
+#        --S - Subcomponents (e.g. attachments, bullets, bullet cases)
 #
 
 

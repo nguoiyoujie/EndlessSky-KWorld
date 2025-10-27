@@ -19,18 +19,5 @@ system "KW.TBD.The Mus"
 	link KW.L.000.Lmd
 	link "KW.TBD.Sol-Lmd Route"
 
-planet KW.A.020.0.Cutin
-	landscape land/city11
-	description WIP
-	government KW.Alph
 
-planet KW.A.042.0.Stonk
-	landscape land/city11
-	description WIP
-	government KW.Fleet1
-
-planet "KW.A.W2.0.Wishing Well"
-	landscape land/city11
-	description WIP
-	government KW.Fleet1
 

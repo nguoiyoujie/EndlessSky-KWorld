@@ -290,4 +290,53 @@ planet "KW.A.019.0.Palmate"
 		description `	WIP`
 	government KW.Alph
 
+planet KW.A.020.0.Cutin
+	"display name" "Cutin"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
 
+planet KW.A.042.0.Stonk
+	"display name" "Stonk"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Fleet1
+
+planet "KW.A.W2.0.Wishing Well"
+	"display name" "Wishing Well"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Fleet1

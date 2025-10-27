@@ -5,45 +5,67 @@ planet KW.SZ.000.0.Sanctum
 	description "	The matrix of spaceports and shipyards stretch beyond the horizon. You notice that some of them had been repurposed into residential enclaves, for the travellers who wish to retire in this paradise."
 	description "	Adjacent to the port space is Sanctuary Factory, a vast array of green foilage atop an army of structures of various manufacturing prowess, without the banes of pollution. The Factory produces all things imagniable and some things beyond. The Factory is the heart of life in such a hidden world. The spaceport is really a grand sale for any merchant who managed the privilege of gaining access to this place. Scarcity is hardly a word in Sanctuary."
 	description "	Finally, the Palace resides in the center, bridging the paths between residence and industry. The Imperial household lives with its halls and representatives from the galaxy gather to seek audience and deliberate on far-reaching matters. The symbol of a white diamond shines prominently on flags surrounding the grounds."
-	spaceport "The port is bristling with life and activity, both from enterprises seeking to profit from the surplus materials generated from the planetary Factory, and dwellers who have turned their parked ship into a domicile, either waiting for enough starlinks to re-establish themselves, reconnecting the way home, or have decided on settling permamently in this garden."
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `The port is bristling with life and activity, both from enterprises seeking to profit from the surplus materials generated from the planetary Factory, and dwellers who have turned their parked ship into a domicile, either waiting for enough starlinks to re-establish themselves, reconnecting the way home, or have decided on settling permamently in this garden.`
 	government KW.Sanctuary
 	shipyard "Basic Ships"
 	outfitter "Basic Outfits"
-	bribe 0.1
-	security 1
 
 planet "KW.SZ.000.1.Sanctum Minor"
 	landscape land/desert0
 	description "If the architecture surrounding the star provided most of Sanctum's energy needs, then the rich asteroid field in the inner core provided the material. Mining ventures use this planet as their base of operations to save on fuel costs, both from the lower gravity, and the greater proximity to the resource field. Seems even in paradise, business remains cutthroat."
-	spaceport "If Sanctum would boast that they have everything, then they would be wrong. This lesser brother has a proud outfitter bearing some exclusive mining and directed energy equipment."
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description "If Sanctum would boast that they have everything, then they would be wrong. This lesser brother has a proud outfitter bearing some exclusive mining and directed energy equipment."
 	government KW.Sanctuary
 	outfitter "Basic Outfits"
-	bribe 0.1
-	security 1
 
 planet "KW.SZ.006.0.Warm Point"
 	landscape land/bwerner5
 	description "In this strange place, there is a system with all the conditions right for life. The plantlife appear to say and nod in agreement. There is all the planet has to offer though, for tests on its microbial ecology reveals a hostile interaction with your kind."
 	government Uninhabited
-	bribe 0
-	security 1
 	
 planet KW.SZ.009.0.Keep
 	landscape land/station57
 	description "The Keep is the last line of defense before reaching Sanctuary. The honor of approaching this station is given to few, let alone landing on it. "
 	description "	You wonder what drove Sanctuary to take such measures to defend their home. As if hiding inside a literal black hole is not extreme enough..."
-	spaceport "Compared to others, this station seems unremarkable. Do not be fooled though, for you notice the number of small hangars lining the otherwise smooth walls of the station. Housed within each could be a fighter drone. It could be a gun port. Or it could be a really big bomb. Whatever it is, you might not want to be its target."
-	spaceport "	You pick up a hint that in the unlikely scenario that the Crossroads be breached, there is still one way to keep Sanctuary safe, but if enacted, is irreversible. You are curious but also hope such a drastic situation would not come to pass."
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description "Compared to others, this station seems unremarkable. Do not be fooled though, for you notice the number of small hangars lining the otherwise smooth walls of the station. Housed within each could be a fighter drone. It could be a gun port. Or it could be a really big bomb. Whatever it is, you might not want to be its target."
+		description "	You pick up a hint that in the unlikely scenario that the Crossroads be breached, there is still one way to keep Sanctuary safe, but if enacted, is irreversible. You are curious but also hope such a drastic situation would not come to pass."
 	government KW.Fleet0
 	"required reputation" 1
-	bribe 0
-	security 1	
 
 planet KW.SZ.024.0.Citadel
 	landscape land/mountain35
 	description "Flags bearing the sigil of a white diamond flutter proudly across many parts of the hangar dock. You are duly informed that this place is a command center operated by the Imperial Guard Fleet, and not much else. Given its location, you presume that this post offers the Fleet the initiative to pounce upon any invasion that would enter the Fork towards the Crossroads. You hope such a day would never come to pass."
-	spaceport "	Even after gaining access to the port, most of the planet surface remain restricted to you. "
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description "Even after gaining access to the port, most of the planet surface remain restricted to you. "
 	government KW.Fleet0
 	"required reputation" 1
-	bribe 0
-	security 1

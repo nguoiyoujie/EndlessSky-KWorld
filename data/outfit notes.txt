@@ -1,0 +1,197 @@
+#
+#	Ship Outfit Indices
+#
+#	100XXXXX - Sanctuary
+#	101XXXXX - Alph
+#	102XXXXX - Bet
+#	103XXXXX - Canc
+#	104XXXXX - Det
+#	105XXXXX - Dgt
+#	106XXXXX - Edrin
+#	107XXXXX - Xil
+#	108XXXXX - Ker
+#	109XXXXX - Mid
+#	110XXXXX - Nat
+#	111XXXXX - Hel
+#	112XXXXX - Fel
+#	113XXXXX - Upsn
+#	114XXXXX - Phi
+#	115XXXXX - Lmd
+#	116XXXXX - Rho
+#	117XXXXX - Gamn
+#	118XXXXX - Sol
+#
+#      XXXXX
+#      00XXX - Reactors
+#      01XXX - Power (Solar)
+#      02XXX - Power (Storage)
+#      03XXX - Power (Other)
+#
+#      10XXX - Main Thruster Engines
+#      11XXX - Side Steering Engines
+#      12XXX - Rear Thruster Engines
+#      13XXX - Afterburner Engines
+#      14XXX - Composite Engines
+#      19XXX - FTL Drives
+#
+#      20XXX - Cooling (Passive)
+#      21XXX - Cooling (Active)
+#      30XXX - Fuel (Ramscoop)
+#      31XXX - Fuel (Storage)
+#      40XXX - Shield Regen & Support
+#      41XXX - Hull Regen & Support
+#      49XXX - Other Support
+#
+#      80XXX - Weapons (Non-Ammunition Gun)
+#      81XXX - Weapons (Ammunition Gun)
+#      82XXX - Weapons (Non-Ammunition Turret)
+#      83XXX - Weapons (Ammunition Turret)
+#      84XXX - Weapons (Ammunition)
+#      85XXX - Weapons (AA Turret)
+#      86XXX - Scanners
+#      87XXX - Anti-Scanners
+#
+#      90XXX - Refits
+#      98XXX - Licences
+#      99XXX - Utility / Special Items
+#
+#        XXX
+#        M-- - Major producer series (usually a corporation - use 0 to represent generic items, use 9 to represent the government)
+#        -P- - Product series
+#        --S - Subcomponents (e.g. attachments, bullets, bullet cases)
+#
+#	
+#	[100] Sanctuary
+#		[00] Reactors
+#		[01] Power (Solar)
+#		[02] Power (Storage)
+#		[03] Power (Other)
+#		[10] Main Thruster Engines
+#		[11] Side Steering Engines
+#		[12] Rear Thruster Engines
+#		[13] Afterburner Engines
+#		[14] Composite Engines
+#		[19] FTL Drives
+#		[20] Cooling (Passive)
+#		[21] Cooling (Active)
+#		[30] Fuel (Ramscoop)
+#		[31] Fuel (Storage)
+#		[40] Shield Regen & Support
+#		[41] Hull Regen & Support
+#		[49] Other Regen & Support
+#		[80] Weapons (Non-Ammunition Gun)
+#		[81] Weapons (Ammunition Gun)
+#		[82] Weapons (Non-Ammunition Turret)
+#		[83] Weapons (Ammunition Turret)
+#		[84] Weapons (AA Turret)
+#		[85] Weapons (Ammunition)
+#		[86] Scanners
+#		[87] Anti-Scanners
+#		[90] Refits
+#		[98] Licences
+#		[99] Utility / Special Items
+#	
+#	[102] Bet
+#	
+#	
+#	[111] Hel
+#	
+#
+#	[118] Sol
+#		[00] Reactors
+#			[1] Codex Corp
+#				11800100	"KW.CDX-FE-100 Fuel Cell"
+#				11800110	"KW.CDX-FE-200 Fuel Cell"
+#				11800120	"KW.CDX-FE-300 Fuel Chamber"
+#				11800130	"KW.CDX-FE-400 Fuel Reactor"
+#		[01] Power (Solar)
+#			[1] Codex Corp
+#				11801100	"KW.CDX-PV-100 Photovoltaic Cell"
+#				11801110	"KW.CDX-PV-200 Photovoltaic Array"
+#		[02] Power (Storage)
+#			[1] Codex Corp
+#				11802100	"KW.CDX-CP-100 Capacitor Array"
+#				11802110	"KW.CDX-B-100 Battery"
+#				11802120	"KW.CDX-B-200 Battery"
+#	
+#		[03] Power (Other)
+#		[10] Main Thruster Engines
+#			[2] Traveser Systems
+#				11810200	"KW.TR-1650T Ion Thruster"
+#				11810210	"KW.TR-2950T Ion Thruster"
+#				11810220	"KW.TR-4500T Ion Thruster"
+#				11810230	"KW.TR-6400T Ion Thruster"
+#		[11] Side Steering Engines
+#			[2] Traveser Systems
+#				11811200	"KW.TR-1250S Ion Steering"
+#				11811210	"KW.TR-2550S Ion Steering"
+#				11811220	"KW.TR-4150S Ion Steering"
+#		[12] Rear Thruster Engines
+#			[2] Traveser Systems
+#				11812200	"KW.TR-1650R Ion Reverse Thruster"
+#		[13] Afterburner Engines
+#		[14] Composite Engines
+#		[19] FTL Drives
+#				????????	"KW.Basic Chronodrive"					-- Move to Edrin's listing!
+#				????????	"KW.Chronodrive Fuel Recycler"			-- Move to Edrin's listing!
+#		[20] Cooling (Passive)
+#			[1] Codex Corp
+#				11820100	"KW.CDX-HC-100 Conductor"
+#				11820110	"KW.CDX-HC-120 Material Conductor"
+#					11820111	"KW.CDX-M-N Liquid Nitrogen Coolant"
+#					11820112	"KW.CDX-M-N Liquid Oxygen Coolant"
+#					11820113	"KW.CDX-M-N Liquid Helium Coolant"
+#				11820120	"KW.CDX-HC-200 Radiator"
+#		[21] Cooling (Active)
+#			[1] Codex Corp
+#				11821100	"KW.CDX-HC-300 Ablator"
+#		[30] Fuel (Ramscoop)
+#		[31] Fuel (Storage)
+#			[0] Generic
+#				11831000	"KW.Fuel Pod"
+#				11831010	"KW.Fuel Tank"
+#		[40] Shield Regen & Support
+#		[41] Hull Regen & Support
+#		[49] Other Regen & Support
+#		[80] Weapons (Non-Ammunition Gun)
+#			[0] Generic
+#				11880000	"KW.Mining Laser"
+#				11880010	"KW.Beam Laser"
+#				11880020	"KW.Focus Laser"
+#		[81] Weapons (Ammunition Gun)
+#			[0] Generic
+#				11881000	"KW.Vulcan Cannon"
+#				11881010	"KW.Kinetic Rod Launcher"
+#		[82] Weapons (Non-Ammunition Turret)
+#			[0] Generic
+#				11882000	"KW.Mining Laser Turret"
+#				11882010	"KW.Laser Turret"
+#		[83] Weapons (Ammunition Turret)
+#		[84] Weapons (AA Turret)
+#			[0] Generic
+#				11884000	"KW.Point Defense Turret"
+#		[85] Weapons (Ammunition)
+#			[0] Generic
+#				11885000	"KW.Vulcanite"
+#					11885001	"KW.Bullet Case"
+#				11885010	"KW.Kinetic Rod"
+#		[86] Scanners
+#			[2] Traveser Systems
+#				11886200	"KW.TRS-C Cargo Scanner"
+#				11886210	"KW.TRS-O Outfit Scanner"
+#				11886220	"KW.TRS-A Asteroid Scanner"
+#				11886230	"KW.TRS-T Tactical Scanner"
+#				11886240	"KW.TRS-M Multi Scanner"
+#		[87] Anti-Scanners
+#		[90] Refits
+#			[0] Generic
+#				11890000	"KW.Cargo Refit"
+#				11890010	"KW.Outfit Refit"
+#				11890020	"KW.Space Bunk"
+#				11890030	"KW.Hull Reinforcememt"
+#				11890040	"KW.Faraday Reinforcement"
+#		[98] Licences
+#		[99] Utility / Special Items
+#			[9] Government of Sol
+#				11899900	"KW.Sol Map"
+#	

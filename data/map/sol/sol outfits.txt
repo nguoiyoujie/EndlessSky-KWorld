@@ -1058,7 +1058,7 @@ outfit "KW.Sol Map"
 	cost 5000
 	thumbnail "outfit/map"
 	"map" 8
-	"map mineables" 1
+	"map minables" 1
 	description "It is a dream that a ship captain can traverse several metropolitan systems in a row. Until then, space travel in the wild is not for the navigationally-challenged. A star map can be the difference between reaching home or being stranded without fuel. The star map is also marked with essential information such as: notable planets, ports, governments, trades and services, for those who wish to save the effort of making a personal survey themselves."
 
 #Licences
