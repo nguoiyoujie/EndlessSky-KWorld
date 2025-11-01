@@ -1,0 +1,17 @@
+shipyard "KW.Sol.Basic Ships"
+	"KW.Firefly"
+	"KW.Shuttle"
+	"KW.Draft"
+
+shipyard "KW.Sol.Basic Ships II"
+	"KW.Little Vulture"
+	"KW.Mosquito"
+	"KW.Hornet"
+	"KW.Shuttle II"
+	"KW.Shuttle III"
+	"KW.Scow"
+	"KW.Barge"
+
+shipyard "KW.Sol.Local Sol"
+	"KW.Worker Bee"
+	"KW.Def-Sat"

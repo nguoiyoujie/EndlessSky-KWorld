@@ -1,16 +1,119 @@
-shipyard "KW.Sol.Basic Ships"
-	"KW.Firefly"
-	"KW.Shuttle"
-	"KW.Mini Barge"
-
 
 # Drones
 # Guideline - Operating Cost: 0.0005 of hull cost
 
+ship "KW.Worker Bee"
+	"display name" "Worker Bee"
+	sprite "ship/mining drone"
+	thumbnail "thumbnail/mining drone"
+	attributes
+		category "Drone"
+		"cost" 75000
+		"hull" 300
+		"automaton" 1
+		"mass" 15
+		"drag" .53
+		"heat dissipation" .9
+		"cargo space" 15
+		"outfit space" 55
+		"weapon capacity" 12
+		"engine capacity" 29
+		"operating costs" 37
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"KW.CDX-PV-100 Photovoltaic Cell" 2
+		"KW.CDX-CP-100 Capacitor Array" 4
+		"KW.Mining Laser"
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-1250S Ion Steering"
+
+	engine -3 29
+	engine 3 29
+	gun 0 -19
+	explode "tiny explosion" 15
+	description `WIP`
+
+ship "KW.Def-Sat"
+	"display name" "Def-Sat"
+	sprite "ship/combat drone"
+	thumbnail "thumbnail/combat drone"
+	attributes
+		category "Drone"
+		"cost" 84000
+		"hull" 900
+		"automaton" 1
+		"mass" 20
+		"drag" .59
+		"heat dissipation" .9
+		"outfit space" 60
+		"weapon capacity" 12
+		"engine capacity" 38
+		"operating costs" 42
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"KW.CDX-PV-100 Photovoltaic Cell" 2
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.Kinetic Rod Launcher"
+		"KW.Kinetic Rod" 24
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+
+	engine -8.5 28.5 0.9
+	engine 8.5 28.5 0.9
+	gun 0 -29
+	explode "tiny explosion" 15
+	description `WIP`
 
 # Fighters
 # Guideline - Operating Cost: 0.0005 of hull cost
+ship "KW.Little Vulture"
+	"display name" "Little Vulture"
+	sprite "ship/lance"
+	thumbnail "thumbnail/lance"
+	attributes
+		category "Drone"
+		"cost" 100000
+		"hull" 400
+		"required crew" 1
+		"bunks" 1
+		"mass" 30
+		"drag" .7
+		"heat dissipation" .8
+		"outfit space" 82
+		"weapon capacity" 28
+		"engine capacity" 38
+		"operating costs" 50
+		weapon
+			"blast radius" 12
+			"shield damage" 120
+			"hull damage" 60
+			"hit force" 180
+	outfits
+		"KW.CDX-PV-100 Photovoltaic Cell" 3
+		"KW.CDX-CP-100 Capacitor Array" 3
+		"KW.Vulcan Cannon" 2
+		"KW.Vulcanite" 6000
+		"KW.Kinetic Rod Launcher"
+		"KW.Kinetic Rod" 24
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
 
+	engine -14.5 30.5
+	engine 14.5 30.5
+	gun 0 -34
+	gun -13.5 -6.5
+	gun 13.5 -6.5
+	explode "tiny explosion" 15
+	explode "small explosion" 5
+	description `WIP`
 
 ####### Interceptor
 # Guideline - Operating Cost: 0.001 of hull cost
@@ -57,8 +160,100 @@ ship "KW.Firefly"
 	leak "flame" 60 80
 	explode "tiny explosion" 15
 	explode "small explosion" 5
-	description "Classified as an interceptor rather than a fighter because it has its own hyperdrive instead of needing to be carried inside a larger ship, the Tarazed Sparrow is the smallest and cheapest combat ship available. Because of its limited cargo and passenger space, the primary way for a Sparrow pilot to pay the bills is to upgrade the weapons and hunt pirates... or become one. In either case, it is a perilous way to earn a living."
-	description "	Government reports indicate that as many as two out of every three first-time ship buyers who choose to pilot a Sparrow lose their ship (and often, their life as well) within the first month of owning it. Pilots who have survived longer than that tend to swear by replacing the stock weapons with missile launchers."
+	description `The first interspace vessels fielded by the Organization were decendants of their ubiquitous Vertical Take-Off and Landing Improvised Aero-Space (VTOLIAS) design. The Firefly-class, and the Shuttle, are the pioneer members of the first-generation Vertical-Take-Off and Landing Intra-Space (VTOLIS) vessels. In particular, the Firefly sports the earliest of Sol armaments designed for exfoilating asteroid matter for extraction. Thus began the space mining economy for the species.`
+
+ship "KW.Mosquito"
+	"display name" "Mosquito"
+	sprite "ship/sparrow"
+	thumbnail "thumbnail/sparrow"
+	attributes
+		category "Interceptor"
+		"cost" 350000
+		"hull" 450
+		"required crew" 1
+		"bunks" 2
+		"mass" 48
+		"drag" .87
+		"heat dissipation" .77
+		"fuel capacity" 200
+		"cargo space" 10
+		"outfit space" 135
+		"weapon capacity" 24
+		"engine capacity" 52
+		"operating costs" 350
+		weapon
+			"blast radius" 16
+			"shield damage" 160
+			"hull damage" 80
+			"hit force" 240
+	outfits
+		"KW.Focus Laser"
+		"KW.CDX-FE-200 Fuel Cell"
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+		"KW.Basic Chronodrive"
+
+	engine -5 35
+	engine 5 35
+	gun -7 -10
+	gun 7 -10
+	gun -10.5 -8.5
+	gun 10.5 -8.5
+	leak "flame" 60 80
+	explode "tiny explosion" 15
+	explode "small explosion" 5
+	description `The Mosquito is an alternate design of the Firefly, with some of its hull sacrificed for better agility and larger engines.`
+
+ship "KW.Hornet"
+	"display name" "Hornet"
+	sprite "ship/fury"
+	thumbnail "thumbnail/fury"
+	attributes
+		category "Interceptor"
+		"cost" 800000
+		"hull" 800
+		"required crew" 1
+		"bunks" 3
+		"mass" 60
+		"drag" .9
+		"heat dissipation" .77
+		"fuel capacity" 300
+		"cargo space" 20
+		"outfit space" 150
+		"weapon capacity" 48
+		"engine capacity" 46
+		"operating costs" 800
+		weapon
+			"blast radius" 16
+			"shield damage" 160
+			"hull damage" 80
+			"hit force" 240
+	outfits
+		"KW.Focus Laser"
+		"KW.Kinetic Rod Launcher" 2
+		"KW.Kinetic Rod" 48
+		"KW.CDX-FE-200 Fuel Cell"
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-1250S Ion Steering"
+		"KW.Basic Chronodrive"
+
+	engine -11 35 0.8
+	engine 11 35 0.8
+	engine -18 37 0.6
+	engine 18 37 0.6
+	gun -11 -28
+	gun 11 -28
+	gun -17 -19.5
+	gun 17 -19.5
+	gun -5.5 -33
+	gun 5.5 -33
+	leak "flame" 50 80
+	explode "tiny explosion" 10
+	explode "small explosion" 20
+	description `The Mosquito is an alternate design of the Firefly, with some of its hull sacrificed for better agility and larger engines.`
+
 
 # Transport
 
@@ -103,14 +298,91 @@ ship "KW.Shuttle"
 	leak "leak" 60 50
 	explode "tiny explosion" 10
 	explode "small explosion" 5
-	description "Although Betelgeuse Shipyards produces other ship models as well, the majority of their profits come from sales of the Shuttle. This versatile ship serves equally well as a passenger transport or a cargo courier. It also happens to be the cheapest ship you can buy which is capable of hyperspace travel."
-	description `	Shuttles are not designed to withstand combat of any sort, but they are fast and maneuverable enough to get out of harm's way if attacked by a larger, slower ship. Although they are typically unarmed, they have enough space for one weapon, which is the origin of the popular phrase, "as useless as a blaster cannon on a shuttlecraft."`
+	description `WIP`
 
+ship "KW.Shuttle II"
+	"display name" "Shuttle II"
+	sprite "ship/heavy shuttle"
+	thumbnail "thumbnail/heavy shuttle"
+	attributes
+		category "Transport"
+		"cost" 375000
+		#"shields" 500
+		"hull" 650
+		"required crew" 1
+		"bunks" 10
+		"mass" 135
+		"drag" 2.1
+		"heat dissipation" .73
+		"fuel capacity" 500
+		"cargo space" 32
+		"outfit space" 135
+		"weapon capacity" 16
+		"engine capacity" 66
+		weapon
+			"blast radius" 12
+			"shield damage" 120
+			"hull damage" 60
+			"hit force" 180
+		"operating costs" 375
+	outfits
+		"KW.CDX-FE-100 Fuel Cell"
+		"KW.CDX-B-100 Battery"
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+		"KW.Basic Chronodrive"
+
+	engine -6 30
+	engine 6 30
+	gun 0 -31
+	leak "leak" 60 50
+	explode "tiny explosion" 10
+	explode "small explosion" 5
+	description `WIP`
+
+ship "KW.Shuttle III"
+	"display name" "Shuttle III"
+	sprite "ship/heavy shuttle"
+	thumbnail "thumbnail/heavy shuttle"
+	attributes
+		category "Transport"
+		"cost" 650000
+		"hull" 800
+		"required crew" 3
+		"bunks" 22
+		"mass" 180
+		"drag" 2.5
+		"heat dissipation" .7
+		"fuel capacity" 500
+		"cargo space" 40
+		"outfit space" 154
+		"weapon capacity" 22
+		"engine capacity" 76
+		weapon
+			"blast radius" 12
+			"shield damage" 120
+			"hull damage" 60
+			"hit force" 180
+		"operating costs" 650
+	outfits
+		"KW.CDX-FE-200 Fuel Cell"
+		"KW.CDX-B-100 Battery"
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-4150S Ion Steering"
+		"KW.Basic Chronodrive"
+
+	engine -6 30
+	engine 6 30
+	gun 0 -31
+	leak "leak" 60 50
+	explode "tiny explosion" 10
+	explode "small explosion" 5
+	description `WIP`
 
 # Light Freighter
 
-ship "KW.Mini Barge"
-	"display name" "Mini Barge"
+ship "KW.Draft"
+	"display name" "Draft"
 	sprite "ship/star barge"
 	thumbnail "thumbnail/star barge"
 	attributes
@@ -148,9 +420,96 @@ ship "KW.Mini Barge"
 	leak "leak" 60 50
 	explode "tiny explosion" 10
 	explode "small explosion" 10
-	description "The Syndicate CT-50 Star Barge is little more than a cluster of cargo containers with an engine at one end and a cockpit on the other. It is a slow and ugly ship, but it can carry enough cargo to earn its captain a steady income even in parts of the galaxy where it is hard to find passengers to carry or courier missions."
-	description "	Because they often carry valuable cargo, and because they are too slow to evade any attackers, Star Barges are a common target of pirates."
+	description `WIP`
 
+ship "KW.Scow"
+	"display name" "Scow"
+	sprite "ship/star barge"
+	thumbnail "thumbnail/star barge"
+	attributes
+		category "Light Freighter"
+		"cost" 300000
+		#"shields" 600
+		"hull" 650
+		"required crew" 1
+		"bunks" 4
+		"mass" 95
+		"drag" 2.3
+		"heat dissipation" .77
+		"fuel capacity" 300
+		"cargo space" 60
+		"outfit space" 145
+		"weapon capacity" 32
+		"engine capacity" 45
+		weapon
+			"blast radius" 16
+			"shield damage" 160
+			"hull damage" 80
+			"hit force" 240
+		"operating costs" 300
+	outfits
+		"KW.Laser Turret"
+		"KW.CDX-FE-100 Fuel Cell"
+		"KW.CDX-B-100 Battery"
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-1250S Ion Steering"
+		"KW.Basic Chronodrive"
+		"KW.Chronodrive Fuel Recycler"
+
+	engine -9.5 38
+	engine 9.5 38
+	turret -3 -18
+	turret 3 -18
+	leak "leak" 60 50
+	explode "tiny explosion" 10
+	explode "small explosion" 10
+	description `WIP`
+
+ship "KW.Barge"
+	"display name" "Barge"
+	sprite "ship/star barge"
+	thumbnail "thumbnail/star barge"
+	attributes
+		category "Light Freighter"
+		"cost" 650000
+		#"shields" 600
+		"hull" 900
+		"required crew" 3
+		"bunks" 7
+		"mass" 150
+		"drag" 2.6
+		"heat dissipation" .77
+		"fuel capacity" 500
+		"cargo space" 90
+		"outfit space" 170
+		"weapon capacity" 48
+		"engine capacity" 55
+		weapon
+			"blast radius" 16
+			"shield damage" 160
+			"hull damage" 80
+			"hit force" 240
+		"operating costs" 650
+	outfits
+		"KW.Mining Laser Turret"
+		"KW.Point Defense Turret"
+		"KW.Vulcanite" 2000
+		"KW.CDX-FE-200 Fuel Cell"
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+		"KW.CDX-HC-100 Conductor"
+		"KW.Basic Chronodrive"
+		"KW.Chronodrive Fuel Recycler"
+
+	engine -9.5 38
+	engine 9.5 38
+	turret -3 -18
+	turret 3 -18
+	leak "leak" 60 50
+	explode "tiny explosion" 10
+	explode "small explosion" 10
+	description `WIP`
 
 # Medium Freighter
 

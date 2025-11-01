@@ -79,8 +79,8 @@ conversation "k.world intro"
 
 	label transfer
 	action
-		set "kw start: Mini Barge"
-		give ship "Mini Barge (KW Start)" "Dusty Pearl"
+		set "kw start: Draft"
+		give ship "Draft (KW Start)" "Dusty Pearl"
 		payment -115350 #30%
 		#debug
 		payment 10000000
@@ -88,7 +88,7 @@ conversation "k.world intro"
 		decline
 
 
-ship "KW.Mini Barge" "Mini Barge (KW Start)"
+ship "KW.Draft" "Draft (KW Start)"
 	outfits
 		"KW.CDX-PV-100 Photovoltaic Cell" 2
 		"KW.CDX-FE-100 Fuel Cell"
