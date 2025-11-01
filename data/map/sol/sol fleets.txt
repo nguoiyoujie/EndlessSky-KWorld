@@ -1,0 +1,120 @@
+
+fleet "KW.Sol Defense Post"
+	government "KW.Sol"
+	names "republic small"
+	cargo 0
+	personality
+		heroic opportunistic
+	variant 3
+		"KW.Def-Sat" 1
+		"KW.Little Vulture" 4
+	variant 3
+		"KW.Def-Sat" 1
+		"KW.Little Vulture" 6
+	variant 3
+		"KW.Def-Sat" 2
+		"KW.Little Vulture" 6
+	variant 2
+		"KW.Def-Sat" 2
+		"KW.Little Vulture" 9
+	variant 1
+		"KW.Def-Sat" 3
+		"KW.Little Vulture" 12
+
+fleet "KW.Sol Defenders Mobile"
+	government "KW.Sol"
+	names "republic small"
+	cargo 0
+	personality
+		heroic opportunistic
+	variant 4
+		"KW.Firefly" 2
+	variant 3
+		"KW.Mosquito" 2
+	variant 3
+		"KW.Hornet"
+
+fleet "KW.Sol Miner"
+	government "KW.Merchants"
+	names "civilian"
+	cargo 0
+	personality
+		confusion 20
+		timid frugal mining harvests
+	variant 6
+		"KW.Firefly"
+	variant 4
+		"KW.Mosquito"
+	variant 2
+		"KW.Hornet"
+	variant 3
+		"KW.Scow"
+	variant 3
+		"KW.Barge"
+	variant 1
+		"KW.Worker Bee" 3
+
+fleet "KW.Sol Merchants Small"
+	government "KW.Merchants"
+	names "civilian"
+	cargo 2
+	personality
+		confusion 50
+		timid frugal appeasing
+	variant 5
+		"KW.Shuttle"
+	variant 1
+		"KW.Shuttle" 2
+	variant 3
+		"KW.Shuttle II"
+	variant 1
+		"KW.Shuttle II" 2
+	variant 2
+		"KW.Shuttle III"
+	variant 1
+		"KW.Shuttle III"
+		"KW.Hornet"
+	variant 2
+		"KW.Scow"
+		"KW.Firefly" 2
+	variant 2
+		"KW.Barge"
+		"KW.Mosquito" 2
+
+fleet "KW.Sol Merchants Large"
+	government "KW.Merchants"
+	names "civilian"
+	cargo 2
+	personality
+		confusion 50
+		timid frugal appeasing
+	variant 3
+		"KW.Scow" 2
+	variant 3
+		"KW.Scow" 2
+		"KW.Firefly" 2
+	variant 3
+		"KW.Scow" 2
+		"KW.Shuttle" 2
+	variant 2
+		"KW.Barge" 2
+	variant 2
+		"KW.Barge" 2
+		"KW.Shuttle" 2
+	variant 2
+		"KW.Barge" 2
+		"KW.Firefly" 2
+	variant 2
+		"KW.Barge" 2
+		"KW.Mosquito" 2
+	variant 1
+		"KW.Shuttle" 6
+	variant 1
+		"KW.Shuttle II" 4
+	variant 1
+		"KW.Shuttle III" 2
+	variant 1
+		"KW.Shuttle III" 2
+		"KW.Hornet" 1
+		"KW.Firefly" 2
+

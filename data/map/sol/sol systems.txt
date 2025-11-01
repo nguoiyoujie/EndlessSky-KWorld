@@ -89,6 +89,14 @@ system KW.S.000.Sol
 		sprite planet/neptune
 		distance 15730
 		period 24012.7
+	fleet "KW.Sol Merchants Small" 300
+	fleet "KW.Sol Merchants Large" 2500
+	fleet "KW.Sol Defense Post" 10
+	fleet "KW.Sol Defense Fleet" 200
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 500
+	fleet "KW.Sol Miner" 1500
+
 
 system "KW.S.001.Alpha Centauri"
 	"display name" "Alpha Centauri"
@@ -133,6 +141,10 @@ system "KW.S.001.Alpha Centauri"
 		sprite planet/gas15-b
 		distance 5258
 		period 833.859
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 1800
 
 system KW.S.002.Rigel
 	"display name" Rigel
@@ -185,6 +197,10 @@ system KW.S.002.Rigel
 			sprite planet/callisto
 			distance 509
 			period 59.776
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 1800
 
 system KW.S.003.Arcturus
 	"display name" Arcturus
@@ -223,6 +239,11 @@ system KW.S.003.Arcturus
 			sprite planet/desert4-b
 			distance 279
 			period 220.454
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 1800
+	fleet "KW.Sol Miner" 3200
 
 system KW.S.004.Achernar
 	"display name" Achernar
@@ -250,6 +271,10 @@ system KW.S.004.Achernar
 		sprite planet/rock12-b
 		distance 2731.777
 		period 395.789
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 1800
 
 system KW.S.005.Canopus
 	"display name" Canopus
@@ -297,6 +322,10 @@ system KW.S.005.Canopus
 			sprite planet/dust7-b
 			distance 195
 			period 102.933
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 1800
 
 system KW.S.006.Spica
 	"display name" Spica
@@ -412,6 +441,9 @@ system KW.S.008.Deneb
 				scale 0.6
 			distance 274
 			period 171.446
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 2800
 
 system KW.S.009.Agena
 	"display name" Agena
@@ -614,6 +646,10 @@ system KW.S.013.Vega
 		sprite planet/debris1
 		distance 2373.154
 		period 808.625
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 1800
 
 system KW.S.014.Denebola
 	"display name" Denebola
@@ -655,6 +691,11 @@ system KW.S.014.Denebola
 		distance 1350.372
 		period 121
 		offset 175
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 1800
+	fleet "KW.Sol Miner" 3200
 
 system KW.S.015.Capella
 	"display name" Capella
@@ -695,6 +736,8 @@ system KW.S.015.Capella
 		sprite star/m-dwarf
 		distance 3303.469
 		period 2870.558
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
 
 system KW.S.016.Regulus
 	"display name" Regulus
@@ -746,6 +789,8 @@ system KW.S.016.Regulus
 			sprite planet/rock7
 			distance 414
 			period 398.485
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
 
 system KW.S.017.Alioth
 	"display name" Alioth
@@ -790,6 +835,11 @@ system KW.S.017.Alioth
 		sprite planet/neptune
 		distance 5996.426
 		period 3059.265
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Patrol Machine" 2500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Merchants Large" 1800
+	fleet "KW.Sol Miner" 3200
 
 system KW.S.018.Phecda
 	"display name" Phecda
@@ -823,6 +873,9 @@ system KW.S.018.Phecda
 			sprite planet/io-b
 			distance 214
 			period 118.337
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Miner" 3200
 
 system KW.S.019.Alkaid
 	"display name" Alkaid
@@ -849,6 +902,9 @@ system KW.S.019.Alkaid
 			sprite planet/luna-b
 			distance 221
 			period 124.191
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Miner" 3200
 
 system KW.S.020.Vindemiatrix
 	"display name" Vindemiatrix
@@ -949,6 +1005,9 @@ system KW.S.021.Algieba
 		sprite planet/gas9
 		distance 9533
 		period 4690.662
+	fleet "KW.Sol Patrol" 3500
+	fleet "KW.Sol Merchants Small" 1300
+	fleet "KW.Sol Miner" 3200
 
 system KW.S.022.Adhara
 	"display name" Adhara
