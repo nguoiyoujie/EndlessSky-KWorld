@@ -43,8 +43,8 @@
 #      49XXX - Other Support
 #
 #      80XXX - Weapons (Non-Ammunition Gun)
-#      81XXX - Weapons (Ammunition Gun)
-#      82XXX - Weapons (Non-Ammunition Turret)
+#      81XXX - Weapons (Non-Ammunition Turret)
+#      82XXX - Weapons (Ammunition Gun)
 #      83XXX - Weapons (Ammunition Turret)
 #      84XXX - Weapons (Ammunition)
 #      85XXX - Weapons (AA Turret)
@@ -60,7 +60,7 @@
 #        -P- - Product series
 #        --S - Subcomponents (e.g. attachments, bullets, bullet cases)
 #
-#	
+#
 #	[100] Sanctuary
 #		[00] Reactors
 #		[01] Power (Solar)
@@ -80,8 +80,8 @@
 #		[41] Hull Regen & Support
 #		[49] Other Regen & Support
 #		[80] Weapons (Non-Ammunition Gun)
-#		[81] Weapons (Ammunition Gun)
-#		[82] Weapons (Non-Ammunition Turret)
+#		[81] Weapons (Non-Ammunition Turret)
+#		[82] Weapons (Ammunition Gun)
 #		[83] Weapons (Ammunition Turret)
 #		[84] Weapons (AA Turret)
 #		[85] Weapons (Ammunition)
@@ -90,12 +90,146 @@
 #		[90] Refits
 #		[98] Licences
 #		[99] Utility / Special Items
-#	
+#
+#	[101] Alph
+#		[00] Reactors
+#			[0] Generic
+#				10100000	"KW.Alph Remote Core I"
+#				10100010	"KW.Alph Remote Core II"
+#				10100020	"KW.Alph Remote Core III"
+#		[01] Power (Solar)
+#			[0] Generic
+#				10101000	"KW.Alph Triangle Panel"
+#				10101010	"KW.Alph Rhombic Panel"
+#				10101020	"KW.Alph Trapezoid Panel"
+#				10101030	"KW.Alph Hex Panel"
+#		[02] Power (Storage)
+#		[03] Power (Other)
+#		[10] Main Thruster Engines
+#		[11] Side Steering Engines
+#		[12] Rear Thruster Engines
+#		[13] Afterburner Engines
+#		[14] Composite Engines
+#		[19] FTL Drives
+#		[20] Cooling (Passive)
+#			[0] Generic
+#				10120000	"KW.Integument Ventilation"
+#		[21] Cooling (Active)
+#			[0] Generic
+#				10121000	"KW.Integument Purge Ventilation"
+#		[30] Fuel (Ramscoop)
+#		[31] Fuel (Storage)
+#		[40] Shield Regen & Support
+#		[41] Hull Regen & Support
+#		[49] Other Regen & Support
+#		[80] Weapons (Non-Ammunition Gun)
+#		[81] Weapons (Non-Ammunition Turret)
+#		[82] Weapons (Ammunition Gun)
+#		[83] Weapons (Ammunition Turret)
+#		[84] Weapons (AA Turret)
+#		[85] Weapons (Ammunition)
+#		[86] Scanners
+#		[87] Anti-Scanners
+#		[90] Refits
+#		[98] Licences
+#		[99] Utility / Special Items
+#			[9] Government of Alph
+#				10199900	"KW.Alph Map"
+#
 #	[102] Bet
-#	
-#	
+#		[00] Reactors
+#			[1] Inlos
+#				10200100	"KW.Inlos Simple Fluid Cell"
+#				10200110	"KW.Inlos Biochemical Cell"
+#				10200120	"KW.Inlos Biochemical Doublet"
+#				10200130	"KW.Inlos Biochemical Quartet"
+#				10200140	"KW.Inlos Biosynergistic Chamber"
+#				10200150	"KW.Inlos Biomass Converter"
+#			[2] Keji
+#				10200200	"KW.Keji Cohabitat Gym"
+#		[01] Power (Solar)
+#			[2] Keji
+#				10201200	"KW.Keji Absorption Skin
+#		[02] Power (Storage)
+#		[03] Power (Other)
+#		[10] Main Thruster Engines
+#		[11] Side Steering Engines
+#		[12] Rear Thruster Engines
+#		[13] Afterburner Engines
+#		[14] Composite Engines
+#		[19] FTL Drives
+#		[20] Cooling (Passive)
+#		[21] Cooling (Active)
+#			[1] Inlos
+#				10221100	"KW.Inlos Thermoregulator"
+#				10221110	"KW.Inlos Homeostatic Regulator"
+#		[30] Fuel (Ramscoop)
+#		[31] Fuel (Storage)
+#		[40] Shield Regen & Support
+#		[41] Hull Regen & Support
+#		[49] Other Regen & Support
+#		[80] Weapons (Non-Ammunition Gun)
+#		[81] Weapons (Non-Ammunition Turret)
+#		[82] Weapons (Ammunition Gun)
+#		[83] Weapons (Ammunition Turret)
+#		[84] Weapons (AA Turret)
+#		[85] Weapons (Ammunition)
+#		[86] Scanners
+#		[87] Anti-Scanners
+#		[90] Refits
+#		[98] Licences
+#		[99] Utility / Special Items
+#			[9] Government of Bet
+#				10299900	"KW.Bet Map"
+#
+#
+#	[106] Edrin
+#		[19] FTL Drives
+#				10619000	"KW.Basic Chronodrive"
+#				10619001	"KW.Chronodrive Fuel Recycler"
+#				10619010	"KW.Advanced Chronodrive"
+#
 #	[111] Hel
-#	
+#		[00] Reactors
+#			[1] Devilish
+#				11100100	"KW.Hel Smother"
+#				11100110	"KW.Hel Ember"
+#			[2] Tyrant
+#				11100200	"KW.Hel Blaze"
+#				11100210	"KW.Hel Eruption"
+#				11100220	"KW.Hel Firestorm"
+#		[01] Power (Solar)
+#		[02] Power (Storage)
+#		[03] Power (Other)
+#		[10] Main Thruster Engines
+#		[11] Side Steering Engines
+#		[12] Rear Thruster Engines
+#		[13] Afterburner Engines
+#		[14] Composite Engines
+#		[19] FTL Drives
+#		[20] Cooling (Passive)
+#			[2] Tyrant
+#				10201200	"KW.Hel Anger Pool"
+#				10201210	"KW.Hel Wrath Pool"
+#		[21] Cooling (Active)
+#		[30] Fuel (Ramscoop)
+#		[31] Fuel (Storage)
+#		[40] Shield Regen & Support
+#		[41] Hull Regen & Support
+#		[49] Other Regen & Support
+#		[80] Weapons (Non-Ammunition Gun)
+#		[81] Weapons (Non-Ammunition Turret)
+#		[82] Weapons (Ammunition Gun)
+#		[83] Weapons (Ammunition Turret)
+#		[84] Weapons (AA Turret)
+#		[85] Weapons (Ammunition)
+#		[86] Scanners
+#		[87] Anti-Scanners
+#		[90] Refits
+#		[98] Licences
+#		[99] Utility / Special Items
+#			[9] Government of Hel
+#				11199900	"KW.Hel Map"
 #
 #	[118] Sol
 #		[00] Reactors
@@ -113,7 +247,7 @@
 #				11802100	"KW.CDX-CP-100 Capacitor Array"
 #				11802110	"KW.CDX-B-100 Battery"
 #				11802120	"KW.CDX-B-200 Battery"
-#	
+#
 #		[03] Power (Other)
 #		[10] Main Thruster Engines
 #			[2] Traveser Systems
@@ -131,9 +265,6 @@
 #				11812200	"KW.TR-1650R Ion Reverse Thruster"
 #		[13] Afterburner Engines
 #		[14] Composite Engines
-#		[19] FTL Drives
-#				????????	"KW.Basic Chronodrive"					-- Move to Edrin's listing!
-#				????????	"KW.Chronodrive Fuel Recycler"			-- Move to Edrin's listing!
 #		[20] Cooling (Passive)
 #			[1] Codex Corp
 #				11820100	"KW.CDX-HC-100 Conductor"
@@ -158,14 +289,14 @@
 #				11880000	"KW.Mining Laser"
 #				11880010	"KW.Beam Laser"
 #				11880020	"KW.Focus Laser"
-#		[81] Weapons (Ammunition Gun)
+#		[81] Weapons (Non-Ammunition Turret)
 #			[0] Generic
-#				11881000	"KW.Vulcan Cannon"
-#				11881010	"KW.Kinetic Rod Launcher"
-#		[82] Weapons (Non-Ammunition Turret)
+#				11881000	"KW.Mining Laser Turret"
+#				11881010	"KW.Laser Turret"
+#		[82] Weapons (Ammunition Gun)
 #			[0] Generic
-#				11882000	"KW.Mining Laser Turret"
-#				11882010	"KW.Laser Turret"
+#				11882000	"KW.Vulcan Cannon"
+#				11882010	"KW.Kinetic Rod Launcher"
 #		[83] Weapons (Ammunition Turret)
 #		[84] Weapons (AA Turret)
 #			[0] Generic
@@ -194,4 +325,4 @@
 #		[99] Utility / Special Items
 #			[9] Government of Sol
 #				11899900	"KW.Sol Map"
-#	
+#

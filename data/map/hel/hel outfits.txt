@@ -1,0 +1,124 @@
+##### HEL OUTFITS #####
+# See 'outfit notes.txt' for index and sort methods
+#
+#		[00] Reactors
+#			[1] Devilish
+outfit "KW.Hel Smother"
+	"display name" "Hel Smother"
+	category "Power"
+	series "Generators"
+	index 11100100
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 11
+	"outfit space" -11
+	"energy generation" 1.7
+	"heat generation" 12
+	description `WIP`
+
+outfit "KW.Hel Ember"
+	"display name" "Hel Ember"
+	category "Power"
+	series "Generators"
+	index 11100110
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 20
+	"outfit space" -20
+	"energy generation" 3.6
+	"heat generation" 26
+	description `WIP`
+
+#		[00] Reactors
+#			[2] Tyrant
+outfit "KW.Hel Blaze"
+	"display name" "Hel Blaze"
+	category "Power"
+	series "Generators"
+	index 11100110
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 64
+	"outfit space" -64
+	"energy generation" 11.8
+	"heat generation" 88
+	"solar collection" 4.5
+	"solar heat" 16
+	description `WIP`
+
+outfit "KW.Hel Eruption"
+	"display name" "Hel Eruption"
+	category "Power"
+	series "Generators"
+	index 11100210
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 102
+	"outfit space" -102
+	"energy generation" 23
+	"heat generation" 179
+	"solar collection" 6
+	"solar heat" 34.6
+	description `WIP`
+
+outfit "KW.Hel Firestorm"
+	"display name" "Hel Firestorm"
+	category "Power"
+	series "Generators"
+	index 11100220
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 176
+	"outfit space" -176
+	"energy generation" 46.5
+	"heat generation" 269
+	"solar collection" 25
+	"solar heat" 155
+	description `WIP`
+
+#		[20] Cooling (Passive)
+#			[2] Tyrant
+outfit "KW.Hel Anger Pool"
+	"display name" "Hel Anger Pool"
+	category "Systems"
+	series "Cooling"
+	index 10201200
+	cost 50000
+	#thumbnail "outfit/_wip_cooling"
+	"mass" 25
+	"outfit space" -25
+	"energy capacity" 3400
+	"heat capacity" 1270
+	"solar heat" 2
+	description `WIP`
+
+outfit "KW.Hel Wrath Pool"
+	"display name" "Hel Wrath Pool"
+	category "Systems"
+	series "Cooling"
+	index 10201210
+	cost 50000
+	#thumbnail "outfit/_wip_cooling"
+	"mass" 66
+	"outfit space" -66
+	"energy capacity" 6660
+	"heat capacity" 3666
+	"solar heat" 3
+	description `WIP`
+
+# Specials
+
+outfit "KW.Hel Map"
+	"display name" "Hel Map"
+	category "Special"
+	index 11199900
+	cost 5000
+	thumbnail "outfit/map"
+	"map" 8
+	"map minables" 1
+	description "It is a dream that a ship captain can traverse several metropolitan systems in a row. Until then, space travel in the wild is not for the navigationally-challenged. A star map can be the difference between reaching home or being stranded without fuel. The star map is also marked with essential information such as: notable planets, ports, governments, trades and services, for those who wish to save the effort of making a personal survey themselves."
+
+#Licences
+
+
+

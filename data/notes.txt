@@ -52,7 +52,7 @@
 #	education
 #	military		Produce Military
 #	shipworks		Receive Ship Systems/Ship Alloys
-#	logistics		Act as intermediate waypoints for goods transit 
+#	logistics		Act as intermediate waypoints for goods transit
 #
 ## Routes (Cargo)
 #	["research samples"] 		research -> analysis
@@ -70,7 +70,7 @@
 #	["Military"] 				factory / hitech -> military
 #	["Ship Systems"] 			NA
 #	["Ship Alloys"] 			hitech -> shipworks
-#	
+#
 ## Mining
 #	silicon-source
 #	lead-source
@@ -85,7 +85,7 @@
 #	gold-source
 #	platinum-source
 #	yottrite-source
-#	
+#
 ## Special
 #	gaia			Provides access to the Gaia interface
 #	archive			Provides access to the Archive
@@ -93,7 +93,124 @@
 #	rich
 #	terraform
 #	isolated		Don't give this planet generic jobs
-#	
+#
+
+#	System Scope Planning:
+#
+#	Thoughtform
+#		Godlike 'Species?'
+#		The thoughtform is felt and known by many names, but never adequately described.
+#		The most agreeable description is that they are 'Automata of the Gods', scripts of the Greater World with their limits turned into personalities.
+#		The true capabilities of a Thoughtform is not known. What is known, is that they may possess other living beings to act as their surrogates.
+#			The Creator and Destroyer positions are held exclusively by such beings.
+#			In the space of this plugin, three of them are known in flesh, and others may be felt.
+#			The main method of interference is to hijack meta elements of the game (one of the Thoughtforms handles story narration and questlines - this is invisible to the player until such Thoughtform is angered enough to disrupt gameplay). Meta-element manipulation work by modifying the player's 'perception' of his abilities via outfit/planet/system changes. For example, the Narrator may 'remove' hyperlanes to force the player towards a system.
+#			It is generally not intended for the player to face any one of them as an opponent.
+#
+#	Sanctuary
+#		Highly-Advanced Mix
+#		Leader, Imperial Guards Fleet
+#		Includes all populations and species from the Council of World Systems (19 worlds)
+#			Generally, they do not produce special outfits of their own.
+#				However, they could 'combine' some outfits for a slightly more efficient design.
+#			Ships are vastly mix-tech, and intended to be competitive with the 'metagame' and top-of-the-line builds.
+#
+#	Alph
+#		Highly-Advanced Species
+#		Leader, First Fleet
+#		Rooted space plants, a mix of biological and lithic construction, largely non-mobile
+#			Notable invention: Integument - arms of the civilization to breach space and distance restrictions and reach other spaces.
+#			Major vessels are either very slow and colossal, or use the Integument space-warping portals to become highly mobile at the price of fragility.
+#			Minor vessels are essentially an Integument portal with weapons or cargo ports inside its 'bag of holding' - Very high outfit spaces, but very fragile. Think drone warfare, but with portals.
+#			Main method of travel - Integumental Xylem / Phloem nodes (moon-sized Integument surfaces for wormhole-like portals), Integument Jump Drives (jump drives with heavy defensive malus)
+#
+#	Bet
+#		Highly-Advanced Species
+#		Leader, Second Fleet
+#		Biological nurturers, obsessed with genetics and fertility, the most populous system by count of independent thinkers.
+#			All Bet outfits feature bunks. Even if you don't want them to.
+#			Major vessels are like mini homeworlds, populous to the extent that one outfitted ship may have 2-3x the bunks of a similarly sized ship. This comes at a Maintainence Cost on top of necessary crew costs, however.
+#			Minor vessels are also larger than equivalent hull classes of other ships.
+#			Main method of travel - Edrin's Chronodrives
+#
+#	Canc
+#		Highly-Advanced Species
+#		Leader, Fourth Fleet
+#			WIP
+#
+#	Det
+#		Highly-Advanced Species
+#		Leader, Fifth Fleet
+#		Bio-ethereal communicators, introspective and full of faith and exploration to 'other worlds'. Suspected an offshoot descendant of the Thoughtform, though no one could prove it.
+#			The homeworlds are actually hosts of members of other species, having fallen in battle, in illness or of old age. Rituals are performed to prepare them for the afterlife.
+#			The keyword of Det's military is 'Sudden Death Syndrome'. If possible, weapons work on debilitating conditions, slow, corrosion, etc. to a larger degree than Canc.
+#			Main method of travel - Edrin's Chronodrives
+#
+#	Dgt
+#		Advanced Species
+#		Lithic robots, who are content dwelling in rocks, because they are rich not in real space, but in digital space
+#			(If possible, implement some kind of healing of friendly ships??)
+#			Weapons are generally 'hacking' type, which are instant-hit weapons that apply ion
+#			Main method of travel - Edrin's Chronodrives
+#
+#	Edrin
+#		Advanced Species
+#		Bio-mechanical titans, mastreos of chronomancy
+#			Temporal manipulation is powerful but limited. Essentially you can slow, (almost pause), and fast forward, but it takes immense energy to send information to the past (sending matter in a coherent manner is not possible, let alone sustaining life)
+#			Invented the Chronodrive. Their ships use the most efficient drive systems (jump-fuel ratio), but with no jump drive capability
+#			Vessels generally use 'instant-hit' weapons, with a focus on 'slowing' the enemy.
+#			Main method of travel - Chronodrives
+#
+#	Xil
+#		Advanced Species
+#		Biological thinkers and tinkerers, sufficiently advanced to practice ~*magic*~
+#			Vessels are classed into different 'specializations'
+#				Magister Elementalis uses 'primary elements' to break their enemies
+#					Elementalis Furia - Fire (heat)
+#					Elementalis Ees - Ice (anti-energy / anti-shield)
+#					Elementalis Fluva - Wind (high knockback)
+#					Elementalis Euf - Earth (anti-hull kinetic weapons)
+#				Magister Travis (Motion) manipulates motion with tractor beams, grabbers and banishers.
+#				Magister Tempus (Time) uses primarily Edrin weapons - instant hit and slow.
+#				Magister Automata (Agency) is perhaps the most dangerous - uses a minefield of 'Automata' organisms that behave like corrupting nanobot/gel.
+#				Magister Idelis (Thought) is (hopefully) not an opponent.
+#
+#	Ker
+#
+#
+#	Mid
+#
+#
+#	Nat
+#		Moderate Species
+#		Parasitic organisms, donning the masks of the creature it controls. Also known as the 'body-snatchers'
+#
+#			Nat has a natural symbiotic enemity with Fel, as it currently derives most of its host bodies from the feralistic jungle of Fel and Fel-aligned communities.
+#
+#	Hel
+#		Moderate Species
+#
+#	Fel
+#		Moderate Species
+#
+#	Upsn
+#
+#
+#	Phi
+#
+#
+#	Lmd
+#
+#
+#	Rho
+#
+#
+#	Gamn
+#
+#
+#	Sol
+#		Moderate Species
+#
 
 
 #
@@ -141,8 +258,8 @@
 #      49XXX - Other Support
 #
 #      80XXX - Weapons (Non-Ammunition Gun)
-#      81XXX - Weapons (Ammunition Gun)
-#      82XXX - Weapons (Non-Ammunition Turret)
+#      81XXX - Weapons (Non-Ammunition Turret)
+#      82XXX - Weapons (Ammunition Gun)
 #      83XXX - Weapons (Ammunition Turret)
 #      84XXX - Weapons (Ammunition)
 #      85XXX - Weapons (AA Turret)

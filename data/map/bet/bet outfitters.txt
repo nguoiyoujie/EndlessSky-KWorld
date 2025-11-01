@@ -1,0 +1,14 @@
+
+outfitter "KW.Bet.All"
+	"KW.Inlos Simple Fluid Cell"
+	"KW.Inlos Biochemical Cell"
+	"KW.Inlos Biochemical Doublet"
+	"KW.Inlos Biochemical Quartet"
+	"KW.Inlos Biosynergistic Chamber"
+	"KW.Inlos Biomass Converter"
+	"KW.Keji Cohabitat Gym"
+	"KW.Keji Absorption Skin"
+	"KW.Inlos Thermoregulator"
+	"KW.Inlos Homeostatic Regulator"
+	"KW.Bet Map"
+

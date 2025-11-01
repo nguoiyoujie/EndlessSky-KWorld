@@ -1,0 +1,11 @@
+
+outfitter "KW.Hel.All"
+	"KW.Hel Smother"
+	"KW.Hel Ember"
+	"KW.Hel Blaze"
+	"KW.Hel Eruption"
+	"KW.Hel Firestorm"
+	"KW.Hel Anger Pool"
+	"KW.Hel Wrath Pool"
+	"KW.Hel Map"
+

@@ -1,4 +1,6 @@
-
+##### BET OUTFITS #####
+# See 'outfit notes.txt' for index and sort methods
+#
 
 # Fixed Weapons
 
@@ -7,21 +9,154 @@
 # Turret Weapons
 
 
-# Reactors
-
+#		[00] Reactors
+#			[1] Inlos
 outfit "KW.Inlos Simple Fluid Cell"
 	"display name" "Inlos Simple Fluid Cell"
 	category "Power"
-	series "Solar"
-	index 921010
+	series "Generators"
+	index 10200100
 	cost 10000
-	thumbnail "outfit/_wip_solar"
-	"mass" 2
-	"outfit space" -3
-	"solar collection" .2
-	"solar heat" .1
-	description "The photovoltaic cell is one of the most rudimentary of energy generation systems, harnessing the star's energy for power gain. You can place it almost anywhere on the ship's exterior."
+	thumbnail "outfit/_wip_reactor"
+	"mass" 6
+	"outfit space" -6
+	"energy generation" 0.3
+	"heat generation" 0.1
+	description `WIP`
 
+outfit "KW.Inlos Biochemical Cell"
+	"display name" "Inlos Biochemical Cell"
+	category "Power"
+	series "Generators"
+	index 10200110
+	cost 10000
+	thumbnail "outfit/_wip_reactors"
+	"mass" 21
+	"outfit space" -21
+	"energy generation" 2.05
+	"heat generation" 0.9
+	"required crew" 1
+	"bunks" 1
+	description `WIP`
+
+outfit "KW.Inlos Biochemical Doublet"
+	"display name" "Inlos Biochemical Doublet"
+	category "Power"
+	series "Generators"
+	index 10200120
+	cost 10000
+	thumbnail "outfit/_wip_reactors"
+	"mass" 38
+	"outfit space" -38
+	"energy generation" 4.15
+	"heat generation" 2.1
+	"required crew" 2
+	"bunks" 2
+	description `WIP`
+
+outfit "KW.Inlos Biochemical Quartet"
+	"display name" "Inlos Biochemical Quartet"
+	category "Power"
+	series "Generators"
+	index 10200130
+	cost 10000
+	thumbnail "outfit/_wip_reactors"
+	"mass" 70
+	"outfit space" -70
+	"energy generation" 8.35
+	"heat generation" 5.6
+	"required crew" 4
+	"bunks" 4
+	description `WIP`
+
+outfit "KW.Inlos Biosynergistic Chamber"
+	"display name" "Inlos Biosynergistic Chamber"
+	category "Power"
+	series "Generators"
+	index 10200140
+	cost 10000
+	thumbnail "outfit/_wip_reactors"
+	"mass" 156
+	"outfit space" -156
+	"energy generation" 18.2
+	"heat generation" 12.5
+	"required crew" 8
+	"bunks" 12
+	description `WIP`
+
+outfit "KW.Inlos Biomass Converter"
+	"display name" "Inlos Biomass Converter"
+	category "Power"
+	series "Generators"
+	index 10200150
+	cost 10000
+	thumbnail "outfit/_wip_reactors"
+	"mass" 167
+	"outfit space" -133
+	"energy generation" 24.6
+	"heat generation" 89
+	description `WIP`
+
+#		[00] Reactors
+#			[2] Keji
+outfit "KW.Keji Cohabitat Gym"
+	"display name" "Keji Cohabitat Gym"
+	category "Power"
+	series "Generators"
+	index 10200200
+	cost 10000
+	#thumbnail "outfit/_wip_reactors"
+	"mass" 45
+	"outfit space" -55
+	"energy generation" 3.2
+	"required crew" 1
+	"bunks" 6
+	"cooling inefficiency" 1
+	description `WIP`
+
+#		[01] Power (Solar)
+#			[2] Keji
+outfit "KW.Keji Absorption Skin"
+	"display name" "Keji Absorption Skin"
+	category "Power"
+	series "Generators"
+	index 10201200
+	cost 10000
+	#thumbnail "outfit/_wip_reactors"
+	"mass" 1
+	"outfit space" -6
+	"solar collection" 4
+	"solar heat" 12
+	"coating" -1
+	description `WIP`
+
+#		[21] Cooling (Active)
+#			[1] Inlos
+outfit "KW.Inlos Thermoregulator"
+	"display name" "Inlos Thermoregulator"
+	category "Systems"
+	series "Cooling"
+	index 10221100
+	cost 50000
+	thumbnail "outfit/_wip_cooling"
+	"mass" 5
+	"outfit space" -5
+	"active cooling" 6
+	"cooling energy" 0.1
+	description `WIP`
+
+outfit "KW.Inlos Homeostatic Regulator"
+	"display name" "Inlos Homeostatic Regulator"
+	category "Systems"
+	series "Cooling"
+	index 10221110
+	cost 50000
+	thumbnail "outfit/_wip_cooling"
+	"mass" 30
+	"outfit space" -33
+	"active cooling" 45
+	"cooling energy" 0.6
+	description `WIP`
 
 
 # Specials
@@ -29,6 +164,7 @@ outfit "KW.Inlos Simple Fluid Cell"
 outfit "KW.Bet Map"
 	"display name" "Bet Map"
 	category "Special"
+	index 10299900
 	cost 5000
 	thumbnail "outfit/map"
 	"map" 8

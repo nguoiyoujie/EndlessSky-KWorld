@@ -1,0 +1,58 @@
+##### EDRIN OUTFITS #####
+# See 'outfit notes.txt' for index and sort methods
+#
+#	[106] Edrin
+#		[19] FTL Drives
+#			[0] Generic
+
+outfit "KW.Basic Chronodrive"
+	"display name" "Basic Chronodrive"
+	category "Systems"
+	series "Drives"
+	index 10619000
+	cost 150000
+	thumbnail "outfit/hyperdrive"
+	"mass" 60
+	"outfit space" -25
+	"jump speed" .15
+	"jump fuel" 100
+	"jump mass cost" 10
+	"chronodrive attachment" 1
+	"hyperdrive" 1
+	description "It is quite a mystery how the discovery came to be, but the recent times saw quite a few breakthroughs to the topic of manipulating time. To the uninitiated, it takes a lot of energy to divert the passage of time, and it is impossible to send matter to the past. However, methods to slow time to a crawl had been achieved. The drive works on the basis of 'slowing' the sense of time during interspace travel, returning to normalcy after a determined set time. During travel, fuel is consumed at a rate depending on the mass of the ship being moved, and these too factor into the trajectory of the ship. As such, navigational computers are calibrated very carefully to ensure safe arrival within proximity to the target star. For this reason, early human exploration are limited to very bright stars."
+	description "	Despite advancements in this technology, the rate of ships spontaneously crumbling in chronospace travel due to human error, mechanical fault or interference from a celestial body remains high. This is a lottery you hope to avoid."
+
+outfit "KW.Chronodrive Fuel Recycler"
+	"display name" "Chronodrive Fuel Recycler"
+	category "Systems"
+	series "Drives"
+	index 10619001
+	cost 75000
+	#thumbnail "outfit/hyperdrive"
+	"mass" 10
+	"outfit space" -15
+	# jump attributes is not modified, only replaced
+	"jump speed" .15
+	"jump fuel" 75
+	"jump mass cost" 5
+	"hyperdrive" 1
+	"chronodrive attachment" -1
+	description "An upgrade to a chronodrive that allows some fuel to be recycled during chronospace travel. Useful for ships that carry larger tonnage for freight. Multiple recyclers do not improve recycling effort."
+
+outfit "KW.Advanced Chronodrive"
+	"display name" "Advanced Chronodrive"
+	category "Systems"
+	series "Drives"
+	index 10619010
+	cost 2500000
+	thumbnail "outfit/hyperdrive"
+	"mass" 75
+	"outfit space" -50
+	"jump speed" .35
+	"jump fuel" 50
+	"jump mass cost" 2.5
+	"hyperdrive" 1
+	"ion protection" -0.15
+	description "The advanced version of the chronodrive is able to move large masses material through space at reduced fuel cost and only a modest increase in space and mass requirements. However, this feat comes at the cost of more delicate computers and control systems, increasing the ship's vulnerability to electrical interference."
+
+

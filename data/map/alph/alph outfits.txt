@@ -1,0 +1,154 @@
+##### ALPH OUTFITS #####
+# See 'outfit notes.txt' for index and sort methods
+#
+#		[00] Reactors
+#			[0] Generic
+outfit "KW.Alph Remote Core I"
+	"display name" "Alph Remote Core I"
+	category "Power"
+	series "Generators"
+	index 10100000
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 3
+	"outfit space" -32
+	"energy generation" 5.75
+	"heat generation" 12
+	"integument attachment" -1
+	description `WIP`
+
+outfit "KW.Alph Remote Core II"
+	"display name" "Alph Remote Core II"
+	category "Power"
+	series "Generators"
+	index 10100010
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 6
+	"outfit space" -60
+	"energy generation" 12.2
+	"heat generation" 36
+	"integument attachment" -1
+	description `WIP`
+
+outfit "KW.Alph Remote Core III"
+	"display name" "Alph Remote Core III"
+	category "Power"
+	series "Generators"
+	index 10100020
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 11
+	"outfit space" -108
+	"energy generation" 26.5
+	"heat generation" 108
+	"integument attachment" -1
+	description `WIP`
+
+#		[01] Power (Solar)
+#			[0] Generic
+outfit "KW.Alph Triangle Panel"
+	"display name" "Alph Triangle Panel"
+	category "Power"
+	series "Solar"
+	index 10101000
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 2
+	"outfit space" -20
+	"solar collection" 5
+	"solar heat" 3
+	"integument attachment" -1
+	description `WIP`
+
+outfit "KW.Alph Rhombic Panel"
+	"display name" "Alph Rhombic Panel"
+	category "Power"
+	series "Solar"
+	index 10101010
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 4
+	"outfit space" -39
+	"solar collection" 9.8
+	"solar heat" 6.2
+	"integument attachment" -1
+	description `WIP`
+
+outfit "KW.Alph Trapezoid Panel"
+	"display name" "Alph Trapezoid Panel"
+	category "Power"
+	series "Solar"
+	index 10101020
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 6
+	"outfit space" -57
+	"solar collection" 14.6
+	"solar heat" 9.5
+	"integument attachment" -1
+	description `WIP`
+
+outfit "KW.Alph Hex Panel"
+	"display name" "Alph Hex Panel"
+	category "Power"
+	series "Solar"
+	index 10101030
+	cost 10000
+	#thumbnail "outfit/_wip_reactor"
+	"mass" 11
+	"outfit space" -110
+	"solar collection" 28.5
+	"solar heat" 20
+	"integument attachment" -1
+	description `WIP`
+
+#		[20] Cooling (Passive)
+#			[0] Generic
+outfit "KW.Integument Ventilation"
+	"display name" "Integument Ventilation"
+	category "Systems"
+	series "Cooling"
+	index 10120000
+	cost 50000
+	#thumbnail "outfit/_wip_cooling"
+	"mass" 2
+	"outfit space" -18
+	"cooling" 22.5
+	"heat capacity" 666
+	"integument attachment" -1
+	description `WIP`
+
+#		[21] Cooling (Active)
+#			[0] Generic
+outfit "KW.Integument Purge Ventilation"
+	"display name" "Integument Purge Ventilation"
+	category "Systems"
+	series "Cooling"
+	index 10121000
+	cost 50000
+	#thumbnail "outfit/_wip_cooling"
+	"mass" 2
+	"outfit space" -22
+	"active cooling" 75
+	"cooling energy" 3
+	"heat capacity" 666
+	"integument attachment" -1
+	description `WIP`
+
+# Specials
+
+outfit "KW.Alph Map"
+	"display name" "Alph Map"
+	category "Special"
+	index 10199900
+	cost 5000
+	thumbnail "outfit/map"
+	"map" 8
+	"map minables" 1
+	description "It is a dream that a ship captain can traverse several metropolitan systems in a row. Until then, space travel in the wild is not for the navigationally-challenged. A star map can be the difference between reaching home or being stranded without fuel. The star map is also marked with essential information such as: notable planets, ports, governments, trades and services, for those who wish to save the effort of making a personal survey themselves."
+
+#Licences
+
+
+

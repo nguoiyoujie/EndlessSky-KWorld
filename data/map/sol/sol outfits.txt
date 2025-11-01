@@ -1,168 +1,419 @@
+##### SOL OUTFITS #####
+# See 'outfit notes.txt' for index and sort methods
+#
+#	[118] Sol
+#		[00] Reactors
+#			[1] Codex Corp
+outfit "KW.CDX-FE-100 Fuel Cell"
+	"display name" "CDX-FE-100 Fuel Cell"
+	category "Power"
+	series "Generators"
+	index 11800100
+	cost 65000
+	thumbnail "outfit/CDX-FE-100 fuel cell"
+	"mass" 15
+	"outfit space" -15
+	"energy generation" 1.08
+	"heat generation" 1.83
+	description "Highly laminated membrane fuel cells are relatively simple to make and can host a wide variety of reactants, allowing it to be installed in small vessels that cannot afford more complex operations. Technically, fuel used for power generation is not a infinite resource, so this is truly a glorified battery, but let's not question the specifications."
 
-outfitter "KW.Sol.Earth 1"
-	# Codex Corp
-	"KW.CDX-PV-100 Photovoltaic Cell"
-	"KW.CDX-PV-200 Photovoltaic Array"
-	"KW.CDX-FE-100 Fuel Cell"
-	"KW.CDX-FE-200 Fuel Cell"
-	"KW.CDX-CP-100 Capacitor Array"
-	"KW.CDX-B-100 Battery"
-	"KW.CDX-B-200 Battery"
-	"KW.CDX-HC-100 Conductor"
-	"KW.CDX-HC-120 Material Conductor"
-	"KW.CDX-M-N Liquid Nitrogen Coolant"
-	"KW.CDX-M-O Liquid Oxygen Coolant"
-	"KW.CDX-M-He Liquid Helium Coolant"
-	# Traverser Systems
-	"KW.TR-1650T Ion Thruster"
-	"KW.TR-2950T Ion Thruster"
-	"KW.TR-1250S Ion Steering"
-	"KW.TR-2550S Ion Steering"
-	"KW.TRS-C Cargo Scanner"
-	"KW.Fuel Pod"
+outfit "KW.CDX-FE-200 Fuel Cell"
+	"display name" "CDX-FE-200 Fuel Cell"
+	category "Power"
+	series "Generators"
+	index 11800110
+	cost 140000
+	thumbnail "outfit/CDX-FE-200 fuel cell"
+	"mass" 32
+	"outfit space" -32
+	"energy generation" 2.58
+	"heat generation" 4.40
+	description "Placing multiple cell modules allows one cell to recharge another, freeing space used by internal charge banks for a greater throughput."
 
-outfitter "KW.Sol.Earth 2"
-	# Codex Corp
-	"KW.CDX-FE-300 Fuel Chamber"
-	"KW.CDX-FE-400 Fuel Reactor"
-	"KW.CDX-HC-200 Radiator"
-	"KW.CDX-HC-300 Ablator"
-	# Other firms
-	"KW.Space Bunk"
-	"KW.Faraday Reinforcement"
-	"KW.Fuel Tank"
+outfit "KW.CDX-FE-300 Fuel Chamber"
+	"display name" "CDX-FE-300 Fuel Chamber"
+	category "Power"
+	series "Generators"
+	index 11800120
+	licenses
+		"KW.Codex"
+	cost 420000
+	thumbnail "outfit/CDX-FE-300 fuel chamber"
+	"mass" 66
+	"outfit space" -66
+	"energy generation" 9.25
+	"heat generation" 8
+	description "At a certain size, the reactions produce enough heat to catalyze further reactions just short of combustion, granting higher energy output at the edge of risking reactant leaks."
 
+outfit "KW.CDX-FE-400 Fuel Reactor"
+	"display name" "CDX-FE-400 Fuel Reactor"
+	category "Power"
+	series "Generators"
+	index 11800130
+	licenses
+		"KW.Codex"
+	cost 1150000
+	thumbnail "outfit/CDX-FE-400 fuel reactor"
+	"mass" 124
+	"outfit space" -124
+	"energy generation" 22.22
+	"heat generation" 18.50
+	description "Seriously, if you have reached the point of combusting chemicals for juice, you could consider other reactor types. Any larger, and your ship shall be a reactor. Nevertheless, the higher energies coupled with Codex's proprietary fuel mix produces output on par with top of the line reaction chambers. "
 
-outfitter "KW.Sol.Io 1"
-	# Codex Corp
-	"KW.CDX-PV-100 Photovoltaic Cell"
-	"KW.CDX-PV-200 Photovoltaic Array"
-	"KW.CDX-FE-100 Fuel Cell"
-	"KW.CDX-FE-200 Fuel Cell"
-	"KW.CDX-CP-100 Capacitor Array"
-	"KW.CDX-B-100 Battery"
-	"KW.CDX-B-200 Battery"
-	"KW.CDX-HC-100 Conductor"
-	"KW.CDX-HC-120 Material Conductor"
-	# Traverser Systems
-	"KW.TR-1650T Ion Thruster"
-	"KW.TR-2950T Ion Thruster"
-	"KW.TR-1250S Ion Steering"
-	"KW.TR-2550S Ion Steering"
-	"KW.TR-1650R Ion Reverse Thruster"
-	"KW.TRS-C Cargo Scanner"
-	"KW.TRS-A Asteroid Scanner"
-	# ChronoLock Institute
-	"KW.Basic Chronodrive"
-	"KW.Chronodrive Fuel Recycler"
-	# Weapons
-	"KW.Beam Laser"
-	"KW.Mining Laser"
-	"KW.Focus Laser"
-	"KW.Kinetic Rod Launcher"
-	"KW.Kinetic Rod"
-	"KW.Vulcan Cannon"
-	"KW.Vulcanite"
-	"KW.Bullet Case"
-	"KW.Point Defense Turret"
-	"KW.Laser Turret"
-	"KW.Mining Laser Turret"
-	"KW.Fuel Pod"
+#		[01] Power (Solar)
+#			[1] Codex Corp
+outfit "KW.CDX-PV-100 Photovoltaic Cell"
+	"display name" "CDX-PV-100 Photovoltaic Cell"
+	category "Power"
+	series "Solar"
+	index 11801100
+	cost 10000
+	thumbnail "outfit/CDX-PV-100 pv cell"
+	"mass" 2
+	"outfit space" -3
+	"solar collection" .2
+	"solar heat" .1
+	description "The photovoltaic cell is one of the most rudimentary of energy generation systems, harnessing the star's energy for power gain. You can place it almost anywhere on the ship's exterior."
 
-outfitter "KW.Sol.Io 1B"
-	# Other firms
-	"KW.Cargo Refit"
+outfit "KW.CDX-PV-200 Photovoltaic Array"
+	"display name" "CDX-PV-200 Photovoltaic Array"
+	category "Power"
+	series "Solar"
+	index 11801110
+	cost 85000
+	thumbnail "outfit/CDX-PV-200 pv array"
+	"mass" 16
+	"outfit space" -21
+	"solar collection" 1.6
+	"solar heat" 1
+	description "For larger vessels, coupling multiple cells together allows for a more compact design. In addition, a centralized computer manages the panels, tilting them towards the direction of the most illumination, granting a further bonus to generation."
 
-outfitter "KW.Sol.Io 2"
-	# Traverser Systems
-	"KW.TRS-O Outfit Scanner"
-	"KW.TRS-M Multi Scanner"
-	"KW.TR-4500T Ion Thruster"
-	"KW.TR-6400T Ion Thruster"
-	"KW.TR-4150S Ion Steering"
-	# Other firms
-	"KW.Outfit Refit"
-	"KW.Hull Reinforcememt"
-	"KW.Fuel Tank"
-
-outfitter "KW.Sol.Marigold 1"
-	# Machine exclusives?
-	# Advanced Chronodrives
-	"KW.Basic Chronodrive"
-	"KW.Chronodrive Fuel Recycler"
-
-outfitter "KW.Sol.Ebbing Colors 1"
-	"KW.TRS-C Cargo Scanner"
-	"KW.TRS-O Outfit Scanner"
-	"KW.CDX-PV-100 Photovoltaic Cell"
-	"KW.Beam Laser"
-	"KW.Laser Turret"
-	"KW.Fuel Pod"
-
-outfitter "KW.Sol.Lepo 1"
-	"KW.CDX-PV-100 Photovoltaic Cell"
-	"KW.CDX-PV-200 Photovoltaic Array"
-	"KW.TRS-T Tactical Scanner"
-	"KW.Beam Laser"
-	"KW.Cargo Refit"
-	"KW.Space Bunk"
-	"KW.Fuel Pod"
-
-# some planets have their characteristic set of outfits
-outfitter "KW.Sol.Earth Exclusive"
-
-
-outfitter "KW.Sol.Io Exclusive"
-	"KW.Sol Map"
-
-
-
-
-# temporary outfitter for items not yet configured
-outfitter "KW.Sol.Temp"
-	"Mining Laser"
-	"Mining Laser Turret"
-	"Energy Blaster"
-	"Twin Blaster"
-	"Blaster Turret"
-	"Anti-Missile Turret"
-
-# Fixed Weapons
-
-outfit "KW.Beam Laser"
-	"display name" "Beam Laser"
-	category "Guns"
-	series "Guns"
+#		[02] Power (Storage)
+#			[1] Codex Corp
+outfit "KW.CDX-CP-100 Capacitor Array"
+	"display name" "CDX-CP-100 Capacitor Array"
+	category "Power"
+	series "Batteries"
 	index 901010
-	cost 55000
-	thumbnail "outfit/laser"
+	cost 5000
+	thumbnail "outfit/Sol-battery-wip"
+	"mass" 2
+	"outfit space" -2
+	"energy capacity" 750
+	description "Constant power generation usually fulfills a ship's energy needs. However, generators are expensive, and some systems may require a burst of power beyond generation output. In such a scenario, a captain may find it wise to invest in some energy storage."
+
+outfit "KW.CDX-B-100 Battery"
+	"display name" "CDX-B-100 Battery"
+	category "Power"
+	series "Batteries"
+	index 901020
+	cost 17500
+	thumbnail "outfit/Sol-battery-wip"
+	"mass" 15
+	"outfit space" -15
+	"energy capacity" 6600
+	description "Repurposing the CDX-FE-100 Fuel Cell into electrochemical storage, the Battery is modest power pack for short-distance travel between a few star systems. This is a deal for captains who do not require the hefty cost of a fully-featured fuel cell."
+
+outfit "KW.CDX-B-200 Battery"
+	"display name" "CDX-B-200 Battery"
+	category "Power"
+	series "Batteries"
+	index 901030
+	cost 42000
+	thumbnail "outfit/Sol-battery-wip"
+	"mass" 32
+	"outfit space" -32
+	"energy capacity" 14400
+	description "Born from the chassic of CDX-FE-200 Fuel Cell, a larger battery can allow you further distance or even particpate in a burst of energy-intensive tasks."
+
+#		[10] Main Thruster Engines
+#			[2] Traveser Systems
+outfit "KW.TR-1650T Ion Thruster"
+	"display name" "TR-1650T Ion Thruster"
+	category "Engines"
+	series "Engines"
+	index 901010
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 18
+	"outfit space" -18
+	"engine capacity" -18
+	"thrust" 16.2
+	"thrusting energy" .7
+	"thrusting heat" 1
+	"flare sprite" "effect/ion flare/tiny"
+		"frame rate" 1.2
+	"flare sound" "ion tiny"
+	description "A miniscule thruster for the smallest of ships. Larger ships will struggle to move, otherwise it gets the job done."
+
+outfit "KW.TR-2950T Ion Thruster"
+	"display name" "TR-2950T Ion Thruster"
+	category "Engines"
+	series "Engines"
+	index 901020
+	"cost" 104000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 30
+	"outfit space" -30
+	"engine capacity" -30
+	"thrust" 29.5
+	"thrusting energy" 1.6
+	"thrusting heat" 2
+	"flare sprite" "effect/ion flare/small"
+		"frame rate" 1.1
+	"flare sound" "ion small"
+	description "The standard-issue thruster for intraspace travel in Sol space, the TR-2950T offers a decent propulsion for its size. Fighters and freighters are often seen bearing this outfit, with different degrees of mobility. Remember that a ship with large mass requires stronger thrust to accelerate."
+
+outfit "KW.TR-4500T Ion Thruster"
+	"display name" "TR-4500T Ion Thruster"
+	category "Engines"
+	series "Engines"
+	index 901030
+	"cost" 196000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" -42
+	"outfit space" -42
+	"engine capacity" -42
+	"thrust" 45
+	"thrusting energy" 2.6
+	"thrusting heat" 3.1
+	"flare sprite" "effect/ion flare/medium"
+		"frame rate" 1.0
+	"flare sound" "ion medium"
+	description "The large variant of the Traverser thruster line is intended for use in heavy freighters. Should the space allows for it, it can be installed in smaller craft, if the captain wishes to boast about his speed rating. The traffic police has yet to be invented."
+
+outfit "KW.TR-6400T Ion Thruster"
+	"display name" "TR-6400T Ion Thruster"
+	category "Engines"
+	series "Engines"
+	index 901040
+	"cost" 288000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 58
+	"outfit space" -58
+	"engine capacity" -58
+	"thrust" 65
+	"thrusting energy" 3.5
+	"thrusting heat" 4
+	"flare sprite" "effect/ion flare/large"
+		"frame rate" 0.9
+	"flare sound" "ion large"
+	description "KW.TRaverser Systems built this thruster in a bid to compete with those massive systems used by the Sentient Machines. The Machines, however, prefered their own and this piece of technology is placed on the market in an attempt to recoup the cost of development."
+
+#		[11] Side Steering Engines
+#			[2] Traveser Systems
+outfit "KW.TR-1250S Ion Steering"
+	"display name" "TR-1250S Ion Steering"
+	category "Engines"
+	series "Engines"
+	index 901110
+	"cost" 45000
+	thumbnail "outfit/Sol-steering-wip"
+	"mass" 11
+	"outfit space" -11
+	"engine capacity" -11
+	"turn" 230
+	"turning energy" .25
+	"turning heat" .5
+	"flare sprite" "effect/ion flare/tiny"
+		"frame rate" 1.2
+	"steering flare sound" "ion tiny"
+	description "The portable steering thruster is mostly used on drones and single-manned craft. They can sometimes be found attached to the hull of larger ships for its low cost, with dubious results."
+
+outfit "KW.TR-2550S Ion Steering"
+	"display name" "TR-2550S Ion Steering"
+	category "Engines"
+	series "Engines"
+	index 901120
+	"cost" 94000
+	thumbnail "outfit/Sol-steering-wip"
+	"mass" 20
+	"outfit space" -20
+	"engine capacity" -20
+	"turn" 570
+	"turning energy" .55
+	"turning heat" 1.1
+	"flare sprite" "effect/ion flare/small"
+		"frame rate" 1.1
+	"steering flare sound" "ion small"
+	description "Designed for small ships, the TR-2550S steering component is one of the most popular steering systems sold and outfitted on Sol."
+
+outfit "KW.TR-4150S Ion Steering"
+	"display name" "TR-4150S Ion Steering"
+	category "Engines"
+	series "Engines"
+	index 901130
+	"cost" 94000
+	thumbnail "outfit/Sol-steering-wip"
+	"mass" 44
+	"outfit space" -44
+	"engine capacity" -44
+	"turn" 1240
+	"turning energy" 1
+	"turning heat" 2.4
+	"flare sprite" "effect/ion flare/medium"
+		"frame rate" 1.1
+	"steering flare sound" "ion medium"
+	description "Ships dedicated to the task of bulk freight would be highly advised to invest in an engine suited for their weight, as the planet Io had recorded multiple instances of foolhardy captains who cheapened out, and got their hulk of a ship into an accident because space offers little resistance to a wayward hauler with no brakes."
+
+#		[12] Rear Thruster Engines
+#			[2] Traveser Systems
+outfit "KW.TR-1650R Ion Reverse Thruster"
+	"display name" "TR-1650R Ion Reverse Thruster"
+	category "Engines"
+	series "Engines"
+	index 901140
+	"cost" 21000
+	thumbnail "outfit/Sol-rear-thruster-wip"
+	"mass" 18
+	"outfit space" -18
+	"weapon capacity" -20
+	"reverse thrust" 16.2
+	"reverse thrusting energy" .7
+	"reverse thrusting heat" 1
+	"reverse flare sprite" "effect/ion flare/tiny"
+		"frame rate" 1.2
+	"reverse flare sound" "ion tiny"
+	description "The TR-1650R, but backwards. There may be some case where a ship is too bulky, or its side steering too insufficient, to turn around in a timely manner. As such, a thruster in the opposite direction can be used to slow the ship."
+	description "	Because a reverse thruster must be facing forwards, it must be installed in the weapon section of your ship instead of the engine section. Additionally, since weapon ports were not designed to hold an engine, some adjustments had to be made and the supports would take a small premium on weapon space."
+
+#		[20] Cooling (Passive)
+#			[1] Codex Corp
+outfit "KW.CDX-HC-100 Conductor"
+	"display name" "CDX-HC-100 Conductor"
+	category "Systems"
+	series "Cooling"
+	index 11820100
+	cost 50000
+	thumbnail "outfit/_wip_cooling"
+	"mass" 6
+	"outfit space" -6
+	"cooling" 5
+	description "When out in space, your ship and its systems are vulnerable to the elements. When your systems spends a lot of energy and activity, it leaks some excess as heat. Overheating may cause subsystems to shut down. One of these may prevent that fate."
+
+outfit "KW.CDX-HC-120 Material Conductor"
+	"display name" "CDX-HC-120 Material Conductor"
+	category "Systems"
+	series "Cooling"
+	index 11820110
+	cost 150000
+	thumbnail "outfit/_wip_cooling"
+	"mass" 30
+	"outfit space" -20
+	"cooling" 25
+	"coolant liquid attachment" 1
+	description "The larger variant of the Conductor is large enough to use liquids to perform thermal exchange. The result is a heavier, but more space-efficient cooling. By default the ship uses water as the exchange medium, but other options are available as attachments"
+
+outfit "KW.CDX-M-N Liquid Nitrogen Coolant"
+	"display name" "CDX-M-N Liquid Nitrogen Coolant"
+	category "Systems"
+	series "Cooling"
+	index 11820111
+	cost 75000
+	thumbnail "outfit/_wip_cooling"
+	"mass" 5
+	"outfit space" -3
+	"cooling" 6.5
+	"coolant liquid attachment" -1
+	description "Liquid nitrogen is a basic upgrade to liquid conductors. "
+
+outfit "KW.CDX-M-O Liquid Oxygen Coolant"
+	"display name" "CDX-M-O Liquid Oxygen Coolant"
+	category "Systems"
+	series "Cooling"
+	index 11820112
+	cost 125000
+	thumbnail "outfit/_wip_fuel"
+	"mass" 5
+	"outfit space" -3
+	"cooling" 2.2
+	"fuel capacity" 100
+	"coolant liquid attachment" -1
+	description "Instead of a specialized coolant, why not repurpose our fuel to perform the job?"
+
+outfit "KW.CDX-M-He Liquid Helium Coolant"
+	"display name" "CDX-M-He Liquid Helium Coolant"
+	category "Systems"
+	series "Cooling"
+	index 11820113
+	cost 360000
+	thumbnail "outfit/_wip_cooling"
+	"mass" 14
+	"outfit space" -8
+	"cooling" 18.5
+	"coolant liquid attachment" -2
+	description "Liquid helium absorbs heat readily and has higher heat capacity than liquid nitrogen, and is a favorite choice for larger ships. The increased complexities of using helium will require the coolant be attached to two cooling systems."
+
+outfit "KW.CDX-HC-200 Radiator"
+	"display name" "CDX-HC-200 Radiator"
+	category "Systems"
+	series "Cooling"
+	index 11820120
+	licenses
+		"KW.Codex"
+	cost 375000
+	thumbnail "outfit/_wip_cooling"
+	"mass" 9
+	"outfit space" -12
+	"cooling" 22.5
+	"drag" .2
+	description "Thermal conduction merely solves half the equation for temperature regulation. Most ships have basic radiators to purge heat into the blackness of space. The Radiator features a greater surface area for greater cooling, at the slight expense of drag."
+
+#		[21] Cooling (Active)
+#			[1] Codex Corp
+outfit "KW.CDX-HC-300 Ablator"
+	"display name" "CDX-HC-300 Ablator"
+	category "Systems"
+	series "Cooling"
+	index 11821100
+	licenses
+		"KW.Codex"
+	cost 875000
+	thumbnail "outfit/_wip_cooling"
+	"mass" 55
+	"outfit space" -45
+	"active cooling" 48
+	"cooling energy" 5
+	"thrust" 4.8
+	"thrusting energy" .1
+	"thrusting heat" -.9
+	"ramscoop" -2
+	"cooling inefficiency" -2
+	description "The idea of cooling by sacrificing the very limited matter on board is at best outrageous, but Codex Corporation claims to have found a solution. With the use of ramscoop, the Ablator achieves a balance between incoming and outgoing materials, compressing incoming fuel to power a thermal exchanger and collect acculmulated heat before ejection into space. The Ablator may also be configured to point its nozzles in the direction of thrust, allowing for a little boost from the heat of the main engines."
+
+#		[31] Fuel (Storage)
+#			[0] Generic
+outfit "KW.Fuel Pod"
+	"display name" "Fuel Pod"
+	category "Systems"
+	series "Fuel"
+	index 11831000
+	cost 25000
+	thumbnail "outfit/fuel pod"
 	"mass" 8
 	"outfit space" -8
-	"weapon capacity" -8
-	"gun ports" -1
-	weapon
-		sprite "projectile/laser"
-			"frame rate" 1
-		sound "laser"
-		"hit effect" "light laser impact"
-		"inaccuracy" .5
-		"velocity" 300
-		"lifetime" 1
-		"reload" 1
-		"firing energy" .67
-		"firing heat" 1.6
-		"shield damage" .5
-		"hull damage" 1.1
-		"heat damage" .3
-		"piercing" .1
-	description `In the early years of space travel, space-faring vessels have rudimentary protection against incident radiation, rendering lasers largely ineffective. Nevertheless, lasers have been used to focus heat energy on a specific point enough to cause fragile hulls to fracture and exposing vulnerable electronics.`
-	description `	Lasers are easily dissipitated by modern shields, but can penetrate them due to their focused strength.`
+	"fuel capacity" 100
+	description "A fuel pod increases your fuel capacity, allowing your ship to make an additional hyperspace jump before it needs to land and refuel."
 
+outfit "KW.Fuel Tank"
+	"display name" "Fuel Tank"
+	category "Systems"
+	series "Fuel"
+	index 11831010
+	cost 180000
+	thumbnail "outfit/fuel pod"
+	"mass" 26
+	"outfit space" -26
+	"fuel capacity" 400
+	description "Instead of carrying numerous fuel pods, captains may opt to use a dedicated fuel storage for their long-distance travels."
+
+#		[80] Weapons (Non-Ammunition Gun)
+#			[0] Generic
 outfit "KW.Mining Laser"
 	"display name" "Mining Laser"
 	category "Guns"
 	series "Guns"
-	index 901020
+	index 11880000
 	cost 68000
 	thumbnail "outfit/mining laser"
 	"mass" 12
@@ -187,11 +438,49 @@ outfit "KW.Mining Laser"
 		"prospecting" 1
 	description `The Mining Laser is the result of an alternative development in laser technology. Calibrated to ablate only rock and sediment material, the mining laser is specialized at extracting metals and specific materials from asteroids. While the mining laser can incidentally do some damage to opposing shields and ceramic-based hulls, do not expect it to perform favorably against an opponent with a standard laser.`
 
+outfit "KW.Beam Laser"
+	"display name" "Beam Laser"
+	category "Guns"
+	series "Guns"
+	index 11880010
+	cost 55000
+	thumbnail "outfit/laser"
+	"mass" 8
+	"outfit space" -8
+	"weapon capacity" -8
+	"gun ports" -1
+	weapon
+		sprite "projectile/laser"
+			"frame rate" 1
+		sound "laser"
+		"hit effect" "light laser impact"
+		"inaccuracy" .5
+		"velocity" 300
+		"lifetime" 1
+		"reload" 1
+		"firing energy" .67
+		"firing heat" 1.6
+		"shield damage" .5
+		"hull damage" 1.1
+		"heat damage" .3
+		"piercing" .1
+	description `In the early years of space travel, space-faring vessels have rudimentary protection against incident radiation, rendering lasers largely ineffective. Nevertheless, lasers have been used to focus heat energy on a specific point enough to cause fragile hulls to fracture and exposing vulnerable electronics.`
+	description `	Lasers are easily dissipitated by modern shields, but can penetrate them due to their focused strength.`
+
+effect "light laser impact"
+	sprite "effect/laser impact"
+		"no repeat"
+		"frame rate" 30
+	"lifetime" 5
+	"random angle" 2
+	"random spin" 1
+	"velocity scale" -.005
+
 outfit "KW.Focus Laser"
 	"display name" "Focus Laser"
 	category "Guns"
 	series "Guns"
-	index 901030
+	index 11880020
 	cost 125000
 	thumbnail "outfit/heavy laser"
 	"mass" 24
@@ -216,15 +505,6 @@ outfit "KW.Focus Laser"
 	description `A heavier variant of the standard laser, the Foucs Laser offers a more concentrated beam in exchange for higher energy demands. An inexperienced pilot may find his ship overheating before he could overheat his target.`
 	description `	Lasers are easily dissipitated by modern shields, but can penetrate them due to their focused strength.`
 
-effect "light laser impact"
-	sprite "effect/laser impact"
-		"no repeat"
-		"frame rate" 30
-	"lifetime" 5
-	"random angle" 2
-	"random spin" 1
-	"velocity scale" -.005
-
 effect "focus laser impact"
 	sprite "effect/heavy laser impact"
 		"no repeat"
@@ -235,57 +515,82 @@ effect "focus laser impact"
 	"random velocity" 1
 	"velocity scale" -.007
 
-outfit "KW.Kinetic Rod Launcher"
-	"display name" "Kinetic Rod Launcher"
-	category "Secondary Weapons"
-	series "Secondary Weapons"
-	index 901010
-	cost 80000
-	#thumbnail "outfit/javelin pod"
-	"mass" 4
-	"outfit space" -12
-	"weapon capacity" -12
-	"gun ports" -1
-	"kinetic rod capacity" 24
+#		[81] Weapons (Non-Ammunition Turret)
+#			[0] Generic
+outfit "KW.Mining Laser Turret"
+	"display name" "Mining Laser Turret"
+	category "Turrets"
+	series "Turrets"
+	index 11881000
+	cost 68000
+	thumbnail "outfit/mining laser turret"
+	"mass" 18
+	"outfit space" -18
+	"weapon capacity" -18
+	"turret mounts" -1
+	"required crew" 1
 	weapon
-		sprite "projectile/javelin"
-		sound "javelin"
-		ammo "KW.Kinetic Rod"
-		icon "icon/javelin"
-		"hit effect" "tiny explosion"
-		"inaccuracy" 1.5
-		"velocity" 20
-		"lifetime" 80
-		"reload" 40
-		"firing energy" .4
-		"firing heat" 8
-		"shield damage" 32
-		"hull damage" 75
-		"hit force" 750
-		"piercing" .2
-		"missile strength" 8
-		"penetration count" 4
-		"damage dropoff" 300
-		"dropoff modifier" 0
-	description `In space, where a ships' standard radiative coating offers innate defenses against energy-based weapons, kinetic weapons promise a nasty punch to where it hurts most. The Kinetic Rod is as simple as it is effective: Slugs of tungsten-carbide slamming against delicate hull plates, crushing electronics and cracking outfit cavities. The brutality of this way of combat is a testament to humanity's prior experience in warfare, as primitive as they are.`
-	description `	Shields can often blunt the impact of the Kinetic Rod by electromagetic induction, forcing incoming rods to deviate from their trajectory and scrape the hulls at an angle. Nevertheless, Kinetic Rods are capable of inflicting damage through their sheer weight and energy.`
+		sprite "projectile/mining laser"
+			"frame rate" 1
+		"hardpoint sprite" "hardpoint/mining laser turret"
+		"hardpoint offset" 0.7 8.
+		sound "mining laser"
+		"hit effect" "light laser impact"
+		"inaccuracy" .35
+		"turret turn" 4.4
+		"velocity" 200
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1.1
+		"firing heat" 2.1
+		"shield damage" .25
+		"hull damage" 1
+		"piercing" .05
+		"minable damage" 2.1
+		"prospecting" 1
+	description `The Mining Laser Turret sacrifices some outfit space for a rotatable mount, allowing less nimble ships to extract resources from asteroids without having to move their entire ship towards them.`
+	description `	Mining Laser Turrets are designed to be used in conjunction with asteroid scanners, as being unable to target asteroids means you have to aim the weapon manually as if it were a fixed gun.`
 
-outfit "KW.Kinetic Rod"
-	"display name" "Kinetic Rod"
-	category "Ammunition"
-	series "Ammunition"
-	index 901010
-	cost 1500
-	#thumbnail "outfit/javelin"
-	"mass" 1.2
-	"kinetic rod capacity" -1
-	description "The Kinetic Rod is a tungsten-carbide rod designed to be launched using magnetoelectric propulsion from its respective launcher. You must have the launcher or a storage rack in order to purchase and use them."
+outfit "KW.Beam Laser Turret"
+	"display name" "Beam Laser Turret"
+	category "Turrets"
+	series "Turrets"
+	index 11881010
+	cost 210000
+	thumbnail "outfit/laser turret"
+	"mass" 21
+	"outfit space" -21
+	"weapon capacity" -21
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/2x laser"
+			"frame rate" 1
+		"hardpoint sprite" "hardpoint/laser turret"
+		"hardpoint offset" -0.5 8.
+		sound "laser"
+		"hit effect" "light laser impact"
+		"inaccuracy" .5
+		"turret turn" 4
+		"velocity" 300
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1.33
+		"firing heat" 3.2
+		"shield damage" 1
+		"hull damage" 2.2
+		"heat damage" .6
+		"piercing" .1
+	description `For vessels struggling to turn their ships to bring their guns to bear, the Laser Turret is a simple solution in the form of a pair of guns mounted on a rotating platform. It does require a dedicated crew to turn the turrets, but the utility of dispatching targets to the side or rear of the ship has convinced several captains to invest in this outfit.`
+	description `	Lasers are easily dissipitated by modern shields, but can penetrate them due to their focused strength.`
 
+#		[81] Weapons (Ammunition Gun)
+#			[0] Generic
 outfit "KW.Vulcan Cannon"
 	"display name" "Vulcan Cannon"
 	category "Secondary Weapons"
 	series "Secondary Weapons"
-	index 901020
+	index 11882000
 	cost 45000
 	thumbnail "outfit/gat"
 	"mass" 3
@@ -334,38 +639,48 @@ effect "vulcan impact"
 	"random angle" 40
 	"velocity scale" -.05
 
-outfit "KW.Vulcanite"
-	"display name" "Vulcanite"
-	plural "Vulcanite"
-	category "Ammunition"
-	series "Ammunition"
-	index 901020
-	cost 40
-	thumbnail "outfit/bullet"
-	"mass" .002
-	"vulcanite capacity" -1
-	description "Never underestimate the minute bullet, for the Vulcanite demands from its enemies death by a thousand spears per second. Unless it overheats."
+outfit "KW.Kinetic Rod Launcher"
+	"display name" "Kinetic Rod Launcher"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 11882010
+	cost 80000
+	thumbnail "outfit/javelin pod"
+	"mass" 4
+	"outfit space" -12
+	"weapon capacity" -12
+	"gun ports" -1
+	"kinetic rod capacity" 24
+	weapon
+		sprite "projectile/javelin"
+		sound "javelin"
+		ammo "KW.Kinetic Rod"
+		icon "icon/javelin"
+		"hit effect" "tiny explosion"
+		"inaccuracy" 1.5
+		"velocity" 20
+		"lifetime" 80
+		"reload" 40
+		"firing energy" .4
+		"firing heat" 8
+		"shield damage" 32
+		"hull damage" 75
+		"hit force" 750
+		"piercing" .2
+		"missile strength" 8
+		"penetration count" 4
+		"damage dropoff" 300
+		"dropoff modifier" 0
+	description `In space, where a ships' standard radiative coating offers innate defenses against energy-based weapons, kinetic weapons promise a nasty punch to where it hurts most. The Kinetic Rod is as simple as it is effective: Slugs of tungsten-carbide slamming against delicate hull plates, crushing electronics and cracking outfit cavities. The brutality of this way of combat is a testament to humanity's prior experience in warfare, as primitive as they are.`
+	description `	Shields can often blunt the impact of the Kinetic Rod by electromagetic induction, forcing incoming rods to deviate from their trajectory and scrape the hulls at an angle. Nevertheless, Kinetic Rods are capable of inflicting damage through their sheer weight and energy.`
 
-outfit "KW.Bullet Case"
-	"display name" "Bullet Case"
-	category "Ammunition"
-	series "Ammunition"
-	index 901021
-	cost 3000
-	thumbnail "outfit/bullet storage"
-	"mass" 2
-	"outfit space" -5
-	"vulcanite capacity" 1500
-	ammo "Gatling Gun Ammo"
-	description "Bullet Cases are used to store extra ammunition for the Vulcan Cannon and Point Defense Turret."
-
-# Turret Weapons
-
+#		[84] Weapons (AA Turret)
+#			[0] Generic
 outfit "KW.Point Defense Turret"
 	"display name" "Point Defense Turret"
 	category "Turrets"
 	series "Anti-Missile"
-	index 901010
+	index 11884000
 	cost 60000
 	thumbnail "outfit/anti-missile"
 	"mass" 16
@@ -386,490 +701,51 @@ outfit "KW.Point Defense Turret"
 		"firing heat" 3
 	description `The Close-In Weapon System suite had served water-bound vessels well in conflicts on the surface world of Sol. The Point Defense is an extension of this philosophy - that large incoming ordinaces can be targeted by and defused with a high-density volley of fire. Captains who use this brand of turret should take care to stock ample amounts of ammunition, lest they be caught with an empty magazine.`
 
-outfit "KW.Laser Turret"
-	"display name" "Laser Turret"
-	category "Turrets"
-	series "Turrets"
-	index 901010
-	cost 210000
-	thumbnail "outfit/laser turret"
-	"mass" 21
-	"outfit space" -21
-	"weapon capacity" -21
-	"turret mounts" -1
-	"required crew" 1
-	weapon
-		sprite "projectile/2x laser"
-			"frame rate" 1
-		"hardpoint sprite" "hardpoint/laser turret"
-		"hardpoint offset" -0.5 8.
-		sound "laser"
-		"hit effect" "light laser impact"
-		"inaccuracy" .5
-		"turret turn" 4
-		"velocity" 300
-		"lifetime" 1
-		"reload" 1
-		"firing energy" 1.33
-		"firing heat" 3.2
-		"shield damage" 1
-		"hull damage" 2.2
-		"heat damage" .6
-		"piercing" .1
-	description `For vessels struggling to turn their ships to bring their guns to bear, the Laser Turret is a simple solution in the form of a pair of guns mounted on a rotating platform. It does require a dedicated crew to turn the turrets, but the utility of dispatching targets to the side or rear of the ship has convinced several captains to invest in this outfit.`
-	description `	Lasers are easily dissipitated by modern shields, but can penetrate them due to their focused strength.`
+#		[85] Weapons (Ammunition)
+#			[0] Generic
+outfit "KW.Vulcanite"
+	"display name" "Vulcanite"
+	plural "Vulcanite"
+	category "Ammunition"
+	series "Ammunition"
+	index 11885000
+	cost 40
+	thumbnail "outfit/bullet"
+	"mass" .002
+	"vulcanite capacity" -1
+	description "Never underestimate the minute bullet, for the Vulcanite demands from its enemies death by a thousand spears per second. Unless it overheats."
 
-outfit "KW.Mining Laser Turret"
-	"display name" "Mining Laser Turret"
-	category "Turrets"
-	series "Turrets"
-	index 901020
-	cost 68000
-	thumbnail "outfit/mining laser turret"
-	"mass" 18
-	"outfit space" -18
-	"weapon capacity" -18
-	"turret mounts" -1
-	"required crew" 1
-	weapon
-		sprite "projectile/mining laser"
-			"frame rate" 1
-		"hardpoint sprite" "hardpoint/mining laser turret"
-		"hardpoint offset" 0.7 8.
-		sound "mining laser"
-		"hit effect" "light laser impact"
-		"inaccuracy" .35
-		"turret turn" 4.4
-		"velocity" 200
-		"lifetime" 1
-		"reload" 1
-		"firing energy" 1.1
-		"firing heat" 2.1
-		"shield damage" .25
-		"hull damage" 1
-		"piercing" .05
-		"minable damage" 2.1
-		"prospecting" 1
-	description `The Mining Laser Turret sacrifices some outfit space for a rotatable mount, allowing less nimble ships to extract resources from asteroids without having to move their entire ship towards them.`
-	description `	Mining Laser Turrets are designed to be used in conjunction with asteroid scanners, as being unable to target asteroids means you have to aim the weapon manually as if it were a fixed gun.`
-
-
-# Reactors
-
-outfit "KW.CDX-PV-100 Photovoltaic Cell"
-	"display name" "CDX-PV-100 Photovoltaic Cell"
-	category "Power"
-	series "Solar"
-	index 901010
-	cost 10000
-	thumbnail "outfit/_wip_solar"
+outfit "KW.Bullet Case"
+	"display name" "Bullet Case"
+	category "Ammunition"
+	series "Ammunition"
+	index 11885001
+	cost 3000
+	thumbnail "outfit/bullet storage"
 	"mass" 2
-	"outfit space" -3
-	"solar collection" .2
-	"solar heat" .1
-	description "The photovoltaic cell is one of the most rudimentary of energy generation systems, harnessing the star's energy for power gain. You can place it almost anywhere on the ship's exterior."
+	"outfit space" -5
+	"vulcanite capacity" 1500
+	ammo "Gatling Gun Ammo"
+	description "Bullet Cases are used to store extra ammunition for the Vulcan Cannon and Point Defense Turret."
 
-outfit "KW.CDX-PV-200 Photovoltaic Array"
-	"display name" "CDX-PV-200 Photovoltaic Array"
-	category "Power"
-	series "Solar"
-	index 901020
-	cost 85000
-	thumbnail "outfit/_wip_solar"
-	"mass" 16
-	"outfit space" -21
-	"solar collection" 1.6
-	"solar heat" 1
-	description "For larger vessels, coupling multiple cells together allows for a more compact design. In addition, a centralized computer manages the panels, tilting them towards the direction of the most illumination, granting a further bonus to generation."
+outfit "KW.Kinetic Rod"
+	"display name" "Kinetic Rod"
+	category "Ammunition"
+	series "Ammunition"
+	index 11885010
+	cost 1500
+	thumbnail "outfit/javelin"
+	"mass" 1.2
+	"kinetic rod capacity" -1
+	description "The Kinetic Rod is a tungsten-carbide rod designed to be launched using magnetoelectric propulsion from its respective launcher. You must have the launcher or a storage rack in order to purchase and use them."
 
-outfit "KW.CDX-FE-100 Fuel Cell"
-	"display name" "CDX-FE-100 Fuel Cell"
-	category "Power"
-	series "Generators"
-	index 901030
-	cost 65000
-	thumbnail "outfit/_wip_reactor"
-	"mass" 15
-	"outfit space" -15
-	"energy generation" 1.08
-	"heat generation" 1.83
-	description "Highly laminated membrane fuel cells are relatively simple to make and can host a wide variety of reactants, allowing it to be installed in small vessels that cannot afford more complex operations. Technically, fuel used for power generation is not a infinite resource, so this is truly a glorified battery, but let's not question the specifications."
-
-outfit "KW.CDX-FE-200 Fuel Cell"
-	"display name" "CDX-FE-200 Fuel Cell"
-	category "Power"
-	series "Generators"
-	index 901040
-	cost 140000
-	thumbnail "outfit/_wip_reactor"
-	"mass" 32
-	"outfit space" -32
-	"energy generation" 2.58
-	"heat generation" 4.40
-	description "Placing multiple cell modules allows one cell to recharge another, freeing space used by internal charge banks for a greater throughput."
-
-outfit "KW.CDX-FE-300 Fuel Chamber"
-	"display name" "CDX-FE-300 Fuel Chamber"
-	category "Power"
-	series "Generators"
-	index 901050
-	licenses
-		"KW.Codex"
-	cost 420000
-	thumbnail "outfit/_wip_reactor"
-	"mass" 66
-	"outfit space" -66
-	"energy generation" 9.25
-	"heat generation" 8
-	description "At a certain size, the reactions produce enough heat to catalyze further reactions just short of combustion, granting higher energy output at the edge of risking reactant leaks."
-
-outfit "KW.CDX-FE-400 Fuel Reactor"
-	"display name" "CDX-FE-400 Fuel Reactor"
-	category "Power"
-	series "Generators"
-	index 901060
-	licenses
-		"KW.Codex"
-	cost 1150000
-	thumbnail "outfit/_wip_reactor"
-	"mass" 124
-	"outfit space" -124
-	"energy generation" 22.22
-	"heat generation" 18.50
-	description "Seriously, if you have reached the point of combusting chemicals for juice, you could consider other reactor types. Any larger, and your ship shall be a reactor. Nevertheless, the higher energies coupled with Codex's proprietary fuel mix produces output on par with top of the line reaction chambers. "
-
-# Energy Storage
-
-outfit "KW.CDX-CP-100 Capacitor Array"
-	"display name" "CDX-CP-100 Capacitor Array"
-	category "Power"
-	series "Batteries"
-	index 901010
-	cost 5000
-	thumbnail "outfit/_wip_battery"
-	"mass" 2
-	"outfit space" -2
-	"energy capacity" 750
-	description "Constant power generation usually fulfills a ship's energy needs. However, generators are expensive, and some systems may require a burst of power beyond generation output. In such a scenario, a captain may find it wise to invest in some energy storage."
-
-outfit "KW.CDX-B-100 Battery"
-	"display name" "CDX-B-100 Battery"
-	category "Power"
-	series "Batteries"
-	index 901020
-	cost 17500
-	thumbnail "outfit/_wip_battery"
-	"mass" 15
-	"outfit space" -15
-	"energy capacity" 6600
-	description "Repurposing the CDX-FE-100 Fuel Cell into electrochemical storage, the Battery is modest power pack for short-distance travel between a few star systems. This is a deal for captains who do not require the hefty cost of a fully-featured fuel cell."
-
-outfit "KW.CDX-B-200 Battery"
-	"display name" "CDX-B-200 Battery"
-	category "Power"
-	series "Batteries"
-	index 901030
-	cost 42000
-	thumbnail "outfit/_wip_battery"
-	"mass" 32
-	"outfit space" -32
-	"energy capacity" 14400
-	description "Born from the chassic of CDX-FE-200 Fuel Cell, a larger battery can allow you further distance or even particpate in a burst of energy-intensive tasks."
-
-# Main Engines
-
-outfit "KW.TR-1650T Ion Thruster"
-	"display name" "TR-1650T Ion Thruster"
-	category "Engines"
-	series "Engines"
-	index 901010
-	"cost" 65000
-	thumbnail "outfit/_wip_thruster"
-	"mass" 18
-	"outfit space" -18
-	"engine capacity" -18
-	"thrust" 16.2
-	"thrusting energy" .7
-	"thrusting heat" 1
-	"flare sprite" "effect/ion flare/tiny"
-		"frame rate" 1.2
-	"flare sound" "ion tiny"
-	description "A miniscule thruster for the smallest of ships. Larger ships will struggle to move, otherwise it gets the job done."
-
-outfit "KW.TR-2950T Ion Thruster"
-	"display name" "TR-2950T Ion Thruster"
-	category "Engines"
-	series "Engines"
-	index 901020
-	"cost" 104000
-	thumbnail "outfit/_wip_thruster"
-	"mass" 30
-	"outfit space" -30
-	"engine capacity" -30
-	"thrust" 29.5
-	"thrusting energy" 1.6
-	"thrusting heat" 2
-	"flare sprite" "effect/ion flare/small"
-		"frame rate" 1.1
-	"flare sound" "ion small"
-	description "The standard-issue thruster for intraspace travel in Sol space, the TR-2950T offers a decent propulsion for its size. Fighters and freighters are often seen bearing this outfit, with different degrees of mobility. Remember that a ship with large mass requires stronger thrust to accelerate."
-
-outfit "KW.TR-4500T Ion Thruster"
-	"display name" "TR-4500T Ion Thruster"
-	category "Engines"
-	series "Engines"
-	index 901030
-	"cost" 196000
-	thumbnail "outfit/_wip_thruster"
-	"mass" -42
-	"outfit space" -42
-	"engine capacity" -42
-	"thrust" 45
-	"thrusting energy" 2.6
-	"thrusting heat" 3.1
-	"flare sprite" "effect/ion flare/medium"
-		"frame rate" 1.0
-	"flare sound" "ion medium"
-	description "The large variant of the Traverser thruster line is intended for use in heavy freighters. Should the space allows for it, it can be installed in smaller craft, if the captain wishes to boast about his speed rating. The traffic police has yet to be invented."
-
-outfit "KW.TR-6400T Ion Thruster"
-	"display name" "TR-6400T Ion Thruster"
-	category "Engines"
-	series "Engines"
-	index 901040
-	"cost" 288000
-	thumbnail "outfit/_wip_thruster"
-	"mass" 58
-	"outfit space" -58
-	"engine capacity" -58
-	"thrust" 65
-	"thrusting energy" 3.5
-	"thrusting heat" 4
-	"flare sprite" "effect/ion flare/large"
-		"frame rate" 0.9
-	"flare sound" "ion large"
-	description "KW.TRaverser Systems built this thruster in a bid to compete with those massive systems used by the Sentient Machines. The Machines, however, prefered their own and this piece of technology is placed on the market in an attempt to recoup the cost of development."
-
-# Steering Engines
-
-outfit "KW.TR-1250S Ion Steering"
-	"display name" "TR-1250S Ion Steering"
-	category "Engines"
-	series "Engines"
-	index 901110
-	"cost" 45000
-	thumbnail "outfit/_wip_steering"
-	"mass" 11
-	"outfit space" -11
-	"engine capacity" -11
-	"turn" 230
-	"turning energy" .25
-	"turning heat" .5
-	"flare sprite" "effect/ion flare/tiny"
-		"frame rate" 1.2
-	"steering flare sound" "ion tiny"
-	description "The portable steering thruster is mostly used on drones and single-manned craft. They can sometimes be found attached to the hull of larger ships for its low cost, with dubious results."
-
-outfit "KW.TR-2550S Ion Steering"
-	"display name" "TR-2550S Ion Steering"
-	category "Engines"
-	series "Engines"
-	index 901120
-	"cost" 94000
-	thumbnail "outfit/_wip_steering"
-	"mass" 20
-	"outfit space" -20
-	"engine capacity" -20
-	"turn" 570
-	"turning energy" .55
-	"turning heat" 1.1
-	"flare sprite" "effect/ion flare/small"
-		"frame rate" 1.1
-	"steering flare sound" "ion small"
-	description "Designed for small ships, the TR-2550S steering component is one of the most popular steering systems sold and outfitted on Sol."
-
-outfit "KW.TR-4150S Ion Steering"
-	"display name" "TR-4150S Ion Steering"
-	category "Engines"
-	series "Engines"
-	index 901130
-	"cost" 94000
-	thumbnail "outfit/_wip_steering"
-	"mass" 44
-	"outfit space" -44
-	"engine capacity" -44
-	"turn" 1240
-	"turning energy" 1
-	"turning heat" 2.4
-	"flare sprite" "effect/ion flare/medium"
-		"frame rate" 1.1
-	"steering flare sound" "ion medium"
-	description "Ships dedicated to the task of bulk freight would be highly advised to invest in an engine suited for their weight, as the planet Io had recorded multiple instances of foolhardy captains who cheapened out, and got their hulk of a ship into an accident because space offers little resistance to a wayward hauler with no brakes."
-
-outfit "KW.TR-1650R Ion Reverse Thruster"
-	"display name" "TR-1650R Ion Reverse Thruster"
-	category "Engines"
-	series "Engines"
-	index 901140
-	"cost" 21000
-	thumbnail "outfit/_wip_rearthruster"
-	"mass" 18
-	"outfit space" -18
-	"weapon capacity" -20
-	"reverse thrust" 16.2
-	"reverse thrusting energy" .7
-	"reverse thrusting heat" 1
-	"reverse flare sprite" "effect/ion flare/tiny"
-		"frame rate" 1.2
-	"reverse flare sound" "ion tiny"
-	description "The TR-1650R, but backwards. There may be some case where a ship is too bulky, or its side steering too insufficient, to turn around in a timely manner. As such, a thruster in the opposite direction can be used to slow the ship."
-	description "	Because a reverse thruster must be facing forwards, it must be installed in the weapon section of your ship instead of the engine section. Additionally, since weapon ports were not designed to hold an engine, some adjustments had to be made and the supports would take a small premium on weapon space."
-
-# Drive
-
-outfit "KW.Basic Chronodrive"
-	"display name" "Basic Chronodrive"
-	category "Systems"
-	series "Drives"
-	index 900010
-	cost 150000
-	#thumbnail "outfit/hyperdrive"
-	"mass" 60
-	"outfit space" -25
-	"jump speed" .15
-	"jump fuel" 100
-	"jump mass cost" 10
-	"chronodrive attachment" 1
-	"hyperdrive" 1
-	description "It is quite a mystery how the discovery came to be, but the recent times saw quite a few breakthroughs to the topic of manipulating time. To the uninitiated, it takes a lot of energy to divert the passage of time, and it is impossible to send matter to the past. However, methods to slow time to a crawl had been achieved. The drive works on the basis of 'slowing' the sense of time during interspace travel, returning to normalcy after a determined set time. During travel, fuel is consumed at a rate depending on the mass of the ship being moved, and these too factor into the trajectory of the ship. As such, navigational computers are calibrated very carefully to ensure safe arrival within proximity to the target star. For this reason, early human exploration are limited to very bright stars."
-	description "	Despite advancements in this technology, the rate of ships spontaneously crumbling in chronospace travel due to human error, mechanical fault or interference from a celestial body remains high. This is a lottery you hope to avoid."
-
-outfit "KW.Chronodrive Fuel Recycler"
-	"display name" "Chronodrive Fuel Recycler"
-	category "Systems"
-	series "Drives"
-	index 900020
-	cost 75000
-	#thumbnail "outfit/hyperdrive"
-	"mass" 10
-	"outfit space" -15
-	# jump attributes is not modified, only replaced
-	"jump speed" .15
-	"jump fuel" 75
-	"jump mass cost" 5
-	"hyperdrive" 1
-	"chronodrive attachment" -1
-	description "An upgrade to a chronodrive that allows some fuel to be recycled during chronospace travel. Useful for ships that carry larger tonnage for freight. Multiple recyclers do not improve recycling effort."
-
-# Cooling Systems
-
-outfit "KW.CDX-HC-100 Conductor"
-	"display name" "CDX-HC-100 Conductor"
-	category "Systems"
-	series "Cooling"
-	index 901010
-	cost 50000
-	thumbnail "outfit/_wip_cooling"
-	"mass" 6
-	"outfit space" -6
-	"cooling" 5
-	description "When out in space, your ship and its systems are vulnerable to the elements. When your systems spends a lot of energy and activity, it leaks some excess as heat. Overheating may cause subsystems to shut down. One of these may prevent that fate."
-
-outfit "KW.CDX-HC-120 Material Conductor"
-	"display name" "CDX-HC-120 Material Conductor"
-	category "Systems"
-	series "Cooling"
-	index 901020
-	cost 150000
-	thumbnail "outfit/_wip_cooling"
-	"mass" 30
-	"outfit space" -20
-	"cooling" 25
-	"coolant liquid attachment" 1
-	description "The larger variant of the Conductor is large enough to use liquids to perform thermal exchange. The result is a heavier, but more space-efficient cooling. By default the ship uses water as the exchange medium, but other options are available as attachments"
-
-outfit "KW.CDX-M-N Liquid Nitrogen Coolant"
-	"display name" "CDX-M-N Liquid Nitrogen Coolant"
-	category "Systems"
-	series "Cooling"
-	index 901030
-	cost 75000
-	thumbnail "outfit/_wip_cooling"
-	"mass" 5
-	"outfit space" -3
-	"cooling" 6.5
-	"coolant liquid attachment" -1
-	description "Liquid nitrogen is a basic upgrade to liquid conductors. "
-
-outfit "KW.CDX-M-O Liquid Oxygen Coolant"
-	"display name" "CDX-M-O Liquid Oxygen Coolant"
-	category "Systems"
-	series "Cooling"
-	index 901040
-	cost 125000
-	thumbnail "outfit/_wip_fuel"
-	"mass" 5
-	"outfit space" -3
-	"cooling" 2.2
-	"fuel capacity" 100
-	"coolant liquid attachment" -1
-	description "Instead of a specialized coolant, why not repurpose our fuel to perform the job?"
-
-outfit "KW.CDX-M-He Liquid Helium Coolant"
-	"display name" "CDX-M-He Liquid Helium Coolant"
-	category "Systems"
-	series "Cooling"
-	index 901050
-	cost 360000
-	thumbnail "outfit/_wip_cooling"
-	"mass" 14
-	"outfit space" -8
-	"cooling" 18.5
-	"coolant liquid attachment" -2
-	description "Liquid helium absorbs heat readily and has higher heat capacity than liquid nitrogen, and is a favorite choice for larger ships. The increased complexities of using helium will require the coolant be attached to two cooling systems."
-
-outfit "KW.CDX-HC-200 Radiator"
-	"display name" "CDX-HC-200 Radiator"
-	category "Systems"
-	series "Cooling"
-	index 901060
-	licenses
-		"KW.Codex"
-	cost 375000
-	thumbnail "outfit/_wip_cooling"
-	"mass" 9
-	"outfit space" -12
-	"cooling" 22.5
-	"drag" .2
-	description "Thermal conduction merely solves half the equation for temperature regulation. Most ships have basic radiators to purge heat into the blackness of space. The Radiator features a greater surface area for greater cooling, at the slight expense of drag."
-
-outfit "KW.CDX-HC-300 Ablator"
-	"display name" "CDX-HC-300 Ablator"
-	category "Systems"
-	series "Cooling"
-	index 901070
-	licenses
-		"KW.Codex"
-	cost 875000
-	thumbnail "outfit/_wip_cooling"
-	"mass" 55
-	"outfit space" -45
-	"active cooling" 48
-	"cooling energy" 5
-	"thrust" 4.8
-	"thrusting energy" .1
-	"thrusting heat" -.9
-	"ramscoop" -2
-	"cooling inefficiency" -2
-	description "The idea of cooling by sacrificing the very limited matter on board is at best outrageous, but Codex Corporation claims to have found a solution. With the use of ramscoop, the Ablator achieves a balance between incoming and outgoing materials, compressing incoming fuel to power a thermal exchanger and collect acculmulated heat before ejection into space. The Ablator may also be configured to point its nozzles in the direction of thrust, allowing for a little boost from the heat of the main engines."
-
-# Utility
-
+#		[86] Scanners
+#			[2] Traveser Systems
 outfit "KW.TRS-C Cargo Scanner"
 	"display name" "TRS-C Cargo Scanner"
 	category "Systems"
 	series "Scanners"
-	index 901010
+	index 11886200
 	cost 8000
 	thumbnail "outfit/_wip_scanner"
 	"mass" 1
@@ -882,7 +758,7 @@ outfit "KW.TRS-O Outfit Scanner"
 	"display name" "TRS-O Outfit Scanner"
 	category "Systems"
 	series "Scanners"
-	index 901020
+	index 11886210
 	cost 24000
 	thumbnail "outfit/_wip_scanner"
 	"mass" 2
@@ -895,7 +771,7 @@ outfit "KW.TRS-A Asteroid Scanner"
 	"display name" "TRS-A Asteroid Scanner"
 	category "Systems"
 	series "Scanners"
-	index 901030
+	index 11886220
 	cost 61000
 	thumbnail "outfit/_wip_scanner"
 	"mass" 6
@@ -907,7 +783,7 @@ outfit "KW.TRS-T Tactical Scanner"
 	"display name" "TRS-T Tactical Scanner"
 	category "Systems"
 	series "Scanners"
-	index 901040
+	index 11886230
 	cost 144000
 	thumbnail "outfit/_wip_scanner"
 	"mass" 2
@@ -919,7 +795,7 @@ outfit "KW.TRS-M Multi Scanner"
 	"display name" "TRS-M Multi Scanner"
 	category "Systems"
 	series "Scanners"
-	index 901050
+	index 11886240
 	cost 122500
 	thumbnail "outfit/_wip_scanner"
 	"mass" 7
@@ -932,11 +808,13 @@ outfit "KW.TRS-M Multi Scanner"
 	"tactical scan power" 7
 	description "This scanner was the birthchild of Traverser Systems and the Institute of Robotics and Cybernetics (InsARC) in joint development of a multipurpose remote scanner. This device targets other ships, so asteroids are not part of the scan criteria."
 
+#		[90] Refits
+#			[0] Generic
 outfit "KW.Cargo Refit"
 	"display name" "Cargo Refit"
 	category "Systems"
 	series "Expansions"
-	index 901010
+	index 11890000
 	cost 50000
 	thumbnail "outfit/_wip_cargo"
 	"mass" 5
@@ -951,7 +829,7 @@ outfit "KW.Outfit Refit"
 	"display name" "Outfit Refit"
 	category "Systems"
 	series "Expansions"
-	index 901020
+	index 11890010
 	cost 50000
 	#thumbnail "outfit/_wip_cargo-"
 	"mass" 5
@@ -965,7 +843,7 @@ outfit "KW.Space Bunk"
 	"display name" "Space Bunk"
 	category "Systems"
 	series "Expansions"
-	index 901030
+	index 11890020
 	cost 50000
 	#thumbnail "outfit/_wip_cargo-"
 	"mass" 5
@@ -978,7 +856,7 @@ outfit "KW.Hull Reinforcememt"
 	"display name" "Hull Reinforcememt"
 	category "Systems"
 	series "Expansions"
-	index 901040
+	index 11890030
 	cost 100000
 	#thumbnail "outfit/cargo expansion"
 	"mass" 25
@@ -998,7 +876,7 @@ outfit "KW.Faraday Reinforcement"
 	"display name" "Faraday Reinforcememt"
 	category "Systems"
 	series "Expansions"
-	index 901050
+	index 11890040
 	cost 100000
 	#thumbnail "outfit/cargo expansion"
 	"mass" 15
@@ -1026,35 +904,13 @@ outfit "KW.Faraday Reinforcement"
 #	"unplunderable" 1
 #	description "The "
 
-outfit "KW.Fuel Pod"
-	"display name" "Fuel Pod"
-	category "Systems"
-	series "Fuel"
-	index 901010
-	cost 25000
-	thumbnail "outfit/fuel pod"
-	"mass" 8
-	"outfit space" -8
-	"fuel capacity" 100
-	description "A fuel pod increases your fuel capacity, allowing your ship to make an additional hyperspace jump before it needs to land and refuel."
-
-outfit "KW.Fuel Tank"
-	"display name" "Fuel Tank"
-	category "Systems"
-	series "Fuel"
-	index 901020
-	cost 180000
-	thumbnail "outfit/fuel pod"
-	"mass" 26
-	"outfit space" -26
-	"fuel capacity" 400
-	description "Instead of carrying numerous fuel pods, captains may opt to use a dedicated fuel storage for their long-distance travels."
 
 # Specials
 
 outfit "KW.Sol Map"
 	"display name" "Sol Map"
 	category "Special"
+	index 11899900
 	cost 5000
 	thumbnail "outfit/map"
 	"map" 8

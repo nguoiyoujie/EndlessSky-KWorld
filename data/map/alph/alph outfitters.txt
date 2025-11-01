@@ -1,0 +1,12 @@
+
+outfitter "KW.Alph.All"
+	"KW.Alph Remote Core I"
+	"KW.Alph Remote Core II"
+	"KW.Alph Remote Core III"
+	"KW.Alph Triangle Panel"
+	"KW.Alph Rhombic Panel"
+	"KW.Alph Trapezoid Panel"
+	"KW.Alph Hex Panel"
+	"KW.Integument Ventilation"
+	"KW.Integument Purge Ventilation"
+	"KW.Alph Map"

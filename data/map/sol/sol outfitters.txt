@@ -1,0 +1,128 @@
+
+outfitter "KW.Sol.Earth 1"
+	# Codex Corp
+	"KW.CDX-PV-100 Photovoltaic Cell"
+	"KW.CDX-PV-200 Photovoltaic Array"
+	"KW.CDX-FE-100 Fuel Cell"
+	"KW.CDX-FE-200 Fuel Cell"
+	"KW.CDX-CP-100 Capacitor Array"
+	"KW.CDX-B-100 Battery"
+	"KW.CDX-B-200 Battery"
+	"KW.CDX-HC-100 Conductor"
+	"KW.CDX-HC-120 Material Conductor"
+	"KW.CDX-M-N Liquid Nitrogen Coolant"
+	"KW.CDX-M-O Liquid Oxygen Coolant"
+	"KW.CDX-M-He Liquid Helium Coolant"
+	# Traverser Systems
+	"KW.TR-1650T Ion Thruster"
+	"KW.TR-2950T Ion Thruster"
+	"KW.TR-1250S Ion Steering"
+	"KW.TR-2550S Ion Steering"
+	"KW.TRS-C Cargo Scanner"
+	"KW.Fuel Pod"
+
+outfitter "KW.Sol.Earth 2"
+	# Codex Corp
+	"KW.CDX-FE-300 Fuel Chamber"
+	"KW.CDX-FE-400 Fuel Reactor"
+	"KW.CDX-HC-200 Radiator"
+	"KW.CDX-HC-300 Ablator"
+	# Other firms
+	"KW.Space Bunk"
+	"KW.Faraday Reinforcement"
+	"KW.Fuel Tank"
+
+
+outfitter "KW.Sol.Io 1"
+	# Codex Corp
+	"KW.CDX-PV-100 Photovoltaic Cell"
+	"KW.CDX-PV-200 Photovoltaic Array"
+	"KW.CDX-FE-100 Fuel Cell"
+	"KW.CDX-FE-200 Fuel Cell"
+	"KW.CDX-CP-100 Capacitor Array"
+	"KW.CDX-B-100 Battery"
+	"KW.CDX-B-200 Battery"
+	"KW.CDX-HC-100 Conductor"
+	"KW.CDX-HC-120 Material Conductor"
+	# Traverser Systems
+	"KW.TR-1650T Ion Thruster"
+	"KW.TR-2950T Ion Thruster"
+	"KW.TR-1250S Ion Steering"
+	"KW.TR-2550S Ion Steering"
+	"KW.TR-1650R Ion Reverse Thruster"
+	"KW.TRS-C Cargo Scanner"
+	"KW.TRS-A Asteroid Scanner"
+	# ChronoLock Institute
+	"KW.Basic Chronodrive"
+	"KW.Chronodrive Fuel Recycler"
+	# Weapons
+	"KW.Beam Laser"
+	"KW.Mining Laser"
+	"KW.Focus Laser"
+	"KW.Kinetic Rod Launcher"
+	"KW.Kinetic Rod"
+	"KW.Vulcan Cannon"
+	"KW.Vulcanite"
+	"KW.Bullet Case"
+	"KW.Point Defense Turret"
+	"KW.Mining Laser Turret"
+	"KW.Beam Laser Turret"
+	"KW.Fuel Pod"
+
+outfitter "KW.Sol.Io 1B"
+	# Other firms
+	"KW.Cargo Refit"
+
+outfitter "KW.Sol.Io 2"
+	# Traverser Systems
+	"KW.TRS-O Outfit Scanner"
+	"KW.TRS-M Multi Scanner"
+	"KW.TR-4500T Ion Thruster"
+	"KW.TR-6400T Ion Thruster"
+	"KW.TR-4150S Ion Steering"
+	# Other firms
+	"KW.Outfit Refit"
+	"KW.Hull Reinforcememt"
+	"KW.Fuel Tank"
+
+outfitter "KW.Sol.Marigold 1"
+	# Machine exclusives?
+	# Advanced Chronodrives
+	"KW.Basic Chronodrive"
+	"KW.Chronodrive Fuel Recycler"
+
+outfitter "KW.Sol.Ebbing Colors 1"
+	"KW.TRS-C Cargo Scanner"
+	"KW.TRS-O Outfit Scanner"
+	"KW.CDX-PV-100 Photovoltaic Cell"
+	"KW.Beam Laser"
+	"KW.Beam Laser Turret"
+	"KW.Fuel Pod"
+
+outfitter "KW.Sol.Lepo 1"
+	"KW.CDX-PV-100 Photovoltaic Cell"
+	"KW.CDX-PV-200 Photovoltaic Array"
+	"KW.TRS-T Tactical Scanner"
+	"KW.Beam Laser"
+	"KW.Cargo Refit"
+	"KW.Space Bunk"
+	"KW.Fuel Pod"
+
+# some planets have their characteristic set of outfits
+outfitter "KW.Sol.Earth Exclusive"
+
+
+outfitter "KW.Sol.Io Exclusive"
+	"KW.Sol Map"
+
+
+
+
+# temporary outfitter for items not yet configured
+outfitter "KW.Sol.Temp"
+	"Mining Laser"
+	"Mining Laser Turret"
+	"Energy Blaster"
+	"Twin Blaster"
+	"Blaster Turret"
+	"Anti-Missile Turret"
