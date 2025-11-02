@@ -296,8 +296,11 @@
 #		[82] Weapons (Ammunition Gun)
 #			[0] Generic
 #				11882000	"KW.Vulcan Cannon"
+#				11882001	"KW.Vulcan Storm"
 #				11882010	"KW.Kinetic Rod Launcher"
 #		[83] Weapons (Ammunition Turret)
+#				11883000	"KW.Vulcan Turret"
+#				11883010	"KW.Kinetic Rod Turret"
 #		[84] Weapons (AA Turret)
 #			[0] Generic
 #				11884000	"KW.Point Defense Turret"
@@ -306,6 +309,7 @@
 #				11885000	"KW.Vulcanite"
 #					11885001	"KW.Bullet Case"
 #				11885010	"KW.Kinetic Rod"
+#					11885011	"KW.Rod Stocker"
 #		[86] Scanners
 #			[2] Traveser Systems
 #				11886200	"KW.TRS-C Cargo Scanner"

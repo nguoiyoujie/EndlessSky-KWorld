@@ -584,7 +584,7 @@ outfit "KW.Beam Laser Turret"
 	description `For vessels struggling to turn their ships to bring their guns to bear, the Laser Turret is a simple solution in the form of a pair of guns mounted on a rotating platform. It does require a dedicated crew to turn the turrets, but the utility of dispatching targets to the side or rear of the ship has convinced several captains to invest in this outfit.`
 	description `	Lasers are easily dissipitated by modern shields, but can penetrate them due to their focused strength.`
 
-#		[81] Weapons (Ammunition Gun)
+#		[82] Weapons (Ammunition Gun)
 #			[0] Generic
 outfit "KW.Vulcan Cannon"
 	"display name" "Vulcan Cannon"
@@ -602,7 +602,7 @@ outfit "KW.Vulcan Cannon"
 		sprite "projectile/tinyflare"
 			"random start frame"
 		sound "gatling"
-		ammo "Gatling Gun Ammo"
+		ammo "KW.Vulcanite"
 		icon "icon/gat"
 		"inaccuracy" 2.5
 		"velocity" 16
@@ -615,7 +615,7 @@ outfit "KW.Vulcan Cannon"
 		"submunition" "vbullet"
 		"cluster"
 		"hit effect" "vulcan impact"
-	description `It is convenient to bring pre-existing weapons into space, even if its efficacy is questionable. The Gattling Gun is no different, and efforts had been made to incorporate different kinds of earthly weapons for the inevitable space-to-space combat. Along with the Kinetic Rod, the Gattling Gun found its way into humanity's weapon suite for its mechanical simplicity and dramatic effect.`
+	description `It is convenient to bring pre-existing weapons into space, even if its efficacy is questionable. The Vulcan Cannon is no different, and efforts had been made to incorporate different kinds of earthly weapons for the inevitable space-to-space combat. Along with the Kinetic Rod, the Vulcan Cannon found its way into humanity's weapon suite for its mechanical simplicity and dramatic effect.`
 
 outfit "vbullet"
 	weapon
@@ -624,7 +624,7 @@ outfit "vbullet"
 			"random start frame"
 			"frame rate" 0
 		"random velocity" 8
-		"lifetime" 20
+		"lifetime" 40
 		"random lifetime" 5
 		"shield damage" 3
 		"hull damage" 6
@@ -638,6 +638,51 @@ effect "vulcan impact"
 	"lifetime" 8
 	"random angle" 40
 	"velocity scale" -.05
+
+outfit "KW.Vulcan Storm"
+	"display name" "Vulcan Storm"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 11882001
+	cost 400000
+	thumbnail "outfit/gat"
+	"mass" 20
+	"outfit space" -32
+	"weapon capacity" -32
+	"gun ports" -1
+	"vulcanite capacity" 3000
+	weapon
+		sprite "projectile/2x tinyflare"
+			"random start frame"
+		sound "gatling"
+		ammo "KW.Vulcanite" 5
+		icon "icon/gat"
+		"inaccuracy" 6
+		"velocity" 16
+		"lifetime" 1
+		"reload" 3
+		"burst count" 180
+		"burst reload" 1
+		"firing energy" .3
+		"firing heat" 18
+		"submunition" "vbullet"
+			"offset" 1.5 -6
+			"facing" 0
+		"submunition" "vbullet"
+			"offset" -1.5 -6
+			"facing" -0.3
+		"submunition" "vbullet"
+			"offset" 1.5 -6
+			"facing" 0.3
+		"submunition" "vbullet"
+			"offset" -3 -6
+			"facing" -0.6
+		"submunition" "vbullet"
+			"offset" 3 -6
+			"facing" 0.6
+		"cluster"
+		"hit effect" "vulcan impact"
+	description `When you really need the bullet density, there is the option of bundling as many Vulcan Cannons as possible into a single gun point. This comes at a cost to accuracy, heat and energy, but the spectacle of bullet hell might be worth it.`
 
 outfit "KW.Kinetic Rod Launcher"
 	"display name" "Kinetic Rod Launcher"
@@ -672,6 +717,82 @@ outfit "KW.Kinetic Rod Launcher"
 		"damage dropoff" 300
 		"dropoff modifier" 0
 	description `In space, where a ships' standard radiative coating offers innate defenses against energy-based weapons, kinetic weapons promise a nasty punch to where it hurts most. The Kinetic Rod is as simple as it is effective: Slugs of tungsten-carbide slamming against delicate hull plates, crushing electronics and cracking outfit cavities. The brutality of this way of combat is a testament to humanity's prior experience in warfare, as primitive as they are.`
+	description `	Shields can often blunt the impact of the Kinetic Rod by electromagetic induction, forcing incoming rods to deviate from their trajectory and scrape the hulls at an angle. Nevertheless, Kinetic Rods are capable of inflicting damage through their sheer weight and energy.`
+
+#		[83] Weapons (Ammunition Turret)
+#			[0] Generic
+outfit "KW.Vulcan Turret"
+	"display name" "Vulcan Turret"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 11883000
+	cost 120000
+	thumbnail "outfit/gat turret"
+	"mass" 10
+	"outfit space" -22
+	"weapon capacity" -22
+	"turret mounts" -1
+	"vulcanite capacity" 6000
+	weapon
+		sprite "projectile/2x tinyflare"
+			"random start frame"
+		sound "gatling"
+		ammo "KW.Vulcanite" 2
+		icon "icon/gat turret"
+		"inaccuracy" 2.5
+		"turret turn" 3.6
+		"velocity" 16
+		"lifetime" 1
+		"reload" 3
+		"burst count" 180
+		"burst reload" 1
+		"firing energy" .1
+		"firing heat" 6
+		"submunition" "vbullet"
+			"offset" 1.5 -6
+			"facing" 0.3
+		"submunition" "vbullet"
+			"offset" -1.5 -6
+			"facing" -0.3
+		"cluster"
+		"hit effect" "vulcan impact"
+	description `"I've heard you'd like the gun to spin while it is spinning. Now it comes in pairs!"`
+	description `	The Vulcan Turret is the natural extension of mounted turret design on Sol-based vessels. Supporting a rack of two Vulcan Cannons, the turret packs a considerable punch to any hull that dares get in the way of its captain.`
+
+outfit "KW.Kinetic Rod Turret"
+	"display name" "Kinetic Rod Turret"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 11883010
+	cost 160000
+	thumbnail "outfit/javelin turret"
+	"mass" 15
+	"outfit space" -29
+	"weapon capacity" -29
+	"turret mounts" -1
+	"kinetic rod capacity" 48
+	weapon
+		sprite "projectile/javelin"
+		sound "javelin"
+		ammo "KW.Kinetic Rod"
+		icon "icon/javelin turret"
+		"hit effect" "tiny explosion"
+		"inaccuracy" 1.5
+		"turret turn" 3.2
+		"velocity" 20
+		"lifetime" 80
+		"reload" 20
+		"firing energy" .4
+		"firing heat" 8
+		"shield damage" 32
+		"hull damage" 75
+		"hit force" 750
+		"piercing" .2
+		"missile strength" 8
+		"penetration count" 4
+		"damage dropoff" 300
+		"dropoff modifier" 0
+	description `If the penetrating carnage dealt by Kinetic Rods are your cup of tea, but the aim of your bulky ship frustrats you, then drink the tears of your enemies heartily with the turret emplacement design supporting two such launchers side by side.`
 	description `	Shields can often blunt the impact of the Kinetic Rod by electromagetic induction, forcing incoming rods to deviate from their trajectory and scrape the hulls at an angle. Nevertheless, Kinetic Rods are capable of inflicting damage through their sheer weight and energy.`
 
 #		[84] Weapons (AA Turret)
@@ -713,7 +834,7 @@ outfit "KW.Vulcanite"
 	thumbnail "outfit/bullet"
 	"mass" .002
 	"vulcanite capacity" -1
-	description "Never underestimate the minute bullet, for the Vulcanite demands from its enemies death by a thousand spears per second. Unless it overheats."
+	description "Never underestimate the minute bullet, for the Vulcanite demands from its enemies death by a thousand spears per second. Until it overheats."
 
 outfit "KW.Bullet Case"
 	"display name" "Bullet Case"
@@ -725,7 +846,7 @@ outfit "KW.Bullet Case"
 	"mass" 2
 	"outfit space" -5
 	"vulcanite capacity" 1500
-	ammo "Gatling Gun Ammo"
+	ammo "KW.Vulcanite"
 	description "Bullet Cases are used to store extra ammunition for the Vulcan Cannon and Point Defense Turret."
 
 outfit "KW.Kinetic Rod"
@@ -738,6 +859,19 @@ outfit "KW.Kinetic Rod"
 	"mass" 1.2
 	"kinetic rod capacity" -1
 	description "The Kinetic Rod is a tungsten-carbide rod designed to be launched using magnetoelectric propulsion from its respective launcher. You must have the launcher or a storage rack in order to purchase and use them."
+
+outfit "KW.Rod Stocker"
+	"display name" "Rod Stocker"
+	category "Ammunition"
+	series "Ammunition"
+	index 11885011
+	cost 25000
+	thumbnail "outfit/javelin storage"
+	"mass" 3
+	"outfit space" -9
+	"kinetic rod capacity" 120
+	ammo "KW.Kinetic Rod"
+	description "As the Launchers do not carry many Rods within them, pilots may feel the worth of these Stocker complements more acutely compared to other ammunition storage"
 
 #		[86] Scanners
 #			[2] Traveser Systems

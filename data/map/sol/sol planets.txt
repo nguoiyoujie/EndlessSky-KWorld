@@ -116,6 +116,8 @@ planet KW.S.000.2.Io
 		description `	[Beacon]: Humans often get lost and stranded in space. The Machines organize rescue parties to bring them back to civilization.`
 	government KW.Machines
 	shipyard "KW.Sol.Basic Ships"
+	shipyard "KW.Sol.Basic Ships II"
+	shipyard "KW.Sol.Local Sol"
 	outfitter "KW.Sol.Io Exclusive"
 	outfitter "KW.Sol.Io 1"
 	#outfitter "KW.Sol.Io 2"

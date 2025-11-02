@@ -1,38 +1,104 @@
 
-fleet "KW.Sol Defense Post"
-	government "KW.Sol"
-	names "republic small"
-	cargo 0
-	personality
-		heroic opportunistic
-	variant 3
-		"KW.Def-Sat" 1
-		"KW.Little Vulture" 4
-	variant 3
-		"KW.Def-Sat" 1
-		"KW.Little Vulture" 6
-	variant 3
-		"KW.Def-Sat" 2
-		"KW.Little Vulture" 6
-	variant 2
-		"KW.Def-Sat" 2
-		"KW.Little Vulture" 9
-	variant 1
-		"KW.Def-Sat" 3
-		"KW.Little Vulture" 12
+#fleet "KW.Sol Defense Post"
+#	government "KW.Sol"
+#	names "republic small"
+#	cargo 0
+#	personality
+#		confusion 10
+#		heroic opportunistic waiting staying
+#	variant
+#		"KW.Def-Sat" 3
+#		"KW.Little Vulture" 6
+#
+#fleet "KW.Sol Defense Fleet"
+#	government "KW.Sol"
+#	names "republic small"
+#	cargo 0
+#	personality
+#		confusion 10
+#		heroic opportunistic waiting staying
+#	variant 4
+#		"KW.Firefly" 2
+#	variant 3
+#		"KW.Mosquito" 2
+#	variant 3
+#		"KW.Hornet"
 
-fleet "KW.Sol Defenders Mobile"
+fleet "KW.Sol Patrol"
 	government "KW.Sol"
 	names "republic small"
 	cargo 0
 	personality
+		confusion 10
 		heroic opportunistic
-	variant 4
-		"KW.Firefly" 2
 	variant 3
+		"KW.Firefly" 2
+	variant 1
+		"KW.Firefly"
+		"KW.Firefly (Vulcan)"
+	variant 2
 		"KW.Mosquito" 2
 	variant 3
+		"KW.Mosquito"
+		"KW.Mosquito (Rod)"
+	variant 3
 		"KW.Hornet"
+
+fleet "KW.Sol Patrol Machine"
+	government "KW.Machines"
+	names "republic small"
+	cargo 0
+	personality
+		confusion 5
+		heroic opportunistic
+	variant 3
+		"KW.Firefly" 2
+	variant 1
+		"KW.Firefly"
+		"KW.Firefly (Vulcan)"
+	variant 2
+		"KW.Mosquito" 2
+	variant 3
+		"KW.Mosquito"
+		"KW.Mosquito (Rod)"
+	variant 3
+		"KW.Hornet"
+
+fleet "KW.Sol Pirates"
+	government "KW.Pirates"
+	names "republic small"
+	cargo 0
+	personality
+		confusion 15
+		heroic opportunistic
+	variant 4
+		"KW.Firefly" 5
+	variant 4
+		"KW.Firefly" 3
+		"KW.Firefly (Vulcan)" 2
+	variant 3
+		"KW.Mosquito" 4
+	variant 2
+		"KW.Firefly" 2
+		"KW.Firefly (Vulcan)" 2
+		"KW.Mosquito (Rod)"
+	variant 2
+		"KW.Firefly" 4
+		"KW.Mosquito (Rod)"
+	variant 2
+		"KW.Hornet" 2
+	variant 1
+		"KW.Hornet (Vulcan)" 2
+	variant 2
+		"KW.Mosquito" 2
+		"KW.Hornet"
+	variant 1
+		"KW.Mosquito (Rod)" 2
+		"KW.Hornet (Vulcan)"
+	variant 1
+		"KW.Firefly" 2
+		"KW.Mosquito (Rod)" 2
+		"KW.Hornet (Vulcan)"
 
 fleet "KW.Sol Miner"
 	government "KW.Merchants"
@@ -41,11 +107,15 @@ fleet "KW.Sol Miner"
 	personality
 		confusion 20
 		timid frugal mining harvests
-	variant 6
+	variant 2
 		"KW.Firefly"
 	variant 4
+		"KW.Firefly (Mining)"
+	variant 1
 		"KW.Mosquito"
-	variant 2
+	variant 3
+		"KW.Mosquito (Mining)"
+	variant 1
 		"KW.Hornet"
 	variant 3
 		"KW.Scow"
@@ -53,6 +123,9 @@ fleet "KW.Sol Miner"
 		"KW.Barge"
 	variant 1
 		"KW.Worker Bee" 3
+	variant 1
+		"KW.Worker Bee" 2
+		"KW.Worker Bee (Hunter)"
 
 fleet "KW.Sol Merchants Small"
 	government "KW.Merchants"

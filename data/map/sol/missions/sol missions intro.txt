@@ -731,7 +731,7 @@ mission "KW.Sol.Inbox [4B]"
 		personality staying heroic target
 			confusion 120
 		system destination
-		ship "KW.Shuttle (Light)" "Target Practice"
+		ship "KW.Worker Bee" "Target Practice"
 		dialog "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
 
 	on accept

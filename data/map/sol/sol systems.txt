@@ -89,13 +89,12 @@ system KW.S.000.Sol
 		sprite planet/neptune
 		distance 15730
 		period 24012.7
-	fleet "KW.Sol Merchants Small" 300
+	fleet "KW.Sol Merchants Small" 1750
 	fleet "KW.Sol Merchants Large" 2500
-	fleet "KW.Sol Defense Post" 10
-	fleet "KW.Sol Defense Fleet" 200
-	fleet "KW.Sol Patrol" 3500
-	fleet "KW.Sol Patrol Machine" 500
-	fleet "KW.Sol Miner" 1500
+	fleet "KW.Sol Patrol" 2500
+	fleet "KW.Sol Patrol Machine" 3500
+	fleet "KW.Sol Miner" 1600
+	fleet "KW.Sol Pirates" 4000
 
 
 system "KW.S.001.Alpha Centauri"

@@ -1,0 +1,38 @@
+############### NPC FLEETS ###############
+#	NPC static fleets, usually for system defense
+
+mission "KW.Sol.NPC Defense Fleet [Sol]"
+	invisible
+	repeat
+	non-blocking
+	landing
+	npc
+		government "KW.Sol"
+		personality
+			confusion 10
+			heroic opportunistic waiting staying swarming lingering
+		system KW.S.000.Sol
+		fleet
+			names "republic small"
+			cargo 0
+			variant
+				"KW.Def-Sat" 4
+				"KW.Def-Min" 2
+				"KW.Def-Min (Vulcan)" 2
+	npc
+		government "KW.Machines"
+		personality
+			confusion 5
+			heroic opportunistic waiting staying swarming lingering
+		system KW.S.000.Sol
+		fleet
+			names "republic small"
+			cargo 0
+			variant
+				"KW.Hornet"
+				"KW.Mosquito" 2
+				"KW.Little Vulture (Scan)"
+				"KW.Little Vulture (Laser)" 2
+	on daily
+		fail
+

@@ -25,12 +25,11 @@ ship "KW.Worker Bee"
 			"hull damage" 15
 			"hit force" 45
 	outfits
+		"KW.Mining Laser"
 		"KW.CDX-PV-100 Photovoltaic Cell" 2
 		"KW.CDX-CP-100 Capacitor Array" 4
-		"KW.Mining Laser"
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
-
 	engine -3 29
 	engine 3 29
 	gun 0 -19
@@ -39,8 +38,8 @@ ship "KW.Worker Bee"
 
 ship "KW.Def-Sat"
 	"display name" "Def-Sat"
-	sprite "ship/combat drone"
-	thumbnail "thumbnail/combat drone"
+	sprite "ship/surveillance drone"
+	thumbnail "thumbnail/surveillance drone"
 	attributes
 		category "Drone"
 		"cost" 84000
@@ -65,11 +64,42 @@ ship "KW.Def-Sat"
 		"KW.Kinetic Rod" 24
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-2550S Ion Steering"
-
 	engine -8.5 28.5 0.9
 	engine 8.5 28.5 0.9
 	gun 0 -29
 	explode "tiny explosion" 15
+	description `WIP`
+
+ship "KW.Def-Min"
+	"display name" "Def-Min"
+	sprite "ship/pollen"
+	#thumbnail "thumbnail/surveillance drone"
+	attributes
+		category "Drone"
+		"cost" 50000
+		"hull" 350
+		"automaton" 1
+		"mass" 999
+		"drag" .59
+		"heat dissipation" .9
+		"outfit space" 48
+		"weapon capacity" 29
+		"operating costs" 25
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"KW.CDX-PV-100 Photovoltaic Cell" 2
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.Kinetic Rod Turret"
+		"KW.Kinetic Rod" 168
+		"KW.Rod Stocker"
+	turret 0 0
+	explode "tiny explosion" 15
+	uncapturable
+	"never disabled"
 	description `WIP`
 
 # Fighters
@@ -105,7 +135,6 @@ ship "KW.Little Vulture"
 		"KW.Kinetic Rod" 24
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-2550S Ion Steering"
-
 	engine -14.5 30.5
 	engine 14.5 30.5
 	gun 0 -34
@@ -150,7 +179,6 @@ ship "KW.Firefly"
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
 		"KW.Basic Chronodrive"
-
 	engine -5 35
 	engine 5 35
 	gun -7 -10
@@ -164,8 +192,8 @@ ship "KW.Firefly"
 
 ship "KW.Mosquito"
 	"display name" "Mosquito"
-	sprite "ship/sparrow"
-	thumbnail "thumbnail/sparrow"
+	sprite "ship/wasp"
+	thumbnail "thumbnail/wasp"
 	attributes
 		category "Interceptor"
 		"cost" 350000
@@ -193,22 +221,22 @@ ship "KW.Mosquito"
 		"KW.TR-2950T Ion Thruster"
 		"KW.TR-2550S Ion Steering"
 		"KW.Basic Chronodrive"
-
-	engine -5 35
-	engine 5 35
-	gun -7 -10
-	gun 7 -10
-	gun -10.5 -8.5
-	gun 10.5 -8.5
-	leak "flame" 60 80
-	explode "tiny explosion" 15
-	explode "small explosion" 5
+	engine -5.5 32.5
+	engine 5.5 32.5
+	gun 0 -41
+	gun -13.5 -35
+	gun 13.5 -35
+	gun -18.5 -27
+	gun 18.5 -27
+	leak "leak" 60 50
+	explode "tiny explosion" 20
+	explode "small explosion" 10
 	description `The Mosquito is an alternate design of the Firefly, with some of its hull sacrificed for better agility and larger engines.`
 
 ship "KW.Hornet"
 	"display name" "Hornet"
-	sprite "ship/fury"
-	thumbnail "thumbnail/fury"
+	sprite "ship/jackal"
+	thumbnail "thumbnail/jackal"
 	attributes
 		category "Interceptor"
 		"cost" 800000
@@ -238,20 +266,17 @@ ship "KW.Hornet"
 		"KW.TR-2950T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
 		"KW.Basic Chronodrive"
-
-	engine -11 35 0.8
-	engine 11 35 0.8
-	engine -18 37 0.6
-	engine 18 37 0.6
-	gun -11 -28
-	gun 11 -28
-	gun -17 -19.5
-	gun 17 -19.5
-	gun -5.5 -33
-	gun 5.5 -33
-	leak "flame" 50 80
+	engine -10 35
+	engine 10 35
+	gun -17 -8.5
+	gun 17 -8.5
+	gun -25 -6
+	gun 25 -6
+	leak "leak" 50 40
+	leak "flame" 70 80
 	explode "tiny explosion" 10
-	explode "small explosion" 20
+	explode "small explosion" 10
+	"final explode" "final explosion small"
 	description `The Mosquito is an alternate design of the Firefly, with some of its hull sacrificed for better agility and larger engines.`
 
 
@@ -291,7 +316,6 @@ ship "KW.Shuttle"
 		"KW.TR-2950T Ion Thruster"
 		"KW.TR-2550S Ion Steering"
 		"KW.Basic Chronodrive"
-
 	engine -6 30
 	engine 6 30
 	gun 0 -31
@@ -331,7 +355,6 @@ ship "KW.Shuttle II"
 		"KW.TR-2950T Ion Thruster"
 		"KW.TR-2550S Ion Steering"
 		"KW.Basic Chronodrive"
-
 	engine -6 30
 	engine 6 30
 	gun 0 -31
@@ -370,7 +393,6 @@ ship "KW.Shuttle III"
 		"KW.TR-2950T Ion Thruster"
 		"KW.TR-4150S Ion Steering"
 		"KW.Basic Chronodrive"
-
 	engine -6 30
 	engine 6 30
 	gun 0 -31
@@ -413,7 +435,6 @@ ship "KW.Draft"
 		"KW.TR-1250S Ion Steering"
 		"KW.Basic Chronodrive"
 		"KW.Chronodrive Fuel Recycler"
-
 	engine -9.5 38
 	engine 9.5 38
 	turret 0 -18
@@ -424,8 +445,8 @@ ship "KW.Draft"
 
 ship "KW.Scow"
 	"display name" "Scow"
-	sprite "ship/star barge"
-	thumbnail "thumbnail/star barge"
+	sprite "ship/clipper"
+	thumbnail "thumbnail/clipper"
 	attributes
 		category "Light Freighter"
 		"cost" 300000
@@ -448,27 +469,31 @@ ship "KW.Scow"
 			"hit force" 240
 		"operating costs" 300
 	outfits
-		"KW.Laser Turret"
+		"KW.Beam Laser" 2
 		"KW.CDX-FE-100 Fuel Cell"
 		"KW.CDX-B-100 Battery"
 		"KW.TR-2950T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
 		"KW.Basic Chronodrive"
 		"KW.Chronodrive Fuel Recycler"
-
-	engine -9.5 38
-	engine 9.5 38
-	turret -3 -18
-	turret 3 -18
+	engine -22 47
+	engine 22 47
+	gun -21.5 -18
+	gun 21.5 -18
+	gun -11 -8.5
+	gun 11 -8.5
 	leak "leak" 60 50
-	explode "tiny explosion" 10
-	explode "small explosion" 10
+	leak "flame" 50 80
+	explode "tiny explosion" 15
+	explode "small explosion" 20
+	explode "medium explosion" 10
+	"final explode" "final explosion small"
 	description `WIP`
 
 ship "KW.Barge"
 	"display name" "Barge"
-	sprite "ship/star barge"
-	thumbnail "thumbnail/star barge"
+	sprite "ship/freighter"
+	thumbnail "thumbnail/freighter"
 	attributes
 		category "Light Freighter"
 		"cost" 650000
@@ -501,14 +526,17 @@ ship "KW.Barge"
 		"KW.CDX-HC-100 Conductor"
 		"KW.Basic Chronodrive"
 		"KW.Chronodrive Fuel Recycler"
-
-	engine -9.5 38
-	engine 9.5 38
-	turret -3 -18
-	turret 3 -18
+	engine -7.5 92
+	engine 7.5 92
+	turret 0 -64
+	turret 0 -4.5
+	turret 0 64.5
 	leak "leak" 60 50
+	leak "flame" 50 80
 	explode "tiny explosion" 10
-	explode "small explosion" 10
+	explode "small explosion" 30
+	explode "medium explosion" 20
+	"final explode" "final explosion small"
 	description `WIP`
 
 # Medium Freighter

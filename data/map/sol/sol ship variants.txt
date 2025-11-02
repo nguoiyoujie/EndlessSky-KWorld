@@ -1,23 +1,90 @@
 
-ship "KW.Shuttle" "KW.Shuttle (Light)"
+ship "KW.Worker Bee" "KW.Worker Bee (Hunter)"
 	outfits
-		"Beam Laser"
-		"KW.CDX-PV-200 Photovoltaic Array"
+		"KW.Kinetic Rod Launcher"
+		"KW.Kinetic Rod" 144
+		"KW.Rod Stocker"
+		"KW.CDX-PV-100 Photovoltaic Cell"
+		"KW.CDX-CP-100 Capacitor Array"
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-1250S Ion Steering"
+
+ship "KW.Little Vulture" "KW.Little Vulture (Laser)"
+	outfits
+		"KW.Beam Laser" 3
+		"KW.CDX-FE-100 Fuel Cell"
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+
+ship "KW.Little Vulture" "KW.Little Vulture (Scan)"
+	outfits
+		"KW.CDX-PV-100 Photovoltaic Cell" 3
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.Vulcan Cannon" 3
+		"KW.Vulcanite" 9000
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+		"KW.TRS-M Multi Scanner"
+
+ship "KW.Def-Min" "KW.Def-Min (Vulcan)"
+	uncapturable
+	"never disabled"
+	outfits
+		"KW.CDX-PV-100 Photovoltaic Cell" 2
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.Vulcan Turret"
+		"KW.Vulcanite" 9000
+		"KW.Bullet Case" 2
+
+ship "KW.Firefly" "KW.Firefly (Vulcan)"
+	outfits
+		"KW.Vulcan Cannon" 2
+		"KW.Vulcanite" 6000
+		"KW.CDX-FE-100 Fuel Cell"
+		"KW.CDX-B-100 Battery"
+		"KW.TR-1650T Ion Thruster"
+		"KW.TR-1250S Ion Steering"
+		"KW.Basic Chronodrive"
+
+ship "KW.Firefly" "KW.Firefly (Mining)"
+	outfits
+		"KW.Mining Laser"
+		"KW.CDX-FE-100 Fuel Cell"
 		"KW.CDX-CP-100 Capacitor Array" 2
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
-		"KW.TRS-C Cargo Scanner"
+		"KW.Basic Chronodrive"
+		"KW.TRS-A Asteroid Scanner"
 
-	gun "Beam Laser"
-
-ship "KW.Firefly" "KW.Firefly (Light)"
+ship "KW.Mosquito" "KW.Mosquito (Mining)"
 	outfits
-		"Beam Laser"
-		"KW.CDX-PV-200 Photovoltaic Array"
+		"KW.Mining Laser" 2
+		"KW.CDX-FE-100 Fuel Cell"
+		"KW.CDX-CP-100 Capacitor Array" 3
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+		"KW.Basic Chronodrive"
+		"KW.TRS-A Asteroid Scanner"
+
+ship "KW.Mosquito" "KW.Mosquito (Rod)"
+	outfits
+		"KW.Kinetic Rod Launcher" 2
+		"KW.Kinetic Rod" 168
+		"KW.Rod Stocker"
+		"KW.CDX-FE-100 Fuel Cell"
 		"KW.CDX-CP-100 Capacitor Array" 2
-		"KW.TR-1650T Ion Thruster"
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+		"KW.Basic Chronodrive"
+
+ship "KW.Hornet" "KW.Hornet (Vulcan)"
+	outfits
+		"KW.Vulcan Cannon" 2
+		"KW.Vulcan Storm"
+		"KW.Vulcanite" 9000
+		"KW.CDX-FE-200 Fuel Cell"
+		"KW.CDX-CP-100 Capacitor Array" 2
+		"KW.TR-2950T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
-		"KW.TRS-C Cargo Scanner"
-
-	gun "Beam Laser"
-
+		"KW.Basic Chronodrive"
