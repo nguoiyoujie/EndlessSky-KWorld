@@ -836,8 +836,8 @@ outfit "KW.Vulcanite"
 	"vulcanite capacity" -1
 	description "Never underestimate the minute bullet, for the Vulcanite demands from its enemies death by a thousand spears per second. Until it overheats."
 
-outfit "KW.Bullet Case"
-	"display name" "Bullet Case"
+outfit "KW.Vulcan Case"
+	"display name" "Vulcan Case"
 	category "Ammunition"
 	series "Ammunition"
 	index 11885001
@@ -847,7 +847,7 @@ outfit "KW.Bullet Case"
 	"outfit space" -5
 	"vulcanite capacity" 1500
 	ammo "KW.Vulcanite"
-	description "Bullet Cases are used to store extra ammunition for the Vulcan Cannon and Point Defense Turret."
+	description "Vulcan Cases are used to store extra ammunition for the Vulcan Cannon and Point Defense Turret."
 
 outfit "KW.Kinetic Rod"
 	"display name" "Kinetic Rod"

@@ -35,7 +35,7 @@ ship "KW.Def-Min" "KW.Def-Min (Vulcan)"
 		"KW.CDX-CP-100 Capacitor Array" 2
 		"KW.Vulcan Turret"
 		"KW.Vulcanite" 9000
-		"KW.Bullet Case" 2
+		"KW.Vulcan Case" 2
 
 ship "KW.Firefly" "KW.Firefly (Vulcan)"
 	outfits
