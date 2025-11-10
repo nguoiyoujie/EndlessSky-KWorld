@@ -5,20 +5,36 @@ mission "KW.Sol.NPC Defense Fleet [Sol]"
 	invisible
 	repeat
 	non-blocking
-	landing
+	entering
+	source
+		system KW.S.000.Sol
+	destination
+		system KW.S.000.Sol
 	npc
 		government "KW.Sol"
 		personality
 			confusion 10
-			heroic opportunistic waiting staying swarming lingering
+			heroic opportunistic waiting staying
 		system KW.S.000.Sol
 		fleet
-			names "republic small"
+			names "sol small"
+			fighters
+				personality
+					confusion 10
+					heroic opportunistic
+				names "sol small"
 			cargo 0
 			variant
-				"KW.Def-Sat" 4
-				"KW.Def-Min" 2
-				"KW.Def-Min (Vulcan)" 2
+				"KW.Def-Min"
+				"KW.Def-Sat" 2
+				"KW.Def-Min"
+				"KW.Def-Sat" 2
+				"KW.Def-Min (Vulcan)"
+				"KW.Def-Sat" 2
+				"KW.Def-Min (Vulcan)"
+				"KW.Def-Sat" 2
+		on encounter
+			fail
 	npc
 		government "KW.Machines"
 		personality
@@ -26,13 +42,41 @@ mission "KW.Sol.NPC Defense Fleet [Sol]"
 			heroic opportunistic waiting staying swarming lingering
 		system KW.S.000.Sol
 		fleet
-			names "republic small"
+			names "machine small"
 			cargo 0
 			variant
 				"KW.Hornet"
 				"KW.Mosquito" 2
 				"KW.Little Vulture (Scan)"
 				"KW.Little Vulture (Laser)" 2
+	npc
+		government "KW.Machines"
+		personality
+			confusion 5
+			heroic opportunistic waiting staying
+		system KW.S.000.Sol
+		fleet
+			names "machine capital"
+			fighters
+				names "machine small"
+			cargo 0
+			variant
+				"KW.Hive"
+				"KW.Hunter Bee" 4
+	npc
+		government "KW.Machines"
+		personality
+			confusion 20
+			timid frugal mining harvests
+		system KW.S.000.Sol
+		fleet
+			names "machine capital"
+			fighters
+				names "machine small"
+			cargo 0
+			variant
+				"KW.Hive"
+				"KW.Worker Bee" 6
 	on daily
 		fail
 

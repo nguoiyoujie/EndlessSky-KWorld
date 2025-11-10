@@ -25,7 +25,7 @@ mission "KW.Sol.Cargo [Earth,0]"
 	on complete
 		payment 0 125
 		dialog phrase "generic cargo delivery payment"
-		
+
 mission "KW.Sol.Cargo [Earth,1]"
 	name "Delivery to <planet>"
 	job
@@ -261,7 +261,7 @@ mission "KW.Sol.Inspector [0]"
 	to offer
 		random < 25
 		has "KW.Sol.Lepo [2]: done"
-	source "KW.S.000.0.Io"
+	source "KW.S.000.1.Io"
 	stopover
 		distance 2 8
 		government "KW.Sol"

@@ -1,13 +1,28 @@
 
-ship "KW.Worker Bee" "KW.Worker Bee (Hunter)"
+
+
+ship "KW.Shuttle" "KW.Shuttle (Minimal)"
+	add attributes
+		"automaton" 1
+		"required crew" 0
 	outfits
-		"KW.Kinetic Rod Launcher"
-		"KW.Kinetic Rod" 144
-		"KW.Rod Stocker"
-		"KW.CDX-PV-100 Photovoltaic Cell"
-		"KW.CDX-CP-100 Capacitor Array"
+		"KW.Central Piloting System"
+		"KW.Silicate Data Cubes" 3
+		"KW.CDX-PV-100 Photovoltaic Cell" 2
+		"KW.CDX-CP-100 Capacitor Array" 2
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
+
+#ship "KW.Hunter Bee" "KW.Hunter Bee (Iron Mining)"
+#	outfits
+#		"KW.Mining Drill"
+#		"KW.Crude Catapult (Iron)"
+#		"KW.Thermal Spark"
+#		"KW.CDX-CP-100 Capacitor Array"
+#		"KW.Thermal Converter Panel"
+#		"KW.Drone Relocation Engine"
+#	gun "KW.Mining Drill"
+#	gun "KW.Crude Catapult (Iron)"
 
 ship "KW.Little Vulture" "KW.Little Vulture (Laser)"
 	outfits
@@ -16,6 +31,9 @@ ship "KW.Little Vulture" "KW.Little Vulture (Laser)"
 		"KW.CDX-CP-100 Capacitor Array" 2
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-2550S Ion Steering"
+	gun "KW.Beam Laser"
+	gun "KW.Beam Laser"
+	gun "KW.Beam Laser"
 
 ship "KW.Little Vulture" "KW.Little Vulture (Scan)"
 	outfits
@@ -26,6 +44,9 @@ ship "KW.Little Vulture" "KW.Little Vulture (Scan)"
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-2550S Ion Steering"
 		"KW.TRS-M Multi Scanner"
+	gun "KW.Vulcan Cannon"
+	gun "KW.Vulcan Cannon"
+	gun "KW.Vulcan Cannon"
 
 ship "KW.Def-Min" "KW.Def-Min (Vulcan)"
 	uncapturable
@@ -34,8 +55,11 @@ ship "KW.Def-Min" "KW.Def-Min (Vulcan)"
 		"KW.CDX-PV-100 Photovoltaic Cell" 2
 		"KW.CDX-CP-100 Capacitor Array" 2
 		"KW.Vulcan Turret"
-		"KW.Vulcanite" 9000
+		"KW.Point Defense Turret"
+		"KW.Vulcanite" 27000
 		"KW.Vulcan Case" 2
+	turret "KW.Vulcan Turret"
+	turret "KW.Point Defense Turret"
 
 ship "KW.Firefly" "KW.Firefly (Vulcan)"
 	outfits
@@ -46,6 +70,8 @@ ship "KW.Firefly" "KW.Firefly (Vulcan)"
 		"KW.TR-1650T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
 		"KW.Basic Chronodrive"
+	gun "KW.Vulcan Cannon"
+	gun "KW.Vulcan Cannon"
 
 ship "KW.Firefly" "KW.Firefly (Mining)"
 	outfits
@@ -56,6 +82,7 @@ ship "KW.Firefly" "KW.Firefly (Mining)"
 		"KW.TR-1250S Ion Steering"
 		"KW.Basic Chronodrive"
 		"KW.TRS-A Asteroid Scanner"
+	gun "KW.Mining Laser"
 
 ship "KW.Mosquito" "KW.Mosquito (Mining)"
 	outfits
@@ -66,17 +93,21 @@ ship "KW.Mosquito" "KW.Mosquito (Mining)"
 		"KW.TR-2550S Ion Steering"
 		"KW.Basic Chronodrive"
 		"KW.TRS-A Asteroid Scanner"
+	gun "KW.Mining Laser"
+	gun "KW.Mining Laser"
 
 ship "KW.Mosquito" "KW.Mosquito (Rod)"
 	outfits
 		"KW.Kinetic Rod Launcher" 2
-		"KW.Kinetic Rod" 168
+		"KW.Kinetic Rod" 192
 		"KW.Rod Stocker"
 		"KW.CDX-FE-100 Fuel Cell"
 		"KW.CDX-CP-100 Capacitor Array" 2
 		"KW.TR-2950T Ion Thruster"
 		"KW.TR-2550S Ion Steering"
 		"KW.Basic Chronodrive"
+	gun "KW.Kinetic Rod Launcher"
+	gun "KW.Kinetic Rod Launcher"
 
 ship "KW.Hornet" "KW.Hornet (Vulcan)"
 	outfits
@@ -88,3 +119,6 @@ ship "KW.Hornet" "KW.Hornet (Vulcan)"
 		"KW.TR-2950T Ion Thruster"
 		"KW.TR-1250S Ion Steering"
 		"KW.Basic Chronodrive"
+	gun "KW.Vulcan Storm"
+	gun "KW.Vulcan Cannon"
+	gun "KW.Vulcan Cannon"

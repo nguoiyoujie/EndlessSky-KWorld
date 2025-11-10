@@ -1,7 +1,7 @@
 
 #fleet "KW.Sol Defense Post"
 #	government "KW.Sol"
-#	names "republic small"
+#	names "sol small"
 #	cargo 0
 #	personality
 #		confusion 10
@@ -12,7 +12,7 @@
 #
 #fleet "KW.Sol Defense Fleet"
 #	government "KW.Sol"
-#	names "republic small"
+#	names "sol small"
 #	cargo 0
 #	personality
 #		confusion 10
@@ -26,47 +26,58 @@
 
 fleet "KW.Sol Patrol"
 	government "KW.Sol"
-	names "republic small"
+	names "sol small"
 	cargo 0
 	personality
 		confusion 10
 		heroic opportunistic
 	variant 3
-		"KW.Firefly" 2
+		"KW.Firefly" 3
 	variant 1
-		"KW.Firefly"
+		"KW.Firefly" 2
 		"KW.Firefly (Vulcan)"
-	variant 2
-		"KW.Mosquito" 2
-	variant 3
-		"KW.Mosquito"
-		"KW.Mosquito (Rod)"
 	variant 3
 		"KW.Hornet"
 
 fleet "KW.Sol Patrol Machine"
 	government "KW.Machines"
-	names "republic small"
+	names "machine small"
 	cargo 0
 	personality
 		confusion 5
 		heroic opportunistic
-	variant 3
-		"KW.Firefly" 2
-	variant 1
-		"KW.Firefly"
-		"KW.Firefly (Vulcan)"
-	variant 2
+	variant 4
+		"KW.Mosquito" 3
+	variant 4
 		"KW.Mosquito" 2
-	variant 3
-		"KW.Mosquito"
 		"KW.Mosquito (Rod)"
 	variant 3
 		"KW.Hornet"
 
+fleet "KW.Sol Pirate Single"
+	government "KW.Pirates"
+	names "pirate"
+	cargo 0
+	personality
+		confusion 15
+		heroic opportunistic
+	variant 4
+		"KW.Firefly"
+	variant 4
+		"KW.Firefly (Vulcan)"
+	variant 3
+		"KW.Mosquito"
+	variant 3
+		"KW.Mosquito (Rod)"
+	variant 2
+		"KW.Hornet"
+	variant 1
+		"KW.Hornet (Vulcan)"
+
+
 fleet "KW.Sol Pirates"
 	government "KW.Pirates"
-	names "republic small"
+	names "pirate"
 	cargo 0
 	personality
 		confusion 15
@@ -120,12 +131,25 @@ fleet "KW.Sol Miner"
 	variant 3
 		"KW.Scow"
 	variant 3
-		"KW.Barge"
+		"KW.Barge II"
 	variant 1
+		"KW.Barge III"
+
+fleet "KW.Sol Miner Machine"
+	government "KW.Machines"
+	names "machine capital"
+	fighters
+		names "machine small"
+	cargo 0
+	personality
+		confusion 20
+		timid frugal mining harvests
+	variant 2
+		"KW.Hive"
 		"KW.Worker Bee" 3
 	variant 1
-		"KW.Worker Bee" 2
-		"KW.Worker Bee (Hunter)"
+		"KW.Hive"
+		"KW.Worker Bee" 4
 
 fleet "KW.Sol Merchants Small"
 	government "KW.Merchants"
@@ -152,7 +176,10 @@ fleet "KW.Sol Merchants Small"
 		"KW.Firefly" 2
 	variant 2
 		"KW.Barge"
-		"KW.Mosquito" 2
+	variant 2
+		"KW.Barge II"
+	variant 2
+		"KW.Barge III"
 
 fleet "KW.Sol Merchants Large"
 	government "KW.Merchants"
@@ -161,6 +188,10 @@ fleet "KW.Sol Merchants Large"
 	personality
 		confusion 50
 		timid frugal appeasing
+	variant 2
+		"KW.Barge" 2
+	variant 2
+		"KW.Barge" 3
 	variant 3
 		"KW.Scow" 2
 	variant 3
@@ -170,18 +201,33 @@ fleet "KW.Sol Merchants Large"
 		"KW.Scow" 2
 		"KW.Shuttle" 2
 	variant 2
-		"KW.Barge" 2
-	variant 2
-		"KW.Barge" 2
+		"KW.Barge II" 2
+	variant 1
+		"KW.Barge II" 2
 		"KW.Shuttle" 2
-	variant 2
-		"KW.Barge" 2
+	variant 1
+		"KW.Barge II" 2
 		"KW.Firefly" 2
+	variant 1
+		"KW.Barge II" 2
+		"KW.Mosquito" 2
 	variant 2
-		"KW.Barge" 2
+		"KW.Barge III"
+	variant 1
+		"KW.Barge III"
+		"KW.Shuttle" 2
+	variant 1
+		"KW.Barge III"
+		"KW.Firefly" 2
+	variant 1
+		"KW.Barge III"
 		"KW.Mosquito" 2
 	variant 1
+		"KW.Shuttle" 3
+	variant 1
 		"KW.Shuttle" 6
+	variant 1
+		"KW.Shuttle II" 2
 	variant 1
 		"KW.Shuttle II" 4
 	variant 1

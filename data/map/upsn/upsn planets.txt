@@ -1,0 +1,16 @@
+planet KW.U.000.0.Silon
+	"display name" "Silon"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Upsn

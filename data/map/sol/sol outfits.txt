@@ -43,7 +43,8 @@ outfit "KW.CDX-FE-300 Fuel Chamber"
 	"outfit space" -66
 	"energy generation" 9.25
 	"heat generation" 8
-	description "At a certain size, the reactions produce enough heat to catalyze further reactions just short of combustion, granting higher energy output at the edge of risking reactant leaks."
+	"fuel capacity" -200
+	description "At a certain size, the reactions produce enough heat to catalyze further reactions just short of combustion, granting higher energy output at the edge of risking reactant leaks. To sustain such output however, some fuel has to be burnt, which can be a worthwhile trade-off for a ship with excess fuel or sources of replenishment."
 
 outfit "KW.CDX-FE-400 Fuel Reactor"
 	"display name" "CDX-FE-400 Fuel Reactor"
@@ -58,7 +59,8 @@ outfit "KW.CDX-FE-400 Fuel Reactor"
 	"outfit space" -124
 	"energy generation" 22.22
 	"heat generation" 18.50
-	description "Seriously, if you have reached the point of combusting chemicals for juice, you could consider other reactor types. Any larger, and your ship shall be a reactor. Nevertheless, the higher energies coupled with Codex's proprietary fuel mix produces output on par with top of the line reaction chambers. "
+	"fuel capacity" -200
+	description "Seriously, if you have reached the point of combusting fuel for juice, you could consider other reactor types. Any larger, and your ship shall be a reactor. Nevertheless, the higher energies coupled with Codex's proprietary fuel mix produces output on par with top of the line reaction chambers."
 
 #		[01] Power (Solar)
 #			[1] Codex Corp
@@ -94,7 +96,7 @@ outfit "KW.CDX-CP-100 Capacitor Array"
 	"display name" "CDX-CP-100 Capacitor Array"
 	category "Power"
 	series "Batteries"
-	index 901010
+	index 11802100
 	cost 5000
 	thumbnail "outfit/Sol-battery-wip"
 	"mass" 2
@@ -106,7 +108,7 @@ outfit "KW.CDX-B-100 Battery"
 	"display name" "CDX-B-100 Battery"
 	category "Power"
 	series "Batteries"
-	index 901020
+	index 11802110
 	cost 17500
 	thumbnail "outfit/Sol-battery-wip"
 	"mass" 15
@@ -118,7 +120,7 @@ outfit "KW.CDX-B-200 Battery"
 	"display name" "CDX-B-200 Battery"
 	category "Power"
 	series "Batteries"
-	index 901030
+	index 11802120
 	cost 42000
 	thumbnail "outfit/Sol-battery-wip"
 	"mass" 32
@@ -132,7 +134,7 @@ outfit "KW.TR-1650T Ion Thruster"
 	"display name" "TR-1650T Ion Thruster"
 	category "Engines"
 	series "Engines"
-	index 901010
+	index 11810200
 	"cost" 65000
 	thumbnail "outfit/Sol-thruster-wip"
 	"mass" 18
@@ -150,7 +152,7 @@ outfit "KW.TR-2950T Ion Thruster"
 	"display name" "TR-2950T Ion Thruster"
 	category "Engines"
 	series "Engines"
-	index 901020
+	index 11810210
 	"cost" 104000
 	thumbnail "outfit/Sol-thruster-wip"
 	"mass" 30
@@ -168,7 +170,7 @@ outfit "KW.TR-4500T Ion Thruster"
 	"display name" "TR-4500T Ion Thruster"
 	category "Engines"
 	series "Engines"
-	index 901030
+	index 11810220
 	"cost" 196000
 	thumbnail "outfit/Sol-thruster-wip"
 	"mass" -42
@@ -186,7 +188,7 @@ outfit "KW.TR-6400T Ion Thruster"
 	"display name" "TR-6400T Ion Thruster"
 	category "Engines"
 	series "Engines"
-	index 901040
+	index 11810230
 	"cost" 288000
 	thumbnail "outfit/Sol-thruster-wip"
 	"mass" 58
@@ -206,7 +208,7 @@ outfit "KW.TR-1250S Ion Steering"
 	"display name" "TR-1250S Ion Steering"
 	category "Engines"
 	series "Engines"
-	index 901110
+	index 11811200
 	"cost" 45000
 	thumbnail "outfit/Sol-steering-wip"
 	"mass" 11
@@ -224,7 +226,7 @@ outfit "KW.TR-2550S Ion Steering"
 	"display name" "TR-2550S Ion Steering"
 	category "Engines"
 	series "Engines"
-	index 901120
+	index 11811210
 	"cost" 94000
 	thumbnail "outfit/Sol-steering-wip"
 	"mass" 20
@@ -242,7 +244,7 @@ outfit "KW.TR-4150S Ion Steering"
 	"display name" "TR-4150S Ion Steering"
 	category "Engines"
 	series "Engines"
-	index 901130
+	index 11811220
 	"cost" 94000
 	thumbnail "outfit/Sol-steering-wip"
 	"mass" 44
@@ -262,7 +264,7 @@ outfit "KW.TR-1650R Ion Reverse Thruster"
 	"display name" "TR-1650R Ion Reverse Thruster"
 	category "Engines"
 	series "Engines"
-	index 901140
+	index 11812200
 	"cost" 21000
 	thumbnail "outfit/Sol-rear-thruster-wip"
 	"mass" 18
@@ -619,15 +621,15 @@ outfit "KW.Vulcan Cannon"
 
 outfit "vbullet"
 	weapon
-		sprite "projectile/bullet"
+		sprite "projectile/kw.vulcan"
 			"delay" 5
 			"random start frame"
 			"frame rate" 0
 		"random velocity" 8
 		"lifetime" 40
 		"random lifetime" 5
-		"shield damage" 3
-		"hull damage" 6
+		"shield damage" 2
+		"hull damage" 4
 		"hit force" 3
 		"hit effect" "bullet impact"
 
@@ -695,9 +697,9 @@ outfit "KW.Kinetic Rod Launcher"
 	"outfit space" -12
 	"weapon capacity" -12
 	"gun ports" -1
-	"kinetic rod capacity" 24
+	"kinetic rod capacity" 36
 	weapon
-		sprite "projectile/javelin"
+		sprite "projectile/kw.kinrod"
 		sound "javelin"
 		ammo "KW.Kinetic Rod"
 		icon "icon/javelin"
@@ -706,7 +708,7 @@ outfit "KW.Kinetic Rod Launcher"
 		"velocity" 20
 		"lifetime" 80
 		"reload" 40
-		"firing energy" .4
+		"firing energy" 2.4
 		"firing heat" 8
 		"shield damage" 32
 		"hull damage" 75
@@ -770,9 +772,9 @@ outfit "KW.Kinetic Rod Turret"
 	"outfit space" -29
 	"weapon capacity" -29
 	"turret mounts" -1
-	"kinetic rod capacity" 48
+	"kinetic rod capacity" 72
 	weapon
-		sprite "projectile/javelin"
+		sprite "projectile/kw.kinrod"
 		sound "javelin"
 		ammo "KW.Kinetic Rod"
 		icon "icon/javelin turret"
@@ -782,7 +784,7 @@ outfit "KW.Kinetic Rod Turret"
 		"velocity" 20
 		"lifetime" 80
 		"reload" 20
-		"firing energy" .4
+		"firing energy" 2.4
 		"firing heat" 8
 		"shield damage" 32
 		"hull damage" 75
@@ -792,7 +794,7 @@ outfit "KW.Kinetic Rod Turret"
 		"penetration count" 4
 		"damage dropoff" 300
 		"dropoff modifier" 0
-	description `If the penetrating carnage dealt by Kinetic Rods are your cup of tea, but the aim of your bulky ship frustrats you, then drink the tears of your enemies heartily with the turret emplacement design supporting two such launchers side by side.`
+	description `If the penetrating carnage dealt by Kinetic Rods are your cup of tea, but the aim of your bulky ship frustrates you, then drink the tears of your enemies heartily with the turret emplacement design supporting two such launchers side by side.`
 	description `	Shields can often blunt the impact of the Kinetic Rod by electromagetic induction, forcing incoming rods to deviate from their trajectory and scrape the hulls at an angle. Nevertheless, Kinetic Rods are capable of inflicting damage through their sheer weight and energy.`
 
 #		[84] Weapons (AA Turret)

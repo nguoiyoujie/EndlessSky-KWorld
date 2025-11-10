@@ -149,11 +149,21 @@
 #				10200200	"KW.Keji Cohabitat Gym"
 #		[01] Power (Solar)
 #			[2] Keji
-#				10201200	"KW.Keji Absorption Skin
+#				10201200	"KW.Keji Photo-Absorption Skin
 #		[02] Power (Storage)
 #		[03] Power (Other)
 #		[10] Main Thruster Engines
+#			[0] Generic
+#				10210000	"KW.Cyclos Engine"
+#				10210010	"KW.Encyclos Engine"
+#				10210020	"KW.Tricyclos Engine"
+#				10210030	"KW.Turbos Engine"
 #		[11] Side Steering Engines
+#			[0] Generic
+#				10211000	"KW.Cyclos Director"
+#				10211010	"KW.Encyclos Director"
+#				10211020	"KW.Tricyclos Director"
+#				10211030	"KW.Turbos Director"
 #		[12] Rear Thruster Engines
 #		[13] Afterburner Engines
 #		[14] Composite Engines
@@ -164,12 +174,27 @@
 #				10221100	"KW.Inlos Thermoregulator"
 #				10221110	"KW.Inlos Homeostatic Regulator"
 #		[30] Fuel (Ramscoop)
+#			[0] Generic
+#				10230000	"KW.Fuel Collector"
+#			[2] Keji
+#				10230200	"KW.Keji Material-Absorption Skin
 #		[31] Fuel (Storage)
 #		[40] Shield Regen & Support
 #		[41] Hull Regen & Support
 #		[49] Other Regen & Support
 #		[80] Weapons (Non-Ammunition Gun)
+#			[0] Generic
+#				10280000	"KW.Energy Blaster"
+#				10280010	"KW.Rapid Blaster"
+#				10280020	"KW.Flux Blaster"
+#				10280030	"KW.Dissipitative Blaster"
+#				10280040	"KW.Ion Cannon"
 #		[81] Weapons (Non-Ammunition Turret)
+#			[0] Generic
+#				10281000	"KW.Energy Blaster Turret"
+#				10281010	"KW.Rapid Blaster Turret"
+#				10281020	"KW.Flux Blaster Turret"
+#				10281030	"KW.Dissipitative Blaster Turret"
 #		[82] Weapons (Ammunition Gun)
 #		[83] Weapons (Ammunition Turret)
 #		[84] Weapons (AA Turret)
@@ -330,3 +355,59 @@
 #			[9] Government of Sol
 #				11899900	"KW.Sol Map"
 #
+#	[120] Machines
+#		[00] Reactors
+#			[0] Generic
+#				12000000	"KW.Thermal Spark"
+#				12000010	"KW.Thermal Reactor"
+#		[01] Power (Solar)
+#		[02] Power (Storage)
+#		[03] Power (Other)
+#		[10] Main Thruster Engines
+#			[0] Generic
+#				12010000	"KW.Drone Relocation Engine"
+#				12010010	"KW.Hive Relocation Engine"
+#		[11] Side Steering Engines
+#		[12] Rear Thruster Engines
+#		[13] Afterburner Engines
+#		[14] Composite Engines
+#		[19] FTL Drives
+#		[20] Cooling (Passive)
+#		[21] Cooling (Active)
+#			[0] Generic
+#				12021000	"KW.Thermal Absorption Pad"
+#				12021010	"KW.Thermal Converter Panel"
+#				12021020	"KW.Thermal Converter Suit"
+#				12021030	"KW.Thermal Sufficiency Module"
+#		[30] Fuel (Ramscoop)
+#		[31] Fuel (Storage)
+#		[40] Shield Regen & Support
+#		[41] Hull Regen & Support
+#		[49] Other Regen & Support
+#		[80] Weapons (Non-Ammunition Gun)
+#			[0] Generic
+#				12080000	"KW.Mining Drill"
+#				12080010	"KW.Mason Arm"
+#		[81] Weapons (Non-Ammunition Turret)
+#		[82] Weapons (Ammunition Gun)
+#			[0] Generic
+#				12082000	"KW.Crude Catapult (Iron)"
+#				12082001	"KW.Crude Catapult (Tungsten)"
+#				12082002	"KW.Crude Catapult (Uranium)"
+#				12082010	"KW.Atlotl Catapult (Iron)"
+#				12082011	"KW.Atlotl Catapult (Carbide)"
+#				12082012	"KW.Atlotl Catapult (Uranium)"
+#		[83] Weapons (Ammunition Turret)
+#		[84] Weapons (AA Turret)
+#		[85] Weapons (Ammunition)
+#				12085000	"KW.Iron Bolt"
+#				12085010	"KW.Carbide Rod"
+#				12085020	"KW.Uranium Rod"
+#		[86] Scanners
+#			[0] Generic
+#		[87] Anti-Scanners
+#		[90] Refits
+#		[98] Licences
+#		[99] Utility / Special Items
+#
+

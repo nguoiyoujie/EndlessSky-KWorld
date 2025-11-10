@@ -18,6 +18,7 @@ event "KW.Sol.Advent 1 available"
 
 event "KW.Sol.Advent Workshop 1"
 	planet KW.S.001.0.Advent
+		add attributes "workshop"
 
 
 

@@ -2,8 +2,14 @@
 #	You are actually part of a military, sort of. The Organization is a union of three Great Houses, and every respectable member has a rank.
 #	As far as you are concerned, you deal mostly with logistics, but you are permitted to use weapons if there need be.
 #
-#	Your superior is (a yet unnamed) Major operating solely within the confines of Sol. Your group handles transport between Earth and Io.
-#
+#	Your superior is (a yet unnamed) Major operating solely within the confines of Sol. Your group handles transport between Earth and Io. However, you will also be expected to defend yourselves
+# General breakdown of mission is as follows:
+# 	MISSION 0: First Delivery
+# 	MISSION 1: Basic Cargo Operations
+# 	MISSION 2: Mining Operations
+# 	MISSION 3: Intermediate Cargo Operations
+# 	MISSION 4: Basic Combat (can be taken after Mission 1, with any weapon)
+#		MISSION 5: Escort and Combat
 #
 #	Intent:
 #		The main tutorial. Completing the tutorial unlocks the full job offers and other questlines around Sol
@@ -361,7 +367,10 @@ mission "KW.Sol.Inbox [2A]"
 					not "ship attribute: hull damage"
 					not "flagship attribute: asteroid scan power"
 			`For your troubles, your salary has been increased to 350. You may take other jobs to outfit your ship for the job, or hire another pilot to do the work for you.`
-			`Further instructions await once this job is done.`
+			`	Basic combat training is available on the Moon.`
+				to display
+					not "KW.Sol.Inbox [4C]: done"
+			`	Further instructions await once this job is done.`
 				accept
 
 	on visit
@@ -416,7 +425,10 @@ mission "KW.Sol.Inbox [2B]"
 				to display
 					not "ship attribute: hull damage"
 					not "flagship attribute: asteroid scan power"
-			`Further instructions await once this job is done.`
+			`	Basic combat training is available on the Moon.`
+				to display
+					not "KW.Sol.Inbox [4C]: done"
+			`	Further instructions await once this job is done.`
 				accept
 
 	on visit
@@ -478,7 +490,10 @@ mission "KW.Sol.Inbox [2C]"
 				to display
 					not "ship attribute: hull damage"
 					not "flagship attribute: asteroid scan power"
-			`Further instructions await once this job is done.`
+			`	Basic combat training is available on the Moon.`
+				to display
+					not "KW.Sol.Inbox [4C]: done"
+			`	Further instructions await once this job is done.`
 				accept
 
 	on visit
@@ -540,7 +555,10 @@ mission "KW.Sol.Inbox [3A]"
 			`${KW.Phrase.Sol: Io outfit start}`
 			`There is an additional note: "<outfit> are found only on <dplanet>. Compensation for your troubles would be awarded upon delivery with a bonus. If you have insufficient cash, you may take a temporary loan to finance the purchase, and repay it on delivery.`
 			`Tutorial: You may purchase an outfit and place it in your cargo space instead of outfit space. You can do so at an outfitter with hotkeys (default: C - load to cargo, U - unload to storage), or by using the install/uninstall option with no ships selected (hold Ctrl and left-click to toggle selection of a specific ship). Space is a precious commodity; mastering this techinique can aid you in future adventures to come.`
-			`Further instructions await once this job is done.`
+			`	Basic combat training is available on the Moon.`
+				to display
+					not "KW.Sol.Inbox [4C]: done"
+			`	Further instructions await once this job is done.`
 				accept
 
 	on visit
@@ -603,6 +621,9 @@ mission "KW.Sol.Inbox [3B]"
 
 			label "tutorial"
 			`	Tutorial: You may install and uninstall outfits from your ship using hotkeys (default: I - install, U - uninstall) with a selected item on the Outfitter screen. You may also unload and load items into cargo space with another set of hotkeys (default: C - load to cargo, U - unload to storage), or by using the install/uninstall option with no ships selected (hold Ctrl and left-click to toggle selection of a specific ship). Space is a precious commodity; mastering this techinique can aid you in future adventures to come.`
+			`	Basic combat training is available on the Moon.`
+				to display
+					not "KW.Sol.Inbox [4C]: done"
 			`	Further instructions await once this job is done.`
 				accept
 
@@ -651,6 +672,11 @@ mission "KW.Sol.Inbox [3C]"
 			`	There is an additional note: "<outfit> can be purchased in <dplanet>. Compensation for your troubles would be awarded upon delivery with a bonus. If you have insufficient cash, you may take a temporary loan to finance the purchase, and repay it on delivery. Note that the outfits exceed the normal cargo capacity of a single freighter. Additionally, the Chronodrives are very heavy for the space they occupy. It may be easier to transport them as outfits instead of cargo."`
 			`	Tutorial: Remember you can choose whether to install an outfit as either cargo or active outfit. Sometimes one choice is preferable over the other Space is a precious commodity; mastering this techinique can aid you in future adventures to come.`
 			`	Further instructions await once this job is done.`
+				to display
+					has "KW.Sol.Inbox [4C]: done"
+			`	You must receive basic combat training to receive further instructions. Go to Luna and talk with an instructor for certification.`
+				to display
+					not "KW.Sol.Inbox [4C]: done"
 				accept
 
 	on visit
@@ -675,36 +701,336 @@ mission "KW.Sol.Inbox [3C]"
 
 mission "KW.Sol.Inbox [4A]"
 	priority
-	name "[Sol] Acquire an Interceptor"
+	name "[Sol] Destroy Practice Target"
 	color selected "KW.Color: main missions selected"
 	color unselected "KW.Color: main missions unselected"
-	description "Acquire an Interceptor and go to <destination>. The most basic interceptor is the <dfighter>. New ships can be bought on <dplanet> in <dsystem>."
+	description "As part of your combat training, destroy the test dummy shuttle in <system>, then return to <planet>. You shall be awarded <payment> for your troubles."
+	landing
+	source "KW.S.000.1.Moon"
+
+	to offer
+		has "KW.Sol.Inbox [1A]: done"
+		has "KW.Sol.Inbox [1B]: done"
+		has "KW.Sol.Inbox [1C]: done"
+
+	npc disable kill
+		government "Test Dummy"
+		personality staying heroic target
+			confusion 120
+		system destination
+		ship "KW.Shuttle (Minimal)" "Target Practice"
+		dialog "You observe the disabled craft as it blows up. Time to return to <planet>."
+
+	on offer
+		conversation
+			`You arrive on <planet>, meeting the prerequisites for starting your combat training.`
+			`	You require a weapon for your training.`
+				to display
+					not "ship attribute: hull damage"
+
+			choice
+				`	(Proceed to meet the instructor.) ${KW.Phrase.Mission: Accept}`
+					to display
+						has "ship attribute: hull damage"
+				`	(Hold off on the training missions.) ${KW.Phrase.Mission: Defer}`
+					defer
+
+			`A man clad in a green checkered uniform awaits you at one of the small vessels orbiting the lunar surface. Presumably he is your instructor.`
+
+			branch first
+				not "KW.Sol.Inbox 4A: offered before"
+
+			`	"Have another go, eh," the instructor stands, arms crossed. "Again, I have a shuttle in orbit. Unarmed. Destroy it and come back."`
+				accept
+
+			label first
+			`	"Took your bloody time, eh," the instructor sizes you up, before he turns around. "You have done quite a few jobs already. All is well until someone comes in and holds you at gunpoint."`
+
+			choice
+				`	"Am I expecting hostile ships around Earth?"`
+					goto norm
+				`	"I have not seen much hostile activity in space."`
+					goto norm
+				`	"Is that what awaits me beyond Deneb?"`
+					to display
+						has "visited system: KW.S.008.Deneb"
+
+			`	The instructor's eyes lit up as you mentioned Deneb. "So you have ventured into the borders? Perhaps you are tougher than you look. There may be harsher climates out there, but you should be prepared even here."`
+				goto backtomission
+			label norm
+			`	"You have not ventured far enough to see the lows of space life. And life is hard. Some turn to piracy and hunt down people like you. The machines take care of most of the problem, but surely you are not going to rely on them forever?", the instructor grunts.`
+			label backtomission
+			`	"I have placed a shuttle in orbit. It is unarmed. Your task is simple: Destroy it, then come back. I will be observing you from planetside."`
+				accept
+
+	on accept
+		set "KW.Sol.Inbox 4A: offered before"
+
+	on complete
+		payment 1000
+		conversation
+			branch looted
+				has "outfit: KW.Silicate Data Cubes"
+
+			`The instructor is satisfied with your work.`
+			`	"Well done. The Organization has paid for your training and a stipend of <payment> should be routed to your account once I sign off your training results. Come back here next time, and we will begin our next lesson."`
+				goto done
+
+
+			label looted
+			`The instructor looks as amused as he is bemused.`
+			`	"Surely, the first thing in your mind is to loot your target before completing your objective?"`
+
+			choice
+				`	"Sorry, I will not do it again."`
+				`	"The outfits would have been destroyed anyway. Do you want them back?"`
+				`	"As you had said, life is hard out there. These scraps can keep me afloat."`
+				`	"I would have taken the ship too, if I was able to."`
+			`The instructor shakes his head, "It's your superior officer who have to deal with your looting tendencies. Since you have already done boarding actions, I will waive that lesson plan. I will sign off on your results; the Organization has paid for your training and you should get your award of <payment>."`
+			`	"And you can keep those data cubes you took from the shuttle. The Organization issues use tons of them, and maybe you have better use for them than my superiors think."`
+
+			action
+				set "KW.Sol.Inbox [4B]: offered"
+				set "KW.Sol.Inbox [4B]: done"
+
+			label done
+				`	You bid goodbye to the instructor and return to the lunar port.`
+
+	on fail
+		clear "KW.Sol.Inbox [4A]: offered"
+		dialog `You hear a disapproving voice transmitted to your intercom, "Come back and try again when you are ready."`
+
+mission "KW.Sol.Inbox [4B]"
+	priority
+	name "[Sol] Board Practice Target"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "As part of your combat training, disable and board the test dummy shuttle in <system>, then return to <planet>. The target may be destroyed after boarding, but not before."
+	landing
+	source "KW.S.000.1.Moon"
+
+	to offer
+		has "KW.Sol.Inbox [4A]: done"
+		has "ship attribute: hull damage"
+
+	npc disable board
+		government "Test Dummy"
+		personality staying heroic target
+			confusion 120
+		system destination
+		ship "KW.Shuttle (Minimal)" "Target Practice"
+		dialog "You notice the shuttle made a ticking sound as you connect to it. Time to return to <planet>."
+
+	on offer
+		conversation
+			`You arrive on <planet>, meeting the prerequisites for continuing your combat training.`
+
+			choice
+				`	(Proceed to meet the instructor.) ${KW.Phrase.Mission: Accept}`
+				`	(Hold off on the training missions.) ${KW.Phrase.Mission: Defer}`
+					defer
+
+			`You spot the same man in green checkered uniform as you land on his orbitting shuttle.`
+
+			branch first
+				not "KW.Sol.Inbox 4B: offered before"
+
+			`	"Have another go, eh," the instructor stands, arms crossed. "I have another shuttle in orbit. Unarmed. Board it and come back."`
+				accept
+
+			label first
+			`	"Back for your next lesson, eh?" the instructor speaks, "Let's get to business. I have a new shuttle in orbit. It is unarmed. Your task is simple: Instead of destroying it, disable it first by damaging its hull just enough, then board it (default: B - board/assist selected ship). Then come back. I will be observing your progress."`
+				accept
+
+	on accept
+		set "KW.Sol.Inbox 4B: offered before"
+
+	on complete
+		conversation
+			branch looted
+				has "outfit: KW.Silicate Data Cubes"
+
+			`The instructor is satisfied with your work.`
+				goto done
+
+			label looted
+			`The instructor looks amused.`
+			`	"Couldn't resist the items inside the test ship?"`
+
+			choice
+				`	"Sorry, I will not do it again."`
+				`	"Do you want them back?"`
+				`	"Data cubes seem to be worth something."`
+				`	"I would have taken the ship too, if I was able to."`
+			`The instructor shrugs. "We have an excess of data cubes. I don't even know why we are told to put them on these junk. You can keep them."`
+
+			label done
+			`	"Well done. Come back here next time, with a Cargo Scanner, and we will begin our next lesson."`
+			`	You bid goodbye to the instructor and return to the lunar port.`
+
+	on fail
+		clear "KW.Sol.Inbox [4B]: offered"
+		dialog `You hear a disapproving voice transmitted to your intercom, "You are to board the ship, not destroy it. Come back and try again."`
+
+mission "KW.Sol.Inbox [4C]"
+	priority
+	name "[Sol] Scan Practice Target"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "As part of your combat training, equip a Cargo scanner and conduct a scan on the test dummy shuttle in <system>, then return to <planet>. The target may not be destroyed."
+	landing
+	source "KW.S.000.1.Moon"
+
+	to offer
+		has "KW.Sol.Inbox [4B]: done"
+		has "ship attribute: hull damage"
+
+	npc "scan cargo"
+		government "Test Dummy"
+		personality staying heroic target
+			confusion 120
+		system destination
+		ship "KW.Shuttle (Minimal)" "Target Practice"
+		dialog "You are satisfied about your scanner's readings. Time to return to <planet>."
+
+	on offer
+		conversation
+			`You arrive on <planet>, meeting the prerequisites for continuing your combat training.`
+
+			choice
+				`	(Proceed to meet the instructor.) ${KW.Phrase.Mission: Accept}`
+				`	(Hold off on the training missions.) ${KW.Phrase.Mission: Defer}`
+					defer
+
+			`The man in green checkered uniform is waiting as you land on his orbitting shuttle.`
+
+			branch noscanner
+				not "flagship attribute: cargo scan power"
+
+			`	"Here is the next task," the instructor speaks. "I have a new shuttle in orbit. Get close to it, and using your Cargo Scanner, scan its contents (default: S - scan selected ship). Then come back with the data."`
+				accept
+
+			label noscanner
+			`The instructor makes an outfit check on your ship this time and says, "For this next lesson, you will need something that can scan a ship's internal cargo hold. Get one at Io, install it and come back."`
+				defer
+
+	on complete
+		conversation
+			`The instructor is pleased with the results.`
+			`	"Well done. You are now certified for patrol duties. Your superior officer will arrange for jobs that will put your new skills to use. When you have made it, have a coffee with me sometime."`
+			`	You bid goodbye to the instructor and return to the lunar port.`
+
+	on fail
+		clear "KW.Sol.Inbox [4C]: offered"
+		dialog `You hear a disapproving voice transmitted to your intercom, "You are to scan the ship, not destroy it. Come back and try again."`
+
+
+mission "KW.Sol.Inbox [Reset,5]"
+	priority
+	name "[Sol] Restore mission progress"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	job
+	"offer precedence" 999
+	repeat
+	description "You had stopped essential work for the Organization. Resume your aborted missions by compensating 10000 credits."
+	source
+		system KW.S.000.Sol
+		attributes earth
+
+	to offer
+		or
+			has "KW.Sol.Inbox [5A]: aborted"
+			has "KW.Sol.Inbox [5A]: failed"
+			has "KW.Sol.Inbox [5B]: aborted"
+			has "KW.Sol.Inbox [5B]: failed"
+			has "KW.Sol.Inbox [5C]: aborted"
+			has "KW.Sol.Inbox [5C]: failed"
+	on accept
+		payment -10000
+		conversation
+			branch skip.5a
+				and
+					not "KW.Sol.Inbox [5A]: aborted"
+					not "KW.Sol.Inbox [5A]: failed"
+
+			action
+				clear "KW.Sol.Inbox [5A]: offered"
+				clear "KW.Sol.Inbox [5A]: aborted"
+				clear "KW.Sol.Inbox [5A]: failed"
+
+			label skip.5a
+			branch skip.5b
+				and
+					not "KW.Sol.Inbox [5B]: aborted"
+					not "KW.Sol.Inbox [5B]: failed"
+
+			action
+				clear "KW.Sol.Inbox [5B]: offered"
+				clear "KW.Sol.Inbox [5B]: aborted"
+				clear "KW.Sol.Inbox [5B]: failed"
+
+			label skip.5b
+			branch skip.5c
+				and
+					not "KW.Sol.Inbox [5C]: aborted"
+					not "KW.Sol.Inbox [5C]: failed"
+
+			action
+				clear "KW.Sol.Inbox [5C]: offered"
+				clear "KW.Sol.Inbox [5C]: aborted"
+				clear "KW.Sol.Inbox [5C]: failed"
+
+			label skip.5c
+			`You grit your teeth and make the call, enduring the reprimand from your superior. After a lengthy session, he tells you that he has reopened the offers previously abandoned by you, demanding that you work to regain his trust.`
+				decline
+
+	on daily
+		fail
+
+# MISSION 5: Escort Missions
+
+mission "KW.Sol.Inbox [5A]"
+	priority
+	name "[Sol] Escort a shuttle to <destination>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "Escort a shuttle to <destination>. The shuttle has insufficient fuel for the trip, so carry excess fuel and board the shuttle to transfer your fuel to it. For your troubles, payment is <payment>."
 	landing
 	source
 		system KW.S.000.Sol
 		attributes earth
 	destination "KW.S.017.0.Ebbing Colors"
-	substitutions
-		"<dfighter>" "Firefly"
-		"<dplanet>" "Io"
-		"<dsystem>" "Sol"
 	to offer
 		has "KW.Sol.Inbox [3C]: done"
+		has "KW.Sol.Inbox [4C]: done"
+
+	npc accompany save
+		government "KW.Merchants"
+		personality escort timid
+		fleet
+			names "civilian"
+			variant
+				"KW.Shuttle"
 
 	on accept
-		"salary: House of Coreillius" = 350
+		"salary: House of Coreillius" = 400
 
 	on offer
 		conversation
-			`You look into your digital notepad, and check your inbox. This time, the job does not have a payout, but your superior has asked you to acquire an Interceptor spacecraft. There, you would perform basic combat training, so discarding weapons is quite... ill-advised.`
-			`	Thereafter, you should report to <destination>. It is four jumps away, so a fuel tank may be prudent.`
+			`You look into your digital notepad, and check your inbox. This time, the job indicates an escort mission, that you are to accompany another ship - a shuttle - to its destination at <destination>.`
+			`	While almost no hostilities are expected, the shuttle itself does not have sufficient fuel to make the journey by itself, so you will need to transfer some fuel. This can be done by 'assisting' the stranded shuttle (default: B - board/assist selected ship). Better to invest in some fuel capacity.`
+			` There is also another note: Owing to the completion of your combat training and basic logistics operations, your daily stipend has been increased to 400. This final part of the tutorial will introduce and unlock patrol related missions.`
 				accept
 
 	on visit
-		dialog `You have landed at <destination> without an Interceptor! Either purchase one at <dplanet>, or if they are already in your fleet, wait for them to arrive in system.`
+		dialog phrase "generic arrived-without-npc dialog"
 
-	to complete
-		has "ships: Interceptor"
+	on complete
+		payment 15000
+		dialog
+			`As the pilot of the escorted ship scrambles out towards a remote office within the port, you hear the familiar notification that the job has been marked as completed.`
+			`The next job awaits on Earth.`
 
 	on decline
 		clear "salary: House of Coreillius"
@@ -714,44 +1040,200 @@ mission "KW.Sol.Inbox [4A]"
 		clear "salary: House of Coreillius"
 		dialog phrase "KW.Phrase.Sol: failed"
 
-mission "KW.Sol.Inbox [4B]"
+mission "KW.Sol.Inbox [5B]"
 	priority
-	name "[Sol] Acquire an Interceptor"
+	name "[Sol] Patrol route"
 	color selected "KW.Color: main missions selected"
 	color unselected "KW.Color: main missions unselected"
-	description "Eliminate "
+	description `Perform a patrol by moving through the <waypoints> systems, then return to <destination> to report your findings. Payment is <payment>.`
 	landing
-	source "KW.S.017.0.Ebbing Colors"
+	source
+		system KW.S.000.Sol
+		attributes earth
+	waypoint
+		system KW.S.022.Adhara
+	waypoint
+		system KW.S.015.Capella
+	waypoint
+		system KW.S.013.Vega
+	on visit
+		dialog phrase "generic waypoint on visit"
 
 	to offer
-		has "KW.Sol.Inbox [4A]: done"
-
-	npc disable kill
-		government "Test Dummy"
-		personality staying heroic target
-			confusion 120
-		system destination
-		ship "KW.Worker Bee" "Target Practice"
-		dialog "You scan the disabled craft and take careful measurements of the battle damage. Time to deliver the results on <planet>."
+		has "KW.Sol.Inbox [5A]: done"
 
 	on accept
-		"salary: House of Coreillius" = 350
+		"salary: House of Coreillius" = 400
 
 	on offer
 		conversation
-			`An instructor of sorts awaits you at the outpost.`
-			`	"Took your bloody time, eh," the instructor sizes you up, before he turns around. "You have done quite a few jobs already. All is good when there is no hostile ship firing at you."`
-
-			choice
-				`	"Am I expecting hostile ships around Earth?"`
-				`	"I have not seen much hostile activity in space."`
-
-			`	"Life is hard. Some turn to piracy and hunt down people like you. The machines take care of most of the problem, but surely you are not going to rely on them forever?", the instructor grunts in near-disbelief.`
-			`	"I have placed a shuttle in orbit. It is lightly armed. Destroy it, then come back. I will be observing you from planetside."`
+			`You look into your digital notepad, and check your inbox. This time, the job indicates a patrol mission, that you are to make a visit to a list of nearby systems: <waypoints>.`
+			`	While you are allowed to leave a target system upon visiting it, the job details recommends you make a visual observation about the planets within the system.`
 				accept
 
-	to complete
-		has "ships: Interceptor"
+	on complete
+		payment 10000 175
+		conversation
+			`As you report your ship's data to your supervisor, he nods as he briefly inspects the information on his computer. He suddenly turns around and asks:`
+			`	"How many landable planets were in the three systems you had just patrolled?"`
+
+			choice
+				`"Two."`
+				`"Three."`
+					goto impressed
+				`"Four."`
+				`"Five."`
+				`"... I don't know sir."`
+
+			`Your superior's eyebrows crossed, "I suppose you took off immediately after reaching the system. I have seen too many people do that."`
+			`	"If you get asked difficult questions like this, know that you can view the map mid-conversation by a hotkey (default: M - view map). From the map you can inspect the systems you have visited. You can try it now."`
+
+			choice
+				`"I've got it, sir."`
+					goto done
+
+			label impressed
+			`Your superior's eyebrows raised, "Unlike other pilots, you actually stayed to check the systems."`
+			`	"... Or, you checked the answer by looking at the map mid-conversation. Did you know you can view the map in almost any scenario?"`
+
+			choice
+				`"Yes, I know."`
+					goto done
+				`"Tell me again, sir."`
+
+			`"You can view the map mid-conversation by a hotkey (default: M - view map). You can try it now."`
+			choice
+				`"I've got it, sir."`
+
+			label done
+			`"Knowing how to use your resources is important. Later on, when you have attained enough rank to command others, you will find it worthwhile, perhaps even necessary, to transfer some your ships to subordinate fleets. Issuing orders blind is not recommended."`
+
+			choice
+				"Why do I need to split my fleet?"
+
+			`"Each ship has its maintanence cost, as you have noticed. In addition to that, certain Systems out there levy taxes based on the number of ships you have travelling through them." Your superior grins slightly at your incredulous expression. "I know, taxes are universal after all. Certain rank and faction alignment can get you past some of those limits, but will impose other restrictions to keep you... us managable."`
+
+			choice
+				`"How do I get in touch with those other factions?"`
+
+			"You have already done so: Our neighbor on Io are governed by what we call 'Sentient Machines'. They are a roving group, and act as enforcers of the peace. You will find them plenty once you go beyond Deneb, and you will find one of those restrictions very soon."
+
+			choice
+				`"I have encountered them. They insisted they scan me for... 'innoculations'."`
+					to display
+						has "first contact: Bet"
+				`"I see."`
+					goto finishconvo
+
+			`Your superior sighs. "They had a very bad case of... genetic accidents related to gene-modifying therapy. Took five generations to flush the disease out. They love talking about it so I'll leave them to tell you more."`
+
+			label finishconvo
+			`	"If they ask to scan you on Deneb, let them. We have nothing within us that can harm them. Do not attempt to move past Deneb without the scan, or they will shoot."`
+			`	"Before you make a mad rush towards Deneb, I have one final task for you. Go to Io, and look for the quartermaster; he will tell you the details."`
+
+	on decline
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: declined"
+
+	on fail
+		clear "salary: House of Coreillius"
+		dialog phrase "KW.Phrase.Sol: failed"
+
+mission "KW.Sol.Inbox [5C]"
+	priority
+	name "[Sol] Combat at <destination>"
+	color selected "KW.Color: main missions selected"
+	color unselected "KW.Color: main missions unselected"
+	description "With the fleet assembled by the Sentient Machines, eliminate the pirates gathering at <waypoints>. Payment is <payment>."
+	landing
+	source KW.S.000.2.Io
+	waypoint
+		system KW.S.004.Achernar
+	#to offer
+		#has "KW.Sol.Inbox [5B]: done"
+
+	npc
+		government "KW.Sol"
+		personality heroic frugal escort
+		fleet
+			names "sol small"
+			variant
+				"KW.Firefly" 3
+				"KW.Firefly (Vulcan)"
+				"KW.Mosquito"
+				"KW.Hornet"
+
+	npc
+		government "KW.Machines"
+		personality heroic staying waiting vindictive
+		fleet
+			names "machine small"
+			variant
+				"KW.Firefly" 3
+
+	npc
+		government "KW.Machines"
+		personality heroic escort waiting vindictive
+		system KW.S.004.Achernar
+		fleet
+			names "machine small"
+			variant
+				"KW.Mosquito" 3
+
+	npc
+		government "KW.Machines"
+		personality
+			confusion 5
+			heroic escort vindictive
+		fleet
+			names "machine capital"
+			fighters
+				names "machine small"
+			cargo 0
+			variant
+				"KW.Hive"
+				"KW.Hunter Bee" 6
+
+	npc kill
+		government "KW.Pirates"
+		personality
+			confusion 20
+			daring hunting staying target
+		system KW.S.004.Achernar
+		fleet
+			names "pirate"
+			variant
+				"KW.Shuttle III" 3
+				"KW.Firefly" 2
+				"KW.Firefly (Vulcan)"
+				"KW.Mosquito" 2
+				"KW.Mosquito (Rod)"
+				"KW.Hornet" 2
+				"KW.Hornet (Vulcan)"
+		dialog phrase "generic hunted bounty fleet eliminated dialog"
+
+	on accept
+		"salary: House of Coreillius" = 400
+
+	on offer
+		conversation
+			`The quartermaster was found in the hangar speaking to a team of androids and what looks like a number of ship drones. A hulking machine in tractor form, it beckons you the moment it sees you. It is apparent the quartermaster has been informed of your incoming visit.`
+			` "So this is the new aspiring pilot, Captain <last>!" The mechanical voice roars, "There is confirmed pirate activity on <waypoints>, gathering in numbers and preparing to jump into Denebola. We cannot have the human posts on Rigel and Arneb being cut off, so we are going to strike them before they are ready."`
+			`	The machine roars to the ragtag team of interceptors and drones, "Get your best fighting ship and brawl in! Remember, don't overextend and lose yourself! We have the numbers and element of surprise."`
+			`	There is still time to go to the shipyard and outfitter to prepare your ship. It is recommended to park your non-combat ships (default: I - player information screen), so you do not lose them in the fray.`
+				accept
+
+	on visit
+		dialog phrase "generic fleet bounty hunting on visit"
+
+	on complete
+		payment 350000
+		set "job-board: enable generic escort jobs"
+		set "job-board: enable generic bounty jobs"
+		"salary: House of Coreillius" = 500
+		dialog
+			phrase "generic fleet bounty hunting payment dialog"
+			`You have been committed as a full Captain. Your stipend has been increased to 500, and you now have access to storage outfitters on the Alps and the Moon. You also have access to escort and bounty jobs on the jobboard. You are free to take new jobs as you wish. Grow in Sol, or explore other regions, it is now up to you.`
 
 	on decline
 		clear "salary: House of Coreillius"

@@ -94,7 +94,8 @@ system KW.S.000.Sol
 	fleet "KW.Sol Patrol" 2500
 	fleet "KW.Sol Patrol Machine" 3500
 	fleet "KW.Sol Miner" 1600
-	fleet "KW.Sol Pirates" 4000
+	fleet "KW.Sol Miner Machine" 6000
+	#fleet "KW.Sol Pirates" 1000 #4000
 
 
 system "KW.S.001.Alpha Centauri"
@@ -243,12 +244,13 @@ system KW.S.003.Arcturus
 	fleet "KW.Sol Merchants Small" 1300
 	fleet "KW.Sol Merchants Large" 1800
 	fleet "KW.Sol Miner" 3200
+	fleet "KW.Sol Miner Machine" 8000
 
 system KW.S.004.Achernar
 	"display name" Achernar
 	pos 10320.9 -8605.884
 	government Uninhabited
-	arrival 5000
+	arrival 2500
 	habitable 9000
 	haze _menu/haze-33
 	link KW.S.007.Acrux
@@ -270,10 +272,9 @@ system KW.S.004.Achernar
 		sprite planet/rock12-b
 		distance 2731.777
 		period 395.789
-	fleet "KW.Sol Patrol" 3500
-	fleet "KW.Sol Patrol Machine" 2500
-	fleet "KW.Sol Merchants Small" 1300
-	fleet "KW.Sol Merchants Large" 1800
+	fleet "KW.Sol Patrol" 4500
+	fleet "KW.Sol Patrol Machine" 3500
+	fleet "KW.Sol Merchants Small" 3300
 
 system KW.S.005.Canopus
 	"display name" Canopus
@@ -695,6 +696,7 @@ system KW.S.014.Denebola
 	fleet "KW.Sol Merchants Small" 1300
 	fleet "KW.Sol Merchants Large" 1800
 	fleet "KW.Sol Miner" 3200
+	fleet "KW.Sol Miner Machine" 8000
 
 system KW.S.015.Capella
 	"display name" Capella
@@ -839,6 +841,7 @@ system KW.S.017.Alioth
 	fleet "KW.Sol Merchants Small" 1300
 	fleet "KW.Sol Merchants Large" 1800
 	fleet "KW.Sol Miner" 3200
+	fleet "KW.Sol Miner Machine" 9000
 
 system KW.S.018.Phecda
 	"display name" Phecda
@@ -875,6 +878,7 @@ system KW.S.018.Phecda
 	fleet "KW.Sol Patrol" 3500
 	fleet "KW.Sol Merchants Small" 1300
 	fleet "KW.Sol Miner" 3200
+	fleet "KW.Sol Miner Machine" 16000
 
 system KW.S.019.Alkaid
 	"display name" Alkaid
@@ -904,6 +908,7 @@ system KW.S.019.Alkaid
 	fleet "KW.Sol Patrol" 3500
 	fleet "KW.Sol Merchants Small" 1300
 	fleet "KW.Sol Miner" 3200
+	fleet "KW.Sol Miner Machine" 8000
 
 system KW.S.020.Vindemiatrix
 	"display name" Vindemiatrix

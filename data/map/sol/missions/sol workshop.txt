@@ -1,0 +1,171 @@
+############### MISSION: WORKSHOP ###############
+#
+#
+#	Intent:
+#
+#
+
+#	'Trades'
+#		Iron 									-> Iron Bolts
+#		Copper + Lead 				-> Vulcanite
+#		Tungsten 							-> Kinetic Rod
+#		Uranium								-> DU Rod
+#
+#
+#
+
+
+
+mission "KW.Generic.Workshop"
+	name "[Workshop] Visit the Workshop"
+	color selected "KW.Color: locale missions selected"
+	color unselected "KW.Color: locale missions unselected"
+	job
+	repeat
+	description "Visit and craft materials in the local workshop."
+	"offer precedence" 997
+	source
+		attributes earth # workshop
+
+	on accept
+		conversation
+			`You walk into one of assembly plants within a planetary factory, their drone and clanks neverending as mechanical parts move ceaselessly to produce the next batch of product. Very quickly, you are guided to a sepearate section, a modest crafting workshop that you can use for your own production.`
+				to display
+					has "flagship planet attribute: factory"
+					not "flagship planet attribute: rural"
+			`The warm embrace from the hearth of a smithy greets you as you inspect the tools and tables of the workshop. You consider what to produce with this lovely forge.`
+				to display
+					not "flagship planet attribute: factory"
+					has "flagship planet attribute: rural"
+			`There are a few workers present in the communal workshop, each performing their own crafting. You get to work.`
+				to display
+					not "flagship planet attribute: factory"
+					not "flagship planet attribute: rural"
+				goto workshopchoices
+
+			label workshop
+			`You return to the workshop.`
+
+			label workshopchoices
+			choice
+				`	(View recipes.)`
+					goto recipelist
+				`	(Select something to craft.)`
+					goto craft
+				`	(Leave.)`
+					goto exit
+
+### RECIPE LIST ###
+
+			label recipelist
+			`Recipes found:`
+			`	12 Iron Bolts from 1 Iron`
+			`	1000 Vulcanite from 1 Copper, 2 Lead`
+			`	1 Kinetic Rod from 4 Tungsten`
+			`	1 Uranium Rod from 3 Uranium`
+
+			choice
+				`	(Return to the workshop.)`
+					goto workshop
+				`	(Select something to craft.)`
+					goto craft
+				`	(Leave.)`
+					goto exit
+
+### CRAFT ###
+
+			label craft
+			`What would you like to craft?`
+
+			choice
+				`	(Iron Bolts)`
+					goto craft.ironbolt
+				`	(Vulcanite)`
+					goto craft.vulcanite
+				`	(Kinetic Rods)`
+					goto craft.kinrod
+				`	(Uranium rod)`
+					goto craft.uraniumrod
+				`	(Return to the workshop.)`
+					goto workshop
+				`	(View recipes.)`
+					goto recipelist
+				`	(Leave.)`
+					goto exit
+
+			label craft.ironbolt
+			scene "outfit/harvested iron"
+			`Iron Bolt`
+			`	Input:`
+			`		1 Iron`
+			`	Output:`
+			`		12 Iron Bolt`
+			``
+			`	You can perform this craft &[outfit: Iron] more times`
+
+			choice
+				`	(Craft 1 Iron to 12 Iron Bolts.)`
+					to display
+						"outfit: Iron" >= 1
+					goto craft.ironbolt.1
+
+				`	(Craft 5 Iron to 60 Iron Bolts.)`
+					to display
+						"outfit: Iron" >= 5
+					goto craft.ironbolt.5
+
+				`	(Craft 20 Iron to 240 Iron Bolts.)`
+					to display
+						"outfit: Iron" >= 20
+					goto craft.ironbolt.20
+
+				`	(Craft 500 Iron to 6000 Iron Bolts.)`
+					to display
+						"outfit: Iron" >= 500
+					goto craft.ironbolt.500
+
+				`	(Return to the crafting list.)`
+					goto craft
+				`	(Leave.)`
+					goto exit
+
+			label craft.ironbolt.1
+			action
+				outfit "Iron" -1
+				outfit "KW.Iron Bolt" 12
+			branch craft.ironbolt
+				1 == 1
+
+			label craft.ironbolt.5
+			action
+				outfit "Iron" -5
+				outfit "KW.Iron Bolt" 60
+			branch craft.ironbolt
+				1 == 1
+
+			label craft.ironbolt.20
+			action
+				outfit "Iron" -20
+				outfit "KW.Iron Bolt" 240
+			branch craft.ironbolt
+				1 == 1
+
+			label craft.ironbolt.500
+			action
+				outfit "Iron" -500
+				outfit "KW.Iron Bolt" 6000
+			branch craft.ironbolt
+				1 == 1
+
+			label craft.vulcanite
+
+			label craft.kinrod
+
+			label craft.uraniumrod
+
+			label exit
+			`	You return to the spaceport.`
+		fail
+
+
+

@@ -116,8 +116,8 @@ outfit "KW.Keji Cohabitat Gym"
 
 #		[01] Power (Solar)
 #			[2] Keji
-outfit "KW.Keji Absorption Skin"
-	"display name" "Keji Absorption Skin"
+outfit "KW.Keji Photo-Absorption Skin"
+	"display name" "Keji Photo-Absorption Skin"
 	category "Power"
 	series "Generators"
 	index 10201200
@@ -129,6 +129,172 @@ outfit "KW.Keji Absorption Skin"
 	"solar heat" 12
 	"coating" -1
 	description `WIP`
+
+#		[10] Main Thruster Engines
+#			[0] Generic
+outfit "KW.Cyclos Engine"
+	"display name" "Cyclos Engine"
+	category "Engines"
+	series "Engines"
+	index 10210000
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 40
+	"outfit space" -40
+	"engine capacity" -35
+	"thrust" 48
+	"thrusting energy" 6.4
+	"thrusting heat" 4
+	"cyclos socket" 1
+	"flare sprite" "effect/ion flare/medium"
+		"frame rate" 1.0
+	"flare sound" "ion medium"
+	description `The Betians believe that space travel is to be done with ships large enough to serve as arks and colonies, and this shows in the sizes of their outfits. The smallest forward engine available to the public is sized beyond the limits of a fighter or interceptors. Apart from that, this thruster boasts better thrust-space efficiencies than what Bet's neighbors can offer.`
+	description `The Engine comes with a specialized port that allows attachment of a Director steering mecahnism of equivalent size.`
+
+outfit "KW.Encyclos Engine"
+	"display name" "Encyclos Engine"
+	category "Engines"
+	series "Engines"
+	index 10210010
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 72
+	"outfit space" -72
+	"engine capacity" -66
+	"thrust" 90
+	"thrusting energy" 11.8
+	"thrusting heat" 8.9
+	"encyclos socket" 1
+	"flare sprite" "effect/ion flare/large"
+		"frame rate" 0.9
+	"flare sound" "ion large"
+	description `WIP`
+
+outfit "KW.Tricyclos Engine"
+	"display name" "Tricyclos Engine"
+	category "Engines"
+	series "Engines"
+	index 10210020
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 96
+	"outfit space" -96
+	"engine capacity" -88
+	"thrust" 128
+	"thrusting energy" 16
+	"thrusting heat" 12.5
+	"tricyclos socket" 1
+	"flare sprite" "effect/ion flare/large"
+		"frame rate" 0.9
+	"flare sound" "ion large"
+	description `WIP`
+
+outfit "KW.Turbos Engine"
+	"display name" "Turbos Engine"
+	category "Engines"
+	series "Engines"
+	index 10210030
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 144
+	"outfit space" -144
+	"engine capacity" -132
+	"thrust" 199
+	"thrusting energy" 27.5
+	"thrusting heat" 21
+	"turbos socket" 1
+	"flare sprite" "effect/ion flare/large"
+		"frame rate" 0.9
+	"flare sound" "ion large"
+	description `WIP`
+
+#		[11] Side Steering Engines
+#			[0] Generic
+outfit "KW.Cyclos Director"
+	"display name" "Cyclos Director"
+	category "Engines"
+	series "Engines"
+	index 10211000
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 39
+	"outfit space" -39
+	"engine capacity" -39
+	"turn" 1800
+	"turning energy" 6.4
+	"turning heat" 3
+	"cyclos socket" -1
+	"flare sprite" "effect/ion flare/medium"
+		"frame rate" 1.1
+	"steering flare sound" "ion medium"
+	description `WIP`
+	description `The Director is an extension of the Engine and can only be built with the corresponding engine outfitted on your ship.`
+
+outfit "KW.Encyclos Director"
+	"display name" "Encyclos Director"
+	category "Engines"
+	series "Engines"
+	index 10211000
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 39
+	"mass" 70
+	"outfit space" -70
+	"engine capacity" -70
+	"turn" 3450
+	"turning energy" 12
+	"turning heat" 6.5
+	"encyclos socket" -1
+	"flare sprite" "effect/ion flare/medium"
+		"frame rate" 1.1
+	"steering flare sound" "ion medium"
+	description `WIP`
+	description `The Director is an extension of the Engine and can only be built with the corresponding engine outfitted on your ship.`
+
+	outfit "KW.Tricyclos Director"
+	"display name" "Tricyclos Director"
+	category "Engines"
+	series "Engines"
+	index 10211000
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 95
+	"outfit space" -95
+	"engine capacity" -95
+	"turn" 4880
+	"turning energy" 16.5
+	"turning heat" 9.2
+	"tricyclos socket" -1
+	"flare sprite" "effect/ion flare/large"
+		"frame rate" 1.0
+	"steering flare sound" "ion large"
+	description `WIP`
+	description `The Director is an extension of the Engine and can only be built with the corresponding engine outfitted on your ship.`
+
+	outfit "KW.Turbos Director"
+	"display name" "	outfit "KW.Turbos Director"
+ Director"
+	category "Engines"
+	series "Engines"
+	index 10211000
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 128
+	"outfit space" -128
+	"engine capacity" -128
+	"turn" 6750
+	"turning energy" 16.4
+	"turning heat" 9.25
+	"turbos socket" -1
+	"flare sprite" "effect/ion flare/large"
+		"frame rate" 1.0
+	"steering flare sound" "ion large"
+	description `WIP`
+	description `The Director is an extension of the Engine and can only be built with the corresponding engine outfitted on your ship.`
+
+#		[12] Rear Thruster Engines
+
 
 #		[21] Cooling (Active)
 #			[1] Inlos
@@ -156,6 +322,288 @@ outfit "KW.Inlos Homeostatic Regulator"
 	"outfit space" -33
 	"active cooling" 45
 	"cooling energy" 0.6
+	description `WIP`
+
+#		[30] Fuel (Ramscoop)
+#			[0] Generic
+outfit "KW.Fuel Collector"
+	"display name" "Fuel Collector"
+	category "Systems"
+	series "Fuel"
+	index 10230000
+	cost 180000
+	thumbnail "outfit/fuel pod"
+	"mass" 28
+	"outfit space" -28
+	"ramscoop" 2
+	description `WIP`
+
+#		[30] Fuel (Ramscoop)
+#			[2] Keji
+outfit "KW.Keji Material-Absorption Skin"
+	"display name" "Keji Material-Absorption Skin"
+	category "Systems"
+	series "Fuel"
+	index 10230200
+	cost 10000
+	#thumbnail "outfit/_wip_reactors"
+	"mass" 1
+	"outfit space" -6
+	"ramscoop" 3
+	"coating" -1
+	description `WIP`
+
+#		[80] Weapons (Non-Ammunition Gun)
+#			[0] Generic
+outfit "KW.Energy Blaster"
+	"display name" "Energy Blaster"
+	category "Guns"
+	series "Guns"
+	index 10280000
+	cost 16000
+	thumbnail "outfit/blaster"
+	"mass" 25
+	"outfit space" -25
+	"weapon capacity" -25
+	"gun ports" -1
+	weapon
+		sprite "projectile/blaster"
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"inaccuracy" 6
+		"velocity" 10
+		"lifetime" 96
+		"reload" 12
+		"firing energy" 29.5
+		"firing heat" 90
+		"shield damage" 55
+		"hull damage" 33
+	description `WIP`
+
+outfit "KW.Rapid Blaster"
+	"display name" "Rapid Blaster"
+	category "Guns"
+	series "Guns"
+	index 10280010
+	cost 16000
+	thumbnail "outfit/blaster"
+	"mass" 32
+	"outfit space" -32
+	"weapon capacity" -32
+	"gun ports" -1
+	weapon
+		sprite "projectile/blaster"
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"inaccuracy" 7
+		"velocity" 10
+		"lifetime" 96
+		"reload" 3
+		"firing energy" 9
+		"firing heat" 16
+		"shield damage" 14.5
+		"hull damage" 9.5
+	description `WIP`
+
+outfit "KW.Flux Blaster"
+	"display name" "Flux Blaster"
+	category "Guns"
+	series "Guns"
+	index 10280020
+	cost 16000
+	thumbnail "outfit/blaster"
+	"mass" 45
+	"outfit space" -45
+	"weapon capacity" -45
+	"gun ports" -1
+	weapon
+		sprite "projectile/blaster"
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"inaccuracy" 15
+		"velocity" 10
+		"lifetime" 72
+		"reload" 15
+		"turn" .8
+		"homing"
+			"blindspot"
+		"infrared tracking" .5
+		"firing energy" 40
+		"firing heat" 100
+		"shield damage" 80
+		"hull damage" 60
+	description `WIP`
+
+outfit "KW.Dissipitative Blaster"
+	"display name" "Dissipitative Blaster"
+	category "Guns"
+	series "Guns"
+	index 10280030
+	cost 16000
+	thumbnail "outfit/blaster"
+	"mass" 37
+	"outfit space" -37
+	"weapon capacity" -37
+	"gun ports" -1
+	weapon
+		sprite "projectile/blaster"
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"inaccuracy" 8
+		"velocity" 6
+		"lifetime" 128
+		"reload" 8
+		"firing energy" 24
+		"firing heat" 70
+		"shield damage" 78
+		"hull damage" 21
+	description `WIP`
+
+outfit "KW.Ion Cannon"
+	"display name" "Ion Cannon"
+	category "Guns"
+	series "Guns"
+	index 10280030
+	cost 16000
+	thumbnail "outfit/blaster"
+	"mass" 72
+	"outfit space" -72
+	"weapon capacity" -72
+	"gun ports" -1
+	weapon
+		sprite "projectile/blaster"
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"inaccuracy" 4
+		"velocity" 25
+		"lifetime" 100
+		"reload" 90
+		"firing energy" 480
+		"firing heat" 600
+		"shield damage" 600
+		"ion damage" 1200
+		"scrambling damage" 12
+		"discharge damage" 36
+		"hull damage" 200
+	description `WIP`
+
+#		[81] Weapons (Non-Ammunition Turret)
+#			[0] Generic
+outfit "KW.Energy Blaster Turret"
+	"display name" "Energy Blaster Turret"
+	category "Turrets"
+	series "Turrets"
+	index 10281000
+	cost 16000
+	thumbnail "outfit/blaster turret"
+	"mass" 60
+	"outfit space" -60
+	"weapon capacity" -60
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/blaster"
+		"hardpoint sprite" "hardpoint/blaster turret"
+		"hardpoint offset" 9.
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"turret turn" 2.4
+		"inaccuracy" 6
+		"velocity" 10
+		"lifetime" 96
+		"reload" 6
+		"firing energy" 29.5
+		"firing heat" 90
+		"shield damage" 55
+		"hull damage" 33
+	description `WIP`
+
+outfit "KW.Rapid Blaster Turret"
+	"display name" "Rapid Blaster Turret"
+	category "Turrets"
+	series "Turrets"
+	index 10281010
+	cost 16000
+	thumbnail "outfit/blaster turret"
+	"mass" 32
+	"outfit space" -32
+	"weapon capacity" -32
+	"gun ports" -1
+	weapon
+		sprite "projectile/blaster"
+		"hardpoint sprite" "hardpoint/blaster turret"
+		"hardpoint offset" 9.
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"turret turn" 4.8
+		"inaccuracy" 7
+		"velocity" 10
+		"lifetime" 96
+		"reload" 3
+		"firing energy" 9
+		"firing heat" 16
+		"shield damage" 14.5
+		"hull damage" 9.5
+	description `WIP`
+
+outfit "KW.Flux Blaster Turret"
+	"display name" "Flux Blaster Turret"
+	category "Turrets"
+	series "Turrets"
+	index 10281020
+	cost 16000
+	thumbnail "outfit/blaster turret"
+	"mass" 45
+	"outfit space" -45
+	"weapon capacity" -45
+	"gun ports" -1
+	weapon
+		sprite "projectile/blaster"
+		"hardpoint sprite" "hardpoint/blaster turret"
+		"hardpoint offset" 9.
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"turret turn" 2.4
+		"inaccuracy" 15
+		"velocity" 10
+		"lifetime" 72
+		"reload" 15
+		"turn" .8
+		"homing"
+			"blindspot"
+		"infrared tracking" .5
+		"firing energy" 40
+		"firing heat" 100
+		"shield damage" 80
+		"hull damage" 60
+	description `WIP`
+
+outfit "KW.Dissipitative Blaster Turret"
+	"display name" "Dissipitative Blaster Turret"
+	category "Turrets"
+	series "Turrets"
+	index 10281030
+	cost 16000
+	thumbnail "outfit/blaster turret"
+	"mass" 37
+	"outfit space" -37
+	"weapon capacity" -37
+	"gun ports" -1
+	weapon
+		sprite "projectile/blaster"
+		"hardpoint sprite" "hardpoint/blaster turret"
+		"hardpoint offset" 9.
+		sound "blaster"
+		"hit effect" "blaster impact"
+		"turret turn" 2.4
+		"inaccuracy" 8
+		"velocity" 6
+		"lifetime" 128
+		"reload" 8
+		"firing energy" 24
+		"firing heat" 70
+		"shield damage" 78
+		"hull damage" 21
 	description `WIP`
 
 

@@ -2,7 +2,7 @@ start "k.world test"
 	name "[K. World] Test"
 	description `This is a test scenario`
 	thumbnail "scene/sunset"
-	date 13 1 2040
+	date 13 1 2026
 	system "KW.S.000.Sol"
 	planet "KW.S.000.0A.Yekaterinburg"
 	conversation "k.world intro"
@@ -79,16 +79,16 @@ conversation "k.world intro"
 
 	label transfer
 	action
-		set "kw start: Draft"
-		give ship "Draft (KW Start)" "Dusty Pearl"
+		set "kw start: Barge"
+		give ship "KW.Barge (player start)" "Dusty Pearl"
 		payment -115350 #30%
 		#debug
-		payment 10000000
+		payment 1000000000
 	`	"That's the spirit." He smiles. "I think the handover is done, and I have another pilot to meet. I hope to hear more from you when you are back from your adventure."`
 		decline
 
 
-ship "KW.Draft" "Draft (KW Start)"
+ship "KW.Barge" "KW.Barge (player start)"
 	outfits
 		"KW.CDX-PV-100 Photovoltaic Cell" 2
 		"KW.CDX-FE-100 Fuel Cell"

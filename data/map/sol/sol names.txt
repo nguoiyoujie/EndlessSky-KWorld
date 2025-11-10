@@ -1,0 +1,47 @@
+phrase "sol small"
+	word
+		"C.C.C.S. "
+	phrase
+		"rivers"
+		"flowers"
+
+phrase "sol capital"
+	word
+		"C.C.C.S. "
+	phrase
+		"trees"
+		"mountains"
+		"intellectuals"
+		"greek and roman figures"
+
+phrase "machine small"
+	word
+		"SM-"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"letter"
+
+phrase "machine capital"
+	word
+		"SMC-"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"letter"

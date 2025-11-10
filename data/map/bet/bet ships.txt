@@ -1,0 +1,50 @@
+
+
+ship "KW.Miranda-class Cruiser"
+	"display name" "Miranda-class Cruiser"
+	sprite "ship/sol/kw.barge-iii"
+	thumbnail "thumbnail/freighter"
+	attributes
+		category "Medium Warship"
+		"cost" 10000000
+		"shields" 2000
+		"hull" 3500
+		"required crew" 65
+		"bunks" 83
+		"mass" 850
+		"drag" 9.6
+		"heat dissipation" .45
+		"fuel capacity" 1500
+		"cargo space" 80
+		"outfit space" 450
+		"weapon capacity" 56
+		"engine capacity" 55
+		weapon
+			"blast radius" 16
+			"shield damage" 160
+			"hull damage" 80
+			"hit force" 240
+		"operating costs" 3250
+	outfits
+		"KW.Mining Laser Turret"
+		"KW.Point Defense Turret"
+		"KW.Vulcanite" 2000
+		"KW.CDX-FE-200 Fuel Cell"
+		"KW.CDX-B-100 Battery"
+		"KW.TR-2950T Ion Thruster"
+		"KW.TR-2550S Ion Steering"
+		"KW.CDX-HC-100 Conductor"
+		"KW.Basic Chronodrive"
+		"KW.Chronodrive Fuel Recycler"
+	engine -9.5 72.5
+	engine 9.5 72.5
+	turret 0 -51.5 "KW.Mining Laser Turret"
+	turret 0 -13.5 "KW.Point Defense Turret"
+	turret 0 22.5
+	leak "leak" 60 50
+	leak "flame" 50 80
+	explode "tiny explosion" 10
+	explode "small explosion" 30
+	explode "medium explosion" 20
+	"final explode" "final explosion small"
+	description `WIP`

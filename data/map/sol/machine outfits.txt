@@ -1,0 +1,481 @@
+##### MACHINE OUTFITS #####
+# See 'outfit notes.txt' for index and sort methods
+#
+#	[120] Machine
+#		[00] Reactors
+#			[0] Generic
+outfit "KW.Thermal Spark"
+	"display name" "Thermal Spark"
+	category "Power"
+	series "Generators"
+	index 12000000
+	cost 65000
+	#thumbnail "outfit/CDX-FE-100 fuel cell"
+	"mass" 6
+	"outfit space" -6
+	"energy generation" .75
+	"heat generation" 9.5
+	"energy capacity" 200
+	description `You would think that with their thermal absorption systems, the Sentient Machines do not require a reactor. But those systems require heat to be started, and the Spark is suited to provide that initial heat generation.`
+
+outfit "KW.Thermal Reactor"
+	"display name" "Thermal Reactor"
+	category "Power"
+	series "Generators"
+	index 12000010
+	cost 65000
+	#thumbnail "outfit/CDX-FE-100 fuel cell"
+	"mass" 61
+	"outfit space" -61
+	"energy generation" 12.1
+	"heat generation" 56
+	"energy capacity" 1000
+	description `For the Hives and capital ships fielded by the Machines, the act of recycling heat no longer provides sufficient energy for their needs. A molten core, usually extracted from the mantle of a planet or a moon, is used to power those behemoths for their work.`
+
+#		[10] Main Thruster Engines
+#			[0] Generic
+outfit "KW.Drone Relocation Engine"
+	"display name" "Drone Relocation Engine"
+	category "Engines"
+	series "Engines"
+	index 12010000
+	"cost" 65000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 36
+	"outfit space" -25
+	"engine capacity" -25
+	"thrust" 6.4
+	"thrusting energy" .7
+	"thrusting heat" 1.2
+	"turn" 480
+	"turning energy" .6
+	"turning heat" 1.1
+	"reverse thrust" 4.8
+	"reverse thrusting energy" .4
+	"reverse thrusting heat" .8
+	"flare sprite" "effect/ion flare/tiny"
+	"reverse flare sprite" "effect/ion flare/tiny"
+	"flare sound" "ion tiny"
+	"steering flare sound" "ion tiny"
+	"reverse flare sound" "ion tiny"
+	description `Drone Relocation Engines are fashioned solely for the benefit of Worker Bees, which do not have much space for anything bigger. Larger vessels will find dedicated engines more efficient.`
+
+outfit "KW.Hive Relocation Engine"
+	"display name" "Drone Relocation Engine"
+	category "Engines"
+	series "Engines"
+	index 12010010
+	"cost" 500000
+	thumbnail "outfit/Sol-thruster-wip"
+	"mass" 120
+	"outfit space" -84
+	"engine capacity" -84
+	"thrust" 40
+	"thrusting energy" 2.4
+	"thrusting heat" 3.5
+	"turn" 1080
+	"turning energy" .95
+	"turning heat" 1.6
+	"reverse thrust" 20
+	"reverse thrusting energy" 1.4
+	"reverse thrusting heat" 1.8
+	"flare sprite" "effect/ion flare/medium"
+	"reverse flare sprite" "effect/ion flare/medium"
+	"flare sound" "ion medium"
+	"steering flare sound" "ion medium"
+	"reverse flare sound" "ion medium"
+	description `The larger brother of Drone Relocation Engines, the Hive Relocation Engine is a direct upgrade in terms of power, and may even compete with dedicated engines should heat efficiency is less of a pilot's concern.`
+
+#		[11] Side Steering Engines
+#			[0] Generic
+
+#		[12] Rear Thruster Engines
+#			[0] Generic
+
+#		[20] Cooling (Passive)
+#			[0] Generic
+
+#		[21] Cooling (Active)
+#			[0] Generic
+outfit "KW.Thermal Absorption Pad"
+	"display name" "Thermal Absorption Pad"
+	category "Systems"
+	series "Cooling"
+	index 12021000
+	cost 875000
+	#thumbnail "outfit/_wip_cooling"
+	"mass" 9
+	"outfit space" -9
+	"active cooling" 6
+	"cooling energy" -.5
+	description `The Thermal Absorption Pad is a electromechanical lining that converts thermal heat into electromotive energy. Should a pilot be able to afford the space requirements, it can produce power equivalent to a solar panel just from your ship's residual heat.`
+
+outfit "KW.Thermal Converter Panel"
+	"display name" "Thermal Converter Panel"
+	category "Systems"
+	series "Cooling"
+	index 12021010
+	cost 875000
+	#thumbnail "outfit/_wip_cooling"
+	"mass" 20
+	"outfit space" -20
+	"active cooling" 8
+	"cooling energy" -2
+	#"heat capacity" 50
+	description `For small craft expected to conduct more energy intensive actions, the Thermal Converter Panel may offer a better energy efficiency while also resolving overheating problems.`
+
+outfit "KW.Thermal Converter Suit"
+	"display name" "Thermal Converter Suit"
+	category "Systems"
+	series "Cooling"
+	index 12021020
+	cost 875000
+	#thumbnail "outfit/_wip_cooling"
+	"mass" 60
+	"outfit space" -60
+	"active cooling" 32
+	"cooling energy" -6
+	#"heat capacity" 325
+	description `For ships that run hot and virtually thirsty for energy, it may be worthwhile to invest in a dedicated Converter outfit to absorb excess heat for energy. This requires some dedicated outfit space, so only medium and large ships would be considered for such an investment.`
+
+outfit "KW.Thermal Sufficiency Module"
+	"display name" "Thermal Sufficiency Module"
+	category "Systems"
+	series "Cooling"
+	index 12021030
+	cost 875000
+	#thumbnail "outfit/_wip_cooling"
+	"mass" 152
+	"outfit space" -152
+	"active cooling" 88
+	"cooling energy" -23.5
+	#"heat capacity" 400
+	"ramscoop" -1
+	description `The Sufficiency Module can almost power a space-craft all by itself using its internal heat. It only requires a minimual level of material input from outer space to generate the thermomechanicl=al flux to sustain this heart of a machine.`
+
+#		[31] Fuel (Storage)
+#			[0] Generic
+
+#		[80] Weapons (Non-Ammunition Gun)
+#			[0] Generic
+outfit "KW.Mining Drill"
+	"display name" "Mining Drill"
+	category "Guns"
+	series "Guns"
+	index 12080000
+	cost 205000
+	thumbnail "outfit/mining laser"
+	"mass" 12
+	"outfit space" -12
+	"weapon capacity" -12
+	"gun ports" -1
+	weapon
+		sound "drill"
+		"hit effect" "drilling"
+		"velocity" 50
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1.4
+		"firing heat" .6
+		"shield damage" .45
+		"hull damage" 6
+		"minable damage" 12.8
+		"prospecting" 12
+	description `WIP`
+
+outfit "KW.Mason Arm"
+	"display name" "Mason Arm"
+	category "Guns"
+	series "Guns"
+	index 12080010
+	cost 205000
+	thumbnail "outfit/mining laser"
+	"mass" 6
+	"outfit space" -6
+	"weapon capacity" -6
+	"gun ports" -1
+	"unplunderable" 1
+	weapon
+		sound "drill"
+		"hit effect" "drilling"
+		"velocity" 25
+		"lifetime" 1
+		"reload" 100
+		"firing energy" 75
+		"firing heat" 100
+		"shield damage" 50
+		"hull damage" 400
+		"hit force" -200
+		"piercing" .8
+	description `Never disturb a Mason Bee at work unless you want to catch those hands, and if they do get you, my condolences to the poor pilot who has to bury your mangled remains. If these hands could mold rock, they surely can remold you.`
+
+#		[81] Weapons (Non-Ammunition Turret)
+#			[0] Generic
+
+#		[82] Weapons (Ammunition Gun)
+#			[0] Generic
+outfit "KW.Crude Catapult (Iron)"
+	"display name" "Crude Catapult (Iron)"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 12082000
+	cost 45000
+	thumbnail "outfit/gat"
+	"mass" 12
+	"outfit space" -9
+	"weapon capacity" -9
+	"gun ports" -1
+	weapon
+		sprite "asteroid/iron/spin"
+		sound "javelin"
+		ammo "Iron"
+		icon "icon/javelin"
+		"hit effect" "small explosion"
+		"inaccuracy" 6
+		"velocity" 16
+		"random velocity" 10
+		"lifetime" 30
+		"random lifetime" 10
+		"reload" 30
+		"firing energy" 4.5
+		"firing heat" .5
+		"shield damage" 12
+		"hull damage" 48
+		"hit force" 1250
+		"missile strength" 80
+		"penetration count" 2
+	description `WIP`
+
+outfit "KW.Crude Catapult (Tungsten)"
+	"display name" "Crude Catapult (Tungsten)"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 12082001
+	cost 45000
+	thumbnail "outfit/gat"
+	"mass" 12
+	"outfit space" -11
+	"weapon capacity" -11
+	"gun ports" -1
+	weapon
+		sprite "asteroid/titanium/spin"
+		sound "javelin"
+		ammo "Tungsten"
+		icon "icon/javelin"
+		"hit effect" "small explosion"
+		"inaccuracy" 6
+		"velocity" 12
+		"random velocity" 10
+		"lifetime" 40
+		"random lifetime" 10
+		"reload" 32
+		"firing energy" 5.5
+		"firing heat" .5
+		"shield damage" 15
+		"hull damage" 64
+		"hit force" 1600
+		"missile strength" 99
+		"penetration count" 2
+	description `The crude`
+	description `Minables, when mined off asteroids are brittle and require some processing to be suitable for projectile use. `
+	description `Asteroids are slow and are blunt on impact, but they are very difficult to destroy. An asteroid projectile can absorb several turrets' worth of anti-missile fire before it is destroyed.`
+
+outfit "KW.Crude Catapult (Uranium)"
+	"display name" "Crude Catapult (Uranium)"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 12082002
+	cost 45000
+	thumbnail "outfit/gat"
+	"mass" 12
+	"outfit space" -14
+	"weapon capacity" -14
+	"gun ports" -1
+	weapon
+		sprite "asteroid/lead/spin"
+		sound "javelin"
+		ammo "Uranium"
+		icon "icon/javelin"
+		"hit effect" "small explosion"
+		"inaccuracy" 6
+		"velocity" 14
+		"random velocity" 10
+		"lifetime" 35
+		"random lifetime" 10
+		"reload" 32
+		"firing energy" 6
+		"firing heat" .5
+		"shield damage" 60
+		"hull damage" 50
+		"hit force" 1500
+		"missile strength" 50
+		"penetration count" 2
+	description `WIP`
+
+outfit "KW.Atlotl Catapult (Iron)"
+	"display name" "Atlotl Catapult (Iron)"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 12082010
+	cost 45000
+	thumbnail "outfit/gat"
+	"mass" 9
+	"outfit space" -16
+	"weapon capacity" -16
+	"gun ports" -1
+	"iron bolt capacity" 600
+	weapon
+		sprite "projectile/kw.ironbolt"
+		sound "swarm missile"
+		ammo "KW.Iron Bolt"
+		icon "icon/javelin"
+		"hit effect" "tiny explosion"
+		"inaccuracy" 3
+		"velocity" 45
+		"lifetime" 24
+		"random lifetime" 5
+		"reload" 10
+		"burst count" 12
+		"burst reload" 2
+		"firing energy" .75
+		"firing heat" 2
+		"shield damage" 4
+		"hull damage" 12
+		"disruption damage" 3
+		"hit force" 10
+		"missile strength" 3
+	description `The Atlotl Catapult series is amongst the more primitive of Sentient Machine's weapons, intended for mining outfits with access to workshops that can work raw metals into armaments. The iron variant utilizes sharp iron bolts intended to dent and puncture the hull. While not strong enough to cause damage, the magnetic properties of the bolts can interfere with shield function.`
+
+outfit "KW.Atlotl Catapult (Carbide)"
+	"display name" "Atlotl Catapult (Carbide)"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 12082011
+	cost 45000
+	thumbnail "outfit/gat"
+	"mass" 9
+	"outfit space" -18
+	"weapon capacity" -18
+	"gun ports" -1
+	"kinetic rod capacity" 30
+	weapon
+		sprite "projectile/kw.kinrod"
+		sound "javelin"
+		ammo "KW.Kinetic Rod"
+		icon "icon/javelin"
+		"hit effect" "tiny explosion"
+		"inaccuracy" 1.5
+		"velocity" 40
+		"lifetime" 25
+		"random lifetime" 5
+		"reload" 45
+		"firing energy" 4
+		"firing heat" 18
+		"shield damage" 12
+		"hull damage" 185
+		"hit force" 1350
+		"missile strength" 10
+		"penetration count" 2
+	description `The Atlotl Catapult series is amongst the more primitive of Sentient Machine's weapons, intended for mining outfits with access to workshops that can work raw metals into armaments. The carbide variant is, curiously, wholly compatible with the tungsten-carbide kinetic rod. The Atoltl heats and launches these rods almost at the point of disintegration, sacrificing range for kinetic impact.`
+	description `	Beware that because the material had been pushed to its limits, shields can disintegrate such rods easily, limiting this variant to a mostly anti-hull role.`
+
+outfit "KW.Atlotl Catapult (Uranium)"
+	"display name" "Atlotl Catapult (Uranium)"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 12082012
+	cost 45000
+	thumbnail "outfit/gat"
+	"mass" 9
+	"outfit space" -20
+	"weapon capacity" -20
+	"gun ports" -1
+	"uranium rod capacity" 30
+	weapon
+		sprite "projectile/kw.kinrod"
+		sound "javelin"
+		ammo "KW.Uranium Rod"
+		icon "icon/javelin"
+		"hit effect" "tiny explosion"
+		"inaccuracy" 1.5
+		"velocity" 30
+		"lifetime" 30
+		"random lifetime" 5
+		"reload" 45
+		"firing energy" 3
+		"firing heat" 22
+		"shield damage" 80
+		"hull damage" 64
+		"scrambling damage" 3.5
+		"discharge damage" 12
+		"hit force" 1500
+		"missile strength" 12
+	description `The Atlotl Catapult series is amongst the more primitive of Sentient Machine's weapons, intended for mining outfits with access to workshops that can work raw metals into armaments. The uranium variant is the heaviest variant, on account of handling one of the densest materials in space. The Atoltl heats and launches these rods almost at the point of disintegration, sacrificing range for kinetic impact.`
+	description `	Most space-worthy hulls are resistant to radiation effects. However, uneven radiation incidence has been proven to disrupt shield integrity to the point of discharging them until the ship manages to remove such material from its hull. Should the hull be punctured, these materials may also affect electronics.`
+
+#		[83] Weapons (Ammunition Turret)
+#			[0] Generic
+
+
+#		[84] Weapons (AA Turret)
+#			[0] Generic
+
+#		[85] Weapons (Ammunition)
+#			[0] Generic
+outfit "KW.Iron Bolt"
+	"display name" "Iron Bolt"
+	category "Ammunition"
+	series "Ammunition"
+	index 12085000
+	cost 40
+	thumbnail "outfit/bullet"
+	"mass" 0.075
+	"iron bolt capacity" -1
+	description `WIP`
+
+#outfit "KW.Carbide Rod"
+#	"display name" "Carbide Rod"
+#	category "Ammunition"
+#	series "Ammunition"
+#	index 12085010
+#	cost 40
+#	thumbnail "outfit/bullet"
+#	"mass" 3
+#	description `WIP`
+
+outfit "KW.Uranium Rod"
+	"display name" "Uranium Rod"
+	category "Ammunition"
+	series "Ammunition"
+	index 12085020
+	cost 40
+	thumbnail "outfit/bullet"
+	"mass" 2.4
+	"uranium rod capacity" -1
+	description `WIP`
+
+#		[86] Scanners
+#			[0] Generic
+outfit "KW.Resource Detector"
+	"display name" "Resource Detector"
+	category "Systems"
+	series "Scanners"
+	index 12086220
+	cost 61000
+	thumbnail "outfit/_wip_scanner"
+	"mass" 20
+	"outfit space" -11
+	"cargo scan power" 5
+	"cargo scan efficiency" 8
+	"asteroid scan power" 120
+	description `WIP`
+
+#		[90] Refits
+#			[0] Generic
+
+
+# Specials
+
+
+# Licences
+

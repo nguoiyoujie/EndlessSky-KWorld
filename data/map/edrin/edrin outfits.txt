@@ -15,7 +15,7 @@ outfit "KW.Basic Chronodrive"
 	"mass" 60
 	"outfit space" -25
 	"jump speed" .15
-	"jump fuel" 100
+	"jump fuel" 80
 	"jump mass cost" 10
 	"chronodrive attachment" 1
 	"hyperdrive" 1
@@ -33,7 +33,7 @@ outfit "KW.Chronodrive Fuel Recycler"
 	"outfit space" -15
 	# jump attributes is not modified, only replaced
 	"jump speed" .15
-	"jump fuel" 75
+	"jump fuel" 70
 	"jump mass cost" 5
 	"hyperdrive" 1
 	"chronodrive attachment" -1

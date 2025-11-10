@@ -1,0 +1,181 @@
+# Drones
+# Guideline - Operating Cost: 0.0005 of hull cost
+
+ship "KW.Worker Bee"
+	"display name" "Worker Bee"
+	sprite "ship/machine/kw.worker-bee"
+	thumbnail "thumbnail/mining drone"
+	attributes
+		category "Drone"
+		"cost" 75000
+		"hull" 300
+		"automaton" 1
+		"crew equivalent" 1
+		"mass" 15
+		"drag" .53
+		"heat dissipation" .9
+		"cargo space" 15
+		"outfit space" 55
+		"weapon capacity" 12
+		"engine capacity" 29
+		"operating costs" 37
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"KW.Mining Drill"
+		"KW.Thermal Spark"
+		"KW.Thermal Absorption Pad"
+		"KW.Drone Relocation Engine"
+	engine -5.5 15.5 0.8
+	engine 5.5 15.5 0.8
+	gun 0 -16.5 "KW.Mining Drill"
+	explode "tiny explosion" 15
+	description `The basic workforce of the Sentient Machine's economic fleet, the Worker Bee is light and carries the bare minimum needed to perform its role - gathering resources for its brethren on the planet or moon it hails from. You wonder if the Bees themselves are sentient, but it seems too risky to test your curiousity.`
+
+ship "KW.Hunter Bee"
+	"display name" "Hunter Bee"
+	sprite "ship/machine/kw.hunter-bee"
+	thumbnail "thumbnail/mining drone"
+	attributes
+		category "Drone"
+		"cost" 160000
+		"hull" 650
+		"automaton" 1
+		"crew equivalent" 2
+		"mass" 18
+		"drag" .55
+		"heat dissipation" .9
+		"cargo space" 20
+		"outfit space" 75
+		"weapon capacity" 26
+		"engine capacity" 25
+		"operating costs" 80
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"KW.Atlotl Catapult (Iron)"
+		"KW.Iron Bolt" 600
+		"KW.Thermal Spark"
+		"KW.Thermal Converter Panel"
+		"KW.Drone Relocation Engine"
+	engine -5.5 15.5 0.8
+	engine 5.5 15.5 0.8
+	gun 0 -16.5 "KW.Atlotl Catapult (Iron)"
+	gun 0 -12.5
+	explode "tiny explosion" 15
+	description `The Hunter variant of the Bee family serves one major purpose - to protect the Worker Bees while they work. Their internal structure has been remodeled to suit that purpose. You wonder if the Bees themselves are sentient, but it seems too risky to test your curiousity.`
+
+ship "KW.Mason Bee"
+	"display name" "Mason Bee"
+	sprite "ship/machine/kw.mason-bee"
+	thumbnail "thumbnail/mining drone"
+	attributes
+		category "Drone"
+		"cost" 200000
+		"hull" 800
+		"automaton" 1
+		"crew equivalent" 2
+		"mass" 40
+		"drag" 1.5
+		"heat dissipation" .86
+		"cargo space" 40
+		"outfit space" 64
+		"weapon capacity" 12
+		"engine capacity" 25
+		"operating costs" 100
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"KW.Mason Arm" 2
+		"KW.Thermal Spark"
+		"KW.Thermal Converter Panel"
+		"KW.Drone Relocation Engine"
+	engine -5.5 15.5 0.8
+	engine 5.5 15.5 0.8
+	gun 0 -16.5 "KW.Mason Arm"
+	gun 0 -12.5 "KW.Mason Arm"
+	explode "tiny explosion" 15
+	description `The Mason variant of the Bee is a rarity; they are movers of material and are assigned the role of construction. That doesn't exempt them from some space duty, and some were assigned as a glorified cargo bot. You wonder if the Bees themselves are sentient, but it seems too risky to test your curiousity.`
+
+ship "KW.Hive"
+	"display name" "Hive"
+	sprite "ship/machine/kw.hive"
+	thumbnail "thumbnail/freighter"
+	attributes
+		category "Heavy Freighter"
+		"cost" 2000000
+		"shields" 300
+		"hull" 2200
+		"required crew" 5
+		"bunks" 7
+		"mass" 550
+		"drag" 6
+		"heat dissipation" .75
+		"fuel capacity" 400
+		"cargo space" 200
+		"outfit space" 312
+		"weapon capacity" 64
+		"engine capacity" 88
+		weapon
+			"blast radius" 16
+			"shield damage" 160
+			"hull damage" 80
+			"hit force" 240
+		"operating costs" 5000
+	outfits
+		"KW.Atlotl Catapult (Iron)" 2
+		"KW.Iron Bolt" 1200
+		"KW.Point Defense Turret"
+		"KW.Vulcanite" 2000
+		"KW.Thermal Reactor"
+		"KW.Thermal Converter Suit"
+		"KW.Hive Relocation Engine"
+		"KW.Resource Detector"
+		"KW.Basic Chronodrive"
+		"KW.Chronodrive Fuel Recycler"
+	engine -16.5 74.5
+	engine 16.5 74.5
+	gun -9.5 -64.5 "KW.Atlotl Catapult (Iron)"
+	gun 9.5 -64.5 "KW.Atlotl Catapult (Iron)"
+	turret 0 -62.55 "KW.Point Defense Turret"
+	bay "Drone" 32 40
+		"under"
+		"angle" 90
+		"launch effect" "human external"
+	bay "Drone" -32 40
+		"under"
+		"angle" -90
+		"launch effect" "human external"
+	bay "Drone" 32 0
+		"under"
+		"angle" 90
+		"launch effect" "human external"
+	bay "Drone" -32 0
+		"under"
+		"angle" -90
+		"launch effect" "human external"
+	bay "Drone" 32 -40
+		"under"
+		"angle" 90
+		"launch effect" "human external"
+	bay "Drone" -32 -40
+		"under"
+		"angle" -90
+		"launch effect" "human external"
+	uncapturable
+	leak "leak" 60 50
+	leak "flame" 50 80
+	explode "tiny explosion" 10
+	explode "small explosion" 30
+	explode "medium explosion" 20
+	"final explode" "final explosion small"
+	description `WIP`

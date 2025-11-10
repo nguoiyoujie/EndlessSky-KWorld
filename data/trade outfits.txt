@@ -1,0 +1,66 @@
+# At the moment, outfit prices cannot be changed. Nonetheless, some items may be used as crafting materials or for outfit-request jobs
+
+outfit "KW.Silicate Data Cubes"
+	"display name" "Silicate Data Cubes"
+	"plural" "Silicate Data Cubes"
+	category "Special"
+	series "Trade Goods"
+	#index 12085000
+	cost 1500
+	#thumbnail "outfit/bullet"
+	"installable" -1
+	"mass" 1
+	description `The vulnerability of electronics to intraspace media and radiation has led to various Systems looking for novel ways to store and process data. Silicate stones, developed from asteroid rocks and chemically etched with dense microprints, has been a popular choice for data storage, achieving near universal acclaim across several sectors of the galaxy.`
+
+outfit "KW.Exotic Food Products"
+	"display name" "Exotic Food Products"
+	"plural" "Exotic Food Products"
+	category "Special"
+	series "Trade Goods"
+	#index 12085000
+	cost 1800
+	#thumbnail "outfit/bullet"
+	"installable" -1
+	"mass" 1
+	description `Few planets are suited of argiculture, even fewer have proven to produce their own special product. Some planets may offer such delicacies which can be shipped at profit to clients on the job board. Don't worry, food bathed in solar radiation doesn't rot or expire for decades, even then someone will manage to squeeze some wine from them!`
+
+outfit "KW.Exotic Timber"
+	"display name" "Exotic Timber"
+	"plural" "Exotic Timber"
+	category "Special"
+	series "Trade Goods"
+	#index 12085000
+	cost 2500
+	#thumbnail "outfit/bullet"
+	"installable" -1
+	"mass" 1
+	description `It might be a surprise that plants are abundant in outer space, but the mechanisms of Life seems to have come to a universal conclusion about the merit of developing sturdy trunks and barks. Some planets offer these superior elastomers for clients interested in crafting them into furniture, paper, plastics or even food.`
+	description `	The Alph do not seem happy about this kind of trade, likening them to brutal dismemberment of their lesser kindred. Though they will not confisicate such products, they  do not offer or accept such goods.`
+
+outfit "KW.Exotic Geodes"
+	"display name" "Exotic Geodes"
+	"plural" "Exotic Geodes"
+	category "Special"
+	series "Trade Goods"
+	#index 12085000
+	cost 5000
+	#thumbnail "outfit/bullet"
+	"installable" -1
+	"mass" 1
+	description `Certain artisans live in mining encampments shaping some of the celestial rocks into icons of mineral beauty. In some regions, they inspire good fortune. Wealthy residents in other planets may offer decent compensation for acquiring such collections.`
+
+outfit "KW.Central Piloting System"
+	"display name" "Central Piloting System"
+	category "Special"
+	series "Systems"
+	#index 12085000
+	cost 100000000
+	#thumbnail "outfit/bullet"
+	"unplunderable" 1
+	"automaton" 1
+	"required crew" -1
+	"outfit space" -40
+	"mass" 40
+	description `WIP`
+
+
