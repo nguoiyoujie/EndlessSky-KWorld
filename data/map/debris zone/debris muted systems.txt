@@ -1,26 +1,82 @@
 system KW.nA.m01.---
 	pos 8489.069 -9611.315
+	government Uninhabited
+	arrival 5000
+	habitable 8400
 	"jump range" 20
+	haze _menu/haze-coal
 	link KW.nA.001.Loss
 	link KW.nA.m02.---
 	link KW.nA.m03.---
+	object
+		sprite star/f-supergiant
+		period 100
+	object
+		sprite planet/gas4
+		distance 4422
+		period 1283.36
+	object
+		sprite planet/gas9-b
+		distance 5595
+		period 1826.503
 
 system KW.nA.m02.---
 	pos 8455.292 -9649.981
+	government Uninhabited
+	arrival 2560
+	habitable 2560
 	"jump range" 20
+	haze _menu/haze-coal
 	link KW.nA.m01.---
 	link KW.nA.m08.---
+	object
+		sprite star/f0
+		period 10
+	object
+		sprite planet/lava2
+		distance 321
+		period 45.467
+	object
+		sprite planet/cloud1-b
+		distance 872
+		period 203.57
+	object
+		sprite planet/gas6-b
+		distance 1772
+		period 589.706
 
 system KW.nA.m03.---
 	pos 8457.514 -9578.87
+	government Uninhabited
+	arrival 1325
+	habitable 1325
 	"jump range" 25
+	haze _menu/haze-coal
 	link KW.nA.m01.---
 	link KW.nA.m04.---
+	object
+		sprite star/o-dwarf
+		period 10
+	object
+		sprite planet/gas6
+		distance 1606
+		period 707.246
 
 system KW.nA.m04.---
 	pos 8448.625 -9529.093
+	government Uninhabited
+	arrival 2560
+	habitable 2560
 	"jump range" 55
+	haze _menu/haze-coal
 	link KW.nA.m03.---
+	object
+		sprite star/f0
+		period 10
+	object
+		sprite planet/desert6-b
+		distance 309
+		period 42.942
 
 system KW.nA.m05.---
 	pos 8450.847 -9494.426

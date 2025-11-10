@@ -18,7 +18,7 @@ planet "KW.A.000.0A.Axis Mundi"
 
 planet "KW.A.000.0B.Yggdrasil"
 	"display name" "Yggdrasil"
-	attributes homeworld 
+	attributes homeworld
 	landscape land/city11
 	description `WIP`
 	port
@@ -36,7 +36,7 @@ planet "KW.A.000.0B.Yggdrasil"
 
 planet "KW.A.000.0C.Tetejetlen fa"
 	"display name" "Tetejetlen fa"
-	attributes homeworld 
+	attributes homeworld
 	landscape land/city11
 	description `WIP`
 	port
@@ -156,6 +156,23 @@ planet "KW.A.005.0.Heartwood"
 
 planet "KW.A.005.1.Pith"
 	"display name" "Pith"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet KW.A.006.0.Hydrate
+	"display name" "Hydrate"
 	landscape land/city11
 	description `WIP`
 	port
@@ -292,6 +309,40 @@ planet "KW.A.019.0.Palmate"
 
 planet KW.A.020.0.Cutin
 	"display name" "Cutin"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet KW.A.037.0.Sui
+	"display name" "Sui"
+	landscape land/city11
+	description `WIP`
+	port
+		recharges all
+		services
+			trading
+			"job board"
+			"offers missions"
+			"bank"
+			"hire crew"
+		description `WIP`
+		description `	The following are traits inherent within this city:`
+		description `	WIP`
+	government KW.Alph
+
+planet KW.A.041.0.Readi
+	"display name" "Readi"
 	landscape land/city11
 	description `WIP`
 	port

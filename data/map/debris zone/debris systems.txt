@@ -24,5 +24,37 @@ system KW.nA.002.Erasure
 
 system KW.nA.003.Twilight
 	pos 8355.736 -9596.204
-
+	government Uninhabited
+	arrival 5000
+	habitable 8400
+	haze _menu/haze-coal
+	object
+		sprite star/giant
+		distance 403
+		period 404.508
+	object
+		sprite star/f-supergiant
+		distance 403
+		period 404.508
+		offset 180
+	object
+		sprite planet/gas9
+		distance 1372
+		period 221.795
+		object
+			sprite planet/dust5
+			distance 282
+			period 123.934
+		object
+			sprite planet/rhea
+			distance 406
+			period 254.43
+	object
+		sprite planet/gas3-b
+		distance 2234
+		period 460.835
+	object
+		sprite planet/gas7-b
+		distance 2830
+		period 657.052
 

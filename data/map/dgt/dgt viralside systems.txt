@@ -1,37 +1,277 @@
 system "KW.01.v01.Scarred Man"
 	pos 8586.829 -9363.574
 	government KW.PirateScarred
+	arrival 5000
+	habitable 5751.182
 	"jump range" 60
+	haze _menu/haze-tear
 	link KW.01.v04.Harlie
 	link "KW.01.v06.Pervading Animal"
+	object
+		sprite star/f-giant
+		distance 94.668
+		period 161.176
+		offset 180
+	object
+		sprite star/f8
+		distance 286.332
+		period 161.176
+	object
+		sprite planet/gas7
+		distance 919
+		period 146.945
+		object
+			sprite planet/rock3-b
+			distance 279
+			period 176.16
+		object
+			sprite planet/oberon
+			distance 415
+			period 520.675
+	object
+		sprite planet/gas2-hot
+		distance 2533
+		period 672.41
+		object
+			sprite planet/rhea
+			distance 225
+			period 104.967
+		object
+			sprite planet/rock20
+			distance 390
+			period 291.137
+	object
+		sprite planet/rock4
+		distance 5603.847
+		period 3762.102
+	object
+		sprite planet/gas16-b
+		distance 12256
+		period 7156.564
+		object
+			sprite "planet/asteroid base"
+			distance 239
+			period 96.697
 
 system KW.01.v02.Creaper
 	pos 8591.866 -9446.537
+	government Uninhabited
+	arrival 2560
+	habitable 2560
 	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/b8
+		period 10
+	object
+		sprite planet/forest0-b
+		distance 346
+		period 36.407
+	object
+		sprite planet/ocean7
+		distance 804
+		period 128.961
+	object
+		sprite planet/neptune
+		distance 2554
+		period 730.14
+		object
+			sprite planet/rock14-b
+			distance 267
+			period 114.179
+		object
+			sprite planet/ice8
+			distance 379
+			period 278.907
+		object
+			sprite planet/desert4-b
+			distance 493
+			period 517.824
+	object
+		sprite planet/jupiter-b
+		distance 6702
+		period 3103.713
+		object
+			sprite planet/lava0-b
+			distance 299
+			period 135.308
+	object
+		sprite planet/gas0-b
+		distance 8965
+		period 4801.76
+		object
+			sprite planet/io-b
+			distance 311
+			period 207.32
 
 system KW.01.v03.Davi-PDP
 	pos 8558.088 -9476.463
+	government Uninhabited
+	arrival 5000
+	habitable 5020.209
 	"jump range" 60
+	haze _menu/haze-tear
+	object
+		sprite star/k3
+		distance 102.253
+		period 50.56
+	object
+		sprite star/b8
+		distance 47.747
+		period 50.56
+		offset 180
+	object
+		sprite planet/lava6
+		distance 756
+		period 117.35
+	object
+		sprite planet/browndwarf-l
+		distance 1191
+		period 232.042
+	object
+		sprite planet/gas8
+		distance 2462
+		period 689.654
+	object
+		sprite planet/gas4-b
+		distance 8629
+		period 4525.221
 
 system KW.01.v04.Harlie
 	pos 8628.606 -9385.796
+	government Uninhabited
+	arrival 500
+	habitable 160
 	"jump range" 65
+	haze _menu/haze-tear
 	link "KW.01.v01.Scarred Man"
+	object
+		sprite star/m5
+		period 10
+	object
+		sprite planet/gas17-b
+		distance 1430
+		period 1710.031
+	object
+		sprite planet/jupiter
+		distance 4087
+		period 8262.414
+		object
+			sprite planet/dust1
+			distance 290
+			period 153.594
 
 system KW.01.v05.Wabbit
 	pos 8595.718 -9406.833
+	government Uninhabited
+	arrival 980
+	habitable 980
 	"jump range" 45
+	haze _menu/haze-tear
+	object
+		sprite star/k0-old
+		period 10
+	object
+		sprite planet/rock11
+		distance 368
+		period 90.203
+	object
+		sprite planet/gas3-hot
+		distance 1006
+		period 407.703
+	object
+		sprite planet/gas0-b
+		distance 3104
+		period 2209.681
+		object
+			sprite planet/rock20
+			distance 288
+			period 184.752
 
 system "KW.01.v06.Pervading Animal"
 	pos 8549.792 -9341.944
+	government Uninhabited
+	arrival 5000
+	habitable 10002.645
 	"jump range" 75
+	haze _menu/haze-tear
 	link "KW.01.v01.Scarred Man"
 	link "KW.01.v07.Untrusted Trust"
+	object
+		sprite star/m3
+		distance 163.825
+		period 63.037
+		offset 180
+	object
+		sprite star/o5
+		distance 33.175
+		period 63.037
+	object
+		sprite planet/ice1
+		distance 524
+		period 47.973
+		object
+			sprite planet/dust1-b
+			distance 208
+			period 93.298
+	object
+		sprite planet/gas13-b
+		distance 1249
+		period 176.541
+		object
+			sprite planet/rock0
+			distance 282
+			period 179.009
+	object
+		sprite planet/dust0-b
+		distance 2865
+		period 613.323
+	object
+		sprite planet/gas1
+		distance 5003
+		period 1415.299
+		object
+			sprite planet/dust3-b
+			distance 464
+			period 377.814
+		object
+			sprite planet/desert4-b
+			distance 572
+			period 647.151
 
 system "KW.01.v07.Untrusted Trust"
 	pos 8496.458 -9328.019
+	government Uninhabited
+	arrival 5000
+	habitable 5604.721
 	"jump range" 75
+	haze _menu/haze-tear
 	link "KW.01.v06.Pervading Animal"
+	object
+		sprite star/m3
+		distance 96.475
+		period 38.982
+	object
+		sprite star/b5
+		distance 30.525
+		period 38.982
+		offset 180
+	object
+		sprite planet/desert7
+		distance 306
+		period 28.6
+	object
+		sprite planet/gas15
+		distance 748
+		period 109.304
+	object
+		sprite planet/neptune-b
+		distance 1564
+		period 330.475
+	object
+		sprite planet/gas11-b
+		distance 2191
+		period 547.957
 
 system KW.01.v08.Brainboot
 	pos 8658.829 -9355.574

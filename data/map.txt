@@ -19,5 +19,8 @@ system "KW.TBD.The Mus"
 	link KW.L.000.Lmd
 	link "KW.TBD.Sol-Lmd Route"
 
-
+planet KW.01.v01.Orphan
+	landscape land/city11
+	description WIP
+	government KW.PirateScarred
 
