@@ -2172,16 +2172,4 @@ system KW.A.049.Noraif
 			sprite planet/lava0
 			distance 273
 			period 118.049
-	object
-		sprite planet/debris0
-		distance 11859
-		period 19524.642
-		object
-			sprite planet/rock0
-			distance 256
-			period 154.832
-		object
-			sprite planet/rock17
-			distance 365
-			period 429.471
 

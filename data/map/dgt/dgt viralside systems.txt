@@ -275,13 +275,94 @@ system "KW.01.v07.Untrusted Trust"
 
 system KW.01.v08.Brainboot
 	pos 8658.829 -9355.574
+	government Uninhabited
+	arrival 500
+	habitable 450
 	"jump range" 50
+	haze _menu/haze-tear
+	object
+		sprite star/k3
+		period 10
+	object
+		sprite planet/ganymede-b
+		distance 301
+		period 98.47
+	object
+		sprite planet/rock0
+		distance 769
+		period 402.108
+	object
+		sprite planet/lava7
+		distance 1501
+		period 1096.541
 
 system KW.01.v09.Cascade
 	pos 8596.606 -9286.833
+	government Uninhabited
+	arrival 500
+	habitable 100
 	"jump range" 60
+	haze _menu/haze-tear
+	object
+		sprite star/k-dwarf
+		period 10
+	object
+		sprite planet/rock17-b
+		distance 234
+		period 143.18
+	object
+		sprite planet/dust1
+		distance 1403
+		period 2102.067
+	object
+		sprite planet/gas13
+		distance 2327
+		period 4490.085
+		object
+			sprite planet/rock20
+			distance 278
+			period 175.214
+	object
+		sprite planet/neptune
+		distance 6706
+		period 21966.219
+		object
+			sprite planet/dust4-b
+			distance 229
+			period 107.778
 
 system KW.01.v10.Ghostball
 	pos 8621.199 -9327.426
+	government Uninhabited
+	arrival 4050
+	habitable 4050
 	"jump range" 55
+	haze _menu/haze-tear
+	object
+		sprite star/g-giant
+		period 10
+	object
+		sprite planet/lava5
+		distance 1237
+		period 273.456
+		object
+			sprite planet/luna
+			distance 144
+			period 65.32
+	object
+		sprite planet/gas2
+		distance 2614
+		period 840.022
+		object
+			sprite planet/ice0-b
+			distance 288
+			period 184.752
+	object
+		sprite planet/gateway-frozen
+		distance 8028
+		period 4521.094
+	object
+		sprite planet/gas8
+		distance 11194
+		period 7444.07
 

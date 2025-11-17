@@ -80,109 +80,604 @@ system KW.nA.m04.---
 
 system KW.nA.m05.---
 	pos 8450.847 -9494.426
+	government Uninhabited
+	arrival 2200
+	habitable 2200
+	haze _menu/haze-coal
 	link KW.nA.m06.---
+	object
+		sprite star/f3
+		period 10
+	object
+		sprite planet/cloud2-b
+		distance 837
+		period 206.508
+	object
+		sprite planet/gas2-b
+		distance 3648
+		period 1879.018
+		object
+			sprite planet/dust0
+			distance 283
+			period 293.207
 
 system KW.nA.m06.---
 	pos 8433.069 -9452.648
+	government Uninhabited
+	arrival 1715
+	habitable 1715
+	haze _menu/haze-coal
 	link KW.nA.m05.---
+	object
+		sprite star/f5
+		period 10
+	object
+		sprite planet/rock11-b
+		distance 267
+		period 42.14
+	object
+		sprite planet/gas15-b
+		distance 2067.045
+		period 649.138
+	object
+		sprite planet/miranda-b
+		distance 2525
+		period 1225.519
+	object
+		sprite planet/aera
+		distance 3330
+		period 1856.07
+		object
+			sprite planet/ice8
+			distance 296
+			period 192.503
+	object
+		sprite planet/gas16
+		distance 7529
+		period 6310.066
+		object
+			sprite planet/io
+			distance 242
+			period 142.306
 
 system KW.nA.m07.---
 	pos 8411.736 -9614.426
+	government Uninhabited
+	arrival 5000
+	habitable 6202.268
+	haze _menu/haze-coal
+	object
+		sprite star/g-supergiant
+		distance 573
+		period 685.807
+		offset 180
+	object
+		sprite star/g5-old
+		distance 573
+		period 685.807
+	object
+		sprite planet/browndwarf-l
+		distance 2075
+		period 480.078
+	object
+		sprite planet/rock17-b
+		distance 2622
+		period 681.921
+	object
+		sprite planet/dust3
+		distance 3002
+		period 835.412
+	object
+		sprite planet/gas6
+		distance 3528
+		period 1064.333
 
 system KW.nA.m08.---
 	pos 8412.625 -9653.981
+	government Uninhabited
+	arrival 5000
+	habitable 11350
 	"jump range" 45
+	haze _menu/haze-coal
 	link KW.nA.m02.---
+	object
+		sprite star/b-giant
+		period 10
+	object
+		sprite planet/browndwarf-l-rogue
+		distance 2905
+		period 587.87
+	object
+		sprite planet/browndwarf-y-rogue
+		distance 12072
+		period 4980.018
+		object
+			sprite planet/rock14-b
+			distance 287
+			period 127.245
 
 system KW.nA.m09.---
 	pos 8341.958 -9560.648
+	government Uninhabited
+	arrival 500
+	habitable 450
+	haze _menu/haze-coal
 	link KW.nA.m10.---
+	object
+		sprite star/k3
+		period 10
+	object
+		sprite planet/rock2
+		distance 1460
+		period 1051.921
+	object
+		sprite planet/saturn
+		distance 2288
+		period 2063.658
 
 system KW.nA.m10.---
 	pos 8298.847 -9575.315
+	government Uninhabited
+	arrival 500
+	habitable 150
 	"jump range" 75
+	haze _menu/haze-coal
 	link KW.nA.m09.---
+	object
+		sprite star/g-dwarf
+		period 10
+	object
+		sprite planet/ice3
+		distance 333
+		period 198.464
+	object
+		sprite planet/ice4
+		distance 708
+		period 615.268
+	object
+		sprite planet/browndwarf-l-rogue
+		distance 2316
+		period 3640.174
+		object
+			sprite planet/rock7-b
+			distance 295
+			period 239.687
+		object
+			sprite planet/dust5-b
+			distance 425
+			period 229.298
+	object
+		sprite planet/gas9-b
+		distance 3261
+		period 6081.918
+		object
+			sprite planet/ice0-b
+			distance 259
+			period 157.562
 
 system KW.nA.m11.---
 	pos 8260.181 -9552.648
+	government Uninhabited
+	arrival 5000
+	habitable 13720
 	"jump range" 50
+	haze _menu/haze-coal
 	link KW.nA.m12.---
+	object
+		sprite star/o0
+		period 10
+	object
+		sprite planet/cloud8-b
+		distance 429
+		period 30.344
+	object
+		sprite planet/dust3
+		distance 1032
+		period 113.215
+	object
+		sprite planet/gas17-b
+		distance 2162
+		period 343.294
+	object
+		sprite planet/desert4
+		distance 5419
+		period 1362.265
 
 system KW.nA.m12.---
 	pos 8245.069 -9508.648
+	government Uninhabited
+	arrival 5000
+	habitable 5000
 	"jump range" 20
+	haze _menu/haze-coal
 	link KW.nA.m11.---
 	link KW.nA.m15.---
 	link KW.nA.m23.---
+	object
+		sprite star/b8
+		period 10
+	object
+		sprite planet/rock13-b
+		distance 741
+		period 114.104
+	object
+		sprite planet/jupiter-b
+		distance 1683
+		period 390.572
+	object
+		sprite planet/gas5
+		distance 6703
+		period 3104.408
+		object
+			sprite planet/rhea
+			distance 302
+			period 163.226
 
 system KW.nA.m13.---
 	pos 8333.069 -9494.87
+	government Uninhabited
+	arrival 5000
+	habitable 25022.24
 	"jump range" 30
+	haze _menu/haze-coal
 	link KW.nA.m14.---
 	link KW.nA.m15.---
+	object
+		sprite star/b-giant
+		distance 274.25
+		period 227.086
+	object
+		sprite star/o-giant
+		distance 274.25
+		period 227.086
+		offset 180
+	object
+		sprite planet/tethys-b
+		distance 1085
+		period 90.374
+	object
+		sprite planet/lava5
+		distance 1376
+		period 129.07
+	object
+		sprite planet/gas14-b
+		distance 2299
+		period 278.744
+		object
+			sprite planet/io-b
+			distance 247
+			period 146.739
 
 system KW.nA.m14.---
 	pos 8366.403 -9515.759
+	government Uninhabited
+	arrival 5000
+	habitable 7000
 	"jump range" 40
+	haze _menu/haze-coal
 	link KW.nA.m13.---
+	object
+		sprite star/b0
+		period 10
+	object
+		sprite planet/callisto
+		distance 2078
+		period 452.876
+	object
+		sprite planet/gas0-b
+		distance 2541
+		period 612.376
 
 system KW.nA.m15.---
 	pos 8289.514 -9478.87
+	government Uninhabited
+	arrival 5000
+	habitable 5000
 	"jump range" 10
+	haze _menu/haze-coal
 	link KW.nA.m12.---
 	link KW.nA.m13.---
 	link KW.nA.m16.---
+	object
+		sprite star/b8
+		period 10
+	object
+		sprite planet/gas8-hot
+		distance 402
+		period 45.595
+	object
+		sprite planet/desert10-b
+		distance 1947
+		period 485.986
 
 system KW.nA.m16.---
 	pos 8321.514 -9440.204
+	government Uninhabited
+	arrival 500
+	habitable 320
 	"jump range" 10
+	haze _menu/haze-coal
 	link KW.nA.m15.---
 	link KW.nA.m17.---
 	link KW.nA.m18.---
+	object
+		sprite star/m0
+		period 10
+	object
+		sprite planet/gas7-hot
+		distance 2492
+		period 2781.679
+	object
+		sprite planet/lava0-b
+		distance 3603
+		period 4835.945
 
 system KW.nA.m17.---
 	pos 8301.069 -9407.315
+	government Uninhabited
+	arrival 5000
+	habitable 22300
 	"jump range" 15
+	haze _menu/haze-coal
 	link KW.nA.m16.---
 	link KW.nA.m19.---
+	object
+		sprite star/o-giant
+		period 10
+	object
+		sprite planet/saturn
+		distance 1343
+		period 131.832
+	object
+		sprite planet/gas0-hot
+		distance 7705
+		period 1811.618
+		object
+			sprite planet/oberon-b
+			distance 235
+			period 221.869
 
 system KW.nA.m18.---
 	pos 8367.736 -9423.759
+	government Uninhabited
+	arrival 4050
+	habitable 4050
 	"jump range" 20
+	haze _menu/haze-coal
 	link KW.nA.m16.---
+	object
+		sprite star/g-giant
+		period 10
+	object
+		sprite planet/rock14
+		distance 719
+		period 121.179
+	object
+		sprite planet/gas2-hot
+		distance 2213
+		period 654.342
+		object
+			sprite planet/rock0
+			distance 227
+			period 129.282
 
 system KW.nA.m19.---
 	pos 8271.292 -9384.648
+	government Uninhabited
+	arrival 4050
+	habitable 4050
 	"jump range" 35
+	haze _menu/haze-coal
 	link KW.nA.m17.---
+	object
+		sprite star/g-giant
+		period 10
+	object
+		sprite planet/lava6-b
+		distance 497
+		period 69.641
+	object
+		sprite planet/gas1-b
+		distance 2650
+		period 857.435
+		object
+			sprite planet/rock3-b
+			distance 497
+			period 418.828
 
 system KW.nA.m20.---
 	pos 8245.514 -9369.093
+	government Uninhabited
+	arrival 784.873
+	habitable 784.873
 	"jump range" 35
+	haze _menu/haze-coal
 	link KW.nA.m21.---
+	object
+		sprite star/f-dwarf
+		distance 90.516
+		period 41.227
+		offset 180
+	object
+		sprite star/g3
+		distance 6.984
+		period 41.227
+	object
+		sprite planet/vulpa
+		distance 2272
+		period 1546.226
+		object
+			sprite planet/dust1
+			distance 323
+			period 180.544
+		object
+			sprite planet/rock17-b
+			distance 424
+			period 537.704
 
 system KW.nA.m99.Wardenstone
 	pos 8280.181 -9449.537
+	government KW.Fleet3
+	arrival 750
+	habitable 750
 	"jump range" 50
+	haze _menu/haze-coal
 	link KW.nA.m22.---
+	object
+		sprite star/a-dwarf
+		period 10
+	object
+		sprite planet/desert8-b
+		distance 290
+		period 72.132
+	object
+		sprite planet/titan
+		distance 958.643
+		period 252.17
+	object
+		sprite planet/gas10
+		distance 4428
+		period 4303.688
+		object
+			sprite planet/io
+			distance 215
+			period 119.168
+		object
+			sprite planet/dust3-b
+			distance 350
+			period 247.516
+		object
+			sprite planet/miranda-b
+			distance 464
+			period 472.812
+	object
+		sprite planet/gas15
+		distance 8817
+		period 12092.348
+	object
+		sprite planet/gateway-inactive
+		distance 15854
+		period 29156.651
+		object
+			sprite planet/rock14
+			distance 240
+			period 97.305
+		object
+			sprite planet/rock14-b
+			distance 364
+			period 181.748
+		object
+			sprite planet/rhea
+			distance 538
+			period 388.107
 
 system KW.nA.m21.---
 	pos 8238.847 -9417.093
+	government Uninhabited
+	arrival 5000
+	habitable 11500
 	"jump range" 25
+	haze _menu/haze-coal
 	link KW.nA.m20.---
+	object
+		sprite star/o3
+		period 10
+	object
+		sprite planet/desert9
+		distance 369
+		period 26.439
+	object
+		sprite planet/dust5
+		distance 806
+		period 85.352
+	object
+		sprite planet/rock3-b
+		distance 7534
+		period 2439.212
+	object
+		sprite planet/europa
+		distance 10386
+		period 3948.058
 
 system KW.nA.m22.---
 	pos 8259.736 -9424.204
+	government Uninhabited
+	arrival 3000
+	habitable 3000
 	"jump range" 10
+	haze _menu/haze-coal
 	link KW.nA.m99.Wardenstone
+	object
+		sprite star/a8
+		period 10
+	object
+		sprite planet/lava6
+		distance 676.779
+		period 39.475
+	object
+		sprite planet/gas13-b
+		distance 5960
+		period 3360.228
+	object
+		sprite planet/rock7-b
+		distance 9775
+		period 7057.884
 
 system KW.nA.m23.---
 	pos 8245.069 -9472.204
+	government Uninhabited
+	arrival 5000
+	habitable 22992.39
 	"jump range" 15
+	haze _menu/haze-coal
 	link KW.nA.m12.---
+	object
+		sprite star/f-giant
+		distance 275.25
+		period 228.329
+	object
+		sprite star/o-giant
+		distance 275.25
+		period 228.329
+		offset 180
+	object
+		sprite planet/desert8-b
+		distance 1069
+		period 92.201
+	object
+		sprite planet/cloud1-b
+		distance 1712
+		period 186.863
+	object
+		sprite planet/tethys-b
+		distance 8300
+		period 1994.734
 
 system KW.nA.m98.Blackgate
 	pos 8235.292 -9447.759
+	government Uninhabited
+	arrival 500
+	habitable 30
 	"jump range" 40
+	haze _menu/haze-coal
 	link KW.nA.000.Debris
+	object
+		sprite star/l-dwarf
+		period 10
+	object
+		sprite planet/rock11
+		distance 549.593
+		period 286.945
+	object
+		sprite planet/gas17-b
+		distance 1236.51
+		period 2759.351
+		object
+			sprite planet/dust5
+			distance 409
+			period 216.472
+	object
+		sprite planet/debris1
+		distance 1901.032
+		period 18983.268
 

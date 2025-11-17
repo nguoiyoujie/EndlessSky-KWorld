@@ -24,3 +24,13 @@ planet KW.01.v01.Orphan
 	description WIP
 	government KW.PirateScarred
 
+planet KW.nA.002.0.Whisper
+	landscape land/city11
+	description WIP
+	government Uninhabited
+
+planet KW.nA.003.0.Solace
+	landscape land/city11
+	description WIP
+	government Uninhabited
+

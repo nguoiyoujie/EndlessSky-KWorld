@@ -1,8 +1,40 @@
 system KW.nA.000.Debris
 	pos 8167.806 -9456.111
 	government Uninhabited
+	arrival 1000
+	habitable 0
 	"jump range" 10
+	haze _menu/haze-133
 	link KW.nA.m98.Blackgate
+	object
+		sprite star/nova
+		period 200
+	object
+		sprite planet/debris1
+		distance 1762.207
+		period 213.854
+	object
+		sprite planet/debris1
+		distance 1670.773
+		period 216
+		offset 120
+	object
+		sprite planet/debris1
+		distance 1574.213
+		period 246
+		offset -120
+	object
+		sprite planet/redias
+		distance 3508.795
+		period 7827.843
+	object
+		sprite planet/rock17
+		distance 4282.183
+		period 9499.727
+	object
+		sprite planet/gas16-b
+		distance 17123
+		period 73178.608
 
 system KW.nA.001.Loss
 	pos 8517.958 -9640.815
@@ -21,6 +53,45 @@ system KW.nA.001.Loss
 
 system KW.nA.002.Erasure
 	pos 8439.736 -9399.315
+	government Uninhabited
+	arrival 3430
+	habitable 3430
+	haze _menu/haze-coal
+	object
+		sprite star/f5-old
+		period 10
+	object KW.nA.002.0.Whisper
+		sprite planet/dust9
+		distance 425
+		period 59.841
+	object
+		sprite planet/gas11
+		distance 1901.46
+		period 353.563
+		object
+			sprite planet/dust3-b
+			distance 393.712
+			period 366.875
+		object
+			sprite planet/ice0
+			distance 557.219
+			period 596.316
+	object
+		sprite planet/gas3
+		distance 3594.449
+		period 941.221
+		object
+			sprite planet/callisto-b
+			distance 305
+			period 139.401
+	object
+		sprite planet/aera
+		distance 4659
+		period 2171.961
+	object
+		sprite planet/gas0
+		distance 6199.79
+		period 2704.946
 
 system KW.nA.003.Twilight
 	pos 8355.736 -9596.204
@@ -41,7 +112,7 @@ system KW.nA.003.Twilight
 		sprite planet/gas9
 		distance 1372
 		period 221.795
-		object
+		object KW.nA.003.0.Solace
 			sprite planet/dust5
 			distance 282
 			period 123.934

@@ -1,42 +1,269 @@
 system KW.01.a01.Endpoint
 	pos 8692.162 -9272.759
+	government Uninhabited
+	arrival 5000
+	habitable 7337.575
 	"jump range" 75
+	haze _menu/haze-ghila
 	link "KW.01.006.01-5 (Dgt II)"
 	link KW.01.a04.Disarm
 	link KW.01.a06.Signature
+	object
+		sprite star/f3
+		distance 120.996
+		period 44.274
+		offset 180
+	object
+		sprite star/b0
+		distance 40.004
+		period 44.274
+	object
+		sprite planet/ice10
+		distance 362
+		period 32.162
+	object
+		sprite planet/io
+		distance 705
+		period 87.411
+	object
+		sprite planet/ice1
+		distance 1138
+		period 179.266
+	object
+		sprite planet/gas4
+		distance 1822
+		period 363.167
+	object
+		sprite planet/redias
+		distance 4971.5
+		period 1636.873
+		object
+			sprite planet/luna-b
+			distance 337.5
+			period 234.375
 
 system KW.01.a02.Firewall
 	pos 8657.792 -9318.981
+	government Uninhabited
+	arrival 500
+	habitable 450
 	"jump range" 25
+	haze _menu/haze-ghila
 	link KW.01.a04.Disarm
 	link KW.01.a05.UTM-NGFW
+	object
+		sprite star/k3
+		period 10
+	object
+		sprite planet/cloud7-b
+		distance 264
+		period 80.883
+	object
+		sprite planet/forest2-b
+		distance 677
+		period 332.152
+	object
+		sprite planet/dust6
+		distance 1219
+		period 802.526
+	object
+		sprite planet/gas6
+		distance 5476
+		period 7640.977
+		object
+			sprite "planet/yniu ena"
+			distance 379
+			period 278.907
+	object
+		sprite planet/dust0
+		distance 10389
+		period 19967.071
 
 system KW.01.a03.Reconstruction
 	pos 8740.162 -9251.13
+	government Uninhabited
+	arrival 550
+	habitable 550
+	haze _menu/haze-ghila
 	link "KW.01.006.01-5 (Dgt II)"
 	link KW.AB.009.2kP
+	object
+		sprite star/g8
+		period 10
+	object
+		sprite planet/forest9
+		distance 414.5
+		period 143.935
+		object
+			sprite planet/europa-b
+			distance 155.5
+			period 91.729
+	object
+		sprite planet/saturn
+		distance 1105
+		period 626.501
+	object
+		sprite planet/gas4-b
+		distance 2140
+		period 1688.493
+	object
+		sprite planet/gas3
+		distance 3208
+		period 3099.061
+		object
+			sprite planet/ice7-b
+			distance 326
+			period 154.044
+		object
+			sprite planet/dust4-b
+			distance 461
+			period 307.843
+		object
+			sprite planet/ice0
+			distance 653
+			period 630.769
 
 system KW.01.a04.Disarm
 	pos 8692.458 -9309.796
+	government Uninhabited
+	arrival 2200
+	habitable 2200
 	"jump range" 45
+	haze _menu/haze-ghila
 	link KW.01.a01.Endpoint
 	link KW.01.a02.Firewall
+	object
+		sprite star/f3
+		period 10
+	object
+		sprite planet/ice7
+		distance 250
+		period 33.71
+	object
+		sprite planet/gas4-b
+		distance 950
+		period 249.709
+	object
+		sprite planet/gas17-b
+		distance 1655
+		period 574.177
+		object
+			sprite planet/callisto
+			distance 264
+			period 112.26
+	object
+		sprite planet/gas10-hot
+		distance 6703
+		period 4680.071
+	object
+		sprite planet/gas7
+		distance 14475
+		period 14851.712
+		object
+			sprite planet/callisto-b
+			distance 295
+			period 132.602
+		object
+			sprite planet/dust5-b
+			distance 439
+			period 240.721
 
 system KW.01.a05.UTM-NGFW
 	pos 8648.606 -9289.056
+	government Uninhabited
+	arrival 5000
+	habitable 5600
 	"jump range" 25
+	haze _menu/haze-ghila
 	link KW.01.a02.Firewall
 	link KW.01.a06.Signature
+	object
+		sprite star/b5
+		period 10
+	object
+		sprite planet/rock11-b
+		distance 270
+		period 23.714
+	object
+		sprite planet/dust0
+		distance 514
+		period 62.289
+	object
+		sprite planet/forest6-b
+		distance 886
+		period 140.967
+	object
+		sprite planet/rock3
+		distance 5019
+		period 1900.605
 
 system KW.01.a06.Signature
 	pos 8658.681 -9260.019
+	government Uninhabited
+	arrival 2560
+	habitable 2560
 	"jump range" 40
+	haze _menu/haze-ghila
 	link KW.01.a01.Endpoint
 	link KW.01.a05.UTM-NGFW
 	link KW.01.a07.Blocker
+	object
+		sprite star/f0
+		period 10
+	object
+		sprite planet/ocean9
+		distance 296
+		period 40.26
+	object
+		sprite planet/cloud8-b
+		distance 817
+		period 184.618
+	object
+		sprite planet/ocean2
+		distance 1215
+		period 334.815
+	object
+		sprite planet/gas5-b
+		distance 3854.759
+		period 1201.573
+		object
+			sprite planet/ice0-b
+			distance 293
+			period 189.584
+		object
+			sprite planet/ice8-b
+			distance 402
+			period 304.677
+		object
+			sprite planet/dust3-b
+			distance 515
+			period 441.786
 
 system KW.01.a07.Blocker
 	pos 8630.532 -9252.611
+	government Uninhabited
+	arrival 5000
+	habitable 6075
 	"jump range" 25
+	haze _menu/haze-ghila
 	link KW.01.a06.Signature
+	object
+		sprite star/g-supergiant
+		period 100
+	object
+		sprite planet/dust6-b
+		distance 684
+		period 91.806
+	object
+		sprite planet/rock0
+		distance 1275
+		period 233.643
+	object
+		sprite planet/gas9-b
+		distance 4973
+		period 1799.76
+		object
+			sprite planet/rock14-b
+			distance 292
+			period 130.585
 
